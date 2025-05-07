@@ -335,17 +335,30 @@ def get_component_details(component_type: str, variant: str) -> str:
     return tool_get_component_details(component_type, variant)
 
 
-@style_theme.tool()
-def get_component_elements(component_type: str) -> str:
-    """Get all elements of a component
+# elements are stored in the variant
+# @style_theme.tool()
+# def get_component_elements(component_type: str) -> str:
+#     """Get all elements of a component
+
+#     Args:
+#         component_type: The type of component (e.g., 'dropdown', 'tabs')
+#     """
+#     from theme_tools import tool_get_component_elements
+
+#     return tool_get_component_elements(component_type)
+
+
+def get_variant_details(component_type: str, variant: str) -> Dict[str, Any]:
+    """Get detailed information about a component variant
 
     Args:
-        component_type: The type of component (e.g., 'dropdown', 'tabs')
+        component_type: The type of component (e.g., 'button', 'dropdown')
+        variant: The variant of the component (e.g., 'primary', 'secondary')
     """
     # Import here to avoid circular imports
-    from theme_tools import tool_get_component_elements
+    from theme_tools import tool_get_variant_details
 
-    return tool_get_component_elements(component_type)
+    return tool_get_variant_details(component_type, variant)
 
 
 @style_theme.tool()
@@ -357,18 +370,17 @@ def update_variant_property(  # <<< Renamed
     auto_save: bool = False,
 ) -> str:
     """Update a property of a component VARIANT (e.g., tailwind, description)."""
-    # Import here to avoid circular imports
     from theme_tools import (
         tool_update_variant_property,
-    )  # <<< Call renamed tool function
+    )
 
-    return tool_update_variant_property(  # <<< Call renamed tool function
+    return tool_update_variant_property(
         component_type, variant, property_name, value, auto_save
     )
 
 
 @style_theme.tool()
-def update_variant_element(  # <<< Renamed
+def update_variant_element(
     component_type: str,
     variant: str,
     element_name: str,
@@ -377,10 +389,9 @@ def update_variant_element(  # <<< Renamed
     auto_save: bool = False,
 ) -> str:
     """Update a property of a specific element WITHIN a component VARIANT."""
-    # Import here to avoid circular imports
     from theme_tools import (
         tool_update_variant_element,
-    )  # <<< Call renamed tool function
+    )
 
     return tool_update_variant_element(  # <<< Call renamed tool function
         component_type, variant, element_name, property_name, value, auto_save
@@ -398,7 +409,6 @@ def update_global_color(
         color_value: The new color value (e.g., '#ff41b4')
         auto_save: Whether to automatically save changes to disk (default: False)
     """
-    # Import here to avoid circular imports
     from theme_tools import tool_update_global_color
 
     return tool_update_global_color(color_name, color_value, auto_save)
@@ -428,7 +438,6 @@ def create_component_variant(
         auto_save: Whether to automatically save changes to disk (default: False)
     """
 
-    # Import here to avoid circular imports
     from theme_tools import tool_create_component_variant
 
     return tool_create_component_variant(

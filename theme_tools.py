@@ -121,6 +121,30 @@ def tool_get_component_details(component_type: str, variant: str) -> str:
         return f"Error getting component details: {str(e)}"
 
 
+def tool_get_variant_details(component_type: str, variant: str) -> str:
+    """Get detailed information about a component variant"""
+    try:
+        result = engine.get_variant_details(component_type, variant)
+
+        if "error" in result:
+            return result["error"]
+
+        # Format the result as a string
+        output = f"Variant: {result['variant']}\n\n"
+        output += "Properties:\n"
+
+        for key, value in result["properties"].items():
+            output += f"- {key}: {value}\n"
+
+        output += (
+            f"\nComputed Tailwind Classes:\n{result['computed_tailwind']}"
+        )
+
+        return output
+    except Exception as e:
+        return f"Error getting variant details: {str(e)}"
+
+
 def tool_get_component_elements(component_type: str) -> str:
     """Get all elements of a component"""
     try:
