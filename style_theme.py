@@ -5,7 +5,7 @@ from mcp.server.fastmcp import FastMCP, Context
 
 # Create our MCP server
 style_theme = FastMCP(
-    "ComponentStyleTheme",
+    "StyleATC Tailwind Styling System",
     instructions="""# Welcome to the StyleATC Component Styling System
 
 This tool helps you create and manage a centralized theme for dynamically styled React components using Tailwind CSS.
@@ -348,6 +348,7 @@ def get_component_details(component_type: str, variant: str) -> str:
 #     return tool_get_component_elements(component_type)
 
 
+@style_theme.tool()
 def get_variant_details(component_type: str, variant: str) -> Dict[str, Any]:
     """Get detailed information about a component variant
 
