@@ -1,0 +1,49 @@
+
+> preview@0.0.1 dev
+> astro dev --host 0.0.0.0 --port 3000
+
+▶ Astro collects anonymous usage data.
+  This information helps us improve Astro.
+  Run "astro telemetry disable" to opt-out.
+  https://astro.build/telemetry
+
+06:42:37 [types] Generated 0ms
+06:42:37 [content] Syncing content
+06:42:37 [content] Synced content
+
+ astro  v5.7.5 ready in 283 ms
+
+┃ Local    http://localhost:3000/
+┃ Network  http://172.17.0.2:3000/
+
+06:42:37 watching for file changes...
+06:42:39 [WARN] [vite] warning: The character "}" is not valid inside a JSX element
+928|  
+929|    Assumes `pageStyles` (or similar for colors) is available in scope.
+930|  */}
+   |    ^
+931|  <div className="mb-12">
+932|    <h3 className="text-xl font-bold mb-4 border-b pb-2" style={{ color: pageStyles.sectionHeadingColor /* Example */ }}>
+
+  Plugin: vite:esbuild
+  File: /app/preview/src/output/StyleGuide.jsx
+06:42:41 [WARN] [vite] warning: The character "}" is not valid inside a JSX element
+979|  
+980|    Assumes `pageStyles` (or similar for colors) is available in scope.
+981|  */}
+   |    ^
+982|  <div className="mb-12">
+983|    <h3 className="text-xl font-bold mb-4 border-b pb-2" style={{ color: pageStyles.sectionHeadingColor /* Example */ }}>
+
+  Plugin: vite:esbuild
+  File: /app/preview/src/output/StyleGuide.jsx
+06:42:58 [WARN] [vite] warning: The character "}" is not valid inside a JSX element
+993|  
+994|    Assumes `pageStyles` (or similar for colors) is available in scope.
+995|  */}
+   |    ^
+996|  <div className="mb-12">
+997|    <h3 className="text-xl font-bold mb-4 border-b pb-2" style={{ color: pageStyles.sectionHeadingColor /* Example */ }}>
+
+  Plugin: vite:esbuild
+  File: /app/preview/src/output/StyleGuide.jsx

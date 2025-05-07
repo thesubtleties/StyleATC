@@ -1,0 +1,31 @@
+06:42:39 [ERROR] Could not import `./components/Contextmenu`.
+  Hint:
+    This is often caused by a typo in the import path. Please make sure the file exists.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/
+  Stack trace:
+    at loadAndTransform (file:///app/preview/node_modules/vite/dist/node/chunks/dep-BMIURPaQ.js:35688:17)
+06:42:41 [ERROR] Could not import `./components/Contextmenu`.
+  Hint:
+    This is often caused by a typo in the import path. Please make sure the file exists.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/
+  Stack trace:
+    at loadAndTransform (file:///app/preview/node_modules/vite/dist/node/chunks/dep-BMIURPaQ.js:35688:17)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+06:42:58 [ERROR] Could not import `./components/Contextmenu`.
+  Hint:
+    This is often caused by a typo in the import path. Please make sure the file exists.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/
+  Stack trace:
+    at loadAndTransform (file:///app/preview/node_modules/vite/dist/node/chunks/dep-BMIURPaQ.js:35688:17)
+    [...] See full stack trace in the browser, or rerun with --verbose.
+07:35:33 [ERROR] Could not import `./components/Contextmenu`.
+  Hint:
+    This is often caused by a typo in the import path. Please make sure the file exists.
+  Error reference:
+    https://docs.astro.build/en/reference/errors/failed-to-load-module-ssr/
+  Stack trace:
+    at loadAndTransform (file:///app/preview/node_modules/vite/dist/node/chunks/dep-BMIURPaQ.js:35688:17)
+    [...] See full stack trace in the browser, or rerun with --verbose.

@@ -1,0 +1,4 @@
+# Ignore template files - optional
+# boilerplate/**/*.jsx
+# boilerplate/sections/**/*.jsx
+# boilerplate/variants/**/*.jsx

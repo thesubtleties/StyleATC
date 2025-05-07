@@ -1,0 +1,17 @@
+---
+// src/pages/index.astro
+import StyleGuide from '../output/StyleGuide'
+import "../styles/global.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Style Guide Preview</title>
+    <!-- You might need to include your Tailwind CSS here if it's not already part of your setup -->
+  </head>
+  <body>
+    <StyleGuide client:load />
+  </body>
+</html>

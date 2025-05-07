@@ -1,0 +1,16 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  style-guide:
+    build: .
+    image: mcp/style-guide
+    stdin_open: true # Required for stdio transport
+    tty: true # Required for stdio transport
+    volumes:
+      - ./data:/data
+    ports:
+      - 3000:3000
+    environment:
+      - DEFAULT_PRIMARY_COLOR=#3b82f6
+      - DEFAULT_SECONDARY_COLOR=#10b981

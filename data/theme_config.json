@@ -1,0 +1,1210 @@
+{
+  "global_values": {
+    "colors": {
+      "primary": "#6d28d9",
+      "secondary": "#22d3ee",
+      "success": "#16a34a",
+      "warning": "#f59e0b",
+      "error": "#ef4444",
+      "neutral": "#f3f4f6",
+      "text": {
+        "primary": "#111827",
+        "secondary": "#4b5563",
+        "muted": "#9ca3af"
+      }
+    },
+    "spacing": {
+      "xs": "0.25rem",
+      "sm": "0.5rem",
+      "md": "1rem",
+      "lg": "1.5rem",
+      "xl": "2rem"
+    },
+    "fontSizes": {
+      "xs": "0.75rem",
+      "sm": "0.875rem",
+      "md": "1rem",
+      "lg": "1.125rem",
+      "xl": "1.25rem"
+    }
+  },
+  "components": {
+    "accordion": {
+      "variants": {
+        "default": {
+          "tailwind": "w-[300px] rounded-md shadow-[0_2px_10px] shadow-black/5 bg-white",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default accordion variant.",
+          "elements": {
+            "item": {
+              "tailwind": "mt-px overflow-hidden first:mt-0 first:rounded-t last:rounded-b focus-within:relative focus-within:z-10 focus-within:shadow-[0_0_0_2px] focus-within:shadow-black/10",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "trigger": {
+              "tailwind": "group flex h-[45px] flex-1 cursor-default items-center justify-between px-5 text-[15px] leading-none shadow-[0_1px_0] shadow-black/10 outline-none hover:bg-opacity-80 bg-white",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "icon": {
+              "tailwind": "text-gray-500 h-4 w-4",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "content": {
+              "tailwind": "overflow-hidden text-[15px] data-[state=closed]:animate-slideUp data-[state=open]:animate-slideDown bg-white text-gray-700",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        }
+      }
+    },
+    "alertdialog": {
+      "variants": {
+        "default": {
+          "tailwind": "",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default AlertDialog variant.",
+          "elements": {
+            "trigger": {
+              "tailwind": "bg-gray-100 text-gray-900 hover:bg-gray-200 focus:ring-2 focus:ring-gray-400",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "overlay": {
+              "tailwind": "bg-black/50 backdrop-blur-sm",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "content": {
+              "tailwind": "bg-white border border-gray-200",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "title": {
+              "tailwind": "text-gray-900",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "description": {
+              "tailwind": "text-gray-500",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "cancel": {
+              "tailwind": "bg-gray-100 text-gray-900 hover:bg-gray-200 focus:ring-2 focus:ring-gray-400",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "action": {
+              "tailwind": "bg-red-600 text-white hover:bg-red-700 focus:ring-2 focus:ring-red-600",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        }
+      }
+    },
+    "button": {
+      "variants": {
+        "default": {
+          "tailwind": "bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default button variant.",
+          "elements": {
+            "text": {
+              "tailwind": "flex items-center",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        },
+        "primary": {
+          "tailwind": "bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400",
+          "extends": "button.default",
+          "color": null,
+          "text_color": null,
+          "description": "Primary button with blue styling and white text"
+        },
+        "secondary": {
+          "tailwind": "bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500",
+          "extends": "button.default",
+          "color": null,
+          "text_color": null,
+          "description": "Secondary button with gray styling"
+        },
+        "outline": {
+          "tailwind": "bg-transparent hover:bg-gray-50 text-purple-600 border border-purple-600 px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500",
+          "extends": "button.default",
+          "color": null,
+          "text_color": null,
+          "description": "Outline button with purple border"
+        },
+        "danger": {
+          "tailwind": "bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500",
+          "extends": "button.default",
+          "color": null,
+          "text_color": null,
+          "description": "Danger button with red styling"
+        },
+        "ghost": {
+          "tailwind": "bg-transparent hover:bg-primary/10 text-primary px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary/50",
+          "extends": "button.default",
+          "color": null,
+          "text_color": null,
+          "description": "Ghost button with transparent background and primary text color"
+        },
+        "success": {
+          "tailwind": "bg-secondary hover:bg-secondary/90 text-white px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary/50",
+          "extends": "button.default",
+          "color": null,
+          "text_color": null,
+          "description": "Success button with secondary color styling"
+        },
+        "bright": {
+          "tailwind": "bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-4 py-2 rounded-md font-medium shadow-md hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500",
+          "extends": "button.default",
+          "color": null,
+          "text_color": null,
+          "description": "Bright button with gradient effect and subtle shadow"
+        },
+        "subtle": {
+          "tailwind": "bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-md font-medium border border-gray-200 shadow-sm hover:shadow transition-all duration-200 focus:outline-none focus:ring-1 focus:ring-gray-400",
+          "extends": "button.default",
+          "color": null,
+          "text_color": null,
+          "description": "Subtle button with minimal styling for secondary actions"
+        },
+        "neon": {
+          "tailwind": "bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary/50 shadow-md hover:shadow-lg transition-all duration-200",
+          "extends": "button.default",
+          "color": null,
+          "text_color": null,
+          "description": "Neon pink button with subtle shadow and hover effects"
+        },
+        "gradient": {
+          "tailwind": "bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white px-4 py-2 rounded-md font-medium shadow-md hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50",
+          "extends": "button.default",
+          "color": null,
+          "text_color": null,
+          "description": "Gradient button with primary to secondary color transition"
+        },
+        "custom": {
+          "tailwind": "bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 text-white px-5 py-2.5 rounded-full font-medium shadow-md hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2",
+          "extends": "button.default",
+          "color": null,
+          "text_color": null,
+          "description": "Custom button with gradient and rounded corners"
+        },
+        "test": {
+          "tailwind": "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "A test button to verify if we can create components"
+        },
+        "vibrant": {
+          "tailwind": "bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-5 py-2.5 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400",
+          "extends": "button.default",
+          "color": null,
+          "text_color": null,
+          "description": "A vibrant button with cyan-to-blue gradient and enhanced hover effects"
+        },
+        "3d": {
+          "tailwind": "bg-secondary text-white px-5 py-3 rounded-lg font-bold transform transition-all duration-200 hover:-translate-y-1 hover:shadow-lg active:translate-y-0 active:shadow-md border-b-4 border-secondary-700 active:border-b-0",
+          "extends": "button.default",
+          "color": null,
+          "text_color": null,
+          "description": "A 3D button with depth effect that appears to press down when clicked"
+        },
+        "cool-blue": {
+          "tailwind": "bg-gradient-to-r from-blue-400 to-cyan-400 hover:from-blue-500 hover:to-cyan-500 text-white px-5 py-2.5 rounded-lg font-semibold shadow-md hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400",
+          "extends": "button.default",
+          "color": null,
+          "text_color": null,
+          "description": "A cool blue gradient button with cyan accents and enhanced hover effects"
+        },
+        "modern": {
+          "tailwind": "bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white px-5 py-2.5 rounded-xl font-medium shadow-md hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50",
+          "extends": "button.default",
+          "color": null,
+          "text_color": null,
+          "description": "A modern button with gradient background, rounded corners, and subtle shadow effects"
+        }
+      }
+    },
+    "card": {
+      "variants": {
+        "default": {
+          "tailwind": "rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow duration-200",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Modern card with hover effect and smooth transition"
+        },
+        "elevated": {
+          "tailwind": "bg-white border border-gray-200 rounded-lg shadow-lg p-6",
+          "extends": "card.default",
+          "color": null,
+          "text_color": null,
+          "description": "Elevated card with a stronger shadow"
+        },
+        "outlined": {
+          "tailwind": "bg-white border-2 border-purple-500 rounded-lg p-6",
+          "extends": "card.default",
+          "color": null,
+          "text_color": null,
+          "description": "Outlined card with a colored border"
+        },
+        "flat": {
+          "tailwind": "bg-gray-50 rounded-lg p-6",
+          "extends": "card.default",
+          "color": null,
+          "text_color": null,
+          "description": "Flat card with no border or shadow"
+        },
+        "primary": {
+          "tailwind": "bg-primary/10 border-2 border-primary rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-200",
+          "extends": "card.default",
+          "color": null,
+          "text_color": null,
+          "description": "Primary card with primary border and light background"
+        },
+        "gradient": {
+          "tailwind": "bg-gradient-to-br from-purple-100 to-blue-100 border border-purple-200 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-200",
+          "extends": "card.default",
+          "color": null,
+          "text_color": null,
+          "description": "Gradient card with subtle purple to blue background and hover effect"
+        },
+        "neon-accent": {
+          "tailwind": "bg-white border-l-4 border-primary rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-200",
+          "extends": "card.default",
+          "color": null,
+          "text_color": null,
+          "description": "Card with a neon pink accent border on the left side"
+        },
+        "custom-dark": {
+          "tailwind": "bg-gray-800 text-white rounded-xl border-2 border-purple-500 p-6 shadow-xl hover:shadow-2xl transition-all duration-300",
+          "extends": "card.default",
+          "color": null,
+          "text_color": null,
+          "description": "Custom dark-themed card with purple border and hover effects"
+        },
+        "vibrant": {
+          "tailwind": "bg-gradient-to-br from-white to-blue-50 border border-blue-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300",
+          "extends": "card.default",
+          "color": null,
+          "text_color": null,
+          "description": "A vibrant card with subtle blue gradient and enhanced shadow effects"
+        },
+        "neumorphic": {
+          "tailwind": "bg-gray-100 rounded-xl p-6 shadow-[8px_8px_16px_#d1d1d1,-8px_-8px_16px_#ffffff] hover:shadow-[12px_12px_20px_#d1d1d1,-12px_-12px_20px_#ffffff] transition-all duration-300",
+          "extends": "card.default",
+          "color": null,
+          "text_color": null,
+          "description": "A neumorphic card with soft shadow effects that appears raised from the surface"
+        }
+      }
+    },
+    "checkbox": {
+      "variants": {
+        "default": {
+          "tailwind": "border border-gray-300 bg-white hover:bg-gray-100 focus:ring-2 focus:ring-offset-2 focus:ring-primary-500",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default checkbox variant.",
+          "elements": {
+            "indicator": {
+              "tailwind": "flex items-center justify-center text-white",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "icon": {
+              "tailwind": "size-4 text-primary-600",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "label": {
+              "tailwind": "text-gray-700 font-medium cursor-pointer",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        }
+      }
+    },
+    "collapsible": {
+      "variants": {
+        "default": {
+          "tailwind": "w-full rounded-md border p-4",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default collapsible variant.",
+          "elements": {
+            "header": {
+              "tailwind": "flex items-center justify-between py-2",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "title": {
+              "tailwind": "font-medium",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "trigger": {
+              "tailwind": "bg-transparent hover:bg-slate-100 dark:hover:bg-slate-800 focus:shadow-slate-200 dark:focus:shadow-slate-800",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "icon": {
+              "tailwind": "h-4 w-4 text-slate-500",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "item": {
+              "tailwind": "bg-slate-100 dark:bg-slate-800",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "itemText": {
+              "tailwind": "text-slate-700 dark:text-slate-300",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "content": {
+              "tailwind": "data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up overflow-hidden transition-all",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        }
+      }
+    },
+    "contentsection": {
+      "variants": {
+        "default": {
+          "tailwind": "w-full py-8",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default ContentSection variant.",
+          "elements": {
+            "container": {
+              "tailwind": "w-full px-4",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "title": {
+              "tailwind": "text-3xl font-bold tracking-tight",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "subtitle": {
+              "tailwind": "text-xl text-muted-foreground",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "content": {
+              "tailwind": "prose prose-lg max-w-none prose-headings:font-bold prose-p:text-muted-foreground prose-a:text-primary",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        }
+      }
+    },
+    "dropdownmenu": {
+      "variants": {
+        "default": {
+          "tailwind": "",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default dropdown menu variant.",
+          "elements": {
+            "trigger": {
+              "tailwind": "bg-white text-gray-900 hover:bg-gray-100 focus:ring-2 focus:ring-gray-400 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "content": {
+              "tailwind": "bg-white border border-gray-200 dark:bg-gray-800 dark:border-gray-700 text-gray-900 dark:text-gray-100",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "item": {
+              "tailwind": "text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 data-[disabled]:text-gray-400 data-[disabled]:dark:text-gray-500",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "shortcut": {
+              "tailwind": "text-gray-500 dark:text-gray-400",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "separator": {
+              "tailwind": "bg-gray-200 dark:bg-gray-700",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "subTrigger": {
+              "tailwind": "text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 data-[state=open]:bg-gray-100 dark:data-[state=open]:bg-gray-700",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "chevron": {
+              "tailwind": "text-gray-500 dark:text-gray-400",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "subContent": {
+              "tailwind": "bg-white border border-gray-200 dark:bg-gray-800 dark:border-gray-700",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "subItem": {
+              "tailwind": "text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 data-[disabled]:text-gray-400 data-[disabled]:dark:text-gray-500",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "checkboxItem": {
+              "tailwind": "text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 data-[disabled]:text-gray-400 data-[disabled]:dark:text-gray-500",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "indicator": {
+              "tailwind": "text-gray-900 dark:text-gray-100",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "label": {
+              "tailwind": "text-gray-500 dark:text-gray-400",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "radioItem": {
+              "tailwind": "text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 data-[disabled]:text-gray-400 data-[disabled]:dark:text-gray-500",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "arrow": {
+              "tailwind": "fill-white dark:fill-gray-800",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        },
+        "contextmenu": {
+          "tailwind": "",
+          "extends": "dropdownmenu.default",
+          "color": null,
+          "text_color": null,
+          "description": "A dropdown menu styled to be used as a context menu on right-click",
+          "elements": {
+            "content": {
+              "tailwind": "bg-white border border-gray-200 rounded-md shadow-lg p-1 min-w-[12rem] dark:bg-gray-800 dark:border-gray-700 text-gray-900 dark:text-gray-100 z-50",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "item": {
+              "tailwind": "px-2 py-1.5 text-sm rounded-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 data-[disabled]:text-gray-400 data-[disabled]:dark:text-gray-500 cursor-pointer",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        }
+      }
+    },
+    "dialog": {
+      "variants": {
+        "default": {
+          "tailwind": "",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default dialog variant.",
+          "elements": {
+            "trigger": {
+              "tailwind": "bg-primary text-primary-foreground hover:bg-primary/90 focus:ring-2 focus:ring-primary",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "overlay": {
+              "tailwind": "bg-black/50 backdrop-blur-sm",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "content": {
+              "tailwind": "bg-background border border-border",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "title": {
+              "tailwind": "text-foreground",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "description": {
+              "tailwind": "text-muted-foreground",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "label": {
+              "tailwind": "text-foreground",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "input": {
+              "tailwind": "border border-input bg-background focus:border-primary focus:ring-1 focus:ring-primary",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "saveButton": {
+              "tailwind": "bg-primary text-primary-foreground hover:bg-primary/90 focus:ring-2 focus:ring-primary",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "closeButton": {
+              "tailwind": "hover:bg-muted focus:ring-2 focus:ring-primary",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "closeIcon": {
+              "tailwind": "h-4 w-4 text-foreground",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        }
+      }
+    },
+    "form": {
+      "variants": {
+        "default": {
+          "tailwind": "w-full max-w-lg space-y-4",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default form variant.",
+          "elements": {
+            "field": {
+              "tailwind": "grid gap-1.5",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "label": {
+              "tailwind": "text-[15px] font-medium leading-[35px] text-foreground",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "message": {
+              "tailwind": "text-[13px] text-red-500",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "input": {
+              "tailwind": "h-[35px] w-full rounded border border-input bg-background px-2.5 text-[15px] leading-none focus:outline-none focus:ring-2 focus:ring-ring",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "textarea": {
+              "tailwind": "w-full resize-none rounded border border-input bg-background p-2.5 text-[15px] leading-none focus:outline-none focus:ring-2 focus:ring-ring",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "submit": {
+              "tailwind": "h-[35px] w-full rounded bg-primary px-[15px] font-medium leading-none text-primary-foreground hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        }
+      }
+    },
+    "formfield": {
+      "variants": {
+        "default": {
+          "tailwind": "w-full flex-col justify-start space-y-2",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default FormField variant.",
+          "elements": {
+            "fieldset": {
+              "tailwind": "mb-4 flex flex-col gap-1.5",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "label": {
+              "tailwind": "block text-[13px] leading-none mb-2.5 text-gray-700 font-medium",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "input": {
+              "tailwind": "h-[35px] shrink-0 grow rounded px-2.5 text-[15px] leading-none outline-none shadow-sm border border-gray-300 bg-white focus:border-primary-500 focus:ring-1 focus:ring-primary-500 disabled:cursor-not-allowed disabled:bg-gray-100 disabled:text-gray-500",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        }
+      }
+    },
+    "header": {
+      "variants": {
+        "default": {
+          "tailwind": "bg-white shadow",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default header variant.",
+          "elements": {
+            "logoContainer": {
+              "tailwind": "flex-1",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "logo": {
+              "tailwind": "flex items-center",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "nav": {
+              "tailwind": "items-center",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "navItem": {
+              "tailwind": "text-gray-600 hover:text-gray-900 hover:border-b-2 hover:border-primary transition-colors duration-200",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "actionsContainer": {
+              "tailwind": "ml-4",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "primaryAction": {
+              "tailwind": "bg-primary text-white hover:bg-primary/90 transition-colors shadow-md rounded-md",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "secondaryAction": {
+              "tailwind": "bg-transparent text-gray-700 hover:bg-gray-100 border border-gray-300 transition-colors",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        }
+      }
+    },
+    "hovercard": {
+      "variants": {
+        "default": {
+          "tailwind": "",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default hovercard variant.",
+          "elements": {
+            "triggerWrapper": {
+              "tailwind": "inline-flex items-center justify-center",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "trigger": {
+              "tailwind": "inline-block cursor-pointer rounded-full outline-none focus:shadow-[0_0_0_2px_white]",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "triggerImage": {
+              "tailwind": "block size-[45px] rounded-full object-cover",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "content": {
+              "tailwind": "w-80 bg-white shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity]",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "arrow": {
+              "tailwind": "fill-white",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "cardContentWrapper": {
+              "tailwind": "flex flex-col gap-[7px]",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "cardImage": {
+              "tailwind": "block size-[60px] rounded-full object-cover",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "title": {
+              "tailwind": "m-0 text-[15px] font-medium text-gray-900",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "handle": {
+              "tailwind": "m-0 text-[15px] text-gray-500",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "description": {
+              "tailwind": "m-0 text-[15px] text-gray-700",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "statNumber": {
+              "tailwind": "m-0 text-[15px] font-medium text-gray-900",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "statLabel": {
+              "tailwind": "m-0 text-[15px] text-gray-500",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        }
+      }
+    },
+    "label": {
+      "variants": {
+        "default": {
+          "tailwind": "flex flex-wrap items-center gap-[15px]",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default label variant.",
+          "elements": {
+            "label": {
+              "tailwind": "text-[15px] font-medium leading-[35px] text-gray-800 dark:text-gray-200",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "input": {
+              "tailwind": "inline-flex h-[35px] w-[200px] appearance-none items-center justify-center rounded px-2.5 text-[15px] leading-none outline-none border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        }
+      }
+    },
+    "menubar": {
+      "variants": {
+        "default": {
+          "tailwind": "bg-white border border-gray-200 dark:bg-gray-800 dark:border-gray-700",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default menubar variant.",
+          "elements": {
+            "trigger": {
+              "tailwind": "hover:bg-gray-100 dark:hover:bg-gray-700 focus:bg-gray-100 dark:focus:bg-gray-700 data-[state=open]:bg-gray-100 dark:data-[state=open]:bg-gray-700",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "content": {
+              "tailwind": "bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 z-50",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "item": {
+              "tailwind": "hover:bg-gray-100 dark:hover:bg-gray-700 focus:bg-gray-100 dark:focus:bg-gray-700 cursor-pointer",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "disabledItem": {
+              "tailwind": "opacity-50 pointer-events-none",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "separator": {
+              "tailwind": "bg-gray-200 dark:bg-gray-700",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "shortcut": {
+              "tailwind": "text-gray-500 dark:text-gray-400",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "checkboxItem": {
+              "tailwind": "hover:bg-gray-100 dark:hover:bg-gray-700 focus:bg-gray-100 dark:focus:bg-gray-700 cursor-pointer",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "radioItem": {
+              "tailwind": "hover:bg-gray-100 dark:hover:bg-gray-700 focus:bg-gray-100 dark:focus:bg-gray-700 cursor-pointer",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "indicator": {
+              "tailwind": "text-current",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "subTrigger": {
+              "tailwind": "hover:bg-gray-100 dark:hover:bg-gray-700 focus:bg-gray-100 dark:focus:bg-gray-700 cursor-pointer",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "subContent": {
+              "tailwind": "bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 z-50",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "icon": {
+              "tailwind": "text-gray-500 dark:text-gray-400",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        }
+      }
+    },
+    "modal": {
+      "variants": {
+        "default": {
+          "tailwind": "bg-white dark:bg-gray-800 shadow-xl border border-gray-200 dark:border-gray-700",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default modal variant.",
+          "elements": {
+            "overlay": {
+              "tailwind": "bg-black/50 dark:bg-black/70",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "title": {
+              "tailwind": "text-gray-900 dark:text-gray-100",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "description": {
+              "tailwind": "text-gray-500 dark:text-gray-400",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "content": {
+              "tailwind": "text-gray-700 dark:text-gray-300",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "footer": {
+              "tailwind": "border-t border-gray-200 dark:border-gray-700",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "close": {
+              "tailwind": "text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-500 dark:hover:text-gray-400",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        },
+        "rounded": {
+          "tailwind": "bg-white dark:bg-gray-800 shadow-xl border border-gray-200 dark:border-gray-700 rounded-2xl",
+          "extends": "modal.default",
+          "color": null,
+          "text_color": null,
+          "description": "Modal with rounded corners"
+        },
+        "colorful": {
+          "tailwind": "bg-white dark:bg-gray-800 shadow-xl border border-blue-200 dark:border-gray-700 rounded-lg overflow-hidden",
+          "extends": "modal.default",
+          "color": null,
+          "text_color": null,
+          "description": "Modal with a colorful header section",
+          "elements": {
+            "title": {
+              "tailwind": "text-white font-bold px-6 py-4 bg-gradient-to-r from-primary to-purple-700",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "content": {
+              "tailwind": "text-gray-700 dark:text-gray-300 p-6",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "close": {
+              "tailwind": "text-white hover:bg-purple-800/50 absolute top-3 right-3 rounded-full p-1",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        },
+        "fancy": {
+          "tailwind": "bg-white dark:bg-gray-800 shadow-xl border-t-4 border-primary rounded-lg overflow-hidden",
+          "extends": "modal.default",
+          "color": null,
+          "text_color": null,
+          "description": "Modal with a primary color accent at the top"
+        }
+      }
+    },
+    "navigationmenu": {
+      "variants": {
+        "default": {
+          "tailwind": "relative z-10 flex justify-center",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default navigation menu variant.",
+          "elements": {
+            "list": {
+              "tailwind": "center m-0 flex list-none rounded-md p-1 shadow-sm bg-white dark:bg-gray-800",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "indicator": {
+              "tailwind": "top-full z-10 flex h-2.5 items-end justify-center overflow-hidden transition-[width,transform_250ms_ease]",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "indicatorArrow": {
+              "tailwind": "relative top-[70%] size-2.5 rotate-45 rounded-tl-sm bg-white dark:bg-gray-800",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "viewport": {
+              "tailwind": "relative mt-2.5 bg-white dark:bg-gray-800 shadow-lg rounded-md border border-gray-200 dark:border-gray-700",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "link": {
+              "tailwind": "block select-none rounded px-3 py-2 text-[15px] font-medium leading-none no-underline outline-none hover:bg-gray-100 dark:hover:bg-gray-700 focus:bg-gray-100 dark:focus:bg-gray-700",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "trigger": {
+              "tailwind": "group flex select-none items-center justify-between gap-0.5 rounded px-3 py-2 text-[15px] font-medium leading-none outline-none hover:bg-gray-100 dark:hover:bg-gray-700 focus:bg-gray-100 dark:focus:bg-gray-700",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "caret": {
+              "tailwind": "relative top-px transition-transform duration-[250] ease-in text-gray-500 dark:text-gray-400",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "content": {
+              "tailwind": "absolute left-0 top-0 w-full bg-white dark:bg-gray-800 rounded-md shadow-lg p-3 border border-gray-200 dark:border-gray-700",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "listItem": {
+              "tailwind": "block select-none rounded-md p-3 text-[15px] leading-none no-underline outline-none transition-colors hover:bg-gray-100 dark:hover:bg-gray-700",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "listItemTitle": {
+              "tailwind": "mb-[5px] font-medium leading-[1.2] text-gray-900 dark:text-white",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "listItemText": {
+              "tailwind": "leading-[1.4] text-gray-700 dark:text-gray-300 text-sm",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        }
+      }
+    },
+    "popover": {
+      "variants": {
+        "default": {
+          "tailwind": "",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default popover variant. Can be adapted for context menus.",
+          "elements": {
+            "trigger": {
+              "tailwind": "h-10 w-10 bg-white shadow-md hover:bg-gray-100 focus:shadow-[0_0_0_2px] focus:shadow-black",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "content": {
+              "tailwind": "bg-white shadow-[0_10px_38px_-10px_rgba(22,_23,_24,_0.35),_0_10px_20px_-15px_rgba(22,_23,_24,_0.2)] focus:shadow-[0_0_0_2px] focus:shadow-black",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "contentInner": {
+              "tailwind": "max-w-[300px]",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "title": {
+              "tailwind": "text-gray-900",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "close": {
+              "tailwind": "h-[25px] w-[25px] hover:bg-gray-200 focus:shadow-[0_0_0_2px] focus:shadow-black",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "closeIcon": {
+              "tailwind": "h-4 w-4 text-gray-500",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "arrow": {
+              "tailwind": "fill-white",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "label": {
+              "tailwind": "text-gray-700",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "input": {
+              "tailwind": "border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        }
+      }
+    }
+  }
+}
