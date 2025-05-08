@@ -9,6 +9,6 @@
     className="p-6 rounded-md shadow-sm"
     style={{ backgroundColor: pageStyles.cardBg }}
   >
-    <div className="space-y-8">{{ HOVER_CARD_VARIANTS }}</div>
+    <div className="space-y-8">{{ HOVERCARD_VARIANTS }}</div>
   </div>
 </div>

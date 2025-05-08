@@ -1,7 +1,7 @@
 <div className="mb-6">
   <h4 className="text-sm font-medium mb-2">{{ VARIANT_NAME_CAPITALIZED }}</h4>
   <div className="mb-2">
-    <AlertDialogComponent
+    <AlertdialogComponent
       variant="{{VARIANT_NAME}}"
       triggerText="Open {{VARIANT_NAME_CAPITALIZED}} Dialog"
       title="{{VARIANT_NAME_CAPITALIZED}} Alert Dialog"
@@ -11,3 +11,4 @@
   </div>
   <p className="text-sm text-gray-500">{{ DESCRIPTION }}</p>
 </div>
+

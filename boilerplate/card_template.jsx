@@ -1,7 +1,12 @@
 import React from 'react';
 import classNames from 'classnames';
 
-const Card = ({ children, variant = 'default', className = '', ...props }) => {
+const CardComponent = ({
+  children,
+  variant = 'default',
+  className = '',
+  ...props
+}) => {
   /* INJECT_VARIANT_STYLING_LOGIC */
 
   return (
@@ -14,4 +19,4 @@ const Card = ({ children, variant = 'default', className = '', ...props }) => {
   );
 };
 
-export default Card;
+export default CardComponent;

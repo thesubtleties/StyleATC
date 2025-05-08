@@ -70,7 +70,7 @@ export default function StyleGuide() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: pageStyles.background, color: pageStyles.text }}>
       {/* Header Example */}
-      <Header
+      <HeaderComponent
         title="StyleATC"
         navItems={[
           { label: 'Colors', href: '#colors' },

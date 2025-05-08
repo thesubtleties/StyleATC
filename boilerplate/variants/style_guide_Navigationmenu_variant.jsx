@@ -1,7 +1,7 @@
 <div className="mb-6">
   <h4 className="text-sm font-medium mb-2">{{ VARIANT_NAME_CAPITALIZED }}</h4>
   <div className="mb-4 py-6 bg-gray-50 rounded-md flex justify-center">
-    <NavigationMenuComponent
+    <NavigationmenuComponent
       variant="{{VARIANT_NAME}}"
       items={[
         {
@@ -25,15 +25,15 @@
                 </NavigationMenu.Link>
               </li>
 
-              <NavigationMenuComponent.ListItem href="/" title="Documentation">
+              <NavigationmenuComponent.ListItem href="/" title="Documentation">
                 Comprehensive guides and API references.
-              </NavigationMenuComponent.ListItem>
-              <NavigationMenuComponent.ListItem href="/" title="Components">
+              </NavigationmenuComponent.ListItem>
+              <NavigationmenuComponent.ListItem href="/" title="Components">
                 UI building blocks for your application.
-              </NavigationMenuComponent.ListItem>
-              <NavigationMenuComponent.ListItem href="/" title="Templates">
+              </NavigationmenuComponent.ListItem>
+              <NavigationmenuComponent.ListItem href="/" title="Templates">
                 Pre-built layouts for common use cases.
-              </NavigationMenuComponent.ListItem>
+              </NavigationmenuComponent.ListItem>
             </ul>
           ),
         },
@@ -42,21 +42,21 @@
           label: 'Resources',
           content: (
             <ul className="m-0 grid list-none gap-x-2.5 p-[22px] sm:w-[600px] sm:grid-flow-col sm:grid-rows-2">
-              <NavigationMenuComponent.ListItem
+              <NavigationmenuComponent.ListItem
                 title="Getting Started"
                 href="/"
               >
                 Quick start guide for new users.
-              </NavigationMenuComponent.ListItem>
-              <NavigationMenuComponent.ListItem title="Tutorials" href="/">
+              </NavigationmenuComponent.ListItem>
+              <NavigationmenuComponent.ListItem title="Tutorials" href="/">
                 Step-by-step guides for common tasks.
-              </NavigationMenuComponent.ListItem>
-              <NavigationMenuComponent.ListItem title="Blog" href="/">
+              </NavigationmenuComponent.ListItem>
+              <NavigationmenuComponent.ListItem title="Blog" href="/">
                 Latest news and updates from our team.
-              </NavigationMenuComponent.ListItem>
-              <NavigationMenuComponent.ListItem title="Community" href="/">
+              </NavigationmenuComponent.ListItem>
+              <NavigationmenuComponent.ListItem title="Community" href="/">
                 Join our community of developers.
-              </NavigationMenuComponent.ListItem>
+              </NavigationmenuComponent.ListItem>
             </ul>
           ),
         },

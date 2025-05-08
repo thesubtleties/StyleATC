@@ -1,7 +1,8 @@
+
 <div className="mb-6">
   <h4 className="text-sm font-medium mb-2">{{ VARIANT_NAME_CAPITALIZED }}</h4>
   <div className="mb-2">
-    <ContentSection
+    <ContentSectionComponent
       variant="{{VARIANT_NAME}}"
       title="Example Section Title"
       subtitle="This is a subtitle that provides additional context for the section"
@@ -24,7 +25,7 @@
         <li>Another important point</li>
         <li>Final consideration</li>
       </ul>
-    </ContentSection>
+    </ContentSectionComponent>
   </div>
   <p className="text-sm text-gray-500">{{ DESCRIPTION }}</p>
 </div>

@@ -9,19 +9,7 @@ const SeparatorComponent = ({
   className = '',
   ...props
 }) => {
-  
-/* --- Injected Variant Styling Logic --- */
-const allVariantStyles = JSON.parse('{"default":{"root":"bg-border shrink-0","elements":{"text":"text-sm text-muted-foreground"},"description":"Default separator variant."}}');
-const getStyle = (elementName) => {
-  const variantStyles = allVariantStyles[variant] || allVariantStyles['default'] || { root: '', elements: {} };
-  if (elementName === 'root') {
-    return variantStyles.root || '';
-  }
-  const elementStyles = variantStyles.elements || {};
-  return elementStyles[elementName] || '';
-};
-/* --- End Injected Logic --- */
-
+  /* INJECT_VARIANT_STYLING_LOGIC */
 
   return (
     <Separator.Root
@@ -38,24 +26,12 @@ const getStyle = (elementName) => {
 };
 
 // Demo wrapper component to show different use cases
-const SeparatorDemo = ({
+const SeparatordemoComponent = ({
   variant = 'default',
   showVertical = true,
   className = '',
 }) => {
-  
-/* --- Injected Variant Styling Logic --- */
-const allVariantStyles = JSON.parse('{"default":{"root":"bg-border shrink-0","elements":{"text":"text-sm text-muted-foreground"},"description":"Default separator variant."}}');
-const getStyle = (elementName) => {
-  const variantStyles = allVariantStyles[variant] || allVariantStyles['default'] || { root: '', elements: {} };
-  if (elementName === 'root') {
-    return variantStyles.root || '';
-  }
-  const elementStyles = variantStyles.elements || {};
-  return elementStyles[elementName] || '';
-};
-/* --- End Injected Logic --- */
-
+  /* INJECT_VARIANT_STYLING_LOGIC */
 
   return (
     <div className={classNames('w-full max-w-[300px] mx-auto', className)}>
@@ -91,4 +67,4 @@ const getStyle = (elementName) => {
   );
 };
 
-export default SeparatorDemo;
+export default SeparatordemoComponent;

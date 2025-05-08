@@ -1,7 +1,7 @@
 <div className="mb-6">
   <h4 className="text-sm font-medium mb-2">{{ VARIANT_NAME_CAPITALIZED }}</h4>
   <div className="mb-2">
-    <RadioGroupComponent
+    <RadiogroupComponent
       variant="{{VARIANT_NAME}}"
       options={[
         { value: 'option1', label: 'Option 1' },

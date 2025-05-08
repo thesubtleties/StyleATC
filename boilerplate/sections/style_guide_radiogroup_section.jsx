@@ -9,6 +9,6 @@
     className="p-6 rounded-md shadow-sm"
     style={{ backgroundColor: pageStyles.cardBg }}
   >
-    <div className="space-y-8">{{ RADIO_GROUP_VARIANTS }}</div>
+    <div className="space-y-8">{{ RADIOGROUP_VARIANTS }}</div>
   </div>
 </div>

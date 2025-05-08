@@ -9,6 +9,6 @@
     className="p-6 rounded-md shadow-sm"
     style={{ backgroundColor: pageStyles.cardBg }}
   >
-    <div className="space-y-8">{{ DROPDOWN_MENU_VARIANTS }}</div>
+    <div className="space-y-8">{{ DROPDOWNMENUDEMO_VARIANTS }}</div>
   </div>
 </div>

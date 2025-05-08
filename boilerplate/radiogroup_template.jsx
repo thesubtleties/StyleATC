@@ -2,7 +2,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 import { RadioGroup } from 'radix-ui';
 
-const RadioGroupComponent = ({
+const RadiogroupComponent = ({
   options = [],
   defaultValue = options[0]?.value || '',
   variant = 'default',
@@ -63,4 +63,4 @@ const RadioGroupComponent = ({
   );
 };
 
-export default RadioGroupComponent;
+export default RadiogroupComponent;

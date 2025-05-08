@@ -7,127 +7,94 @@
   Run "astro telemetry disable" to opt-out.
   https://astro.build/telemetry
 
-01:50:34 [types] Generated 1ms
-01:50:34 [content] Syncing content
-01:50:34 [content] Synced content
+23:13:23 [types] Generated 0ms
+23:13:23 [content] Syncing content
+23:13:23 [content] Synced content
 
- astro  v5.7.5 ready in 313 ms
+ astro  v5.7.5 ready in 281 ms
 
 ┃ Local    http://localhost:3000/
 ┃ Network  http://172.17.0.2:3000/
 
-01:50:34 watching for file changes...
-01:50:35 [WARN] [vite] warning: The character "}" is not valid inside a JSX element
-1097|  
-1098|    Assumes `pageStyles` (or similar for colors) is available in scope.
-1099|  */}
+23:13:23 watching for file changes...
+23:13:26 [WARN] [vite] warning: The character "}" is not valid inside a JSX element
+1298|  
+1299|    Assumes `pageStyles` (or similar for colors) is available in scope.
+1300|  */}
    |    ^
-1100|  <div className="mb-12">
-1101|    <h3 className="text-xl font-bold mb-4 border-b pb-2" style={{ color: pageStyles.sectionHeadingColor /* Example */ }}>
+1301|  <div className="mb-12">
+1302|    <h3 className="text-xl font-bold mb-4 border-b pb-2" style={{ color: pageStyles.sectionHeadingColor /* Example */ }}>
 
   Plugin: vite:esbuild
   File: /app/preview/src/output/StyleGuide.jsx
-01:52:42 [WARN] [vite] warning: The character "}" is not valid inside a JSX element
-1162|  
-1163|    Assumes `pageStyles` (or similar for colors) is available in scope.
-1164|  */}
-   |    ^
-1165|  <div className="mb-12">
-1166|    <h3 className="text-xl font-bold mb-4 border-b pb-2" style={{ color: pageStyles.sectionHeadingColor /* Example */ }}>
-
-  Plugin: vite:esbuild
-  File: /app/preview/src/output/StyleGuide.jsx
-01:52:42 [200] / 50ms
-01:54:29 [watch] src/output/StyleGuide.jsx
-01:54:29 [watch] src/output/StyleGuide.jsx
-01:54:29 [watch] src/output/components/Contextmenu.jsx
-01:54:29 [watch] src/output/components/Contextmenu.jsx
-01:54:29 [watch] src/output/components/Toast.jsx
-01:54:29 [watch] src/output/components/Toast.jsx
-01:54:29 [watch] src/output/components/Dialog.jsx
-01:54:29 [watch] src/output/components/Dialog.jsx
-01:54:29 [watch] src/output/components/Tabs.jsx
-01:54:29 [watch] src/output/components/Tabs.jsx
-01:54:29 [watch] src/output/components/Formfield.jsx
-01:54:29 [watch] src/output/components/Formfield.jsx
-01:54:29 [watch] src/output/components/Progress.jsx
-01:54:29 [watch] src/output/components/Progress.jsx
-01:54:29 [watch] src/output/components/Togglegroup.jsx
-01:54:29 [watch] src/output/components/Togglegroup.jsx
-01:54:29 [watch] src/output/components/Toggle.jsx
-01:54:29 [watch] src/output/components/Toggle.jsx
-01:54:29 [watch] src/output/components/Alertdialog.jsx
-01:54:29 [watch] src/output/components/Alertdialog.jsx
-01:54:29 [watch] src/output/components/Menubar.jsx
-01:54:29 [watch] src/output/components/Menubar.jsx
-01:54:29 [watch] src/output/components/ProfileCard.jsx
-01:54:29 [watch] src/output/components/ProfileCard.jsx
-01:54:29 [watch] src/output/components/Switch.jsx
-01:54:29 [watch] src/output/components/Switch.jsx
-01:54:29 [watch] src/output/components/Select.jsx
-01:54:29 [watch] src/output/components/Select.jsx
-01:54:29 [watch] src/output/components/Card.jsx
-01:54:29 [watch] src/output/components/Card.jsx
-01:54:29 [watch] src/output/components/Label.jsx
-01:54:29 [watch] src/output/components/Label.jsx
-01:54:29 [watch] src/output/components/Dropdown.jsx
-01:54:29 [watch] src/output/components/Dropdown.jsx
-01:54:29 [watch] src/output/components/Form.jsx
-01:54:29 [watch] src/output/components/Form.jsx
-01:54:29 [watch] src/output/components/Header.jsx
-01:54:29 [watch] src/output/components/Header.jsx
-01:54:29 [watch] src/output/components/ContentSection.jsx
-01:54:29 [watch] src/output/components/ContentSection.jsx
-01:54:29 [watch] src/output/components/Slider.jsx
-01:54:29 [watch] src/output/components/Slider.jsx
-01:54:29 [watch] src/output/components/Popover.jsx
-01:54:29 [watch] src/output/components/Popover.jsx
-01:54:29 [watch] src/output/components/Contentsection.jsx
-01:54:29 [watch] src/output/components/Contentsection.jsx
-01:54:29 [watch] src/output/components/Tooltip.jsx
-01:54:29 [watch] src/output/components/Tooltip.jsx
-01:54:29 [watch] src/output/components/Toolbar.jsx
-01:54:29 [watch] src/output/components/Toolbar.jsx
-01:54:29 [watch] src/output/components/Navigationmenu.jsx
-01:54:29 [watch] src/output/components/Navigationmenu.jsx
-01:54:29 [watch] src/output/components/Separator.jsx
-01:54:29 [watch] src/output/components/Separator.jsx
-01:54:29 [watch] src/output/components/Checkbox.jsx
-01:54:29 [watch] src/output/components/Checkbox.jsx
-01:54:29 [watch] src/output/components/Modal.jsx
-01:54:29 [watch] src/output/components/Modal.jsx
-01:54:29 [watch] src/output/components/Hovercard.jsx
-01:54:29 [watch] src/output/components/Hovercard.jsx
-01:54:29 [watch] src/output/components/Dropdownmenu.jsx
-01:54:29 [watch] src/output/components/Dropdownmenu.jsx
-01:54:29 [watch] src/output/components/Onetimepassword.jsx
-01:54:29 [watch] src/output/components/Onetimepassword.jsx
-01:54:29 [watch] src/output/components/Dropdownmenudemo.jsx
-01:54:29 [watch] src/output/components/Dropdownmenudemo.jsx
-01:54:29 [watch] src/output/components/Radiogroup.jsx
-01:54:29 [watch] src/output/components/Radiogroup.jsx
-01:54:29 [watch] src/output/components/Button.jsx
-01:54:29 [watch] src/output/components/Button.jsx
-01:54:29 [watch] src/output/components/Accordion.jsx
-01:54:29 [watch] src/output/components/Accordion.jsx
-01:54:29 [watch] src/output/components/Scrollarea.jsx
-01:54:29 [watch] src/output/components/Scrollarea.jsx
-01:54:29 [watch] src/output/components/Profilecard.jsx
-01:54:29 [watch] src/output/components/Profilecard.jsx
-01:54:29 [watch] src/output/components/Collapsible.jsx
-01:54:29 [watch] src/output/components/Collapsible.jsx
-01:54:29 [watch] src/output/components/SwitchComponent.jsx
-01:54:29 [watch] src/output/components/SwitchComponent.jsx
-01:54:29 [watch] src/output/style_summary.md
-01:54:29 [watch] src/output/style_summary.md
-01:54:29 [WARN] [vite] warning: The character "}" is not valid inside a JSX element
-1162|  
-1163|    Assumes `pageStyles` (or similar for colors) is available in scope.
-1164|  */}
-   |    ^
-1165|  <div className="mb-12">
-1166|    <h3 className="text-xl font-bold mb-4 border-b pb-2" style={{ color: pageStyles.sectionHeadingColor /* Example */ }}>
-
-  Plugin: vite:esbuild
-  File: /app/preview/src/output/StyleGuide.jsx
-01:54:30 [200] / 18ms
+23:13:27 [200] / 50ms
+23:19:08 [watch] src/output/StyleGuide.jsx
+23:19:08 [watch] src/output/StyleGuide.jsx
+23:19:55 [watch] src/output/components/AccordionComponent.jsx
+23:19:55 [watch] src/output/components/AccordionComponent.jsx
+23:19:55 [watch] src/output/components/AlertdialogComponent.jsx
+23:19:55 [watch] src/output/components/AlertdialogComponent.jsx
+23:19:55 [watch] src/output/components/ButtonComponent.jsx
+23:19:55 [watch] src/output/components/ButtonComponent.jsx
+23:19:55 [watch] src/output/components/CardComponent.jsx
+23:19:55 [watch] src/output/components/CardComponent.jsx
+23:19:55 [watch] src/output/components/CheckboxComponent.jsx
+23:19:55 [watch] src/output/components/CheckboxComponent.jsx
+23:19:55 [watch] src/output/components/CollapsibleComponent.jsx
+23:19:55 [watch] src/output/components/CollapsibleComponent.jsx
+23:19:55 [watch] src/output/components/ContentsectionComponent.jsx
+23:19:55 [watch] src/output/components/ContentsectionComponent.jsx
+23:19:55 [watch] src/output/components/ContextmenuComponent.jsx
+23:19:55 [watch] src/output/components/ContextmenuComponent.jsx
+23:19:55 [watch] src/output/components/DialogComponent.jsx
+23:19:55 [watch] src/output/components/DialogComponent.jsx
+23:19:55 [watch] src/output/components/DropdownmenudemoComponent.jsx
+23:19:55 [watch] src/output/components/DropdownmenudemoComponent.jsx
+23:19:55 [watch] src/output/components/FormComponent.jsx
+23:19:55 [watch] src/output/components/FormComponent.jsx
+23:19:55 [watch] src/output/components/FormfieldComponent.jsx
+23:19:55 [watch] src/output/components/FormfieldComponent.jsx
+23:19:55 [watch] src/output/components/HeaderComponent.jsx
+23:19:55 [watch] src/output/components/HeaderComponent.jsx
+23:19:55 [watch] src/output/components/HovercardComponent.jsx
+23:19:55 [watch] src/output/components/HovercardComponent.jsx
+23:19:55 [watch] src/output/components/LabelComponent.jsx
+23:19:55 [watch] src/output/components/LabelComponent.jsx
+23:19:55 [watch] src/output/components/MenubarComponent.jsx
+23:19:55 [watch] src/output/components/MenubarComponent.jsx
+23:19:55 [watch] src/output/components/ModalComponent.jsx
+23:19:55 [watch] src/output/components/ModalComponent.jsx
+23:19:55 [watch] src/output/components/NavigationmenuComponent.jsx
+23:19:55 [watch] src/output/components/NavigationmenuComponent.jsx
+23:19:55 [watch] src/output/components/OnetimepasswordComponent.jsx
+23:19:55 [watch] src/output/components/OnetimepasswordComponent.jsx
+23:19:55 [watch] src/output/components/PopoverComponent.jsx
+23:19:55 [watch] src/output/components/PopoverComponent.jsx
+23:19:55 [watch] src/output/components/ProfilecardComponent.jsx
+23:19:55 [watch] src/output/components/ProfilecardComponent.jsx
+23:19:55 [watch] src/output/components/ProgressComponent.jsx
+23:19:55 [watch] src/output/components/ProgressComponent.jsx
+23:19:55 [watch] src/output/components/RadiogroupComponent.jsx
+23:19:55 [watch] src/output/components/RadiogroupComponent.jsx
+23:19:55 [watch] src/output/components/ScrollareaComponent.jsx
+23:19:55 [watch] src/output/components/ScrollareaComponent.jsx
+23:19:55 [watch] src/output/components/SelectComponent.jsx
+23:19:55 [watch] src/output/components/SelectComponent.jsx
+23:19:56 [watch] src/output/components/SeparatordemoComponent.jsx
+23:19:56 [watch] src/output/components/SeparatordemoComponent.jsx
+23:19:56 [watch] src/output/components/SliderComponent.jsx
+23:19:56 [watch] src/output/components/SliderComponent.jsx
+23:19:56 [watch] src/output/components/SwitchComponent.jsx
+23:19:56 [watch] src/output/components/SwitchComponent.jsx
+23:19:56 [watch] src/output/components/TabsComponent.jsx
+23:19:56 [watch] src/output/components/TabsComponent.jsx
+23:19:56 [watch] src/output/components/ToastComponent.jsx
+23:19:56 [watch] src/output/components/ToastComponent.jsx
+23:19:56 [watch] src/output/components/ToggleComponent.jsx
+23:19:56 [watch] src/output/components/ToggleComponent.jsx
+23:19:56 [watch] src/output/components/TogglegroupComponent.jsx
+23:19:56 [watch] src/output/components/TogglegroupComponent.jsx
+23:19:56 [watch] src/output/components/ToolbarComponent.jsx
+23:19:56 [watch] src/output/components/ToolbarComponent.jsx
+23:19:56 [watch] src/output/components/TooltipComponent.jsx
+23:19:56 [watch] src/output/components/TooltipComponent.jsx

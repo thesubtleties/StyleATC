@@ -27,21 +27,21 @@
                 Make changes to your account here. Click save when you're done.
               </p>
               {/* --- Use the actual FormField component --- */}
-              <FormField
+              <FormfieldComponent
                 label="Name"
                 id="name-{{VARIANT_NAME}}" // Unique ID
                 defaultValue="Ada Lovelace"
                 className="mb-4" // Add spacing if needed
               />
               {/* --- Use the actual FormField component --- */}
-              <FormField
+              <FormfieldComponent
                 label="Username"
                 id="username-{{VARIANT_NAME}}" // Unique ID
                 defaultValue="@ada"
               />
               <div className="mt-6 flex justify-end border-t pt-4">
                 {/* --- Use the actual Button component --- */}
-                <Button variant="primary">Save changes</Button> {/* Example: Use button variant */}
+                <ButtonComponent variant="primary">Save changes</ButtonComponent> {/* Example: Use button variant */}
               </div>
             </>
           ),
@@ -55,28 +55,28 @@
                 Change your password here. After saving, you'll be logged out.
               </p>
               {/* --- Use the actual FormField component --- */}
-              <FormField
+              <FormfieldComponent
                 label="Current password"
                 id="current-password-{{VARIANT_NAME}}" // Unique ID
                 type="password"
                 className="mb-4"
               />
               {/* --- Use the actual FormField component --- */}
-              <FormField
+              <FormfieldComponent
                 label="New password"
                 id="new-password-{{VARIANT_NAME}}" // Unique ID
                 type="password"
                 className="mb-4"
               />
               {/* --- Use the actual FormField component --- */}
-              <FormField
+              <FormfieldComponent
                 label="Confirm password"
                 id="confirm-password-{{VARIANT_NAME}}" // Unique ID
                 type="password"
               />
               <div className="mt-6 flex justify-end border-t pt-4">
                  {/* --- Use the actual Button component --- */}
-                <Button variant="primary">Change password</Button>
+                <ButtonComponent variant="primary">Change password</ButtonComponent>
               </div>
             </>
           ),

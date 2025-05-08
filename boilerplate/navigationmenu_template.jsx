@@ -3,7 +3,7 @@ import { NavigationMenu } from 'radix-ui';
 import classNames from 'classnames';
 import { CaretDownIcon } from '@radix-ui/react-icons';
 
-const NavigationMenuComponent = ({
+const NavigationmenuComponent = ({
   variant = 'default',
   className = '',
   items = [],
@@ -137,6 +137,6 @@ const ListItem = React.forwardRef(
 );
 
 // Export both the main component and the ListItem for use in examples
-NavigationMenuComponent.ListItem = ListItem;
+NavigationmenuComponent.ListItem = ListItem;
 
-export default NavigationMenuComponent;
+export default NavigationmenuComponent;

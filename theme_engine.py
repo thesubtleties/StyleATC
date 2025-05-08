@@ -114,14 +114,8 @@ class ThemeEngine:
     def _make_js_safe_identifier(self, name: str) -> str:
         """Converts a name to PascalCase and makes it JS keyword-safe."""
         pascal_name = self._to_pascal_case(name)
-        # Check against lowercase version as well, as some linters/tools might be sensitive
-        # Also, ensure the original check for pascal_name itself being a keyword is there.
-        if (
-            pascal_name.lower() in JS_RESERVED_KEYWORDS
-            or pascal_name in JS_RESERVED_KEYWORDS
-        ):
-            return pascal_name + "Component"  # common convention
-        return pascal_name
+
+        return pascal_name + "Component"
 
     def _load_theme(self):
         """Load the theme configuration from disk"""
@@ -452,6 +446,52 @@ class ThemeEngine:
         return {
             "success": True,
             "message": f"Updated global.colors.{color_name} to '{color_value}'{save_message}",
+        }
+
+    def delete_global_color(
+        self, color_name: str, auto_save: bool = False
+    ) -> Dict[str, Any]:
+        """Delete a global color value"""
+        if (
+            not self._theme
+            or not self._theme.global_values
+            or not self._theme.global_values.colors
+        ):
+            return {"error": "Global values or colors not initialized"}
+
+        parts = color_name.split(".")
+        target_dict = self._theme.global_values.colors
+        prop_name = parts[-1]
+
+        try:
+            # Traverse dictionary for nested paths
+            for i, part in enumerate(parts[:-1]):
+                if part not in target_dict or not isinstance(
+                    target_dict[part], dict
+                ):
+                    return {"error": f"Color '{color_name}' does not exist."}
+                target_dict = target_dict[part]
+
+            # Delete the final value
+            if prop_name in target_dict:
+                del target_dict[prop_name]
+            else:
+                return {"error": f"Color '{color_name}' does not exist."}
+        except Exception as e:
+            return {
+                "error": f"Failed to delete global color '{color_name}': {e}"
+            }
+
+        self._has_unsaved_changes = True
+        if auto_save:
+            self._save_theme()
+            save_message = " and saved to disk"
+        else:
+            save_message = " (not yet saved to disk)"
+
+        return {
+            "success": True,
+            "message": f"Deleted global.colors.{color_name}{save_message}",
         }
 
     def create_component_variant(

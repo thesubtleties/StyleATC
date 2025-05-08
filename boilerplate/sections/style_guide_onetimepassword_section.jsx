@@ -9,6 +9,6 @@
     className="p-6 rounded-md shadow-sm"
     style={{ backgroundColor: pageStyles.cardBg }}
   >
-    <div className="space-y-8">{{ OTP_FIELD_VARIANTS }}</div>
+    <div className="space-y-8">{{ ONETIMEPASSWORD_VARIANTS }}</div>
   </div>
 </div>

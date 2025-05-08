@@ -2,7 +2,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 import { ToggleGroup } from 'radix-ui';
 
-const ToggleGroupComponent = ({
+const TogglegroupComponent = ({
   items = [],
   type = 'single',
   defaultValue,
@@ -46,4 +46,4 @@ const ToggleGroupComponent = ({
   );
 };
 
-export default ToggleGroupComponent;
+export default TogglegroupComponent;

@@ -1,3 +1,4 @@
+
 {/*
   Style Guide Variant for FormField Component
 
@@ -13,14 +14,14 @@
   <div className="space-y-4"> {/* Add spacing between examples */}
 
     {/* Example 1: Basic Text Input */}
-    <FormField
+    <FormfieldComponent
       label="Your Name"
       id="example-name-{{VARIANT_NAME}}"
       placeholder="e.g., Jane Doe"
     />
 
     {/* Example 2: Password Input */}
-    <FormField
+    <FormfieldComponent
       label="Password"
       id="example-password-{{VARIANT_NAME}}"
       type="password"
@@ -28,7 +29,7 @@
     />
 
      {/* Example 3: Input with Default Value */}
-    <FormField
+    <FormfieldComponent
       label="Email Address"
       id="example-email-{{VARIANT_NAME}}"
       type="email"

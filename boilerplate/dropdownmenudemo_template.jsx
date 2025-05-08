@@ -8,7 +8,7 @@ import {
   ChevronRightIcon,
 } from '@radix-ui/react-icons';
 
-const DropdownMenuDemo = ({
+const DropdownmenudemoComponent = ({
   variant = 'default',
   className = '',
   ...props
@@ -279,4 +279,4 @@ const DropdownMenuDemo = ({
   );
 };
 
-export default DropdownMenuDemo;
+export default DropdownmenudemoComponent;

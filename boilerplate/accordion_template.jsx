@@ -1,6 +1,6 @@
 import * as React from 'react';
 import classNames from 'classnames';
-import * as AccordionPrimitive from '@radix-ui/react-accordion';
+import { Accordion as AccordionPrimitive } from 'radix-ui';
 import { ChevronDownIcon } from '@radix-ui/react-icons';
 
 // Main component that accepts variant prop

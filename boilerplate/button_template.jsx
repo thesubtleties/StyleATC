@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-const Button = React.forwardRef(
+const ButtonComponent = React.forwardRef(
   (
     { children, variant = 'default', size = 'md', className = '', ...props },
     forwardedRef
@@ -34,6 +34,6 @@ const Button = React.forwardRef(
   }
 );
 
-Button.displayName = 'Button';
+ButtonComponent.displayName = 'Button';
 
-export default Button;
+export default ButtonComponent;

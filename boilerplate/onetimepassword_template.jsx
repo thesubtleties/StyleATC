@@ -2,7 +2,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 import { unstable_OneTimePasswordField as OneTimePasswordField } from 'radix-ui';
 
-const OTPFieldComponent = ({
+const OnetimepasswordComponent = ({
   length = 6,
   variant = 'default',
   className = '',
@@ -33,4 +33,4 @@ const OTPFieldComponent = ({
   );
 };
 
-export default OTPFieldComponent;
+export default OnetimepasswordComponent;

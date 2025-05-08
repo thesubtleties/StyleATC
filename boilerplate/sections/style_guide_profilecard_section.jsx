@@ -9,6 +9,6 @@
     className="p-6 rounded-md shadow-sm"
     style={{ backgroundColor: pageStyles.cardBg }}
   >
-    <div className="space-y-8">{{ PROFILE_CARD_VARIANTS }}</div>
+    <div className="space-y-8">{{ PROFILECARD_VARIANTS }}</div>
   </div>
 </div>

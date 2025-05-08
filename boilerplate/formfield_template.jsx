@@ -14,7 +14,7 @@ import classNames from 'classnames';
  * The 'variant' prop is optional here unless you define specific FormField variants.
  * If variants exist, the generator would use it for style lookup.
  */
-const FormField = ({
+const FormfieldComponent = ({
   label,
   id,
   type = 'text',
@@ -61,4 +61,4 @@ const FormField = ({
 };
 
 // Export as default
-export default FormField;
+export default FormfieldComponent;

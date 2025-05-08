@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
-import Card from './Card';
+import { CardComponent as Card } from './CardComponent';
 
-const ProfileCard = ({
+const ProfilecardComponent = ({
   name,
   title,
   avatarUrl,
@@ -101,4 +101,4 @@ const ProfileCard = ({
   );
 };
 
-export default ProfileCard;
+export default ProfilecardComponent;

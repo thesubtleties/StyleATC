@@ -9,6 +9,6 @@
     className="p-6 rounded-md shadow-sm"
     style={{ backgroundColor: pageStyles.cardBg }}
   >
-    <div className="space-y-8">{{ SEPARATOR_VARIANTS }}</div>
+    <div className="space-y-8">{{ SEPARATORDEMO_VARIANTS }}</div>
   </div>
 </div>

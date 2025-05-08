@@ -69,12 +69,8 @@ class StyleGuideGenerator:
     def _make_js_safe_identifier(self, name: str) -> str:
         """Converts a name to PascalCase and makes it JS keyword-safe."""
         pascal_name = self._to_pascal_case(name)
-        if (
-            pascal_name.lower() in JS_RESERVED_KEYWORDS
-            or pascal_name in JS_RESERVED_KEYWORDS
-        ):
-            return pascal_name + "Component"
-        return pascal_name
+
+        return pascal_name + "Component"
 
     def _discover_components(self):
         """

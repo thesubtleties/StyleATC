@@ -2,7 +2,7 @@ import * as React from 'react';
 import { ScrollArea } from 'radix-ui';
 import classNames from 'classnames';
 
-const ScrollAreaComponent = ({
+const ScrollareaComponent = ({
   items = [],
   variant = 'default',
   className = '',
@@ -81,4 +81,4 @@ const ScrollAreaComponent = ({
   );
 };
 
-export default ScrollAreaComponent;
+export default ScrollareaComponent;

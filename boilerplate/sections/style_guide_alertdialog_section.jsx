@@ -9,6 +9,6 @@
     className="p-6 rounded-md shadow-sm"
     style={{ backgroundColor: pageStyles.cardBg }}
   >
-    <div className="space-y-8">{{ ALERT_DIALOG_VARIANTS }}</div>
+    <div className="space-y-8">{{ ALERTDIALOG_VARIANTS }}</div>
   </div>
 </div>

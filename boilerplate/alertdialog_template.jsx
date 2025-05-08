@@ -2,7 +2,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 import { AlertDialog } from 'radix-ui';
 
-const AlertDialogComponent = ({
+const AlertdialogComponent = ({
   variant = 'default',
   className = '',
   triggerText = 'Delete account',
@@ -87,4 +87,4 @@ const AlertDialogComponent = ({
   );
 };
 
-export default AlertDialogComponent;
+export default AlertdialogComponent;

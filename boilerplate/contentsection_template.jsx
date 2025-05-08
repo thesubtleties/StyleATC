@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-const ContentSection = ({
+const ContentSectionComponent = ({
   title,
   subtitle,
   children,
@@ -65,4 +65,4 @@ const ContentSection = ({
   );
 };
 
-export default ContentSection;
+export default ContentSectionComponent;
