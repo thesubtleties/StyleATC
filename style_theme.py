@@ -281,13 +281,14 @@ def stop_preview_server() -> str:
     return tool_stop_preview_server()
 
 
-@style_theme.tool()
-def view_theme() -> str:
-    """View the current theme configuration"""
-    # Import here to avoid circular imports
-    from theme_tools import resource_view_theme
+# unsure we want to allow returning the whole theme as it is large
+# @style_theme.tool()
+# def view_theme() -> str:
+#     """View the current theme configuration"""
+#     # Import here to avoid circular imports
+#     from theme_tools import resource_view_theme
 
-    return resource_view_theme()
+#     return resource_view_theme()
 
 
 @style_theme.tool()

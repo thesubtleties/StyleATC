@@ -13,7 +13,7 @@ const HeaderComponent = ({
 }) => {
   
 /* --- Injected Variant Styling Logic --- */
-const allVariantStyles = JSON.parse('{"default":{"root":"bg-white shadow","elements":{"logoContainer":"flex-1","logo":"flex items-center","nav":"items-center","navItem":"text-gray-600 hover:text-gray-900 hover:border-b-2 hover:border-primary transition-colors duration-200","actionsContainer":"ml-4","primaryAction":"bg-primary text-white hover:bg-primary/90 transition-colors shadow-md rounded-md","secondaryAction":"bg-transparent text-gray-700 hover:bg-gray-100 border border-gray-300 transition-colors"},"description":"Default header variant."}}');
+const allVariantStyles = JSON.parse('{"default":{"root":"bg-white shadow","elements":{"logoContainer":"flex-1","logo":"flex items-center","nav":"items-center","navItem":"text-gray-600 hover:text-gray-900 hover:border-b-2 hover:border-primary transition-colors duration-200","actionsContainer":"ml-4","primaryAction":"bg-primary text-white hover:bg-primary/90 transition-colors shadow-md rounded-md","secondaryAction":"bg-transparent text-gray-700 hover:bg-gray-100 border border-gray-300 transition-colors"},"description":"Default header variant."},"ocean-header":{"root":"bg-white shadow bg-gradient-to-r from-primary/10 to-white shadow-sm","elements":{},"description":"A header with a subtle gradient from our primary color to white"}}');
 const getStyle = (elementName) => {
   const variantStyles = allVariantStyles[variant] || allVariantStyles['default'] || { root: '', elements: {} };
   if (elementName === 'root') {

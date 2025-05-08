@@ -43,8 +43,8 @@ export default function StyleGuide() {
   
   // Style tokens from the theme system
   const colors = {
-    primary: '#6d28d9',
-    secondary: '#22d3ee',
+    primary: '#0891b2',
+    secondary: '#0ea5e9',
     success: '#16a34a',
     warning: '#f59e0b',
     error: '#ef4444',
@@ -55,13 +55,13 @@ export default function StyleGuide() {
       muted: '#9ca3af',
     },
     background: '#f9fafb',
-    headerBg: '#6d28d9',
+    headerBg: '#0891b2',
     headerText: '#ffffff',
-    footerBg: '#6d28d9',
+    footerBg: '#0891b2',
     footerText: '#ffffff',
     cardBg: '#ffffff',
     muted: '#9ca3af',
-    sectionHeadingColor: '#6d28d9',
+    sectionHeadingColor: '#0891b2',
   };
   
   const spacing = {
@@ -108,14 +108,14 @@ export default function StyleGuide() {
     sectionHeadingColor: colors.primary || '#3b82f6',
   };
 
-  // Use useEffect to set window.pageStyles only after component mounts (client-side)
+  // useEffect to set window.pageStyles only after component mounts (client-side)
   useEffect(() => {
     setIsBrowser(true);
     // Now it's safe to use window
     window.pageStyles = pageStyles;
   }, []);
 
-  // Safe function for window operations
+  // function for window operations
   const openLink = (url) => {
     if (isBrowser) {
       window.open(url, '_blank');
@@ -623,6 +623,101 @@ export default function StyleGuide() {
   </div>
   <p className="text-sm text-gray-500">A modern button with gradient background, rounded corners, and subtle shadow effects</p>
 </div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Indigo-gradient</h4>
+  <div className="flex flex-wrap gap-4 mb-2">
+    <Button variant="indigo-gradient" size="sm">
+      Small
+    </Button>
+    <Button variant="indigo-gradient" size="md">
+      Medium
+    </Button>
+    <Button variant="indigo-gradient" size="lg">
+      Large
+    </Button>
+    <Button variant="indigo-gradient" disabled>
+      Disabled
+    </Button>
+  </div>
+  <p className="text-sm text-gray-500">An indigo gradient button that uses our primary color with enhanced hover effects</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Ocean</h4>
+  <div className="flex flex-wrap gap-4 mb-2">
+    <Button variant="ocean" size="sm">
+      Small
+    </Button>
+    <Button variant="ocean" size="md">
+      Medium
+    </Button>
+    <Button variant="ocean" size="lg">
+      Large
+    </Button>
+    <Button variant="ocean" disabled>
+      Disabled
+    </Button>
+  </div>
+  <p className="text-sm text-gray-500">A button styled with our primary teal color with a clean, modern appearance</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Sunrise</h4>
+  <div className="flex flex-wrap gap-4 mb-2">
+    <Button variant="sunrise" size="sm">
+      Small
+    </Button>
+    <Button variant="sunrise" size="md">
+      Medium
+    </Button>
+    <Button variant="sunrise" size="lg">
+      Large
+    </Button>
+    <Button variant="sunrise" disabled>
+      Disabled
+    </Button>
+  </div>
+  <p className="text-sm text-gray-500">A warm, energetic button styled with our coral secondary color</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Ocean-sunrise-gradient</h4>
+  <div className="flex flex-wrap gap-4 mb-2">
+    <Button variant="ocean-sunrise-gradient" size="sm">
+      Small
+    </Button>
+    <Button variant="ocean-sunrise-gradient" size="md">
+      Medium
+    </Button>
+    <Button variant="ocean-sunrise-gradient" size="lg">
+      Large
+    </Button>
+    <Button variant="ocean-sunrise-gradient" disabled>
+      Disabled
+    </Button>
+  </div>
+  <p className="text-sm text-gray-500">A vibrant gradient button that transitions from our teal primary to our coral secondary</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Ocean-wave</h4>
+  <div className="flex flex-wrap gap-4 mb-2">
+    <Button variant="ocean-wave" size="sm">
+      Small
+    </Button>
+    <Button variant="ocean-wave" size="md">
+      Medium
+    </Button>
+    <Button variant="ocean-wave" size="lg">
+      Large
+    </Button>
+    <Button variant="ocean-wave" disabled>
+      Disabled
+    </Button>
+  </div>
+  <p className="text-sm text-gray-500">A beautiful ocean-themed gradient button with a wave-like appearance</p>
+</div>
 </div>
   </div>
 </div>
@@ -778,6 +873,48 @@ export default function StyleGuide() {
   </div>
   <p className="text-sm text-gray-500">A neumorphic card with soft shadow effects that appears raised from the surface</p>
 </div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Indigo-glow</h4>
+  <div className="mb-2">
+    <Card variant="indigo-glow" className="p-6 max-w-sm">
+      <h3 className="text-lg font-medium mb-2">Card Title</h3>
+      <p className="text-gray-600">
+        This is a indigo-glow card component that demonstrates the
+        styling for this variant.
+      </p>
+    </Card>
+  </div>
+  <p className="text-sm text-gray-500">A card with an indigo gradient background and subtle primary color glow effect on hover</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Ocean-card</h4>
+  <div className="mb-2">
+    <Card variant="ocean-card" className="p-6 max-w-sm">
+      <h3 className="text-lg font-medium mb-2">Card Title</h3>
+      <p className="text-gray-600">
+        This is a ocean-card card component that demonstrates the
+        styling for this variant.
+      </p>
+    </Card>
+  </div>
+  <p className="text-sm text-gray-500">A card with a subtle sky blue gradient and teal primary color accent</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Ocean-wave</h4>
+  <div className="mb-2">
+    <Card variant="ocean-wave" className="p-6 max-w-sm">
+      <h3 className="text-lg font-medium mb-2">Card Title</h3>
+      <p className="text-gray-600">
+        This is a ocean-wave card component that demonstrates the
+        styling for this variant.
+      </p>
+    </Card>
+  </div>
+  <p className="text-sm text-gray-500">A card with subtle ocean-inspired gradient and cyan border that complements the ocean-wave button</p>
+</div>
 </div>
   </div>
 </div>
@@ -866,6 +1003,22 @@ export default function StyleGuide() {
 
 
 {
+  /* Context Menu */
+}
+<div className="mb-12">
+  <h3 className="text-xl font-bold mb-4" style={{ color: pageStyles.text }}>
+    Context Menu
+  </h3>
+  <div
+    className="p-6 rounded-md shadow-sm"
+    style={{ backgroundColor: pageStyles.cardBg }}
+  >
+    <div className="space-y-8">{{ CONTEXT_MENU_VARIANTS }}</div>
+  </div>
+</div>
+
+
+{
   /* Dialog */
 }
 <div className="mb-12">
@@ -894,6 +1047,22 @@ export default function StyleGuide() {
   <p className="text-sm text-gray-500">Default dialog variant.</p>
 </div>
 </div>
+  </div>
+</div>
+
+
+{
+  /* Dropdown Menu */
+}
+<div className="mb-12">
+  <h3 className="text-xl font-bold mb-4" style={{ color: pageStyles.text }}>
+    Dropdown Menu
+  </h3>
+  <div
+    className="p-6 rounded-md shadow-sm"
+    style={{ backgroundColor: pageStyles.cardBg }}
+  >
+    <div className="space-y-8">{{ DROPDOWN_MENU_VARIANTS }}</div>
   </div>
 </div>
 
@@ -1079,6 +1248,28 @@ export default function StyleGuide() {
     />
   </div>
   <p className="text-sm text-gray-500">Default header variant.</p>
+</div>
+
+<div className="mb-10">
+  <h4 className="text-sm font-medium mb-2">Ocean-header</h4>
+  <div className="mb-4 border rounded-md overflow-hidden">
+    <HeaderComponent
+      variant="ocean-header"
+      logo="/logo.svg"
+      title="Company"
+      navItems={[
+        { label: 'Dashboard', href: '#' },
+        { label: 'Team', href: '#' },
+        { label: 'Projects', href: '#' },
+        { label: 'Calendar', href: '#' },
+      ]}
+      actions={[
+        { label: 'Sign up', onClick: () => {} },
+        { label: 'Log in', onClick: () => {} },
+      ]}
+    />
+  </div>
+  <p className="text-sm text-gray-500">A header with a subtle gradient from our primary color to white</p>
 </div>
 </div>
   </div>
@@ -1324,6 +1515,38 @@ export default function StyleGuide() {
   </div>
   <p className="text-sm text-gray-500">Modal with a primary color accent at the top</p>
 </div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Ocean-modal</h4>
+  <div className="mb-2">
+    <ModalComponent
+      variant="ocean-modal"
+      trigger={
+        <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+          Open Ocean-modal Modal
+        </button>
+      }
+      title="Modal Title"
+      description="This is a description of the modal's purpose."
+      footer={
+        <>
+          <button className="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">
+            Cancel
+          </button>
+          <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+            Confirm
+          </button>
+        </>
+      }
+    >
+      <div className="p-4 border border-gray-200 rounded">
+        <p>This is the main content of the modal.</p>
+        <p className="mt-2">You can put any components or content here.</p>
+      </div>
+    </ModalComponent>
+  </div>
+  <p className="text-sm text-gray-500">A clean modal with subtle primary color accents and rounded corners</p>
+</div>
 </div>
   </div>
 </div>
@@ -1341,6 +1564,22 @@ export default function StyleGuide() {
     style={{ backgroundColor: pageStyles.cardBg }}
   >
     <div className="space-y-12">{{ NAVIGATION_MENU_VARIANTS }}</div>
+  </div>
+</div>
+
+
+{
+  /* One-Time Password Field */
+}
+<div className="mb-12">
+  <h3 className="text-xl font-bold mb-4" style={{ color: pageStyles.text }}>
+    One-Time Password Field
+  </h3>
+  <div
+    className="p-6 rounded-md shadow-sm"
+    style={{ backgroundColor: pageStyles.cardBg }}
+  >
+    <div className="space-y-8">{{ OTP_FIELD_VARIANTS }}</div>
   </div>
 </div>
 
@@ -1376,6 +1615,481 @@ export default function StyleGuide() {
   </div>
 </div>
 
+
+{
+  /* Profile Card */
+}
+<div className="mb-12">
+  <h3 className="text-xl font-bold mb-4" style={{ color: pageStyles.text }}>
+    Profile Card
+  </h3>
+  <div
+    className="p-6 rounded-md shadow-sm"
+    style={{ backgroundColor: pageStyles.cardBg }}
+  >
+    <div className="space-y-8">{{ PROFILE_CARD_VARIANTS }}</div>
+  </div>
+</div>
+
+
+{
+  /* Progress */
+}
+<div className="mb-12">
+  <h3 className="text-xl font-bold mb-4" style={{ color: pageStyles.text }}>
+    Progress
+  </h3>
+  <div
+    className="p-6 rounded-md shadow-sm"
+    style={{ backgroundColor: pageStyles.cardBg }}
+  >
+    <div className="space-y-8"><div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Default</h4>
+  <div className="mb-2">
+    <ProgressComponent variant="default" value={66} />
+  </div>
+  <div className="mt-4 mb-2">
+    <ProgressComponent variant="default" value={33} />
+  </div>
+  <p className="text-sm text-gray-500">Default progress variant.</p>
+</div>
+</div>
+  </div>
+</div>
+
+
+{
+  /* Radio Group */
+}
+<div className="mb-12">
+  <h3 className="text-xl font-bold mb-4" style={{ color: pageStyles.text }}>
+    Radio Group
+  </h3>
+  <div
+    className="p-6 rounded-md shadow-sm"
+    style={{ backgroundColor: pageStyles.cardBg }}
+  >
+    <div className="space-y-8">{{ RADIO_GROUP_VARIANTS }}</div>
+  </div>
+</div>
+
+
+{
+  /* ScrollArea */
+}
+<div className="mb-12">
+  <h3 className="text-xl font-bold mb-4" style={{ color: pageStyles.text }}>
+    ScrollArea
+  </h3>
+  <div
+    className="p-6 rounded-md shadow-sm"
+    style={{ backgroundColor: pageStyles.cardBg }}
+  >
+    <div className="space-y-8">{{ SCROLL_AREA_VARIANTS }}</div>
+  </div>
+</div>
+
+
+{
+  /* Select */
+}
+<div className="mb-12">
+  <h3 className="text-xl font-bold mb-4" style={{ color: pageStyles.text }}>
+    Select
+  </h3>
+  <div
+    className="p-6 rounded-md shadow-sm"
+    style={{ backgroundColor: pageStyles.cardBg }}
+  >
+    <div className="space-y-8"><div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Default</h4>
+  <div className="mb-2">
+    <SelectComponent
+      variant="default"
+      placeholder="Select a food…"
+      groups={[
+        {
+          label: 'Fruits',
+          items: [
+            { value: 'apple', label: 'Apple' },
+            { value: 'banana', label: 'Banana' },
+            { value: 'blueberry', label: 'Blueberry' },
+            { value: 'grapes', label: 'Grapes' },
+            { value: 'pineapple', label: 'Pineapple' },
+          ],
+        },
+        {
+          label: 'Vegetables',
+          items: [
+            { value: 'aubergine', label: 'Aubergine' },
+            { value: 'broccoli', label: 'Broccoli' },
+            { value: 'carrot', label: 'Carrot', disabled: true },
+            { value: 'courgette', label: 'Courgette' },
+            { value: 'leek', label: 'Leek' },
+          ],
+        },
+        {
+          label: 'Meat',
+          items: [
+            { value: 'beef', label: 'Beef' },
+            { value: 'chicken', label: 'Chicken' },
+            { value: 'lamb', label: 'Lamb' },
+            { value: 'pork', label: 'Pork' },
+          ],
+        },
+      ]}
+    />
+  </div>
+  <p className="text-sm text-gray-500">Default select variant.</p>
+</div>
+</div>
+  </div>
+</div>
+
+
+{
+  /* Separator */
+}
+<div className="mb-12">
+  <h3 className="text-xl font-bold mb-4" style={{ color: pageStyles.text }}>
+    Separator
+  </h3>
+  <div
+    className="p-6 rounded-md shadow-sm"
+    style={{ backgroundColor: pageStyles.cardBg }}
+  >
+    <div className="space-y-8"><div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Default</h4>
+  <div className="mb-2">
+    <SeparatorDemo variant="default" />
+  </div>
+  <p className="text-sm text-gray-500">Default separator variant.</p>
+</div>
+</div>
+  </div>
+</div>
+
+
+{
+  /* Slider */
+}
+<div className="mb-12">
+  <h3 className="text-xl font-bold mb-4" style={{ color: pageStyles.text }}>
+    Slider
+  </h3>
+  <div
+    className="p-6 rounded-md shadow-sm"
+    style={{ backgroundColor: pageStyles.cardBg }}
+  >
+    <div className="space-y-8"><div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Default</h4>
+  <div className="mb-2 flex items-center justify-center py-4">
+    <SliderComponent
+      variant="default"
+      defaultValue={[50]}
+      max={100}
+      step={1}
+      ariaLabel="Example slider"
+    />
+  </div>
+  <p className="text-sm text-gray-500">Default slider variant.</p>
+</div>
+</div>
+  </div>
+</div>
+
+
+{
+  /* Switch */
+}
+<div className="mb-12">
+  <h3 className="text-xl font-bold mb-4" style={{ color: pageStyles.text }}>
+    Switch
+  </h3>
+  <div
+    className="p-6 rounded-md shadow-sm"
+    style={{ backgroundColor: pageStyles.cardBg }}
+  >
+    <div className="space-y-8"><div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Default</h4>
+  <div className="mb-2 flex flex-col space-y-4">
+    <SwitchComponent
+      variant="default"
+      label="Airplane mode"
+      id="default-airplane"
+    />
+    <SwitchComponent
+      variant="default"
+      label="Dark mode"
+      id="default-dark"
+      checked={true}
+    />
+  </div>
+  <p className="text-sm text-gray-500">Default switch variant.</p>
+</div>
+</div>
+  </div>
+</div>
+
+
+{
+  /* Tabs */
+}
+<div className="mb-12">
+  <h3 className="text-xl font-bold mb-4" style={{ color: pageStyles.text }}>
+    Tabs
+  </h3>
+  <div
+    className="p-6 rounded-md shadow-sm"
+    style={{ backgroundColor: pageStyles.cardBg }}
+  >
+    <div className="space-y-8">{/*
+  Style Guide Variant for Tabs Component
+
+  Placeholders:
+  - Default: e.g., "Default"
+  - default: e.g., "default"
+  - Default tabs variant.: Description of the variant from theme config.
+
+  Assumes `TabsComponent`, `FormField`, and `Button` are available in the
+  rendering scope (imported into the main StyleGuide.jsx).
+*/}
+<div className="mb-8 p-4 border rounded-lg bg-white shadow-sm"> {/* Added container */}
+  <h4 className="text-md font-semibold mb-3 text-gray-800">Default Variant</h4>
+  <div className="mb-3">
+    {/* --- Render the actual TabsComponent --- */}
+    <TabsComponent
+      variant="default" // Pass variant name (might be used by component or just for consistency)
+      aria-label="Account Management Example" // Good practice for accessibility
+      tabs={[
+        {
+          value: 'account-default', // Unique value using variant name
+          label: 'Account',
+          content: (
+            // Use React Fragments or a div if needed
+            <>
+              <p className="mb-5 text-[15px] leading-normal text-gray-700">
+                Make changes to your account here. Click save when you're done.
+              </p>
+              {/* --- Use the actual FormField component --- */}
+              <FormField
+                label="Name"
+                id="name-default" // Unique ID
+                defaultValue="Ada Lovelace"
+                className="mb-4" // Add spacing if needed
+              />
+              {/* --- Use the actual FormField component --- */}
+              <FormField
+                label="Username"
+                id="username-default" // Unique ID
+                defaultValue="@ada"
+              />
+              <div className="mt-6 flex justify-end border-t pt-4">
+                {/* --- Use the actual Button component --- */}
+                <Button variant="primary">Save changes</Button> {/* Example: Use button variant */}
+              </div>
+            </>
+          ),
+        },
+        {
+          value: 'password-default', // Unique value using variant name
+          label: 'Password',
+          content: (
+            <>
+              <p className="mb-5 text-[15px] leading-normal text-gray-700">
+                Change your password here. After saving, you'll be logged out.
+              </p>
+              {/* --- Use the actual FormField component --- */}
+              <FormField
+                label="Current password"
+                id="current-password-default" // Unique ID
+                type="password"
+                className="mb-4"
+              />
+              {/* --- Use the actual FormField component --- */}
+              <FormField
+                label="New password"
+                id="new-password-default" // Unique ID
+                type="password"
+                className="mb-4"
+              />
+              {/* --- Use the actual FormField component --- */}
+              <FormField
+                label="Confirm password"
+                id="confirm-password-default" // Unique ID
+                type="password"
+              />
+              <div className="mt-6 flex justify-end border-t pt-4">
+                 {/* --- Use the actual Button component --- */}
+                <Button variant="primary">Change password</Button>
+              </div>
+            </>
+          ),
+        },
+      ]}
+    />
+    {/* --- End TabsComponent rendering --- */}
+  </div>
+  <p className="text-sm text-gray-500 italic">Default tabs variant.</p>
+</div></div>
+  </div>
+</div>
+
+
+{
+  /* Toast */
+}
+<div className="mb-12">
+  <h3 className="text-xl font-bold mb-4" style={{ color: pageStyles.text }}>
+    Toast
+  </h3>
+  <div
+    className="p-6 rounded-md shadow-sm"
+    style={{ backgroundColor: pageStyles.cardBg }}
+  >
+    <div className="space-y-8"><div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Default</h4>
+  <div className="mb-2">
+    <ToastComponent
+      variant="default"
+      title="Notification: {{VARIANT_NAME_CAPITALIZED}}"
+      description="This is a default toast notification example"
+      triggerText="Show {{VARIANT_NAME_CAPITALIZED}} Toast"
+      actionText="Dismiss"
+      duration={5000}
+    />
+  </div>
+  <p className="text-sm text-gray-500">Default toast variant.</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Destructive</h4>
+  <div className="mb-2">
+    <ToastComponent
+      variant="destructive"
+      title="Notification: {{VARIANT_NAME_CAPITALIZED}}"
+      description="This is a destructive toast notification example"
+      triggerText="Show {{VARIANT_NAME_CAPITALIZED}} Toast"
+      actionText="Dismiss"
+      duration={5000}
+    />
+  </div>
+  <p className="text-sm text-gray-500">Destructive toast variant.</p>
+</div>
+</div>
+  </div>
+</div>
+
+
+{
+  /* Toggle */
+}
+<div className="mb-12">
+  <h3 className="text-xl font-bold mb-4" style={{ color: pageStyles.text }}>
+    Toggle
+  </h3>
+  <div
+    className="p-6 rounded-md shadow-sm"
+    style={{ backgroundColor: pageStyles.cardBg }}
+  >
+    <div className="space-y-8"><div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Default</h4>
+  <div className="mb-2 flex items-center gap-4">
+    <ToggleComponent
+      variant="default"
+      icon={<FontItalicIcon />}
+      label="Toggle italic"
+    />
+    <ToggleComponent
+      variant="default"
+      icon={<FontItalicIcon />}
+      label="Toggle italic (pressed)"
+      defaultPressed={true}
+    />
+  </div>
+  <p className="text-sm text-gray-500">Default toggle variant.</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Outline</h4>
+  <div className="mb-2 flex items-center gap-4">
+    <ToggleComponent
+      variant="outline"
+      icon={<FontItalicIcon />}
+      label="Toggle italic"
+    />
+    <ToggleComponent
+      variant="outline"
+      icon={<FontItalicIcon />}
+      label="Toggle italic (pressed)"
+      defaultPressed={true}
+    />
+  </div>
+  <p className="text-sm text-gray-500">Outline toggle variant.</p>
+</div>
+</div>
+  </div>
+</div>
+
+
+{
+  /* Toggle Group */
+}
+<div className="mb-12">
+  <h3 className="text-xl font-bold mb-4" style={{ color: pageStyles.text }}>
+    Toggle Group
+  </h3>
+  <div
+    className="p-6 rounded-md shadow-sm"
+    style={{ backgroundColor: pageStyles.cardBg }}
+  >
+    <div className="space-y-8">{{ TOGGLE_GROUP_VARIANTS }}</div>
+  </div>
+</div>
+
+
+{
+  /* Toolbar */
+}
+<div className="mb-12">
+  <h3 className="text-xl font-bold mb-4" style={{ color: pageStyles.text }}>
+    Toolbar
+  </h3>
+  <div
+    className="p-6 rounded-md shadow-sm"
+    style={{ backgroundColor: pageStyles.cardBg }}
+  >
+    <div className="space-y-8"><div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Default</h4>
+  <div className="mb-2">
+    <ToolbarComponent
+      variant="default"
+      textFormatting={true}
+      textAlignment={true}
+      showEditInfo={true}
+      showShareButton={true}
+      editInfoText="Edited 2 hours ago"
+      shareButtonText="Share"
+      defaultAlignment="center"
+    />
+  </div>
+  <p className="text-sm text-gray-500">Default toolbar variant.</p>
+</div>
+</div>
+  </div>
+</div>
+
+
+{/* Tooltip */}
+<div className="mb-12">
+  <h3 className="text-xl font-bold mb-4" style={{ color: pageStyles.text }}>Tooltip</h3>
+  <div className="p-6 rounded-md shadow-sm" style={{ backgroundColor: pageStyles.cardBg }}>
+    <div className="space-y-8">
+      {{TOOLTIP_VARIANTS}}
+    </div>
+  </div>
+</div>
+```
         </section>
       </div>
 

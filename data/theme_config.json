@@ -1,8 +1,8 @@
 {
   "global_values": {
     "colors": {
-      "primary": "#6d28d9",
-      "secondary": "#22d3ee",
+      "primary": "#0891b2",
+      "secondary": "#0ea5e9",
       "success": "#16a34a",
       "warning": "#f59e0b",
       "error": "#ef4444",
@@ -249,6 +249,41 @@
           "color": null,
           "text_color": null,
           "description": "A modern button with gradient background, rounded corners, and subtle shadow effects"
+        },
+        "indigo-gradient": {
+          "tailwind": "bg-gradient-to-r from-primary to-indigo-400 hover:from-primary/90 hover:to-indigo-500 text-white px-5 py-2.5 rounded-xl font-medium shadow-md hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50",
+          "extends": "button.default",
+          "color": null,
+          "text_color": null,
+          "description": "An indigo gradient button that uses our primary color with enhanced hover effects"
+        },
+        "ocean": {
+          "tailwind": "bg-primary hover:bg-primary/90 text-white px-5 py-2.5 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50",
+          "extends": "button.default",
+          "color": null,
+          "text_color": null,
+          "description": "A button styled with our primary teal color with a clean, modern appearance"
+        },
+        "sunrise": {
+          "tailwind": "bg-secondary hover:bg-secondary/90 text-white px-5 py-2.5 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-secondary/50",
+          "extends": "button.default",
+          "color": null,
+          "text_color": null,
+          "description": "A warm, energetic button styled with our coral secondary color"
+        },
+        "ocean-sunrise-gradient": {
+          "tailwind": "bg-gradient-to-r from-primary to-secondary hover:from-primary/80 hover:to-secondary/80 text-white px-5 py-2.5 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50",
+          "extends": "button.default",
+          "color": null,
+          "text_color": null,
+          "description": "A vibrant gradient button that transitions from our teal primary to our coral secondary"
+        },
+        "ocean-wave": {
+          "tailwind": "bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-4 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300",
+          "extends": "button.default",
+          "color": null,
+          "text_color": null,
+          "description": "A beautiful ocean-themed gradient button with a wave-like appearance"
         }
       }
     },
@@ -323,6 +358,27 @@
           "color": null,
           "text_color": null,
           "description": "A neumorphic card with soft shadow effects that appears raised from the surface"
+        },
+        "indigo-glow": {
+          "tailwind": "bg-gradient-to-br from-white to-indigo-50 border-2 border-primary/30 rounded-xl p-6 shadow-lg hover:shadow-xl hover:shadow-primary/20 transition-all duration-300",
+          "extends": "card.default",
+          "color": null,
+          "text_color": null,
+          "description": "A card with an indigo gradient background and subtle primary color glow effect on hover"
+        },
+        "ocean-card": {
+          "tailwind": "bg-gradient-to-br from-white to-sky-50 border-2 border-primary/30 rounded-xl p-6 shadow-lg hover:shadow-xl hover:shadow-primary/20 transition-all duration-300",
+          "extends": "card.default",
+          "color": null,
+          "text_color": null,
+          "description": "A card with a subtle sky blue gradient and teal primary color accent"
+        },
+        "ocean-wave": {
+          "tailwind": "bg-gradient-to-b from-white to-sky-50 border border-cyan-200 rounded-xl p-6 shadow-md hover:shadow-lg hover:border-cyan-300 transition-all duration-300",
+          "extends": "card.default",
+          "color": null,
+          "text_color": null,
+          "description": "A card with subtle ocean-inspired gradient and cyan border that complements the ocean-wave button"
         }
       }
     },
@@ -449,14 +505,184 @@
         }
       }
     },
-    "dropdownmenu": {
+    "contextmenu": {
       "variants": {
         "default": {
           "tailwind": "",
           "extends": null,
           "color": null,
           "text_color": null,
-          "description": "Default dropdown menu variant.",
+          "description": "Default context menu variant.",
+          "elements": {
+            "trigger": {
+              "tailwind": "bg-white text-gray-900 hover:bg-gray-100 focus:ring-2 focus:ring-gray-400 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "content": {
+              "tailwind": "bg-white border border-gray-200 dark:bg-gray-800 dark:border-gray-700 text-gray-900 dark:text-gray-100 rounded-md shadow-lg p-1 min-w-[12rem] z-50",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "item": {
+              "tailwind": "px-2 py-1.5 text-sm rounded-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 data-[disabled]:text-gray-400 data-[disabled]:dark:text-gray-500 cursor-pointer",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "shortcut": {
+              "tailwind": "text-gray-500 dark:text-gray-400",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "separator": {
+              "tailwind": "bg-gray-200 dark:bg-gray-700",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "subTrigger": {
+              "tailwind": "text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 data-[state=open]:bg-gray-100 dark:data-[state=open]:bg-gray-700",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "chevron": {
+              "tailwind": "text-gray-500 dark:text-gray-400",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "subContent": {
+              "tailwind": "bg-white border border-gray-200 dark:bg-gray-800 dark:border-gray-700",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "subItem": {
+              "tailwind": "text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 data-[disabled]:text-gray-400 data-[disabled]:dark:text-gray-500",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "checkboxItem": {
+              "tailwind": "text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 data-[disabled]:text-gray-400 data-[disabled]:dark:text-gray-500",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "indicator": {
+              "tailwind": "text-gray-900 dark:text-gray-100",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "label": {
+              "tailwind": "text-gray-500 dark:text-gray-400",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "radioItem": {
+              "tailwind": "text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 data-[disabled]:text-gray-400 data-[disabled]:dark:text-gray-500",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "arrow": {
+              "tailwind": "fill-white dark:fill-gray-800",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        }
+      }
+    },
+    "dialog": {
+      "variants": {
+        "default": {
+          "tailwind": "",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default dialog variant.",
+          "elements": {
+            "trigger": {
+              "tailwind": "bg-primary text-primary-foreground hover:bg-primary/90 focus:ring-2 focus:ring-primary",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "overlay": {
+              "tailwind": "bg-black/50 backdrop-blur-sm",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "content": {
+              "tailwind": "bg-background border border-border",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "title": {
+              "tailwind": "text-foreground",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "description": {
+              "tailwind": "text-muted-foreground",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "label": {
+              "tailwind": "text-foreground",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "input": {
+              "tailwind": "border border-input bg-background focus:border-primary focus:ring-1 focus:ring-primary",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "saveButton": {
+              "tailwind": "bg-primary text-primary-foreground hover:bg-primary/90 focus:ring-2 focus:ring-primary",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "closeButton": {
+              "tailwind": "hover:bg-muted focus:ring-2 focus:ring-primary",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "closeIcon": {
+              "tailwind": "h-4 w-4 text-foreground",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        }
+      }
+    },
+    "dropdownmenudemo": {
+      "variants": {
+        "default": {
+          "tailwind": "",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default dropdown menu demo variant.",
           "elements": {
             "trigger": {
               "tailwind": "bg-white text-gray-900 hover:bg-gray-100 focus:ring-2 focus:ring-gray-400 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700",
@@ -538,100 +764,6 @@
             },
             "arrow": {
               "tailwind": "fill-white dark:fill-gray-800",
-              "color": null,
-              "text_color": null,
-              "computed": null
-            }
-          }
-        },
-        "contextmenu": {
-          "tailwind": "",
-          "extends": "dropdownmenu.default",
-          "color": null,
-          "text_color": null,
-          "description": "A dropdown menu styled to be used as a context menu on right-click",
-          "elements": {
-            "content": {
-              "tailwind": "bg-white border border-gray-200 rounded-md shadow-lg p-1 min-w-[12rem] dark:bg-gray-800 dark:border-gray-700 text-gray-900 dark:text-gray-100 z-50",
-              "color": null,
-              "text_color": null,
-              "computed": null
-            },
-            "item": {
-              "tailwind": "px-2 py-1.5 text-sm rounded-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 data-[disabled]:text-gray-400 data-[disabled]:dark:text-gray-500 cursor-pointer",
-              "color": null,
-              "text_color": null,
-              "computed": null
-            }
-          }
-        }
-      }
-    },
-    "dialog": {
-      "variants": {
-        "default": {
-          "tailwind": "",
-          "extends": null,
-          "color": null,
-          "text_color": null,
-          "description": "Default dialog variant.",
-          "elements": {
-            "trigger": {
-              "tailwind": "bg-primary text-primary-foreground hover:bg-primary/90 focus:ring-2 focus:ring-primary",
-              "color": null,
-              "text_color": null,
-              "computed": null
-            },
-            "overlay": {
-              "tailwind": "bg-black/50 backdrop-blur-sm",
-              "color": null,
-              "text_color": null,
-              "computed": null
-            },
-            "content": {
-              "tailwind": "bg-background border border-border",
-              "color": null,
-              "text_color": null,
-              "computed": null
-            },
-            "title": {
-              "tailwind": "text-foreground",
-              "color": null,
-              "text_color": null,
-              "computed": null
-            },
-            "description": {
-              "tailwind": "text-muted-foreground",
-              "color": null,
-              "text_color": null,
-              "computed": null
-            },
-            "label": {
-              "tailwind": "text-foreground",
-              "color": null,
-              "text_color": null,
-              "computed": null
-            },
-            "input": {
-              "tailwind": "border border-input bg-background focus:border-primary focus:ring-1 focus:ring-primary",
-              "color": null,
-              "text_color": null,
-              "computed": null
-            },
-            "saveButton": {
-              "tailwind": "bg-primary text-primary-foreground hover:bg-primary/90 focus:ring-2 focus:ring-primary",
-              "color": null,
-              "text_color": null,
-              "computed": null
-            },
-            "closeButton": {
-              "tailwind": "hover:bg-muted focus:ring-2 focus:ring-primary",
-              "color": null,
-              "text_color": null,
-              "computed": null
-            },
-            "closeIcon": {
-              "tailwind": "h-4 w-4 text-foreground",
               "color": null,
               "text_color": null,
               "computed": null
@@ -772,6 +904,13 @@
               "computed": null
             }
           }
+        },
+        "ocean-header": {
+          "tailwind": "bg-gradient-to-r from-primary/10 to-white shadow-sm",
+          "extends": "header.default",
+          "color": null,
+          "text_color": null,
+          "description": "A header with a subtle gradient from our primary color to white"
         }
       }
     },
@@ -1057,6 +1196,13 @@
           "color": null,
           "text_color": null,
           "description": "Modal with a primary color accent at the top"
+        },
+        "ocean-modal": {
+          "tailwind": "bg-white dark:bg-gray-800 shadow-xl border border-primary/30 rounded-xl overflow-hidden",
+          "extends": "modal.default",
+          "color": null,
+          "text_color": null,
+          "description": "A clean modal with subtle primary color accents and rounded corners"
         }
       }
     },
@@ -1139,6 +1285,31 @@
         }
       }
     },
+    "onetimepassword": {
+      "variants": {
+        "default": {
+          "tailwind": "",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default one-time password variant.",
+          "elements": {
+            "fieldset": {
+              "tailwind": "flex gap-2",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "input": {
+              "tailwind": "size-10 text-center text-[15px] leading-none outline-none shadow-[0_0_0_1px] shadow-gray-300 focus:shadow-[0_0_0_2px] focus:shadow-blue-500",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        }
+      }
+    },
     "popover": {
       "variants": {
         "default": {
@@ -1198,6 +1369,467 @@
             },
             "input": {
               "tailwind": "border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-1 focus:ring-blue-500",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        }
+      }
+    },
+    "profilecard": {
+      "variants": {
+        "default": {
+          "tailwind": "p-6 rounded-lg shadow-md",
+          "extends": null,
+          "color": "white",
+          "text_color": null,
+          "description": "Default profile card style.",
+          "elements": {
+            "avatar": {
+              "tailwind": "rounded-full w-16 h-16",
+              "color": null,
+              "text_color": null,
+              "computed": {}
+            },
+            "name": {
+              "tailwind": "font-semibold text-lg",
+              "color": null,
+              "text_color": "global.colors.text.primary",
+              "computed": null
+            }
+          }
+        }
+      }
+    },
+    "progress": {
+      "variants": {
+        "default": {
+          "tailwind": "relative h-2 w-full overflow-hidden rounded-full bg-secondary-foreground/20",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default progress variant.",
+          "elements": {
+            "indicator": {
+              "tailwind": "h-full w-full flex-1 bg-primary transition-all",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        }
+      }
+    },
+    "radiogroup": {
+      "variants": {
+        "default": {
+          "tailwind": "flex flex-col gap-2.5",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default radio group variant.",
+          "elements": {
+            "item": {
+              "tailwind": "flex items-center",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "button": {
+              "tailwind": "size-5 rounded-full shadow-[0_0_0_1px] shadow-gray-300 outline-none focus:shadow-[0_0_0_2px] focus:shadow-black",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "indicator": {
+              "tailwind": "flex items-center justify-center size-full relative after:content-[''] after:block after:size-[11px] after:rounded-full after:bg-blue-500",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "label": {
+              "tailwind": "text-[15px] leading-none pl-[15px] text-gray-800",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        }
+      }
+    },
+    "scrollarea": {
+      "variants": {
+        "default": {
+          "tailwind": "rounded-md border",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default scroll area variant.",
+          "elements": {
+            "viewport": {
+              "tailwind": "h-[200px] w-[350px] rounded-[inherit]",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "scrollbar": {
+              "tailwind": "flex touch-none select-none transition-colors",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "thumb": {
+              "tailwind": "relative flex-1 rounded-full bg-border",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "corner": {
+              "tailwind": "bg-background",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "content": {
+              "tailwind": "p-4",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "item": {
+              "tailwind": "text-sm leading-none text-foreground",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "separator": {
+              "tailwind": "my-2 h-[1px] bg-border",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        }
+      }
+    },
+    "select": {
+      "variants": {
+        "default": {
+          "tailwind": "",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default select variant.",
+          "elements": {
+            "trigger": {
+              "tailwind": "inline-flex items-center justify-center rounded px-[15px] text-[13px] leading-none h-[35px] gap-[5px] bg-white text-gray-800 shadow-[0_2px_10px] shadow-black/10 hover:bg-gray-100 focus:shadow-[0_0_0_2px] focus:shadow-black data-[placeholder]:text-gray-500 outline-none",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "icon": {
+              "tailwind": "text-gray-500",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "content": {
+              "tailwind": "overflow-hidden bg-white rounded shadow-[0px_10px_38px_-10px_rgba(22,_23,_24,_0.35),_0px_10px_20px_-15px_rgba(22,_23,_24,_0.2)] will-change-[transform,opacity] z-[100]",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "viewport": {
+              "tailwind": "p-[5px]",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "item": {
+              "tailwind": "text-[13px] leading-none text-gray-800 rounded flex items-center h-[25px] pr-[35px] pl-[25px] relative select-none data-[disabled]:text-gray-400 data-[disabled]:pointer-events-none data-[highlighted]:outline-none data-[highlighted]:bg-blue-500 data-[highlighted]:text-white",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "itemIndicator": {
+              "tailwind": "absolute left-0 w-[25px] inline-flex items-center justify-center",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "separator": {
+              "tailwind": "h-[1px] bg-gray-200 m-[5px]",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "arrow": {
+              "tailwind": "fill-white",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        }
+      }
+    },
+    "separator": {
+      "variants": {
+        "default": {
+          "tailwind": "bg-gray-200 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full data-[orientation=vertical]:h-full data-[orientation=vertical]:w-px",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default separator variant.",
+          "elements": null
+        }
+      }
+    },
+    "slider": {
+      "variants": {
+        "default": {
+          "tailwind": "relative flex w-full touch-none select-none items-center",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default slider variant.",
+          "elements": {
+            "track": {
+              "tailwind": "relative h-2 w-full grow overflow-hidden rounded-full bg-secondary-foreground/20",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "range": {
+              "tailwind": "absolute h-full bg-primary",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "thumb": {
+              "tailwind": "block size-5 rounded-full border-2 border-primary bg-background ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        }
+      }
+    },
+    "switch": {
+      "variants": {
+        "default": {
+          "tailwind": "peer inline-flex h-[24px] w-[44px] shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default switch variant.",
+          "elements": {
+            "thumb": {
+              "tailwind": "pointer-events-none block size-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        }
+      }
+    },
+    "tabs": {
+      "variants": {
+        "default": {
+          "tailwind": "w-[400px]",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default tabs variant.",
+          "elements": {
+            "list": {
+              "tailwind": "flex shrink-0 border-b border-gray-200",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "trigger": {
+              "tailwind": "bg-white px-5 h-[45px] flex-1 flex items-center justify-center text-[15px] leading-none text-gray-500 select-none first:rounded-tl-md last:rounded-tr-md data-[state=active]:text-blue-500 data-[state=active]:shadow-[inset_0_-1px_0_0,0_1px_0_0] data-[state=active]:shadow-current data-[state=active]:focus:relative data-[state=active]:focus:shadow-[0_0_0_2px] data-[state=active]:focus:shadow-black outline-none cursor-default",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "content": {
+              "tailwind": "grow p-5 bg-white rounded-b-md outline-none focus:shadow-[0_0_0_2px] focus:shadow-black",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        }
+      }
+    },
+    "toast": {
+      "variants": {
+        "default": {
+          "tailwind": "group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-swipe-out data-[state=closed]:fade-out data-[state=open]:fade-in data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[swipe=end]:slide-out-to-right-full data-[swipe=start]:slide-out-to-left-full data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[--radix-toast-swipe-end-x] data-[state=closed]:slide-out-to-bottom-full data-[state=open]:slide-in-from-top-full",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default toast variant.",
+          "elements": {
+            "title": {
+              "tailwind": "text-sm font-semibold",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "description": {
+              "tailwind": "text-sm opacity-90",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "action": {
+              "tailwind": "inline-flex h-8 shrink-0 items-center justify-center rounded-md border bg-transparent px-3 text-sm font-medium transition-colors hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 group-[.destructive]:border-muted/40 group-[.destructive]:hover:border-destructive/30 group-[.destructive]:hover:bg-destructive group-[.destructive]:hover:text-destructive-foreground group-[.destructive]:focus:ring-destructive",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "close": {
+              "tailwind": "absolute right-2 top-2 rounded-md p-1 text-foreground/50 opacity-0 transition-opacity hover:text-foreground focus:opacity-100 focus:outline-none focus:ring-2 group-hover:opacity-100 group-[.destructive]:text-red-300 group-[.destructive]:hover:text-red-50 group-[.destructive]:focus:ring-red-400 group-[.destructive]:focus:ring-offset-red-600",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "closeIcon": {
+              "tailwind": "size-4",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        },
+        "destructive": {
+          "tailwind": "destructive border-destructive bg-destructive text-destructive-foreground",
+          "extends": "toast.default",
+          "color": null,
+          "text_color": null,
+          "description": "Destructive toast variant."
+        }
+      }
+    },
+    "toggle": {
+      "variants": {
+        "default": {
+          "tailwind": "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors hover:bg-muted hover:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default toggle variant.",
+          "elements": null
+        },
+        "outline": {
+          "tailwind": "border border-input bg-transparent hover:bg-accent hover:text-accent-foreground",
+          "extends": "toggle.default",
+          "color": null,
+          "text_color": null,
+          "description": "Outline toggle variant."
+        }
+      }
+    },
+    "togglegroup": {
+      "variants": {
+        "default": {
+          "tailwind": "flex items-center justify-center",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default toggle group variant.",
+          "elements": {
+            "item": {
+              "tailwind": "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors hover:bg-muted hover:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        },
+        "outline": {
+          "tailwind": "border border-input bg-transparent hover:bg-accent hover:text-accent-foreground",
+          "extends": "togglegroup.default",
+          "color": null,
+          "text_color": null,
+          "description": "Outline toggle group variant.",
+          "elements": {
+            "item": {
+              "tailwind": "border border-input bg-transparent hover:bg-accent hover:text-accent-foreground",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        }
+      }
+    },
+    "toolbar": {
+      "variants": {
+        "default": {
+          "tailwind": "flex items-center justify-between rounded-md bg-white p-2 shadow-sm",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default toolbar variant.",
+          "elements": {
+            "button": {
+              "tailwind": "flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "separator": {
+              "tailwind": "mx-2 h-6 w-px bg-gray-300",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "toggleGroup": {
+              "tailwind": "flex",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "toggleItem": {
+              "tailwind": "flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 data-[state=on]:bg-blue-100 data-[state=on]:text-blue-700",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        }
+      }
+    },
+    "tooltip": {
+      "variants": {
+        "default": {
+          "tailwind": "",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Default tooltip variant.",
+          "elements": {
+            "trigger": {
+              "tailwind": "inline-flex items-center justify-center rounded-full bg-gray-200 size-[35px] text-gray-800 shadow-[0_2px_10px] shadow-black/10 hover:bg-gray-300 focus:shadow-[0_0_0_2px] focus:shadow-black outline-none cursor-default",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "content": {
+              "tailwind": "data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade text-gray-800 select-none rounded-[4px] bg-white px-[15px] py-[10px] text-[15px] leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity]",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "arrow": {
+              "tailwind": "fill-white",
               "color": null,
               "text_color": null,
               "computed": null

@@ -10,7 +10,7 @@ const OTPFieldComponent = ({
 }) => {
   
 /* --- Injected Variant Styling Logic --- */
-const allVariantStyles = JSON.parse('{"default":{"root":"flex gap-2 flex-nowrap w-full justify-center","elements":{"input":"box-border inline-flex h-[35px] w-6 appearance-none items-center justify-center rounded p-0 text-[15px] leading-none outline-none border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary"},"description":"Default OTPField variant."}}');
+const allVariantStyles = JSON.parse('{"default":{"root":"","elements":{"fieldset":"flex gap-2","input":"size-10 text-center text-[15px] leading-none outline-none shadow-[0_0_0_1px] shadow-gray-300 focus:shadow-[0_0_0_2px] focus:shadow-blue-500"},"description":"Default one-time password variant."}}');
 const getStyle = (elementName) => {
   const variantStyles = allVariantStyles[variant] || allVariantStyles['default'] || { root: '', elements: {} };
   if (elementName === 'root') {
