@@ -60,6 +60,8 @@ const DEFAULT_CHECKBOX_ITEMS = [
 ];
 const DEFAULT_RADIO_ITEMS = ['Andy', 'Benoît', 'Luis'];
 
+/* INJECT_VARIANT_STYLING_LOGIC */
+
 const MenubarComponent = ({
   variant = 'default',
   className = '',
@@ -73,13 +75,11 @@ const MenubarComponent = ({
   ]);
   const [radioSelection, setRadioSelection] = React.useState(radioItems[2]);
 
-  /* INJECT_VARIANT_STYLING_LOGIC */
-
   return (
     <Menubar.Root
       className={classNames(
         'flex rounded-md p-[3px] shadow-sm',
-        getStyle('root'),
+        getStyle(variant, 'root'),
         className
       )}
       {...props}
@@ -89,6 +89,7 @@ const MenubarComponent = ({
           key={`menu-${index}`}
           name={menu.name}
           items={menu.items}
+          variant={variant}
         />
       ))}
 
@@ -97,7 +98,7 @@ const MenubarComponent = ({
         <Menubar.Trigger
           className={classNames(
             'flex select-none items-center justify-between gap-0.5 rounded px-3 py-2 text-[13px] font-medium leading-none outline-none',
-            getStyle('trigger')
+            getStyle(variant, 'trigger')
           )}
         >
           View
@@ -106,7 +107,7 @@ const MenubarComponent = ({
           <Menubar.Content
             className={classNames(
               'min-w-[220px] rounded-md p-[5px] shadow-md will-change-[transform,opacity]',
-              getStyle('content')
+              getStyle(variant, 'content')
             )}
             align="start"
             sideOffset={5}
@@ -116,7 +117,7 @@ const MenubarComponent = ({
               <Menubar.CheckboxItem
                 className={classNames(
                   'relative flex h-[25px] select-none items-center rounded px-2.5 pl-5 text-[13px] leading-none outline-none',
-                  getStyle('checkboxItem')
+                  getStyle(variant, 'checkboxItem')
                 )}
                 key={item}
                 checked={checkedSelection.includes(item)}
@@ -131,7 +132,7 @@ const MenubarComponent = ({
                 <Menubar.ItemIndicator
                   className={classNames(
                     'absolute left-0 inline-flex w-5 items-center justify-center',
-                    getStyle('indicator')
+                    getStyle(variant, 'indicator')
                   )}
                 >
                   <CheckIcon />
@@ -140,50 +141,69 @@ const MenubarComponent = ({
               </Menubar.CheckboxItem>
             ))}
             <Menubar.Separator
-              className={classNames('m-[5px] h-px', getStyle('separator'))}
+              className={classNames(
+                'm-[5px] h-px',
+                getStyle(variant, 'separator')
+              )}
             />
             <Menubar.Item
               className={classNames(
                 'group relative flex h-[25px] select-none items-center rounded pl-5 pr-2.5 text-[13px] leading-none outline-none',
-                getStyle('item')
+                getStyle(variant, 'item')
               )}
             >
               Reload{' '}
-              <div className={classNames('ml-auto pl-5', getStyle('shortcut'))}>
+              <div
+                className={classNames(
+                  'ml-auto pl-5',
+                  getStyle(variant, 'shortcut')
+                )}
+              >
                 ⌘ R
               </div>
             </Menubar.Item>
             <Menubar.Item
               className={classNames(
                 'group relative flex h-[25px] select-none items-center rounded pl-5 pr-2.5 text-[13px] leading-none outline-none',
-                getStyle('item'),
-                getStyle('disabledItem')
+                getStyle(variant, 'item'),
+                getStyle(variant, 'disabledItem')
               )}
               disabled
             >
               Force Reload{' '}
-              <div className={classNames('ml-auto pl-5', getStyle('shortcut'))}>
+              <div
+                className={classNames(
+                  'ml-auto pl-5',
+                  getStyle(variant, 'shortcut')
+                )}
+              >
                 ⇧ ⌘ R
               </div>
             </Menubar.Item>
             <Menubar.Separator
-              className={classNames('m-[5px] h-px', getStyle('separator'))}
+              className={classNames(
+                'm-[5px] h-px',
+                getStyle(variant, 'separator')
+              )}
             />
             <Menubar.Item
               className={classNames(
                 'relative flex h-[25px] select-none items-center rounded pl-5 pr-2.5 text-[13px] leading-none outline-none',
-                getStyle('item')
+                getStyle(variant, 'item')
               )}
             >
               Toggle Fullscreen
             </Menubar.Item>
             <Menubar.Separator
-              className={classNames('m-[5px] h-px', getStyle('separator'))}
+              className={classNames(
+                'm-[5px] h-px',
+                getStyle(variant, 'separator')
+              )}
             />
             <Menubar.Item
               className={classNames(
                 'relative flex h-[25px] select-none items-center rounded pl-5 pr-2.5 text-[13px] leading-none outline-none',
-                getStyle('item')
+                getStyle(variant, 'item')
               )}
             >
               Hide Sidebar
@@ -197,7 +217,7 @@ const MenubarComponent = ({
         <Menubar.Trigger
           className={classNames(
             'flex select-none items-center justify-between gap-0.5 rounded px-3 py-2 text-[13px] font-medium leading-none outline-none',
-            getStyle('trigger')
+            getStyle(variant, 'trigger')
           )}
         >
           Profiles
@@ -206,7 +226,7 @@ const MenubarComponent = ({
           <Menubar.Content
             className={classNames(
               'min-w-[220px] rounded-md p-[5px] shadow-md will-change-[transform,opacity]',
-              getStyle('content')
+              getStyle(variant, 'content')
             )}
             align="start"
             sideOffset={5}
@@ -220,7 +240,7 @@ const MenubarComponent = ({
                 <Menubar.RadioItem
                   className={classNames(
                     'relative flex h-[25px] select-none items-center rounded pl-5 pr-2.5 text-[13px] leading-none outline-none',
-                    getStyle('radioItem')
+                    getStyle(variant, 'radioItem')
                   )}
                   key={item}
                   value={item}
@@ -228,7 +248,7 @@ const MenubarComponent = ({
                   <Menubar.ItemIndicator
                     className={classNames(
                       'absolute left-0 inline-flex w-5 items-center justify-center',
-                      getStyle('indicator')
+                      getStyle(variant, 'indicator')
                     )}
                   >
                     <DotFilledIcon />
@@ -237,23 +257,27 @@ const MenubarComponent = ({
                 </Menubar.RadioItem>
               ))}
               <Menubar.Separator
-                className={classNames('m-[5px] h-px', getStyle('separator'))}
+                className={classNames(
+                  'm-[5px] h-px',
+                  getStyle(variant, 'separator')
+                )}
               />
               <Menubar.Item
                 className={classNames(
                   'relative flex h-[25px] select-none items-center rounded pl-5 pr-2.5 text-[13px] leading-none outline-none',
-                  getStyle('item')
+                  getStyle(variant, 'item')
                 )}
               >
                 Edit…
               </Menubar.Item>
               <Menubar.Separator
-                className={classNames('m-[5px] h-px', getStyle('separator'))}
-              />
+                className={classNames(getStyle(variant, 'separator'))}
+              />{' '}
+              {/* Pass variant here */}
               <Menubar.Item
                 className={classNames(
                   'relative flex h-[25px] select-none items-center rounded pl-5 pr-2.5 text-[13px] leading-none outline-none',
-                  getStyle('item')
+                  getStyle(variant, 'item')
                 )}
               >
                 Add Profile…
@@ -266,13 +290,13 @@ const MenubarComponent = ({
   );
 };
 
-// Helper component for rendering menu items
-const MenubarMenu = ({ name, items }) => (
+// Helper component for rendering menu items - needs to accept variant
+const MenubarMenu = ({ name, items, variant }) => (
   <Menubar.Menu>
     <Menubar.Trigger
       className={classNames(
         'flex select-none items-center justify-between gap-0.5 rounded px-3 py-2 text-[13px] font-medium leading-none outline-none',
-        getStyle('trigger')
+        getStyle(variant, 'trigger')
       )}
     >
       {name}
@@ -281,7 +305,7 @@ const MenubarMenu = ({ name, items }) => (
       <Menubar.Content
         className={classNames(
           'min-w-[220px] rounded-md p-[5px] shadow-md will-change-[transform,opacity]',
-          getStyle('content')
+          getStyle(variant, 'content')
         )}
         align="start"
         sideOffset={5}
@@ -292,7 +316,10 @@ const MenubarMenu = ({ name, items }) => (
             return (
               <Menubar.Separator
                 key={`sep-${index}`}
-                className={classNames('m-[5px] h-px', getStyle('separator'))}
+                className={classNames(
+                  'm-[5px] h-px',
+                  getStyle(variant, 'separator')
+                )}
               />
             );
           } else if (item.type === 'submenu') {
@@ -301,11 +328,16 @@ const MenubarMenu = ({ name, items }) => (
                 <Menubar.SubTrigger
                   className={classNames(
                     'group relative flex h-[25px] select-none items-center rounded px-2.5 text-[13px] leading-none outline-none',
-                    getStyle('subTrigger')
+                    getStyle(variant, 'subTrigger')
                   )}
                 >
                   {item.label}
-                  <div className={classNames('ml-auto pl-5', getStyle('icon'))}>
+                  <div
+                    className={classNames(
+                      'ml-auto pl-5',
+                      getStyle(variant, 'icon')
+                    )}
+                  >
                     <ChevronRightIcon />
                   </div>
                 </Menubar.SubTrigger>
@@ -313,7 +345,7 @@ const MenubarMenu = ({ name, items }) => (
                   <Menubar.SubContent
                     className={classNames(
                       'min-w-[220px] rounded-md p-[5px] shadow-md will-change-[transform,opacity]',
-                      getStyle('subContent')
+                      getStyle(variant, 'subContent')
                     )}
                     alignOffset={-5}
                   >
@@ -324,7 +356,7 @@ const MenubarMenu = ({ name, items }) => (
                             key={`subsep-${subIndex}`}
                             className={classNames(
                               'm-[5px] h-px',
-                              getStyle('separator')
+                              getStyle(variant, 'separator')
                             )}
                           />
                         );
@@ -334,7 +366,7 @@ const MenubarMenu = ({ name, items }) => (
                           key={`subitem-${subIndex}`}
                           className={classNames(
                             'relative flex h-[25px] select-none items-center rounded px-2.5 text-[13px] leading-none outline-none',
-                            getStyle('item')
+                            getStyle(variant, 'item')
                           )}
                           disabled={subItem.disabled}
                         >
@@ -352,14 +384,17 @@ const MenubarMenu = ({ name, items }) => (
                 key={`item-${index}`}
                 className={classNames(
                   'group relative flex h-[25px] select-none items-center rounded px-2.5 text-[13px] leading-none outline-none',
-                  getStyle('item')
+                  getStyle(variant, 'item')
                 )}
                 disabled={item.disabled}
               >
                 {item.label}
                 {item.shortcut && (
                   <div
-                    className={classNames('ml-auto pl-5', getStyle('shortcut'))}
+                    className={classNames(
+                      'ml-auto pl-5',
+                      getStyle(variant, 'shortcut')
+                    )}
                   >
                     {item.shortcut}
                   </div>

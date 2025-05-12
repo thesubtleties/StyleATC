@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
-import { CardComponent as Card } from './CardComponent';
+import { BaseCard as Card } from './CardComponent';
+/* INJECT_VARIANT_STYLING_LOGIC */
 
 const ProfilecardComponent = ({
   name,
@@ -13,12 +14,10 @@ const ProfilecardComponent = ({
   className = '',
   ...props
 }) => {
-  /* INJECT_VARIANT_STYLING_LOGIC */
-
   return (
     <Card
       variant="elevated"
-      className={classNames('max-w-sm', getStyle('root'), className)}
+      className={classNames('max-w-sm', getStyle(variant, 'root'), className)}
       {...props}
     >
       <div className="p-6">
@@ -30,17 +29,22 @@ const ProfilecardComponent = ({
                 alt={`${name}'s avatar`}
                 className={classNames(
                   'w-16 h-16 rounded-full object-cover border-2',
-                  getStyle('avatar')
+                  getStyle(variant, 'avatar')
                 )}
               />
             </div>
           )}
           <div>
-            <h3 className={classNames('text-lg font-bold', getStyle('name'))}>
+            <h3
+              className={classNames(
+                'text-lg font-bold',
+                getStyle(variant, 'name')
+              )}
+            >
               {name}
             </h3>
             {title && (
-              <p className={classNames('text-sm', getStyle('title'))}>
+              <p className={classNames('text-sm', getStyle(variant, 'title'))}>
                 {title}
               </p>
             )}
@@ -48,7 +52,7 @@ const ProfilecardComponent = ({
         </div>
 
         {description && (
-          <p className={classNames('mb-4', getStyle('description'))}>
+          <p className={classNames('mb-4', getStyle(variant, 'description'))}>
             {description}
           </p>
         )}
@@ -57,7 +61,7 @@ const ProfilecardComponent = ({
           <div
             className={classNames(
               'flex justify-between border-t border-b py-3 mb-4',
-              getStyle('statsSection')
+              getStyle(variant, 'statsSection')
             )}
           >
             {stats.map((stat, index) => (
@@ -65,12 +69,17 @@ const ProfilecardComponent = ({
                 <div
                   className={classNames(
                     'text-lg font-bold',
-                    getStyle('statValue')
+                    getStyle(variant, 'statValue')
                   )}
                 >
                   {stat.value}
                 </div>
-                <div className={classNames('text-xs', getStyle('statLabel'))}>
+                <div
+                  className={classNames(
+                    'text-xs',
+                    getStyle(variant, 'statLabel')
+                  )}
+                >
                   {stat.label}
                 </div>
               </div>
@@ -86,8 +95,8 @@ const ProfilecardComponent = ({
                 className={classNames(
                   'px-3 py-1 text-sm rounded',
                   index === 0
-                    ? getStyle('primaryButton')
-                    : getStyle('secondaryButton')
+                    ? getStyle(variant, 'primaryButton')
+                    : getStyle(variant, 'secondaryButton')
                 )}
                 onClick={action.onClick}
               >

@@ -3,6 +3,8 @@ import classNames from 'classnames';
 import { Collapsible } from 'radix-ui';
 import { RowSpacingIcon, Cross2Icon } from '@radix-ui/react-icons';
 
+/* INJECT_VARIANT_STYLING_LOGIC */
+
 const CollapsibleComponent = ({
   variant = 'default',
   className = '',
@@ -12,11 +14,10 @@ const CollapsibleComponent = ({
   ...props
 }) => {
   const [open, setOpen] = React.useState(defaultOpen);
-  /* INJECT_VARIANT_STYLING_LOGIC */
 
   return (
     <Collapsible.Root
-      className={classNames('w-full', getStyle('root'), className)}
+      className={classNames('w-full', getStyle(variant, 'root'), className)}
       open={open}
       onOpenChange={setOpen}
       {...props}
@@ -24,13 +25,13 @@ const CollapsibleComponent = ({
       <div
         className={classNames(
           'flex items-center justify-between',
-          getStyle('header')
+          getStyle(variant, 'header')
         )}
       >
         <span
           className={classNames(
             'text-[15px] leading-[25px]',
-            getStyle('title')
+            getStyle(variant, 'title')
           )}
         >
           {title}
@@ -39,7 +40,7 @@ const CollapsibleComponent = ({
           <button
             className={classNames(
               'inline-flex size-[25px] items-center justify-center rounded-full outline-none hover:bg-opacity-80 focus:shadow-[0_0_0_2px]',
-              getStyle('trigger')
+              getStyle(variant, 'trigger')
             )}
           >
             {open ? (
@@ -51,27 +52,35 @@ const CollapsibleComponent = ({
         </Collapsible.Trigger>
       </div>
 
-      <div className={classNames('my-2.5 rounded p-2.5', getStyle('item'))}>
+      <div
+        className={classNames(
+          'my-2.5 rounded p-2.5',
+          getStyle(variant, 'item')
+        )}
+      >
         <span
           className={classNames(
             'text-[15px] leading-[25px]',
-            getStyle('itemText')
+            getStyle(variant, 'itemText')
           )}
         >
           {items[0]?.content || '@radix-ui/primitives'}
         </span>
       </div>
 
-      <Collapsible.Content className={getStyle('content')}>
+      <Collapsible.Content className={getStyle(variant, 'content')}>
         {items.slice(1).map((item, index) => (
           <div
             key={index}
-            className={classNames('my-2.5 rounded p-2.5', getStyle('item'))}
+            className={classNames(
+              'my-2.5 rounded p-2.5',
+              getStyle(variant, 'item')
+            )}
           >
             <span
               className={classNames(
                 'text-[15px] leading-[25px]',
-                getStyle('itemText')
+                getStyle(variant, 'itemText')
               )}
             >
               {item.content}

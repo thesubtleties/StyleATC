@@ -7,6 +7,8 @@ import {
   ChevronUpIcon,
 } from '@radix-ui/react-icons';
 
+/* INJECT_VARIANT_STYLING_LOGIC */
+
 // Main component that accepts variant prop and options data
 const SelectComponent = ({
   variant = 'default',
@@ -18,8 +20,6 @@ const SelectComponent = ({
   className = '',
   ...props
 }) => {
-  /* INJECT_VARIANT_STYLING_LOGIC */
-
   return (
     <Select.Root
       defaultValue={defaultValue}
@@ -29,13 +29,13 @@ const SelectComponent = ({
       <Select.Trigger
         className={classnames(
           'inline-flex h-[35px] items-center justify-center gap-[5px] rounded px-[15px] text-[13px] leading-none outline-none',
-          getStyle('trigger'),
+          getStyle(variant, 'trigger'),
           className
         )}
         aria-label={label}
       >
         <Select.Value placeholder={placeholder} />
-        <Select.Icon className={getStyle('icon')}>
+        <Select.Icon className={getStyle(variant, 'icon')}>
           <ChevronDownIcon />
         </Select.Icon>
       </Select.Trigger>
@@ -43,13 +43,13 @@ const SelectComponent = ({
         <Select.Content
           className={classnames(
             'overflow-hidden rounded-md',
-            getStyle('content')
+            getStyle(variant, 'content')
           )}
         >
           <Select.ScrollUpButton
             className={classnames(
               'flex h-[25px] cursor-default items-center justify-center',
-              getStyle('scrollButton')
+              getStyle(variant, 'scrollButton')
             )}
           >
             <ChevronUpIcon />
@@ -61,7 +61,7 @@ const SelectComponent = ({
                   <Select.Separator
                     className={classnames(
                       'm-[5px] h-px',
-                      getStyle('separator')
+                      getStyle(variant, 'separator')
                     )}
                   />
                 )}
@@ -69,7 +69,7 @@ const SelectComponent = ({
                   <Select.Label
                     className={classnames(
                       'px-[25px] text-xs leading-[25px]',
-                      getStyle('label')
+                      getStyle(variant, 'label')
                     )}
                   >
                     {group.label}
@@ -79,6 +79,7 @@ const SelectComponent = ({
                       key={`item-${groupIndex}-${itemIndex}`}
                       value={item.value}
                       disabled={item.disabled}
+                      variant={variant}
                     >
                       {item.label}
                     </SelectItem>
@@ -90,7 +91,7 @@ const SelectComponent = ({
           <Select.ScrollDownButton
             className={classnames(
               'flex h-[25px] cursor-default items-center justify-center',
-              getStyle('scrollButton')
+              getStyle(variant, 'scrollButton')
             )}
           >
             <ChevronDownIcon />
@@ -102,12 +103,12 @@ const SelectComponent = ({
 };
 
 const SelectItem = React.forwardRef(
-  ({ children, className, ...props }, forwardedRef) => {
+  ({ children, className, variant, ...props }, forwardedRef) => {
     return (
       <Select.Item
         className={classnames(
           'relative flex h-[25px] select-none items-center rounded-[3px] pl-[25px] pr-[35px] text-[13px] leading-none data-[disabled]:pointer-events-none',
-          getStyle('item'),
+          getStyle(variant, 'item'),
           className
         )}
         {...props}
@@ -117,7 +118,7 @@ const SelectItem = React.forwardRef(
         <Select.ItemIndicator
           className={classnames(
             'absolute left-0 inline-flex w-[25px] items-center justify-center',
-            getStyle('itemIndicator')
+            getStyle(variant, 'itemIndicator')
           )}
         >
           <CheckIcon />

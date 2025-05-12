@@ -1,7 +1,7 @@
 <div className="mb-6">
   <h4 className="text-sm font-medium mb-2">{{ VARIANT_NAME_CAPITALIZED }}</h4>
   <div className="mb-2 flex justify-center py-12">
-    <HoverCardComponent
+    <HovercardComponent
       variant="{{VARIANT_NAME}}"
       triggerContent={
         <DefaultTrigger

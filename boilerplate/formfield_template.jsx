@@ -14,6 +14,9 @@ import classNames from 'classnames';
  * The 'variant' prop is optional here unless you define specific FormField variants.
  * If variants exist, the generator would use it for style lookup.
  */
+
+/* INJECT_VARIANT_STYLING_LOGIC */
+
 const FormfieldComponent = ({
   label,
   id,
@@ -25,20 +28,18 @@ const FormfieldComponent = ({
   inputClassName = '', // Extra classes for input
   ...props // Spread remaining props onto the input element
 }) => {
-  /* INJECT_VARIANT_STYLING_LOGIC */
-
   return (
     <div
       className={classNames(
         'w-full flex-col justify-start',
-        getStyle('fieldset'),
+        getStyle(variant, 'fieldset'),
         className
       )}
     >
       <label
         className={classNames(
           'block text-[13px] leading-none mb-2.5',
-          getStyle('label'),
+          getStyle(variant, 'label'),
           labelClassName
         )}
         htmlFor={id}
@@ -48,7 +49,7 @@ const FormfieldComponent = ({
       <input
         className={classNames(
           'h-[35px] shrink-0 grow rounded px-2.5 text-[15px] leading-none outline-none shadow-sm border',
-          getStyle('input'),
+          getStyle(variant, 'input'),
           inputClassName
         )}
         id={id}

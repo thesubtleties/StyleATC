@@ -1,6 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
 
+/* INJECT_VARIANT_STYLING_LOGIC */
+
 const ButtonComponent = React.forwardRef(
   (
     { children, variant = 'default', size = 'md', className = '', ...props },
@@ -15,20 +17,18 @@ const ButtonComponent = React.forwardRef(
       lg: 'py-3 px-6 text-lg',
     };
 
-    /* INJECT_VARIANT_STYLING_LOGIC */
-
     return (
       <button
         className={classNames(
           baseClasses,
           sizeClasses[size],
-          getStyle('root'),
+          getStyle(variant, 'root'),
           className
         )}
         {...props}
         ref={forwardedRef}
       >
-        <span className={getStyle('text')}>{children}</span>
+        <span className={getStyle(variant, 'text')}>{children}</span>
       </button>
     );
   }

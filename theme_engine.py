@@ -874,7 +874,7 @@ class ThemeEngine:
         js_injection = f"""
 /* --- Injected Variant Styling Logic --- */
 const allVariantStyles = JSON.parse('{styles_json_string}');
-const getStyle = (elementName) => {{
+const getStyle = (variant, elementName) => {{
   const variantStyles = allVariantStyles[variant] || allVariantStyles['default'] || {{ root: '', elements: {{}} }};
   if (elementName === 'root') {{
     return variantStyles.root || '';

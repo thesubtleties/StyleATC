@@ -238,7 +238,11 @@ class StyleGuideGenerator:
         """Generate import statements for all DISCOVERED components used in the style guide"""
         imports = [
             "import React from 'react';",
-            "import { useState, useEffect } from 'react';",  # Keep common hooks
+            "import { useState, useEffect } from 'react';",
+            "import { DefaultTrigger, DefaultCardContent } from './components/HovercardComponent';",
+            "import { PopoverFormFields } from './components/PopoverComponent';",
+            "import { NavigationMenu } from 'radix-ui';",
+            "import { FontItalicIcon, TextAlignLeftIcon, TextAlignCenterIcon, TextAlignRightIcon } from '@radix-ui/react-icons';",
         ]
 
         # Add import for each component found during discovery

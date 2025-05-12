@@ -2,6 +2,8 @@ import * as React from 'react';
 import classNames from 'classnames';
 import { AlertDialog } from 'radix-ui';
 
+/* INJECT_VARIANT_STYLING_LOGIC */
+
 const AlertdialogComponent = ({
   variant = 'default',
   className = '',
@@ -13,15 +15,13 @@ const AlertdialogComponent = ({
   onAction,
   ...props
 }) => {
-  /* INJECT_VARIANT_STYLING_LOGIC */
-
   return (
     <AlertDialog.Root {...props}>
       <AlertDialog.Trigger asChild>
         <button
           className={classNames(
             'inline-flex h-[35px] items-center justify-center rounded px-[15px] font-medium leading-none outline-none outline-offset-1 select-none',
-            getStyle('trigger'),
+            getStyle(variant, 'trigger'),
             className
           )}
         >
@@ -32,20 +32,20 @@ const AlertdialogComponent = ({
         <AlertDialog.Overlay
           className={classNames(
             'fixed inset-0 data-[state=open]:animate-overlayShow',
-            getStyle('overlay')
+            getStyle(variant, 'overlay')
           )}
         />
         <AlertDialog.Content
           className={classNames(
             'fixed left-1/2 top-1/2 max-h-[85vh] w-[90vw] max-w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-md p-[25px] shadow-sm focus:outline-none data-[state=open]:animate-contentShow',
-            getStyle('content'),
+            getStyle(variant, 'content'),
             className
           )}
         >
           <AlertDialog.Title
             className={classNames(
               'm-0 text-[17px] font-medium',
-              getStyle('title')
+              getStyle(variant, 'title')
             )}
           >
             {title}
@@ -53,7 +53,7 @@ const AlertdialogComponent = ({
           <AlertDialog.Description
             className={classNames(
               'mb-5 mt-[15px] text-[15px] leading-normal',
-              getStyle('description')
+              getStyle(variant, 'description')
             )}
           >
             {description}
@@ -63,7 +63,7 @@ const AlertdialogComponent = ({
               <button
                 className={classNames(
                   'inline-flex h-[35px] items-center justify-center rounded px-[15px] font-medium leading-none outline-none outline-offset-1 select-none',
-                  getStyle('cancel')
+                  getStyle(variant, 'cancel')
                 )}
               >
                 {cancelText}
@@ -73,7 +73,7 @@ const AlertdialogComponent = ({
               <button
                 className={classNames(
                   'inline-flex h-[35px] items-center justify-center rounded px-[15px] font-medium leading-none outline-none outline-offset-1 select-none',
-                  getStyle('action')
+                  getStyle(variant, 'action')
                 )}
                 onClick={onAction}
               >

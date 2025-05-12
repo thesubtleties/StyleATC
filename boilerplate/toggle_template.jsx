@@ -2,6 +2,8 @@ import * as React from 'react';
 import classNames from 'classnames';
 import { Toggle } from 'radix-ui';
 
+/* INJECT_VARIANT_STYLING_LOGIC */
+
 const ToggleComponent = ({
   variant = 'default',
   className = '',
@@ -11,8 +13,6 @@ const ToggleComponent = ({
   onPressedChange,
   ...props
 }) => {
-  /* INJECT_VARIANT_STYLING_LOGIC */
-
   return (
     <Toggle.Root
       aria-label={label}
@@ -20,12 +20,12 @@ const ToggleComponent = ({
       onPressedChange={onPressedChange}
       className={classNames(
         'flex items-center justify-center rounded leading-4',
-        getStyle('root'),
+        getStyle(variant, 'root'),
         className
       )}
       {...props}
     >
-      <span className={getStyle('icon')}>{icon}</span>
+      <span className={getStyle(variant, 'icon')}>{icon}</span>
     </Toggle.Root>
   );
 };

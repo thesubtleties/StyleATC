@@ -2,6 +2,8 @@ import * as React from 'react';
 import { Separator } from 'radix-ui';
 import classNames from 'classnames';
 
+/* INJECT_VARIANT_STYLING_LOGIC */
+
 const SeparatorComponent = ({
   variant = 'default',
   orientation = 'horizontal',
@@ -15,7 +17,7 @@ const SeparatorComponent = ({
     <Separator.Root
       className={classNames(
         'data-[orientation=horizontal]:h-px data-[orientation=vertical]:h-full data-[orientation=horizontal]:w-full data-[orientation=vertical]:w-px',
-        getStyle('root'),
+        getStyle(variant, 'root'),
         className
       )}
       orientation={orientation}
@@ -31,12 +33,10 @@ const SeparatordemoComponent = ({
   showVertical = true,
   className = '',
 }) => {
-  /* INJECT_VARIANT_STYLING_LOGIC */
-
   return (
     <div className={classNames('w-full max-w-[300px] mx-auto', className)}>
       {/* Horizontal separator example */}
-      <div className={getStyle('text')}>
+      <div className={getStyle(variant, 'text')}>
         <div className="font-medium">Radix Primitives</div>
         <div>An open-source UI component library.</div>
       </div>
@@ -46,21 +46,21 @@ const SeparatordemoComponent = ({
       {/* Vertical separator example */}
       {showVertical && (
         <div className="flex h-5 items-center">
-          <div className={getStyle('text')}>Blog</div>
+          <div className={getStyle(variant, 'text')}>Blog</div>
           <SeparatorComponent
             variant={variant}
             className="mx-[15px]"
             decorative
             orientation="vertical"
           />
-          <div className={getStyle('text')}>Docs</div>
+          <div className={getStyle(variant, 'text')}>Docs</div>
           <SeparatorComponent
             variant={variant}
             className="mx-[15px]"
             decorative
             orientation="vertical"
           />
-          <div className={getStyle('text')}>Source</div>
+          <div className={getStyle(variant, 'text')}>Source</div>
         </div>
       )}
     </div>

@@ -1,8 +1,7 @@
 {/*
   Style Guide Section for FormField
 
-  Placeholders:
-  - {{ FORMFIELD_VARIANTS }}: Replaced by the concatenated output of processed variant templates.
+
 
   Assumes `pageStyles` (or similar for colors) is available in scope.
 */}

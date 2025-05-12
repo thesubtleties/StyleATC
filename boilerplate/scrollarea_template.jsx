@@ -2,6 +2,8 @@ import * as React from 'react';
 import { ScrollArea } from 'radix-ui';
 import classNames from 'classnames';
 
+/* INJECT_VARIANT_STYLING_LOGIC */
+
 const ScrollareaComponent = ({
   items = [],
   variant = 'default',
@@ -11,13 +13,11 @@ const ScrollareaComponent = ({
   title = 'Tags',
   ...props
 }) => {
-  /* INJECT_VARIANT_STYLING_LOGIC */
-
   return (
     <ScrollArea.Root
       className={classNames(
         'overflow-hidden rounded shadow-sm',
-        getStyle('root'),
+        getStyle(variant, 'root'),
         className
       )}
       style={{ height, width }}
@@ -30,7 +30,7 @@ const ScrollareaComponent = ({
           <div
             className={classNames(
               'text-[15px] font-medium leading-[18px]',
-              getStyle('title')
+              getStyle(variant, 'title')
             )}
           >
             {title}
@@ -39,7 +39,7 @@ const ScrollareaComponent = ({
             <div
               className={classNames(
                 'mt-2.5 border-t pt-2.5 text-[13px] leading-[18px]',
-                getStyle('item')
+                getStyle(variant, 'item')
               )}
               key={index}
             >
@@ -51,32 +51,32 @@ const ScrollareaComponent = ({
       <ScrollArea.Scrollbar
         className={classNames(
           'flex touch-none select-none p-0.5 transition-colors duration-[160ms] ease-out data-[orientation=horizontal]:h-2.5 data-[orientation=vertical]:w-2.5 data-[orientation=horizontal]:flex-col',
-          getStyle('scrollbar')
+          getStyle(variant, 'scrollbar')
         )}
         orientation="vertical"
       >
         <ScrollArea.Thumb
           className={classNames(
             'relative flex-1 rounded-[10px] before:absolute before:left-1/2 before:top-1/2 before:size-full before:min-h-11 before:min-w-11 before:-translate-x-1/2 before:-translate-y-1/2',
-            getStyle('thumb')
+            getStyle(variant, 'thumb')
           )}
         />
       </ScrollArea.Scrollbar>
       <ScrollArea.Scrollbar
         className={classNames(
           'flex touch-none select-none p-0.5 transition-colors duration-[160ms] ease-out data-[orientation=horizontal]:h-2.5 data-[orientation=vertical]:w-2.5 data-[orientation=horizontal]:flex-col',
-          getStyle('scrollbar')
+          getStyle(variant, 'scrollbar')
         )}
         orientation="horizontal"
       >
         <ScrollArea.Thumb
           className={classNames(
             'relative flex-1 rounded-[10px] before:absolute before:left-1/2 before:top-1/2 before:size-full before:min-h-[44px] before:min-w-[44px] before:-translate-x-1/2 before:-translate-y-1/2',
-            getStyle('thumb')
+            getStyle(variant, 'thumb')
           )}
         />
       </ScrollArea.Scrollbar>
-      <ScrollArea.Corner className={getStyle('corner')} />
+      <ScrollArea.Corner className={getStyle(variant, 'corner')} />
     </ScrollArea.Root>
   );
 };

@@ -2,6 +2,8 @@ import React from 'react';
 import classNames from 'classnames';
 import { Dialog } from 'radix-ui';
 
+/* INJECT_VARIANT_STYLING_LOGIC */
+
 const ModalComponent = ({
   trigger,
   title,
@@ -20,8 +22,6 @@ const ModalComponent = ({
     fullWidth: 'max-w-4xl',
   };
 
-  /* INJECT_VARIANT_STYLING_LOGIC */
-
   return (
     <Dialog.Root {...props}>
       <Dialog.Trigger asChild>{trigger}</Dialog.Trigger>
@@ -29,13 +29,13 @@ const ModalComponent = ({
         <Dialog.Overlay
           className={classNames(
             'fixed inset-0 backdrop-blur-sm data-[state=open]:animate-fadeIn data-[state=closed]:animate-fadeOut',
-            getStyle('overlay')
+            getStyle(variant, 'overlay')
           )}
         />
         <Dialog.Content
           className={classNames(
             `fixed left-[50%] top-[50%] max-h-[85vh] w-[90vw] ${sizeClasses[size]} translate-x-[-50%] translate-y-[-50%] rounded p-6 focus:outline-none data-[state=open]:animate-contentShow overflow-auto`,
-            getStyle('root'),
+            getStyle(variant, 'root'),
             className
           )}
         >
@@ -43,7 +43,7 @@ const ModalComponent = ({
             <Dialog.Title
               className={classNames(
                 'text-xl font-semibold mb-2',
-                getStyle('title')
+                getStyle(variant, 'title')
               )}
             >
               {title}
@@ -52,13 +52,16 @@ const ModalComponent = ({
 
           {description && (
             <Dialog.Description
-              className={classNames('text-sm mb-5', getStyle('description'))}
+              className={classNames(
+                'text-sm mb-5',
+                getStyle(variant, 'description')
+              )}
             >
               {description}
             </Dialog.Description>
           )}
 
-          <div className={classNames('mb-6', getStyle('content'))}>
+          <div className={classNames('mb-6', getStyle(variant, 'content'))}>
             {children}
           </div>
 
@@ -66,7 +69,7 @@ const ModalComponent = ({
             <div
               className={classNames(
                 'flex justify-end space-x-2 pt-4',
-                getStyle('footer')
+                getStyle(variant, 'footer')
               )}
             >
               {footer}
@@ -76,7 +79,7 @@ const ModalComponent = ({
           <Dialog.Close
             className={classNames(
               'absolute top-4 right-4 inline-flex items-center justify-center rounded-full p-1 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2',
-              getStyle('close')
+              getStyle(variant, 'close')
             )}
           >
             <svg

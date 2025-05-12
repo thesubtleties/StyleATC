@@ -1,6 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
 
+/* INJECT_VARIANT_STYLING_LOGIC */
+
 const ContentSectionComponent = ({
   title,
   subtitle,
@@ -23,13 +25,11 @@ const ContentSectionComponent = ({
     large: 'mb-20',
   };
 
-  /* INJECT_VARIANT_STYLING_LOGIC */
-
   return (
     <section
       className={classNames(
         spacingClasses[spacing],
-        getStyle('root'),
+        getStyle(variant, 'root'),
         className
       )}
       {...props}
@@ -37,25 +37,33 @@ const ContentSectionComponent = ({
       <div
         className={classNames(
           `max-w-4xl ${alignClasses[align]}`,
-          getStyle('container')
+          getStyle(variant, 'container')
         )}
       >
         {title && (
           <h2
-            className={classNames('text-3xl font-bold mb-3', getStyle('title'))}
+            className={classNames(
+              'text-3xl font-bold mb-3',
+              getStyle(variant, 'title')
+            )}
           >
             {title}
           </h2>
         )}
         {subtitle && (
-          <p className={classNames('text-xl mb-6', getStyle('subtitle'))}>
+          <p
+            className={classNames(
+              'text-xl mb-6',
+              getStyle(variant, 'subtitle')
+            )}
+          >
             {subtitle}
           </p>
         )}
         <div
           className={classNames(
             'prose prose-lg prose-headings:font-bold',
-            getStyle('content')
+            getStyle(variant, 'content')
           )}
         >
           {children}

@@ -2,7 +2,9 @@ import * as React from 'react';
 import { HoverCard } from 'radix-ui';
 import classNames from 'classnames';
 
-const HoverCardComponent = ({
+/* INJECT_VARIANT_STYLING_LOGIC */
+
+const HovercardComponent = ({
   variant = 'default',
   className = '',
   triggerContent,
@@ -13,13 +15,12 @@ const HoverCardComponent = ({
   showArrow = true,
   ...props
 }) => {
-  /* INJECT_VARIANT_STYLING_LOGIC */
-
   return (
     <HoverCard.Root {...props}>
       <HoverCard.Trigger
         asChild={triggerAsChild}
-        className={getStyle('triggerWrapper')}
+        // Use getStyle with variant for the trigger wrapper if needed for theming
+        className={classNames(getStyle(variant, 'triggerWrapper'))}
       >
         {triggerContent}
       </HoverCard.Trigger>
@@ -27,26 +28,28 @@ const HoverCardComponent = ({
         <HoverCard.Content
           className={classNames(
             'rounded-md p-5 data-[side=bottom]:animate-slideUpAndFade data-[side=left]:animate-slideRightAndFade data-[side=right]:animate-slideLeftAndFade data-[side=top]:animate-slideDownAndFade data-[state=open]:transition-all',
-            getStyle('content'),
+            getStyle(variant, 'content'), // Use getStyle with variant for the main content area
             className
           )}
           sideOffset={5}
           {...contentProps}
         >
           {cardContent}
-          {showArrow && <HoverCard.Arrow className={getStyle('arrow')} />}
+          {showArrow && (
+            <HoverCard.Arrow className={getStyle(variant, 'arrow')} />
+          )}
         </HoverCard.Content>
       </HoverCard.Portal>
     </HoverCard.Root>
   );
 };
 
-// Default trigger component if none provided
+// Default trigger component - using standard Tailwind classes
 export const DefaultTrigger = ({ imageUrl, alt, href, ...props }) => (
   <a
     className={classNames(
-      'inline-block cursor-pointer rounded-full outline-none focus:shadow-[0_0_0_2px_white]',
-      getStyle('trigger')
+      'inline-block cursor-pointer rounded-full outline-none focus:shadow-[0_0_0_2px_white]'
+      // Removed getStyle('trigger')
     )}
     href={href || '#'}
     target="_blank"
@@ -55,8 +58,8 @@ export const DefaultTrigger = ({ imageUrl, alt, href, ...props }) => (
   >
     <img
       className={classNames(
-        'block size-[45px] rounded-full',
-        getStyle('triggerImage')
+        'block size-[45px] rounded-full'
+        // Removed getStyle(variant, 'triggerImage')
       )}
       src={
         imageUrl ||
@@ -67,7 +70,7 @@ export const DefaultTrigger = ({ imageUrl, alt, href, ...props }) => (
   </a>
 );
 
-// Default card content component if none provided
+// Default card content component - using standard Tailwind classes
 export const DefaultCardContent = ({
   imageUrl,
   title,
@@ -75,19 +78,20 @@ export const DefaultCardContent = ({
   description,
   followingCount,
   followersCount,
+
   ...props
 }) => (
   <div
     className={classNames(
-      'flex flex-col gap-[7px]',
-      getStyle('cardContentWrapper')
+      'flex flex-col gap-[7px]'
+      // Removed getStyle(variant, 'cardContentWrapper')
     )}
     {...props}
   >
     <img
       className={classNames(
-        'block size-[60px] rounded-full',
-        getStyle('cardImage')
+        'block size-[60px] rounded-full'
+        // Removed getStyle(variant, 'cardImage')
       )}
       src={
         imageUrl ||
@@ -99,17 +103,27 @@ export const DefaultCardContent = ({
       <div>
         <div
           className={classNames(
-            'm-0 text-[15px] font-medium',
-            getStyle('title')
+            'm-0 text-[15px] font-medium'
+            // Removed getStyle(variant, 'title')
           )}
         >
           {title || 'Radix'}
         </div>
-        <div className={classNames('m-0 text-[15px]', getStyle('handle'))}>
+        <div
+          className={classNames(
+            'm-0 text-[15px]'
+            // Removed getStyle(variant, 'handle')
+          )}
+        >
           {handle || '@radix_ui'}
         </div>
       </div>
-      <div className={classNames('m-0 text-[15px]', getStyle('description'))}>
+      <div
+        className={classNames(
+          'm-0 text-[15px]'
+          // Removed getStyle(variant, 'description')
+        )}
+      >
         {description ||
           'Components, icons, colors, and templates for building high-quality, accessible UI. Free and open-source.'}
       </div>
@@ -117,26 +131,36 @@ export const DefaultCardContent = ({
         <div className="flex gap-[5px]">
           <div
             className={classNames(
-              'm-0 text-[15px] font-medium',
-              getStyle('statNumber')
+              'm-0 text-[15px] font-medium'
+              // Removed getStyle(variant, 'statNumber')
             )}
           >
             {followingCount || '0'}
           </div>{' '}
-          <div className={classNames('m-0 text-[15px]', getStyle('statLabel'))}>
+          <div
+            className={classNames(
+              'm-0 text-[15px]'
+              // Removed getStyle(variant, 'statLabel')
+            )}
+          >
             Following
           </div>
         </div>
         <div className="flex gap-[5px]">
           <div
             className={classNames(
-              'm-0 text-[15px] font-medium',
-              getStyle('statNumber')
+              'm-0 text-[15px] font-medium'
+              // Removed getStyle(variant, 'statNumber')
             )}
           >
             {followersCount || '2,900'}
           </div>{' '}
-          <div className={classNames('m-0 text-[15px]', getStyle('statLabel'))}>
+          <div
+            className={classNames(
+              'm-0 text-[15px]'
+              // Removed getStyle(variant, 'statLabel') - variant is not in scope here
+            )}
+          >
             Followers
           </div>
         </div>
@@ -145,4 +169,4 @@ export const DefaultCardContent = ({
   </div>
 );
 
-export default HoverCardComponent;
+export default HovercardComponent;

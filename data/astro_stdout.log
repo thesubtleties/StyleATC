@@ -7,94 +7,297 @@
   Run "astro telemetry disable" to opt-out.
   https://astro.build/telemetry
 
-23:13:23 [types] Generated 0ms
-23:13:23 [content] Syncing content
-23:13:23 [content] Synced content
+21:18:05 [types] Generated 1ms
+21:18:05 [content] Syncing content
+21:18:05 [content] Synced content
 
- astro  v5.7.5 ready in 281 ms
+ astro  v5.7.5 ready in 316 ms
 
 ┃ Local    http://localhost:3000/
 ┃ Network  http://172.17.0.2:3000/
 
-23:13:23 watching for file changes...
-23:13:26 [WARN] [vite] warning: The character "}" is not valid inside a JSX element
-1298|  
-1299|    Assumes `pageStyles` (or similar for colors) is available in scope.
-1300|  */}
-   |    ^
-1301|  <div className="mb-12">
-1302|    <h3 className="text-xl font-bold mb-4 border-b pb-2" style={{ color: pageStyles.sectionHeadingColor /* Example */ }}>
+21:18:05 watching for file changes...
+21:18:08 [200] / 50ms
+21:18:09 [WARN] [vite] warning: The character "}" is not valid inside a JSX element
+1789|            : Replaced by the concatenated output of processed variant templates.
+1790|            Assumes `pageStyles` (or similar for colors) is available in scope.
+1791|            */}
+   |              ^
+1792|            <div className="mb-12">
+1793|              <h3
 
   Plugin: vite:esbuild
   File: /app/preview/src/output/StyleGuide.jsx
-23:13:27 [200] / 50ms
-23:19:08 [watch] src/output/StyleGuide.jsx
-23:19:08 [watch] src/output/StyleGuide.jsx
-23:19:55 [watch] src/output/components/AccordionComponent.jsx
-23:19:55 [watch] src/output/components/AccordionComponent.jsx
-23:19:55 [watch] src/output/components/AlertdialogComponent.jsx
-23:19:55 [watch] src/output/components/AlertdialogComponent.jsx
-23:19:55 [watch] src/output/components/ButtonComponent.jsx
-23:19:55 [watch] src/output/components/ButtonComponent.jsx
-23:19:55 [watch] src/output/components/CardComponent.jsx
-23:19:55 [watch] src/output/components/CardComponent.jsx
-23:19:55 [watch] src/output/components/CheckboxComponent.jsx
-23:19:55 [watch] src/output/components/CheckboxComponent.jsx
-23:19:55 [watch] src/output/components/CollapsibleComponent.jsx
-23:19:55 [watch] src/output/components/CollapsibleComponent.jsx
-23:19:55 [watch] src/output/components/ContentsectionComponent.jsx
-23:19:55 [watch] src/output/components/ContentsectionComponent.jsx
-23:19:55 [watch] src/output/components/ContextmenuComponent.jsx
-23:19:55 [watch] src/output/components/ContextmenuComponent.jsx
-23:19:55 [watch] src/output/components/DialogComponent.jsx
-23:19:55 [watch] src/output/components/DialogComponent.jsx
-23:19:55 [watch] src/output/components/DropdownmenudemoComponent.jsx
-23:19:55 [watch] src/output/components/DropdownmenudemoComponent.jsx
-23:19:55 [watch] src/output/components/FormComponent.jsx
-23:19:55 [watch] src/output/components/FormComponent.jsx
-23:19:55 [watch] src/output/components/FormfieldComponent.jsx
-23:19:55 [watch] src/output/components/FormfieldComponent.jsx
-23:19:55 [watch] src/output/components/HeaderComponent.jsx
-23:19:55 [watch] src/output/components/HeaderComponent.jsx
-23:19:55 [watch] src/output/components/HovercardComponent.jsx
-23:19:55 [watch] src/output/components/HovercardComponent.jsx
-23:19:55 [watch] src/output/components/LabelComponent.jsx
-23:19:55 [watch] src/output/components/LabelComponent.jsx
-23:19:55 [watch] src/output/components/MenubarComponent.jsx
-23:19:55 [watch] src/output/components/MenubarComponent.jsx
-23:19:55 [watch] src/output/components/ModalComponent.jsx
-23:19:55 [watch] src/output/components/ModalComponent.jsx
-23:19:55 [watch] src/output/components/NavigationmenuComponent.jsx
-23:19:55 [watch] src/output/components/NavigationmenuComponent.jsx
-23:19:55 [watch] src/output/components/OnetimepasswordComponent.jsx
-23:19:55 [watch] src/output/components/OnetimepasswordComponent.jsx
-23:19:55 [watch] src/output/components/PopoverComponent.jsx
-23:19:55 [watch] src/output/components/PopoverComponent.jsx
-23:19:55 [watch] src/output/components/ProfilecardComponent.jsx
-23:19:55 [watch] src/output/components/ProfilecardComponent.jsx
-23:19:55 [watch] src/output/components/ProgressComponent.jsx
-23:19:55 [watch] src/output/components/ProgressComponent.jsx
-23:19:55 [watch] src/output/components/RadiogroupComponent.jsx
-23:19:55 [watch] src/output/components/RadiogroupComponent.jsx
-23:19:55 [watch] src/output/components/ScrollareaComponent.jsx
-23:19:55 [watch] src/output/components/ScrollareaComponent.jsx
-23:19:55 [watch] src/output/components/SelectComponent.jsx
-23:19:55 [watch] src/output/components/SelectComponent.jsx
-23:19:56 [watch] src/output/components/SeparatordemoComponent.jsx
-23:19:56 [watch] src/output/components/SeparatordemoComponent.jsx
-23:19:56 [watch] src/output/components/SliderComponent.jsx
-23:19:56 [watch] src/output/components/SliderComponent.jsx
-23:19:56 [watch] src/output/components/SwitchComponent.jsx
-23:19:56 [watch] src/output/components/SwitchComponent.jsx
-23:19:56 [watch] src/output/components/TabsComponent.jsx
-23:19:56 [watch] src/output/components/TabsComponent.jsx
-23:19:56 [watch] src/output/components/ToastComponent.jsx
-23:19:56 [watch] src/output/components/ToastComponent.jsx
-23:19:56 [watch] src/output/components/ToggleComponent.jsx
-23:19:56 [watch] src/output/components/ToggleComponent.jsx
-23:19:56 [watch] src/output/components/TogglegroupComponent.jsx
-23:19:56 [watch] src/output/components/TogglegroupComponent.jsx
-23:19:56 [watch] src/output/components/ToolbarComponent.jsx
-23:19:56 [watch] src/output/components/ToolbarComponent.jsx
-23:19:56 [watch] src/output/components/TooltipComponent.jsx
-23:19:56 [watch] src/output/components/TooltipComponent.jsx
+21:18:09 [404] /logo.svg 2ms
+21:18:09 [404] /images/avatar-1.jpg 1ms
+21:18:09 [404] /logo.svg 1ms
+21:18:09 [404] /images/avatar-1.jpg 1ms
+21:18:09 [404] /logo.svg 1ms
+21:18:09 [404] /logo.svg 1ms
+21:18:09 [404] /images/avatar-1.jpg 1ms
+21:18:09 [404] /images/avatar-1.jpg 1ms
+21:18:30 [watch] /src/output/components/CardComponent.jsx, /src/styles/global.css
+21:18:30 [watch] src/output/components/CardComponent.jsx
+21:18:30 [404] /src/output/components/CardComponent.jsx 2ms
+21:19:46 [watch] /src/output/StyleGuide.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/StyleGuide.jsx
+21:19:46 [watch] /src/output/components/HeaderComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/HeaderComponent.jsx
+21:19:46 [watch] /src/output/components/AlertdialogComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/AlertdialogComponent.jsx
+21:19:46 [watch] /src/output/components/PopoverComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/PopoverComponent.jsx
+21:19:46 [watch] /src/output/components/DropdownmenudemoComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/DropdownmenudemoComponent.jsx
+21:19:46 [watch] /src/output/components/OnetimepasswordComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/OnetimepasswordComponent.jsx
+21:19:46 [watch] /src/output/components/HovercardComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/HovercardComponent.jsx
+21:19:46 [watch] /src/output/components/TabsComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/TabsComponent.jsx
+21:19:46 [watch] /src/output/components/ToggleComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/ToggleComponent.jsx
+21:19:46 [watch] /src/output/components/ButtonComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/ButtonComponent.jsx
+21:19:46 [watch] /src/output/components/TooltipComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/TooltipComponent.jsx
+21:19:46 [watch] /src/output/components/ContentsectionComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/ContentsectionComponent.jsx
+21:19:46 [watch] /src/output/components/TogglegroupComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/TogglegroupComponent.jsx
+21:19:46 [watch] /src/output/components/ModalComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/ModalComponent.jsx
+21:19:46 [watch] /src/output/components/NavigationmenuComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/NavigationmenuComponent.jsx
+21:19:46 [watch] /src/output/components/DialogComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/DialogComponent.jsx
+21:19:46 [watch] /src/output/components/CollapsibleComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/CollapsibleComponent.jsx
+21:19:46 [watch] /src/output/components/ProgressComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/ProgressComponent.jsx
+21:19:46 [watch] /src/output/components/ContextmenuComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/ContextmenuComponent.jsx
+21:19:46 [watch] /src/output/components/RadiogroupComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/RadiogroupComponent.jsx
+21:19:46 [watch] /src/output/components/SelectComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/SelectComponent.jsx
+21:19:46 [watch] /src/output/components/ScrollareaComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/ScrollareaComponent.jsx
+21:19:46 [watch] /src/output/components/ToolbarComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/ToolbarComponent.jsx
+21:19:46 [watch] /src/output/components/FormfieldComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/FormfieldComponent.jsx
+21:19:46 [watch] /src/output/components/CheckboxComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/CheckboxComponent.jsx
+21:19:46 [watch] /src/output/components/LabelComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/LabelComponent.jsx
+21:19:46 [watch] /src/output/components/ToastComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/ToastComponent.jsx
+21:19:46 [watch] /src/output/components/SeparatordemoComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/SeparatordemoComponent.jsx
+21:19:46 [watch] /src/output/components/SliderComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/SliderComponent.jsx
+21:19:46 [watch] /src/output/components/AccordionComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/AccordionComponent.jsx
+21:19:46 [watch] /src/output/components/FormComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/FormComponent.jsx
+21:19:46 [watch] /src/output/components/ProfilecardComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/ProfilecardComponent.jsx
+21:19:46 [watch] /src/output/components/MenubarComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/MenubarComponent.jsx
+21:19:46 [watch] /src/output/components/SwitchComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/SwitchComponent.jsx
+21:19:46 [watch] src/output/style_summary.md
+21:19:46 [watch] src/output/style_summary.md
+21:19:46 [watch] /src/output/components/CardComponent.jsx, /src/styles/global.css
+21:19:46 [watch] src/output/components/CardComponent.jsx
+21:19:47 [404] /logo.svg 1ms
+21:19:47 [404] /logo.svg 1ms
+21:19:47 [404] /logo.svg 1ms
+21:19:47 [200] / 22ms
+21:19:47 [404] /logo.svg 1ms
+21:19:47 [404] /logo.svg 1ms
+21:19:48 [404] /logo.svg 1ms
+21:19:48 [404] /logo.svg 1ms
+21:21:05 [200] / 5ms
+21:21:05 [404] /logo.svg 1ms
+21:21:06 [404] /logo.svg 1ms
+21:21:06 [200] / 5ms
+21:21:06 [404] /logo.svg 1ms
+21:21:06 [404] /logo.svg 1ms
+21:21:07 [404] /logo.svg 1ms
+21:21:07 [404] /logo.svg 0ms
+21:21:12 [404] /logo.svg 1ms
+21:21:12 [404] /logo.svg 0ms
+21:21:12 [404] /logo.svg 1ms
+21:21:12 [404] /logo.svg 0ms
+21:39:37 [watch] /src/output/StyleGuide.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/StyleGuide.jsx
+21:39:37 [watch] /src/output/components/HeaderComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/HeaderComponent.jsx
+21:39:37 [watch] /src/output/components/AlertdialogComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/AlertdialogComponent.jsx
+21:39:37 [watch] /src/output/components/PopoverComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/PopoverComponent.jsx
+21:39:37 [watch] /src/output/components/DropdownmenudemoComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/DropdownmenudemoComponent.jsx
+21:39:37 [watch] /src/output/components/OnetimepasswordComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/OnetimepasswordComponent.jsx
+21:39:37 [watch] /src/output/components/HovercardComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/HovercardComponent.jsx
+21:39:37 [watch] /src/output/components/TabsComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/TabsComponent.jsx
+21:39:37 [watch] /src/output/components/ToggleComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/ToggleComponent.jsx
+21:39:37 [watch] /src/output/components/ButtonComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/ButtonComponent.jsx
+21:39:37 [watch] /src/output/components/TooltipComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/TooltipComponent.jsx
+21:39:37 [watch] /src/output/components/ContentsectionComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/ContentsectionComponent.jsx
+21:39:37 [watch] /src/output/components/TogglegroupComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/TogglegroupComponent.jsx
+21:39:37 [watch] /src/output/components/ModalComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/ModalComponent.jsx
+21:39:37 [watch] /src/output/components/NavigationmenuComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/NavigationmenuComponent.jsx
+21:39:37 [watch] /src/output/components/DialogComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/DialogComponent.jsx
+21:39:37 [watch] /src/output/components/CollapsibleComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/CollapsibleComponent.jsx
+21:39:37 [watch] /src/output/components/ProgressComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/ProgressComponent.jsx
+21:39:37 [watch] /src/output/components/ContextmenuComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/ContextmenuComponent.jsx
+21:39:37 [watch] /src/output/components/RadiogroupComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/RadiogroupComponent.jsx
+21:39:37 [watch] /src/output/components/SelectComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/SelectComponent.jsx
+21:39:37 [watch] /src/output/components/ScrollareaComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/ScrollareaComponent.jsx
+21:39:37 [watch] /src/output/components/ToolbarComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/ToolbarComponent.jsx
+21:39:37 [watch] /src/output/components/FormfieldComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/FormfieldComponent.jsx
+21:39:37 [watch] /src/output/components/CheckboxComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/CheckboxComponent.jsx
+21:39:37 [watch] /src/output/components/LabelComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/LabelComponent.jsx
+21:39:37 [watch] /src/output/components/ToastComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/ToastComponent.jsx
+21:39:37 [watch] /src/output/components/SeparatordemoComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/SeparatordemoComponent.jsx
+21:39:37 [watch] /src/output/components/SliderComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/SliderComponent.jsx
+21:39:37 [watch] /src/output/components/AccordionComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/AccordionComponent.jsx
+21:39:37 [watch] /src/output/components/CardComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/CardComponent.jsx
+21:39:37 [watch] /src/output/components/FormComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/FormComponent.jsx
+21:39:37 [watch] /src/output/components/ProfilecardComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/ProfilecardComponent.jsx
+21:39:37 [watch] /src/output/components/MenubarComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/MenubarComponent.jsx
+21:39:37 [watch] /src/output/components/SwitchComponent.jsx, /src/styles/global.css
+21:39:37 [watch] src/output/components/SwitchComponent.jsx
+21:39:37 [watch] src/output/style_summary.md
+21:39:37 [watch] src/output/style_summary.md
+21:39:38 [404] /logo.svg 1ms
+21:39:38 [404] /logo.svg 0ms
+21:39:38 [200] / 11ms
+21:39:38 [404] /logo.svg 1ms
+21:39:38 [404] /logo.svg 1ms
+21:39:38 [404] /logo.svg 1ms
+21:39:38 [404] /logo.svg 0ms
+21:41:16 [200] / 4ms
+21:41:16 [404] /logo.svg 1ms
+21:41:16 [404] /logo.svg 1ms
+21:41:17 [404] /logo.svg 1ms
+21:41:17 [404] /logo.svg 0ms
+21:41:42 [watch] /src/output/StyleGuide.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/StyleGuide.jsx
+21:41:42 [watch] /src/output/components/HeaderComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/HeaderComponent.jsx
+21:41:42 [watch] /src/output/components/AlertdialogComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/AlertdialogComponent.jsx
+21:41:42 [watch] /src/output/components/PopoverComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/PopoverComponent.jsx
+21:41:42 [watch] /src/output/components/DropdownmenudemoComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/DropdownmenudemoComponent.jsx
+21:41:42 [watch] /src/output/components/OnetimepasswordComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/OnetimepasswordComponent.jsx
+21:41:42 [watch] /src/output/components/HovercardComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/HovercardComponent.jsx
+21:41:42 [watch] /src/output/components/TabsComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/TabsComponent.jsx
+21:41:42 [watch] /src/output/components/ToggleComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/ToggleComponent.jsx
+21:41:42 [watch] /src/output/components/ButtonComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/ButtonComponent.jsx
+21:41:42 [watch] /src/output/components/TooltipComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/TooltipComponent.jsx
+21:41:42 [watch] /src/output/components/ContentsectionComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/ContentsectionComponent.jsx
+21:41:42 [watch] /src/output/components/TogglegroupComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/TogglegroupComponent.jsx
+21:41:42 [watch] /src/output/components/ModalComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/ModalComponent.jsx
+21:41:42 [watch] /src/output/components/NavigationmenuComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/NavigationmenuComponent.jsx
+21:41:42 [watch] /src/output/components/DialogComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/DialogComponent.jsx
+21:41:42 [watch] /src/output/components/CollapsibleComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/CollapsibleComponent.jsx
+21:41:42 [watch] /src/output/components/ProgressComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/ProgressComponent.jsx
+21:41:42 [watch] /src/output/components/ContextmenuComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/ContextmenuComponent.jsx
+21:41:42 [watch] /src/output/components/RadiogroupComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/RadiogroupComponent.jsx
+21:41:42 [watch] /src/output/components/SelectComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/SelectComponent.jsx
+21:41:42 [watch] /src/output/components/ScrollareaComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/ScrollareaComponent.jsx
+21:41:42 [watch] /src/output/components/ToolbarComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/ToolbarComponent.jsx
+21:41:42 [watch] /src/output/components/CheckboxComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/CheckboxComponent.jsx
+21:41:42 [watch] /src/output/components/FormfieldComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/FormfieldComponent.jsx
+21:41:42 [watch] /src/output/components/LabelComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/LabelComponent.jsx
+21:41:42 [watch] /src/output/components/ToastComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/ToastComponent.jsx
+21:41:42 [watch] /src/output/components/SeparatordemoComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/SeparatordemoComponent.jsx
+21:41:42 [watch] /src/output/components/SliderComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/SliderComponent.jsx
+21:41:42 [watch] /src/output/components/AccordionComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/AccordionComponent.jsx
+21:41:42 [watch] /src/output/components/CardComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/CardComponent.jsx
+21:41:42 [watch] /src/output/components/FormComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/FormComponent.jsx
+21:41:42 [watch] /src/output/components/ProfilecardComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/ProfilecardComponent.jsx
+21:41:42 [watch] /src/output/components/MenubarComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/MenubarComponent.jsx
+21:41:42 [watch] /src/output/components/SwitchComponent.jsx, /src/styles/global.css
+21:41:42 [watch] src/output/components/SwitchComponent.jsx
+21:41:42 [watch] src/output/style_summary.md
+21:41:42 [watch] src/output/style_summary.md
+21:41:43 [404] /images/avatar-1.jpg 1ms
+21:41:43 [404] /logo.svg 0ms
+21:41:43 [404] /logo.svg 0ms
+21:41:43 [404] /images/avatar-1.jpg 0ms
+21:41:43 [404] /images/avatar-1.jpg 0ms
+21:41:43 [200] / 11ms
+21:41:43 [404] /logo.svg 1ms
+21:41:43 [404] /images/avatar-1.jpg 0ms
+21:41:43 [404] /images/avatar-1.jpg 1ms
+21:41:43 [404] /logo.svg 0ms
+21:41:44 [404] /logo.svg 0ms
+21:41:44 [404] /logo.svg 0ms
+21:41:44 [404] /images/avatar-1.jpg 0ms
+21:41:44 [404] /images/avatar-1.jpg 0ms

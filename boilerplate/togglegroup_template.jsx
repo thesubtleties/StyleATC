@@ -2,6 +2,8 @@ import * as React from 'react';
 import classNames from 'classnames';
 import { ToggleGroup } from 'radix-ui';
 
+/* INJECT_VARIANT_STYLING_LOGIC */
+
 const TogglegroupComponent = ({
   items = [],
   type = 'single',
@@ -11,13 +13,11 @@ const TogglegroupComponent = ({
   className = '',
   ...props
 }) => {
-  /* INJECT_VARIANT_STYLING_LOGIC */
-
   return (
     <ToggleGroup.Root
       className={classNames(
         'inline-flex rounded shadow-sm',
-        getStyle('root'),
+        getStyle(variant, 'root'),
         className
       )}
       type={type}
@@ -32,7 +32,7 @@ const TogglegroupComponent = ({
           key={item.value || index}
           className={classNames(
             'flex items-center justify-center first:rounded-l last:rounded-r focus:z-10 focus:outline-none',
-            getStyle('item'),
+            getStyle(variant, 'item'),
             item.className
           )}
           value={item.value}

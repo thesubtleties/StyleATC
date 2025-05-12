@@ -7,6 +7,8 @@ import {
   ChevronRightIcon,
 } from '@radix-ui/react-icons';
 
+/* INJECT_VARIANT_STYLING_LOGIC */
+
 const ContextMenuComponent = ({
   variant = 'default',
   className = '',
@@ -17,8 +19,6 @@ const ContextMenuComponent = ({
   subMenuItems = [],
   ...props
 }) => {
-  /* INJECT_VARIANT_STYLING_LOGIC */
-
   // State for checkbox and radio items
   const [checkboxStates, setCheckboxStates] = React.useState(
     checkboxItems.reduce(
@@ -42,7 +42,7 @@ const ContextMenuComponent = ({
       <ContextMenu.Trigger
         className={classNames(
           'block select-none rounded border-2 border-dashed py-[45px] text-center text-[15px]',
-          getStyle('trigger'),
+          getStyle(variant, 'trigger'),
           className
         )}
       >
@@ -52,7 +52,7 @@ const ContextMenuComponent = ({
         <ContextMenu.Content
           className={classNames(
             'min-w-[220px] overflow-hidden rounded-md p-[5px] shadow-md',
-            getStyle('content')
+            getStyle(variant, 'content')
           )}
           sideOffset={5}
           align="end"
@@ -65,14 +65,17 @@ const ContextMenuComponent = ({
               disabled={item.disabled}
               className={classNames(
                 'group relative flex h-[25px] select-none items-center rounded-[3px] pl-[25px] pr-[5px] text-[13px] leading-none outline-none data-[disabled]:pointer-events-none',
-                getStyle('item')
+                getStyle(variant, 'item')
               )}
               onClick={item.onClick}
             >
               {item.label}
               {item.shortcut && (
                 <div
-                  className={classNames('ml-auto pl-5', getStyle('shortcut'))}
+                  className={classNames(
+                    'ml-auto pl-5',
+                    getStyle(variant, 'shortcut')
+                  )}
                 >
                   {item.shortcut}
                 </div>
@@ -85,18 +88,26 @@ const ContextMenuComponent = ({
             <>
               {items.length > 0 && (
                 <ContextMenu.Separator
-                  className={classNames('m-[5px] h-px', getStyle('separator'))}
+                  className={classNames(
+                    'm-[5px] h-px',
+                    getStyle(variant, 'separator')
+                  )}
                 />
               )}
               <ContextMenu.Sub>
                 <ContextMenu.SubTrigger
                   className={classNames(
                     'group relative flex h-[25px] select-none items-center rounded-[3px] pl-[25px] pr-[5px] text-[13px] leading-none outline-none data-[disabled]:pointer-events-none',
-                    getStyle('subTrigger')
+                    getStyle(variant, 'subTrigger')
                   )}
                 >
                   More Tools
-                  <div className={classNames('ml-auto pl-5', getStyle('icon'))}>
+                  <div
+                    className={classNames(
+                      'ml-auto pl-5',
+                      getStyle(variant, 'icon')
+                    )}
+                  >
                     <ChevronRightIcon />
                   </div>
                 </ContextMenu.SubTrigger>
@@ -104,7 +115,7 @@ const ContextMenuComponent = ({
                   <ContextMenu.SubContent
                     className={classNames(
                       'min-w-[220px] overflow-hidden rounded-md p-[5px] shadow-md',
-                      getStyle('subContent')
+                      getStyle(variant, 'subContent')
                     )}
                     sideOffset={2}
                     alignOffset={-5}
@@ -115,7 +126,7 @@ const ContextMenuComponent = ({
                         disabled={item.disabled}
                         className={classNames(
                           'relative flex h-[25px] select-none items-center rounded-[3px] pl-[25px] pr-[5px] text-[13px] leading-none outline-none data-[disabled]:pointer-events-none',
-                          getStyle('subItem')
+                          getStyle(variant, 'subItem')
                         )}
                         onClick={item.onClick}
                       >
@@ -124,7 +135,7 @@ const ContextMenuComponent = ({
                           <div
                             className={classNames(
                               'ml-auto pl-5',
-                              getStyle('shortcut')
+                              getStyle(variant, 'shortcut')
                             )}
                           >
                             {item.shortcut}
@@ -142,14 +153,17 @@ const ContextMenuComponent = ({
           {checkboxItems.length > 0 && (
             <>
               <ContextMenu.Separator
-                className={classNames('m-[5px] h-px', getStyle('separator'))}
+                className={classNames(
+                  'm-[5px] h-px',
+                  getStyle(variant, 'separator')
+                )}
               />
               {checkboxItems.map((item, index) => (
                 <ContextMenu.CheckboxItem
                   key={`checkbox-${index}`}
                   className={classNames(
                     'group relative flex h-[25px] select-none items-center rounded-[3px] pl-[25px] pr-[5px] text-[13px] leading-none outline-none data-[disabled]:pointer-events-none',
-                    getStyle('checkboxItem')
+                    getStyle(variant, 'checkboxItem')
                   )}
                   checked={checkboxStates[item.id]}
                   onCheckedChange={() => handleCheckboxChange(item.id)}
@@ -157,7 +171,7 @@ const ContextMenuComponent = ({
                   <ContextMenu.ItemIndicator
                     className={classNames(
                       'absolute left-0 inline-flex w-[25px] items-center justify-center',
-                      getStyle('indicator')
+                      getStyle(variant, 'indicator')
                     )}
                   >
                     <CheckIcon />
@@ -167,7 +181,7 @@ const ContextMenuComponent = ({
                     <div
                       className={classNames(
                         'ml-auto pl-5',
-                        getStyle('shortcut')
+                        getStyle(variant, 'shortcut')
                       )}
                     >
                       {item.shortcut}
@@ -182,12 +196,15 @@ const ContextMenuComponent = ({
           {radioItems.length > 0 && (
             <>
               <ContextMenu.Separator
-                className={classNames('m-[5px] h-px', getStyle('separator'))}
+                className={classNames(
+                  'm-[5px] h-px',
+                  getStyle(variant, 'separator')
+                )}
               />
               <ContextMenu.Label
                 className={classNames(
                   'pl-[25px] text-xs leading-[25px]',
-                  getStyle('label')
+                  getStyle(variant, 'label')
                 )}
               >
                 {radioItems[0].group || 'Options'}
@@ -201,14 +218,14 @@ const ContextMenuComponent = ({
                     key={`radio-${index}`}
                     className={classNames(
                       'relative flex h-[25px] select-none items-center rounded-[3px] pl-[25px] pr-[5px] text-[13px] leading-none outline-none data-[disabled]:pointer-events-none',
-                      getStyle('radioItem')
+                      getStyle(variant, 'radioItem')
                     )}
                     value={item.value}
                   >
                     <ContextMenu.ItemIndicator
                       className={classNames(
                         'absolute left-0 inline-flex w-[25px] items-center justify-center',
-                        getStyle('indicator')
+                        getStyle(variant, 'indicator')
                       )}
                     >
                       <DotFilledIcon />

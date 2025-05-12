@@ -10,6 +10,8 @@ import {
   FontItalicIcon,
 } from '@radix-ui/react-icons';
 
+/* INJECT_VARIANT_STYLING_LOGIC */
+
 const ToolbarComponent = ({
   variant = 'default',
   className = '',
@@ -22,13 +24,11 @@ const ToolbarComponent = ({
   defaultAlignment = 'center',
   ...props
 }) => {
-  /* INJECT_VARIANT_STYLING_LOGIC */
-
   return (
     <Toolbar.Root
       className={classNames(
         'flex w-full min-w-max rounded-md p-2.5 shadow-sm',
-        getStyle('root'),
+        getStyle(variant, 'root'),
         className
       )}
       aria-label="Formatting options"
@@ -87,11 +87,11 @@ const ToolbarComponent = ({
 };
 
 const ToolbarToggleItem = React.forwardRef(
-  ({ children, className, ...props }, forwardedRef) => (
+  ({ children, className, variant, ...props }, forwardedRef) => (
     <Toolbar.ToggleItem
       className={classNames(
         'ml-0.5 inline-flex h-[25px] flex-shrink-0 flex-grow-0 basis-auto items-center justify-center rounded px-[5px] text-[13px] leading-none outline-none first:ml-0 focus:relative',
-        getStyle('toggleItem'),
+        getStyle(variant, 'toggleItem'),
         className
       )}
       {...props}
@@ -103,9 +103,13 @@ const ToolbarToggleItem = React.forwardRef(
 );
 
 const ToolbarSeparator = React.forwardRef(
-  ({ className, ...props }, forwardedRef) => (
+  ({ className, variant, ...props }, forwardedRef) => (
     <Toolbar.Separator
-      className={classNames('mx-2.5 w-px', getStyle('separator'), className)}
+      className={classNames(
+        'mx-2.5 w-px',
+        getStyle(variant, 'separator'),
+        className
+      )}
       {...props}
       ref={forwardedRef}
     />
@@ -113,11 +117,11 @@ const ToolbarSeparator = React.forwardRef(
 );
 
 const ToolbarLink = React.forwardRef(
-  ({ children, className, ...props }, forwardedRef) => (
+  ({ children, className, variant, ...props }, forwardedRef) => (
     <Toolbar.Link
       className={classNames(
         'ml-0.5 hidden h-[25px] flex-shrink-0 flex-grow-0 basis-auto items-center justify-center rounded px-[5px] text-[13px] leading-none outline-none first:ml-0 hover:cursor-pointer focus:relative sm:inline-flex',
-        getStyle('link'),
+        getStyle(variant, 'link'),
         className
       )}
       {...props}
@@ -129,11 +133,11 @@ const ToolbarLink = React.forwardRef(
 );
 
 const ToolbarButton = React.forwardRef(
-  ({ children, className, ...props }, forwardedRef) => (
+  ({ children, className, variant, ...props }, forwardedRef) => (
     <Toolbar.Button
       className={classNames(
         'inline-flex h-[25px] flex-shrink-0 flex-grow-0 basis-auto items-center justify-center rounded px-2.5 text-[13px] leading-none outline-none focus:relative',
-        getStyle('button'),
+        getStyle(variant, 'button'),
         className
       )}
       {...props}

@@ -3,9 +3,9 @@
   <div className="mb-2">
     <ToastComponent
       variant="{{VARIANT_NAME}}"
-      title="Notification: {{VARIANT_NAME_CAPITALIZED}}"
+      title="Notification: {{ VARIANT_NAME_CAPITALIZED }}"
       description="This is a {{VARIANT_NAME}} toast notification example"
-      triggerText="Show {{VARIANT_NAME_CAPITALIZED}} Toast"
+      triggerText="Show {{ VARIANT_NAME_CAPITALIZED }} Toast"
       actionText="Dismiss"
       duration={5000}
     />

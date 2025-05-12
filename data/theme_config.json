@@ -65,26 +65,59 @@
           }
         },
         "ocean": {
-          "tailwind": "w-full rounded-md",
+          "tailwind": "w-full rounded-md bg-gradient-to-r from-blue-50 to-cyan-50 shadow-md",
           "extends": "accordion.default",
           "color": null,
           "text_color": null,
           "description": "Ocean-themed accordion with subtle gradients and smooth animations",
           "elements": {
             "item": {
-              "tailwind": "border-b border-primary/10 last:border-0",
+              "tailwind": "border-b border-blue-200/50 last:border-0 transition-all duration-300",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "trigger": {
-              "tailwind": "flex flex-1 items-center justify-between py-4 font-medium transition-all hover:text-primary [&[data-state=open]]:text-primary",
+              "tailwind": "flex flex-1 items-center justify-between py-4 font-medium transition-all hover:text-cyan-600 [&[data-state=open]]:text-blue-600",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "content": {
-              "tailwind": "pt-0 pb-4 text-slate-700",
+              "tailwind": "pt-0 pb-4 text-blue-800/80 animate-in slide-in-from-top-1 duration-300",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        },
+        "modern": {
+          "tailwind": "w-full max-w-md rounded-lg bg-white dark:bg-slate-900 shadow-lg",
+          "extends": "accordion.default",
+          "color": null,
+          "text_color": null,
+          "description": "A sleek, modern accordion with smooth transitions and contemporary styling",
+          "elements": {
+            "item": {
+              "tailwind": "mb-2 overflow-hidden rounded-md border border-slate-200 dark:border-slate-700 last:mb-0 transition-all duration-200",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "trigger": {
+              "tailwind": "flex w-full items-center justify-between px-4 py-3 text-base font-medium text-slate-900 dark:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "icon": {
+              "tailwind": "h-5 w-5 text-blue-500 transition-transform duration-300 ease-in-out group-data-[state=open]:rotate-180",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "content": {
+              "tailwind": "overflow-hidden px-4 pb-4 pt-0 text-sm text-slate-700 dark:text-slate-300 data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down",
               "color": null,
               "text_color": null,
               "computed": null
@@ -145,6 +178,57 @@
               "computed": null
             }
           }
+        },
+        "wizardofoz": {
+          "tailwind": "font-serif",
+          "extends": "alertdialog.default",
+          "color": null,
+          "text_color": null,
+          "description": "A whimsical Wizard of Oz themed alert dialog with emerald city colors and yellow brick road accents",
+          "elements": {
+            "trigger": {
+              "tailwind": "bg-yellow-400 text-emerald-800 hover:bg-yellow-500 focus:ring-2 focus:ring-yellow-600 rounded-full px-6 py-2 font-semibold shadow-md",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "overlay": {
+              "tailwind": "bg-emerald-900/60 backdrop-blur-sm animate-in fade-in",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "content": {
+              "tailwind": "bg-gradient-to-br from-emerald-100 to-emerald-200 border-4 border-emerald-600 rounded-xl shadow-xl p-6 max-w-md w-full mx-auto animate-in zoom-in-95 slide-in-from-bottom-10",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "title": {
+              "tailwind": "text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-emerald-800 text-2xl font-bold mb-2 text-center",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "description": {
+              "tailwind": "bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent text-center mb-6 font-medium",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "cancel": {
+              "tailwind": "bg-gradient-to-r from-red-500 to-pink-600 text-white hover:from-red-600 hover:to-pink-700 focus:ring-2 focus:ring-red-400 rounded-full px-5 py-2 font-medium shadow-md transition-all duration-300 border-2 border-white",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "action": {
+              "tailwind": "bg-yellow-400 text-emerald-800 hover:bg-yellow-500 focus:ring-2 focus:ring-yellow-600 rounded-full px-5 py-2 font-semibold shadow-md transition-colors",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
         }
       }
     },
@@ -180,11 +264,19 @@
           "description": "Secondary button with gray styling"
         },
         "outline": {
-          "tailwind": "bg-transparent hover:bg-gray-50 text-purple-600 border border-purple-600 px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500",
+          "tailwind": "bg-transparent border-2 border-teal-500 text-teal-600 hover:bg-teal-50 font-medium px-6 py-2.5 rounded-lg transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-400",
           "extends": "button.default",
           "color": null,
           "text_color": null,
-          "description": "Outline button with purple border"
+          "description": "A clean teal outline button with a thicker border and subtle hover effect",
+          "elements": {
+            "text": {
+              "tailwind": "flex items-center justify-center gap-1.5 tracking-normal",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
         },
         "danger": {
           "tailwind": "bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500",
@@ -208,18 +300,34 @@
           "description": "Success button with secondary color styling"
         },
         "bright": {
-          "tailwind": "bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-4 py-2 rounded-md font-medium shadow-md hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-500",
+          "tailwind": "bg-gradient-to-br from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2",
           "extends": "button.default",
           "color": null,
           "text_color": null,
-          "description": "Bright button with gradient effect and subtle shadow"
+          "description": "A vibrant amber-to-orange gradient button with a slight lift effect on hover",
+          "elements": {
+            "text": {
+              "tailwind": "flex items-center justify-center gap-2 tracking-wide",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
         },
         "subtle": {
-          "tailwind": "bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-md font-medium border border-gray-200 shadow-sm hover:shadow transition-all duration-200 focus:outline-none focus:ring-1 focus:ring-gray-400",
+          "tailwind": "bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium px-5 py-2 rounded-md border border-slate-200 hover:border-slate-300 transition-all duration-200 focus:outline-none focus:ring-1 focus:ring-slate-400 active:bg-slate-300",
           "extends": "button.default",
           "color": null,
           "text_color": null,
-          "description": "Subtle button with minimal styling for secondary actions"
+          "description": "A refined subtle button with slate colors and active state for secondary actions",
+          "elements": {
+            "text": {
+              "tailwind": "flex items-center justify-center gap-1 text-sm",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
         },
         "neon": {
           "tailwind": "bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary/50 shadow-md hover:shadow-lg transition-all duration-200",
@@ -339,101 +447,135 @@
       "variants": {
         "default": {
           "tailwind": "rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow duration-200",
+          "elements": {
+            "title": "text-lg font-medium mb-2 text-gray-900",
+            "content": "text-sm text-gray-600"
+          },
           "extends": null,
           "color": null,
           "text_color": null,
-          "description": "Modern card with hover effect and smooth transition"
+          "description": "Standard card with subtle hover effect."
         },
         "elevated": {
-          "tailwind": "bg-white border border-gray-200 rounded-lg shadow-lg p-6",
+          "tailwind": "rounded-xl bg-white p-6 shadow-lg hover:shadow-xl transition-shadow duration-200 border border-gray-100",
+          "elements": {
+            "title": "text-xl font-semibold mb-2 text-gray-800",
+            "content": "text-base text-gray-600"
+          },
           "extends": "card.default",
           "color": null,
           "text_color": null,
-          "description": "Elevated card with a stronger shadow"
+          "description": "Card with increased elevation and shadow."
         },
         "outlined": {
-          "tailwind": "bg-white border-2 border-purple-500 rounded-lg p-6",
+          "tailwind": "rounded-xl border-2 border-primary bg-white p-6 hover:border-primary/70 transition-colors duration-200",
+          "elements": {
+            "title": "text-lg font-medium mb-2 text-primary",
+            "content": "text-sm text-gray-700"
+          },
           "extends": "card.default",
           "color": null,
           "text_color": null,
-          "description": "Outlined card with a colored border"
+          "description": "Card with a prominent primary color border."
         },
         "flat": {
-          "tailwind": "bg-gray-50 rounded-lg p-6",
+          "tailwind": "rounded-xl bg-gray-50 p-6 border border-gray-100",
+          "elements": {
+            "title": "text-lg font-medium mb-2 text-gray-700",
+            "content": "text-sm text-gray-500"
+          },
           "extends": "card.default",
           "color": null,
           "text_color": null,
-          "description": "Flat card with no border or shadow"
+          "description": "Minimal card with a flat appearance and light background."
         },
-        "primary": {
-          "tailwind": "bg-primary/10 border-2 border-primary rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-200",
+        "ghost": {
+          "tailwind": "rounded-xl bg-transparent p-6 hover:bg-gray-50/50 transition-colors duration-200",
+          "elements": {
+            "title": "text-lg font-medium mb-2 text-gray-800",
+            "content": "text-sm text-gray-600"
+          },
           "extends": "card.default",
           "color": null,
           "text_color": null,
-          "description": "Primary card with primary border and light background"
+          "description": "Transparent card that blends with the background, subtle hover."
         },
-        "gradient": {
-          "tailwind": "bg-gradient-to-br from-purple-100 to-blue-100 border border-purple-200 rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-200",
+        "dark": {
+          "tailwind": "rounded-xl bg-gray-800 text-white p-6 shadow-lg hover:shadow-gray-700/50 transition-shadow duration-200 border border-gray-700",
+          "elements": {
+            "title": "text-xl font-semibold mb-2 text-white",
+            "content": "text-base text-gray-300"
+          },
           "extends": "card.default",
           "color": null,
           "text_color": null,
-          "description": "Gradient card with subtle purple to blue background and hover effect"
+          "description": "Dark-themed card for interfaces with a dark mode."
         },
-        "neon-accent": {
-          "tailwind": "bg-white border-l-4 border-primary rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-200",
+        "gradient-accent": {
+          "tailwind": "rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-200 bg-white border-t-4 border-transparent bg-clip-padding [border-image:linear-gradient(to_right,theme(colors.primary),theme(colors.secondary))_1]",
+          "elements": {
+            "title": "text-lg font-medium mb-2 text-gray-900",
+            "content": "text-sm text-gray-600"
+          },
           "extends": "card.default",
           "color": null,
           "text_color": null,
-          "description": "Card with a neon pink accent border on the left side"
+          "description": "Card with a subtle gradient accent on the top border."
         },
-        "custom-dark": {
-          "tailwind": "bg-gray-800 text-white rounded-xl border-2 border-purple-500 p-6 shadow-xl hover:shadow-2xl transition-all duration-300",
+        "interactive": {
+          "tailwind": "rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:scale-[1.02] hover:shadow-xl focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2 transition-all duration-200 cursor-pointer",
+          "elements": {
+            "title": "text-lg font-medium mb-2 text-gray-900",
+            "content": "text-sm text-gray-600"
+          },
           "extends": "card.default",
           "color": null,
           "text_color": null,
-          "description": "Custom dark-themed card with purple border and hover effects"
+          "description": "Card designed for interaction, with hover transform and focus states."
         },
-        "vibrant": {
-          "tailwind": "bg-gradient-to-br from-white to-blue-50 border border-blue-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300",
+        "info": {
+          "tailwind": "rounded-xl bg-blue-50 border border-blue-200 p-6 shadow-sm",
+          "elements": {
+            "title": "text-lg font-medium mb-2 text-blue-700",
+            "content": "text-sm text-blue-600"
+          },
           "extends": "card.default",
           "color": null,
           "text_color": null,
-          "description": "A vibrant card with subtle blue gradient and enhanced shadow effects"
+          "description": "Card for displaying informational messages."
         },
-        "neumorphic": {
-          "tailwind": "bg-gray-100 rounded-xl p-6 shadow-[8px_8px_16px_#d1d1d1,-8px_-8px_16px_#ffffff] hover:shadow-[12px_12px_20px_#d1d1d1,-12px_-12px_20px_#ffffff] transition-all duration-300",
+        "success": {
+          "tailwind": "rounded-xl bg-green-50 border border-green-200 p-6 shadow-sm",
+          "elements": {
+            "title": "text-lg font-medium mb-2 text-green-700",
+            "content": "text-sm text-green-600"
+          },
           "extends": "card.default",
           "color": null,
           "text_color": null,
-          "description": "A neumorphic card with soft shadow effects that appears raised from the surface"
+          "description": "Card for success messages or positive affirmations."
         },
-        "indigo-glow": {
-          "tailwind": "bg-gradient-to-br from-white to-indigo-50 border-2 border-primary/30 rounded-xl p-6 shadow-lg hover:shadow-xl hover:shadow-primary/20 transition-all duration-300",
+        "warning": {
+          "tailwind": "rounded-xl bg-yellow-50 border border-yellow-300 p-6 shadow-sm",
+          "elements": {
+            "title": "text-lg font-medium mb-2 text-yellow-700",
+            "content": "text-sm text-yellow-600"
+          },
           "extends": "card.default",
           "color": null,
           "text_color": null,
-          "description": "A card with an indigo gradient background and subtle primary color glow effect on hover"
+          "description": "Card for warnings or important notices."
         },
-        "ocean-card": {
-          "tailwind": "bg-gradient-to-br from-white to-sky-50 border-2 border-primary/30 rounded-xl p-6 shadow-lg hover:shadow-xl hover:shadow-primary/20 transition-all duration-300",
+        "danger": {
+          "tailwind": "rounded-xl bg-red-50 border border-red-200 p-6 shadow-sm",
+          "elements": {
+            "title": "text-lg font-medium mb-2 text-red-700",
+            "content": "text-sm text-red-600"
+          },
           "extends": "card.default",
           "color": null,
           "text_color": null,
-          "description": "A card with a subtle sky blue gradient and teal primary color accent"
-        },
-        "ocean-wave": {
-          "tailwind": "bg-gradient-to-b from-white to-oceanfoam/30 border border-primary/20 rounded-xl p-6 shadow-md hover:shadow-lg hover:border-primary/40 transition-all duration-300",
-          "extends": "card.default",
-          "color": null,
-          "text_color": null,
-          "description": "A card with subtle ocean-inspired gradient and cyan border that complements the ocean-wave button"
-        },
-        "sunset-card": {
-          "tailwind": "bg-orange-50 border border-orange-200 rounded-xl shadow-md hover:shadow-lg transition-all duration-200",
-          "extends": "card.default",
-          "color": null,
-          "text_color": null,
-          "description": "A subtle card with warm orange accents, complementing the sunset button variants"
+          "description": "Card for error messages or critical alerts."
         }
       }
     },
@@ -2013,6 +2155,39 @@
               "computed": null
             }
           }
+        },
+        "ocean": {
+          "tailwind": "flex items-center justify-between rounded-lg bg-gradient-to-r from-blue-50 to-teal-50 p-2.5 shadow-md border border-blue-100",
+          "extends": "toolbar.default",
+          "color": null,
+          "text_color": null,
+          "description": "Ocean-themed toolbar with gradient background and fluid interactions.",
+          "elements": {
+            "button": {
+              "tailwind": "flex items-center justify-center rounded-md p-2 text-blue-600 hover:bg-gradient-to-r hover:from-blue-400/10 hover:to-teal-400/10 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all duration-200",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "separator": {
+              "tailwind": "mx-2 h-6 w-px bg-gradient-to-b from-blue-200 to-teal-200",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "toggleGroup": {
+              "tailwind": "flex gap-0.5 p-0.5 bg-blue-100/40 rounded-md",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "toggleItem": {
+              "tailwind": "flex items-center justify-center rounded-md p-2 text-blue-600 hover:bg-gradient-to-r hover:from-blue-400/10 hover:to-teal-400/10 focus:outline-none focus:ring-2 focus:ring-blue-400 data-[state=on]:bg-gradient-to-r data-[state=on]:from-blue-500 data-[state=on]:to-teal-400 data-[state=on]:text-white transition-all duration-200",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
         }
       }
     },
@@ -2039,6 +2214,33 @@
             },
             "arrow": {
               "tailwind": "fill-white",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        },
+        "ocean": {
+          "tailwind": "",
+          "extends": "tooltip.default",
+          "color": null,
+          "text_color": null,
+          "description": "Ocean-themed tooltip with gradient background and smooth animations.",
+          "elements": {
+            "content": {
+              "tailwind": "data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade text-white select-none rounded-[6px] bg-gradient-to-br from-blue-500 to-teal-400 px-[15px] py-[10px] text-[15px] leading-none shadow-[0px_8px_20px_rgba(0,0,0,0.3)] will-change-[transform,opacity] border border-blue-300/20",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "trigger": {
+              "tailwind": "inline-flex items-center justify-center rounded-full bg-gradient-to-r from-blue-400 to-teal-300 size-[35px] text-white shadow-[0_2px_10px] shadow-blue-400/30 hover:from-blue-500 hover:to-teal-400 focus:shadow-[0_0_0_2px] focus:shadow-blue-600 outline-none cursor-default transition-all duration-200",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "arrow": {
+              "tailwind": "fill-blue-500",
               "color": null,
               "text_color": null,
               "computed": null

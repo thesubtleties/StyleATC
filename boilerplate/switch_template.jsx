@@ -2,6 +2,8 @@ import * as React from 'react';
 import { Switch } from 'radix-ui';
 import classNames from 'classnames';
 
+/* INJECT_VARIANT_STYLING_LOGIC */
+
 const SwitchComponent = ({
   label = 'Toggle',
   id = 'switch',
@@ -11,15 +13,13 @@ const SwitchComponent = ({
   className = '',
   ...props
 }) => {
-  /* INJECT_VARIANT_STYLING_LOGIC */
-
   return (
-    <div className={classNames('flex items-center', getStyle('root'))}>
+    <div className={classNames('flex items-center', getStyle(variant, 'root'))}>
       {label && (
         <label
           className={classNames(
             'pr-[15px] text-[15px] leading-none',
-            getStyle('label')
+            getStyle(variant, 'label')
           )}
           htmlFor={id}
         >
@@ -41,7 +41,7 @@ const SwitchComponent = ({
         <Switch.Thumb
           className={classNames(
             'block size-[21px] translate-x-0.5 rounded-full shadow-sm transition-transform duration-100 will-change-transform data-[state=checked]:translate-x-[19px]',
-            getStyle('thumb')
+            getStyle(variant, 'thumb')
           )}
         />
       </Switch.Root>
