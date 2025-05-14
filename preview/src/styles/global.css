@@ -1,1 +1,274 @@
 @import 'tailwindcss';
+
+/* Your custom Tailwind theme in Tailwind 4 convention */
+@theme {
+  /* Define your Radix UI colors as CSS variables */
+  /* Replace these with the actual color values */
+  --color-blackA1: 0 0 0 / 0.01;
+  --color-blackA2: 0 0 0 / 0.02;
+  --color-blackA3: 0 0 0 / 0.03;
+  --color-blackA4: 0 0 0 / 0.05;
+  --color-blackA5: 0 0 0 / 0.06;
+  --color-blackA6: 0 0 0 / 0.08;
+  --color-blackA7: 0 0 0 / 0.1;
+  --color-blackA8: 0 0 0 / 0.14;
+  --color-blackA9: 0 0 0 / 0.24;
+  --color-blackA10: 0 0 0 / 0.34;
+  --color-blackA11: 0 0 0 / 0.48;
+  --color-blackA12: 0 0 0 / 0.7;
+
+  --color-mauve1: 244 244 248;
+  --color-mauve2: 239 239 243;
+  --color-mauve3: 233 234 237;
+  --color-mauve4: 227 228 231;
+  --color-mauve5: 218 220 224;
+  --color-mauve6: 203 206 211;
+  --color-mauve7: 178 184 190;
+  --color-mauve8: 130 139 151;
+  --color-mauve9: 99 109 128;
+  --color-mauve10: 87 96 112;
+  --color-mauve11: 64 72 87;
+  --color-mauve12: 44 49 57;
+
+  --color-violet1: 248 248 252;
+  --color-violet2: 243 243 250;
+  --color-violet3: 237 237 247;
+  --color-violet4: 231 231 245;
+  --color-violet5: 223 222 241;
+  --color-violet6: 208 207 236;
+  --color-violet7: 185 184 232;
+  --color-violet8: 139 136 222;
+  --color-violet9: 88 84 213;
+  --color-violet10: 75 72 208;
+  --color-violet11: 52 48 200;
+  --color-violet12: 35 30 137;
+
+  --color-purple1: 250 247 252;
+  --color-purple2: 245 240 250;
+  --color-purple3: 240 234 249;
+  --color-purple4: 235 228 248;
+  --color-purple5: 227 219 245;
+  --color-purple6: 214 206 242;
+  --color-purple7: 195 188 238;
+  --color-purple8: 154 146 232;
+  --color-purple9: 102 94 225;
+  --color-purple10: 89 81 220;
+  --color-purple11: 66 57 212;
+  --color-purple12: 42 34 144;
+
+  --color-indigo1: 247 249 252;
+  --color-indigo2: 240 244 250;
+  --color-indigo3: 233 237 247;
+  --color-indigo4: 226 231 245;
+  --color-indigo5: 217 223 242;
+  --color-indigo6: 203 212 239;
+  --color-indigo7: 180 193 235;
+  --color-indigo8: 129 149 229;
+  --color-indigo9: 73 94 221;
+  --color-indigo10: 61 80 217;
+  --color-indigo11: 39 58 210;
+  --color-indigo12: 24 38 141;
+
+  /* Define your animation variables, referencing keyframes */
+  --animate-enterFromRight: enterFromRight 250ms ease;
+  --animate-enterFromLeft: enterFromLeft 250ms ease;
+  --animate-exitToRight: exitToRight 250ms ease;
+  --animate-exitToLeft: exitToLeft 250ms ease;
+  --animate-scaleIn: scaleIn 200ms ease;
+  --animate-scaleOut: scaleOut 200ms ease;
+  --animate-fadeIn: fadeIn 200ms ease;
+  --animate-fadeOut: fadeOut 200ms ease;
+  --animate-wiggle: wiggle 1s ease-in-out infinite;
+  --animate-slideUpAndFade: slideUpAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-slideRightAndFade: slideRightAndFade 400ms
+    cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-slideDownAndFade: slideDownAndFade 400ms
+    cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-slideLeftAndFade: slideLeftAndFade 400ms
+    cubic-bezier(0.16, 1, 0.3, 1);
+
+  --animate-overlayShow: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-contentShow: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Define your @keyframes rules separately */
+@keyframes enterFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes enterFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes exitToRight {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+}
+
+@keyframes exitToLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0deg) scale(1);
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    opacity: 1;
+    transform: rotateX(0deg) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: rotateX(-10deg) scale(0.95);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes contentShow {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes contentHide {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+@keyframes slideUpAndFade {
+  from {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideRightAndFade {
+  from {
+    opacity: 0;
+    transform: translateX(-2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideDownAndFade {
+  from {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeftAndFade {
+  from {
+    opacity: 0;
+    transform: translateX(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes overlayShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* @keyframes contentShow {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+} */
+
+/* Any other global styles can go here */

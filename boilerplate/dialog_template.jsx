@@ -41,7 +41,7 @@ const DialogComponent = ({
         <Dialog.Content
           className={classNames(
             'fixed left-1/2 top-1/2 max-h-[85vh] w-[90vw] max-w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-md p-[25px] shadow-sm focus:outline-none data-[state=open]:animate-contentShow',
-            getStyle(variant, 'root'),
+            getStyle(variant, 'content'),
             className
           )}
         >

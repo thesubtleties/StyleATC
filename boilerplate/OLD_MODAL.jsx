@@ -1,16 +1,15 @@
-// ModalComponent.js (Simplified for always-present footer buttons, using classNames directly)
-
 import React from 'react';
 import classNames from 'classnames';
 import { Dialog } from 'radix-ui';
 
-/* INJECT_VARIANT_STYLING_LOGIC */ // Assumes getStyle is available here
+/* INJECT_VARIANT_STYLING_LOGIC */
 
 const ModalComponent = ({
   trigger,
   title,
   description,
   children,
+  footer,
   size = 'default',
   variant = 'default',
   className = '',
@@ -22,9 +21,6 @@ const ModalComponent = ({
     large: 'max-w-2xl',
     fullWidth: 'max-w-4xl',
   };
-
-  // Define the base button classes that apply to all buttons
-  //   const baseButtonClasses = 'px-4 py-2 rounded';
 
   return (
     <Dialog.Root {...props}>
@@ -43,7 +39,6 @@ const ModalComponent = ({
             className
           )}
         >
-          {/* Title */}
           {title && (
             <Dialog.Title
               className={classNames(
@@ -55,7 +50,6 @@ const ModalComponent = ({
             </Dialog.Title>
           )}
 
-          {/* Description */}
           {description && (
             <Dialog.Description
               className={classNames(
@@ -67,41 +61,21 @@ const ModalComponent = ({
             </Dialog.Description>
           )}
 
-          {/* Main Content */}
           <div className={classNames('mb-6', getStyle(variant, 'content'))}>
             {children}
           </div>
 
-          {/* Footer with always-present buttons */}
-          <div
-            className={classNames(
-              'flex justify-end space-x-2 pt-4',
-              getStyle(variant, 'footer') // Style the footer div itself
-            )}
-          >
-            {/* Cancel Button */}
-            <Dialog.Close asChild>
-              <button
-                className={classNames(
-                  getStyle(variant, 'secondaryButton') // Variant-specific secondary style
-                )}
-                // Add onClick={onCancel} if you re-introduce the prop
-              >
-                Cancel {/* Use cancelText if you re-introduce the prop */}
-              </button>
-            </Dialog.Close>
+          {footer && (
+            <div
+              className={classNames(
+                'flex justify-end space-x-2 pt-4',
+                getStyle(variant, 'footer')
+              )}
+            >
+              {footer}
+            </div>
+          )}
 
-            {/* Confirm Button */}
-            <Dialog.Close asChild>
-              <button
-                className={classNames(getStyle(variant, 'primaryButton'))}
-              >
-                Confirm {/* Use confirmText if you re-introduce the prop */}
-              </button>
-            </Dialog.Close>
-          </div>
-
-          {/* Close Button */}
           <Dialog.Close
             className={classNames(
               'absolute top-4 right-4 inline-flex items-center justify-center rounded-full p-1 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2',

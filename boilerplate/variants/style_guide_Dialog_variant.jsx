@@ -4,7 +4,7 @@
     <DialogComponent
       variant="{{VARIANT_NAME}}"
       triggerText="Open {{ VARIANT_NAME_CAPITALIZED }} Dialog"
-      title="{{ VARIANT_NAME_CAPITALIZED} } Dialog"
+      title="{{ VARIANT_NAME_CAPITALIZED }} Dialog"
       description="This is an example of the {{VARIANT_NAME}} dialog variant."
       fields={[
         { id: 'name', label: 'Name', defaultValue: 'John Doe' },

@@ -461,7 +461,7 @@ export default function StyleGuide() {
       Disabled
     </ButtonComponent>
   </div>
-  <p className="text-sm text-gray-500">A clean teal outline button with a thicker border and subtle hover effect</p>
+  <p className="text-sm text-gray-500">A modern, elegant outline button with subtle hover effects and refined styling</p>
 </div>
 
 
@@ -883,6 +883,46 @@ export default function StyleGuide() {
   </div>
   <p className="text-sm text-gray-500">A harmonious blend of ocean blues and sunset oranges in a gradient button</p>
 </div>
+
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Modal-default</h4>
+  <div className="flex flex-wrap gap-4 mb-2">
+    <ButtonComponent variant="modal-default" size="sm">
+      Small
+    </ButtonComponent>
+    <ButtonComponent variant="modal-default" size="md">
+      Medium
+    </ButtonComponent>
+    <ButtonComponent variant="modal-default" size="lg">
+      Large
+    </ButtonComponent>
+    <ButtonComponent variant="modal-default" disabled>
+      Disabled
+    </ButtonComponent>
+  </div>
+  <p className="text-sm text-gray-500">A button styled to match the default modal theme</p>
+</div>
+
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Sun-faded</h4>
+  <div className="flex flex-wrap gap-4 mb-2">
+    <ButtonComponent variant="sun-faded" size="sm">
+      Small
+    </ButtonComponent>
+    <ButtonComponent variant="sun-faded" size="md">
+      Medium
+    </ButtonComponent>
+    <ButtonComponent variant="sun-faded" size="lg">
+      Large
+    </ButtonComponent>
+    <ButtonComponent variant="sun-faded" disabled>
+      Disabled
+    </ButtonComponent>
+  </div>
+  <p className="text-sm text-gray-500">A sun-faded orange button to match the fancy modal</p>
+</div>
 </div>
   </div>
 </div>
@@ -899,201 +939,102 @@ export default function StyleGuide() {
     className="p-6 rounded-md shadow-sm"
     style={{ backgroundColor: pageStyles.cardBg }}
   >
-    <div className="space-y-8">
-<div className="mb-6">
+    <div className="space-y-8"><div className="mb-6">
   <h4 className="text-sm font-medium mb-2">Default</h4>
   <div className="mb-2">
-    <CardComponent variant="default" className="p-6 max-w-sm">
-      <h3 className="text-lg font-medium mb-2">Card Title</h3>
-      <p className="text-gray-600">
-        This is a default card component that demonstrates the
-        styling for this variant.
-      </p>
-    </CardComponent>
+
+    <CardComponent variant="default" className="max-w-sm" />
   </div>
   <p className="text-sm text-gray-500">Standard card with subtle hover effect.</p>
 </div>
-
-
 <div className="mb-6">
   <h4 className="text-sm font-medium mb-2">Elevated</h4>
   <div className="mb-2">
-    <CardComponent variant="elevated" className="p-6 max-w-sm">
-      <h3 className="text-lg font-medium mb-2">Card Title</h3>
-      <p className="text-gray-600">
-        This is a elevated card component that demonstrates the
-        styling for this variant.
-      </p>
-    </CardComponent>
+
+    <CardComponent variant="elevated" className="max-w-sm" />
   </div>
   <p className="text-sm text-gray-500">Card with increased elevation and shadow.</p>
 </div>
-
-
 <div className="mb-6">
   <h4 className="text-sm font-medium mb-2">Outlined</h4>
   <div className="mb-2">
-    <CardComponent variant="outlined" className="p-6 max-w-sm">
-      <h3 className="text-lg font-medium mb-2">Card Title</h3>
-      <p className="text-gray-600">
-        This is a outlined card component that demonstrates the
-        styling for this variant.
-      </p>
-    </CardComponent>
+
+    <CardComponent variant="outlined" className="max-w-sm" />
   </div>
   <p className="text-sm text-gray-500">Card with a prominent primary color border.</p>
 </div>
-
-
 <div className="mb-6">
   <h4 className="text-sm font-medium mb-2">Flat</h4>
   <div className="mb-2">
-    <CardComponent variant="flat" className="p-6 max-w-sm">
-      <h3 className="text-lg font-medium mb-2">Card Title</h3>
-      <p className="text-gray-600">
-        This is a flat card component that demonstrates the
-        styling for this variant.
-      </p>
-    </CardComponent>
+
+    <CardComponent variant="flat" className="max-w-sm" />
   </div>
-  <p className="text-sm text-gray-500">Minimal card with a flat appearance and light background.</p>
+  <p className="text-sm text-gray-500">Minimal card with a truly flat appearance and subtle gray background.</p>
 </div>
-
-
 <div className="mb-6">
   <h4 className="text-sm font-medium mb-2">Ghost</h4>
   <div className="mb-2">
-    <CardComponent variant="ghost" className="p-6 max-w-sm">
-      <h3 className="text-lg font-medium mb-2">Card Title</h3>
-      <p className="text-gray-600">
-        This is a ghost card component that demonstrates the
-        styling for this variant.
-      </p>
-    </CardComponent>
+
+    <CardComponent variant="ghost" className="max-w-sm" />
   </div>
   <p className="text-sm text-gray-500">Transparent card that blends with the background, subtle hover.</p>
 </div>
-
-
 <div className="mb-6">
   <h4 className="text-sm font-medium mb-2">Dark</h4>
   <div className="mb-2">
-    <CardComponent variant="dark" className="p-6 max-w-sm">
-      <h3 className="text-lg font-medium mb-2">Card Title</h3>
-      <p className="text-gray-600">
-        This is a dark card component that demonstrates the
-        styling for this variant.
-      </p>
-    </CardComponent>
+
+    <CardComponent variant="dark" className="max-w-sm" />
   </div>
   <p className="text-sm text-gray-500">Dark-themed card for interfaces with a dark mode.</p>
 </div>
-
-
 <div className="mb-6">
   <h4 className="text-sm font-medium mb-2">Gradient-accent</h4>
   <div className="mb-2">
-    <CardComponent variant="gradient-accent" className="p-6 max-w-sm">
-      <h3 className="text-lg font-medium mb-2">Card Title</h3>
-      <p className="text-gray-600">
-        This is a gradient-accent card component that demonstrates the
-        styling for this variant.
-      </p>
-    </CardComponent>
+
+    <CardComponent variant="gradient-accent" className="max-w-sm" />
   </div>
   <p className="text-sm text-gray-500">Card with a subtle gradient accent on the top border.</p>
 </div>
-
-
 <div className="mb-6">
   <h4 className="text-sm font-medium mb-2">Interactive</h4>
   <div className="mb-2">
-    <CardComponent variant="interactive" className="p-6 max-w-sm">
-      <h3 className="text-lg font-medium mb-2">Card Title</h3>
-      <p className="text-gray-600">
-        This is a interactive card component that demonstrates the
-        styling for this variant.
-      </p>
-    </CardComponent>
+
+    <CardComponent variant="interactive" className="max-w-sm" />
   </div>
   <p className="text-sm text-gray-500">Card designed for interaction, with hover transform and focus states.</p>
 </div>
-
-
 <div className="mb-6">
   <h4 className="text-sm font-medium mb-2">Info</h4>
   <div className="mb-2">
-    <CardComponent variant="info" className="p-6 max-w-sm">
-      <h3 className="text-lg font-medium mb-2">Card Title</h3>
-      <p className="text-gray-600">
-        This is a info card component that demonstrates the
-        styling for this variant.
-      </p>
-    </CardComponent>
+
+    <CardComponent variant="info" className="max-w-sm" />
   </div>
   <p className="text-sm text-gray-500">Card for displaying informational messages.</p>
 </div>
-
-
 <div className="mb-6">
   <h4 className="text-sm font-medium mb-2">Success</h4>
   <div className="mb-2">
-    <CardComponent variant="success" className="p-6 max-w-sm">
-      <h3 className="text-lg font-medium mb-2">Card Title</h3>
-      <p className="text-gray-600">
-        This is a success card component that demonstrates the
-        styling for this variant.
-      </p>
-    </CardComponent>
+
+    <CardComponent variant="success" className="max-w-sm" />
   </div>
   <p className="text-sm text-gray-500">Card for success messages or positive affirmations.</p>
 </div>
-
-
 <div className="mb-6">
   <h4 className="text-sm font-medium mb-2">Warning</h4>
   <div className="mb-2">
-    <CardComponent variant="warning" className="p-6 max-w-sm">
-      <h3 className="text-lg font-medium mb-2">Card Title</h3>
-      <p className="text-gray-600">
-        This is a warning card component that demonstrates the
-        styling for this variant.
-      </p>
-    </CardComponent>
+
+    <CardComponent variant="warning" className="max-w-sm" />
   </div>
   <p className="text-sm text-gray-500">Card for warnings or important notices.</p>
 </div>
-
-
 <div className="mb-6">
   <h4 className="text-sm font-medium mb-2">Danger</h4>
   <div className="mb-2">
-    <CardComponent variant="danger" className="p-6 max-w-sm">
-      <h3 className="text-lg font-medium mb-2">Card Title</h3>
-      <p className="text-gray-600">
-        This is a danger card component that demonstrates the
-        styling for this variant.
-      </p>
-    </CardComponent>
+
+    <CardComponent variant="danger" className="max-w-sm" />
   </div>
   <p className="text-sm text-gray-500">Card for error messages or critical alerts.</p>
-</div>
-
-
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Base</h4>
-  <div className="mb-2">
-    <CardComponent variant="base" className="p-6 max-w-sm">
-      <h3 className="text-lg font-medium mb-2">Card Title</h3>
-      <p className="text-gray-600">
-        This is a base card component that demonstrates the
-        styling for this variant.
-      </p>
-    </CardComponent>
-  </div>
-  <p className="text-sm text-gray-500">Base card component with rounded corners and subtle shadow</p>
-</div>
-</div>
+</div></div>
   </div>
 </div>
 
@@ -1128,6 +1069,82 @@ export default function StyleGuide() {
   </div>
   <p className="text-sm text-gray-500">Default checkbox variant.</p>
 </div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Modern</h4>
+  <div className="mb-2 flex flex-col gap-4">
+    <CheckboxComponent
+      variant="modern"
+      label="Unchecked state"
+      id="modern-unchecked"
+      defaultChecked={false}
+    />
+    <CheckboxComponent
+      variant="modern"
+      label="Checked state"
+      id="modern-checked"
+      defaultChecked={true}
+    />
+  </div>
+  <p className="text-sm text-gray-500">Modern checkbox with vibrant colors and smooth transitions.</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Minimal</h4>
+  <div className="mb-2 flex flex-col gap-4">
+    <CheckboxComponent
+      variant="minimal"
+      label="Unchecked state"
+      id="minimal-unchecked"
+      defaultChecked={false}
+    />
+    <CheckboxComponent
+      variant="minimal"
+      label="Checked state"
+      id="minimal-checked"
+      defaultChecked={true}
+    />
+  </div>
+  <p className="text-sm text-gray-500">Subtle, minimal checkbox with light styling.</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Rounded</h4>
+  <div className="mb-2 flex flex-col gap-4">
+    <CheckboxComponent
+      variant="rounded"
+      label="Unchecked state"
+      id="rounded-unchecked"
+      defaultChecked={false}
+    />
+    <CheckboxComponent
+      variant="rounded"
+      label="Checked state"
+      id="rounded-checked"
+      defaultChecked={true}
+    />
+  </div>
+  <p className="text-sm text-gray-500">Fully rounded checkbox with smooth edges.</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Ocean</h4>
+  <div className="mb-2 flex flex-col gap-4">
+    <CheckboxComponent
+      variant="ocean"
+      label="Unchecked state"
+      id="ocean-unchecked"
+      defaultChecked={false}
+    />
+    <CheckboxComponent
+      variant="ocean"
+      label="Checked state"
+      id="ocean-checked"
+      defaultChecked={true}
+    />
+  </div>
+  <p className="text-sm text-gray-500">Ocean-themed checkbox with blue and teal colors.</p>
+</div>
 </div>
   </div>
 </div>
@@ -1158,6 +1175,38 @@ export default function StyleGuide() {
     />
   </div>
   <p className="text-sm text-gray-500">Default collapsible variant.</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Classy</h4>
+  <div className="mb-2">
+    <CollapsibleComponent
+      variant="classy"
+      title="@peduarte starred 3 repositories"
+      items={[
+        { content: '@radix-ui/primitives' },
+        { content: '@radix-ui/colors' },
+        { content: '@radix-ui/themes' },
+      ]}
+    />
+  </div>
+  <p className="text-sm text-gray-500">A classy, minimalist collapsible with subtle colors and elegant styling.</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Fresh</h4>
+  <div className="mb-2">
+    <CollapsibleComponent
+      variant="fresh"
+      title="@peduarte starred 3 repositories"
+      items={[
+        { content: '@radix-ui/primitives' },
+        { content: '@radix-ui/colors' },
+        { content: '@radix-ui/themes' },
+      ]}
+    />
+  </div>
+  <p className="text-sm text-gray-500">A fresh, organic-inspired collapsible that feels welcoming and natural.</p>
 </div>
 </div>
   </div>
@@ -1264,6 +1313,49 @@ export default function StyleGuide() {
     <em>Note: Right-click on the trigger area to see the context menu</em>
   </div>
 </div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Soda-pop</h4>
+  <div className="mb-2">
+    <ContextmenuComponent
+      variant="soda-pop"
+      triggerText="Right-click here to open menu"
+      items={[
+        { label: 'Back', shortcut: '⌘+[' },
+        { label: 'Forward', shortcut: '⌘+]', disabled: true },
+        { label: 'Reload', shortcut: '⌘+R' },
+      ]}
+      subMenuItems={[
+        { label: 'Save Page As…', shortcut: '⌘+S' },
+        { label: 'Create Shortcut…' },
+        { label: 'Name Window…' },
+        { label: 'Developer Tools' },
+      ]}
+      checkboxItems={[
+        {
+          id: 'bookmarks',
+          label: 'Show Bookmarks',
+          shortcut: '⌘+B',
+          defaultChecked: true,
+        },
+        { id: 'urls', label: 'Show Full URLs' },
+      ]}
+      radioItems={[
+        {
+          group: 'People',
+          value: 'pedro',
+          label: 'Pedro Duarte',
+          defaultChecked: true,
+        },
+        { group: 'People', value: 'colm', label: 'Colm Tuite' },
+      ]}
+    />
+  </div>
+  <p className="text-sm text-gray-500">A whimsical 50's ice cream parlor-themed context menu with pastel colors and retro styling.</p>
+  <div className="mt-2 text-xs text-gray-400">
+    <em>Note: Right-click on the trigger area to see the context menu</em>
+  </div>
+</div>
 </div>
   </div>
 </div>
@@ -1286,7 +1378,7 @@ export default function StyleGuide() {
     <DialogComponent
       variant="default"
       triggerText="Open Default Dialog"
-      title="{{ VARIANT_NAME_CAPITALIZED} } Dialog"
+      title="Default Dialog"
       description="This is an example of the default dialog variant."
       fields={[
         { id: 'name', label: 'Name', defaultValue: 'John Doe' },
@@ -1295,7 +1387,25 @@ export default function StyleGuide() {
       saveButtonText="Save Changes"
     />
   </div>
-  <p className="text-sm text-gray-500">Default dialog variant.</p>
+  <p className="text-sm text-gray-500">Default dialog variant with solid background and normalized styling.</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Midnight</h4>
+  <div className="mb-2">
+    <DialogComponent
+      variant="midnight"
+      triggerText="Open Midnight Dialog"
+      title="Midnight Dialog"
+      description="This is an example of the midnight dialog variant."
+      fields={[
+        { id: 'name', label: 'Name', defaultValue: 'John Doe' },
+        { id: 'email', label: 'Email', defaultValue: 'john@example.com' },
+      ]}
+      saveButtonText="Save Changes"
+    />
+  </div>
+  <p className="text-sm text-gray-500">An elegant midnight-themed dialog with deep blues and subtle purple accents.</p>
 </div>
 </div>
   </div>
@@ -1384,7 +1494,7 @@ export default function StyleGuide() {
       ]}
     />
     <div className="ml-8 flex-1">
-      <p className="text-sm text-gray-500 mb-2">Ocean-themed dropdown menu with subtle gradients and animations</p>
+      <p className="text-sm text-gray-500 mb-2">Ocean-themed dropdown menu with beautiful aquatic colors and smooth transitions.</p>
       <p className="text-xs text-gray-400">
         Click the menu button to see the dropdown with the ocean{' '}
         styling.
@@ -1439,6 +1549,39 @@ export default function StyleGuide() {
     />
   </div>
   <p className="text-sm text-gray-500">Default form variant.</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Luxury</h4>
+  <div className="mb-2">
+    <FormComponent
+      variant="luxury"
+      fields={[
+        {
+          name: 'email',
+          label: 'Email',
+          type: 'email',
+          required: true,
+          messages: [
+            { match: 'valueMissing', text: 'Please enter your email' },
+            { match: 'typeMismatch', text: 'Please provide a valid email' },
+          ],
+        },
+        {
+          name: 'question',
+          label: 'Question',
+          type: 'textarea',
+          required: true,
+          messages: [
+            { match: 'valueMissing', text: 'Please enter a question' },
+          ],
+        },
+      ]}
+      submitLabel="Post question"
+      onSubmit={(e) => e.preventDefault()}
+    />
+  </div>
+  <p className="text-sm text-gray-500">Elegant form styled for luxury jewelry websites with gold accents and refined typography.</p>
 </div>
 </div>
   </div>
@@ -1503,6 +1646,47 @@ export default function StyleGuide() {
 
   </div>
   <p className="text-sm text-gray-500 italic mt-4">Default FormField variant.</p>
+</div>
+
+{/*
+  Style Guide Variant for FormField Component
+
+  Placeholders:
+  - Cosmic: e.g., "Default"
+  - cosmic: e.g., "default" (May not be used if FormField has no variants itself)
+  - A cosmic, space-themed form field with starry accents and futuristic styling.: Description of the variant/example.
+
+  Assumes `FormField` is available in the rendering scope.
+*/}
+<div className="mb-6 p-4 border rounded-lg bg-white shadow-sm"> {/* Added container */}
+  <h4 className="text-md font-semibold mb-3 text-gray-800">Cosmic Example</h4>
+  <div className="space-y-4"> {/* Add spacing between examples */}
+
+    {/* Example 1: Basic Text Input */}
+    <FormfieldComponent
+      label="Your Name"
+      id="example-name-cosmic"
+      placeholder="e.g., Jane Doe"
+    />
+
+    {/* Example 2: Password Input */}
+    <FormfieldComponent
+      label="Password"
+      id="example-password-cosmic"
+      type="password"
+      placeholder="Enter your password"
+    />
+
+     {/* Example 3: Input with Default Value */}
+    <FormfieldComponent
+      label="Email Address"
+      id="example-email-cosmic"
+      type="email"
+      defaultValue="test@example.com"
+    />
+
+  </div>
+  <p className="text-sm text-gray-500 italic mt-4">A cosmic, space-themed form field with starry accents and futuristic styling.</p>
 </div>
     </div>
   </div>
@@ -1604,6 +1788,33 @@ export default function StyleGuide() {
   </div>
   <p className="text-sm text-gray-500">Default hovercard variant.</p>
 </div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Graystone</h4>
+  <div className="mb-2 flex justify-center py-12">
+    <HovercardComponent
+      variant="graystone"
+      triggerContent={
+        <DefaultTrigger
+          imageUrl="https://pbs.twimg.com/profile_images/1337055608613253126/r_eiMp2H_400x400.png"
+          alt="Radix UI"
+          href="https://twitter.com/radix_ui"
+        />
+      }
+      cardContent={
+        <DefaultCardContent
+          imageUrl="https://pbs.twimg.com/profile_images/1337055608613253126/r_eiMp2H_400x400.png"
+          title="Radix"
+          handle="@radix_ui"
+          description="Components, icons, colors, and templates for building high-quality, accessible UI. Free and open-source."
+          followingCount="0"
+          followersCount="2,900"
+        />
+      }
+    />
+  </div>
+  <p className="text-sm text-gray-500">Sophisticated graystone hovercard with slate tones and subtle depth effects.</p>
+</div>
 </div>
   </div>
 </div>
@@ -1634,6 +1845,22 @@ export default function StyleGuide() {
     </LabelComponent>
   </div>
   <p className="text-sm text-gray-500">Default label variant.</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Ocean</h4>
+  <div className="mb-2">
+    <LabelComponent
+      variant="ocean"
+      htmlFor="ocean_input"
+      inputProps={{
+        defaultValue: 'Sample Text',
+      }}
+    >
+      Ocean Label
+    </LabelComponent>
+  </div>
+  <p className="text-sm text-gray-500">An ocean-themed label with wave-like aesthetics and sea colors.</p>
 </div>
 </div>
   </div>
@@ -1689,6 +1916,45 @@ export default function StyleGuide() {
   </div>
   <p className="text-sm text-gray-500">Default menubar variant.</p>
 </div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Cosmic</h4>
+  <div className="mb-2">
+    <MenubarComponent
+      variant="cosmic"
+      menus={[
+        {
+          name: 'File',
+          items: [
+            { label: 'New Tab', shortcut: '⌘ T' },
+            { label: 'New Window', shortcut: '⌘ N' },
+            { label: 'New Incognito Window', disabled: true },
+            { type: 'separator' },
+            {
+              label: 'Share',
+              type: 'submenu',
+              items: [
+                { label: 'Email Link' },
+                { label: 'Messages' },
+                { label: 'Notes' },
+              ],
+            },
+            { type: 'separator' },
+            { label: 'Print…', shortcut: '⌘ P' },
+          ],
+        },
+        {
+          name: 'Edit',
+          items: [
+            { label: 'Undo', shortcut: '⌘ Z' },
+            { label: 'Redo', shortcut: '⇧ ⌘ Z' },
+          ],
+        },
+      ]}
+    />
+  </div>
+  <p className="text-sm text-gray-500">A cosmic-themed menubar with space-inspired colors and stellar accents.</p>
+</div>
 </div>
   </div>
 </div>
@@ -1717,16 +1983,16 @@ export default function StyleGuide() {
       }
       title="Modal Title"
       description="This is a description of the modal's purpose."
-      footer={
-        <>
-          <button className="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">
-            Cancel
-          </button>
-          <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-            Confirm
-          </button>
-        </>
-      }
+      // footer={
+      //   <>
+      //     <button className="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">
+      //       Cancel
+      //     </button>
+      //     <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+      //       Confirm
+      //     </button>
+      //   </>
+      // }
     >
       <div className="p-4 border border-gray-200 rounded">
         <p>This is the main content of the modal.</p>
@@ -1749,16 +2015,16 @@ export default function StyleGuide() {
       }
       title="Modal Title"
       description="This is a description of the modal's purpose."
-      footer={
-        <>
-          <button className="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">
-            Cancel
-          </button>
-          <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-            Confirm
-          </button>
-        </>
-      }
+      // footer={
+      //   <>
+      //     <button className="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">
+      //       Cancel
+      //     </button>
+      //     <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+      //       Confirm
+      //     </button>
+      //   </>
+      // }
     >
       <div className="p-4 border border-gray-200 rounded">
         <p>This is the main content of the modal.</p>
@@ -1781,16 +2047,16 @@ export default function StyleGuide() {
       }
       title="Modal Title"
       description="This is a description of the modal's purpose."
-      footer={
-        <>
-          <button className="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">
-            Cancel
-          </button>
-          <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-            Confirm
-          </button>
-        </>
-      }
+      // footer={
+      //   <>
+      //     <button className="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">
+      //       Cancel
+      //     </button>
+      //     <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+      //       Confirm
+      //     </button>
+      //   </>
+      // }
     >
       <div className="p-4 border border-gray-200 rounded">
         <p>This is the main content of the modal.</p>
@@ -1813,16 +2079,16 @@ export default function StyleGuide() {
       }
       title="Modal Title"
       description="This is a description of the modal's purpose."
-      footer={
-        <>
-          <button className="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">
-            Cancel
-          </button>
-          <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-            Confirm
-          </button>
-        </>
-      }
+      // footer={
+      //   <>
+      //     <button className="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">
+      //       Cancel
+      //     </button>
+      //     <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+      //       Confirm
+      //     </button>
+      //   </>
+      // }
     >
       <div className="p-4 border border-gray-200 rounded">
         <p>This is the main content of the modal.</p>
@@ -1845,16 +2111,16 @@ export default function StyleGuide() {
       }
       title="Modal Title"
       description="This is a description of the modal's purpose."
-      footer={
-        <>
-          <button className="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">
-            Cancel
-          </button>
-          <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-            Confirm
-          </button>
-        </>
-      }
+      // footer={
+      //   <>
+      //     <button className="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">
+      //       Cancel
+      //     </button>
+      //     <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+      //       Confirm
+      //     </button>
+      //   </>
+      // }
     >
       <div className="p-4 border border-gray-200 rounded">
         <p>This is the main content of the modal.</p>
@@ -1960,7 +2226,7 @@ export default function StyleGuide() {
       ]}
     />
   </div>
-  <p className="text-sm text-gray-500">Default navigation menu variant.</p>
+  <p className="text-sm text-gray-500">Default navigation menu with configurable menu items.</p>
 </div>
 <div className="mb-6">
   <h4 className="text-sm font-medium mb-2">Ocean</h4>
@@ -2067,6 +2333,24 @@ export default function StyleGuide() {
   </div>
   <p className="text-sm text-gray-500">Default one-time password variant.</p>
 </div>
+
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Terminal</h4>
+  <div className="mb-2">
+    <OnetimepasswordComponent variant="terminal" length={6} />
+  </div>
+  <p className="text-sm text-gray-500">Linux terminal-style one-time password field with dark background and burnt orange monospace text.</p>
+</div>
+
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Rectangular</h4>
+  <div className="mb-2">
+    <OnetimepasswordComponent variant="rectangular" length={6} />
+  </div>
+  <p className="text-sm text-gray-500">Rectangular one-time password field with white background, silver borders, and bold medium gray text.</p>
+</div>
 </div>
   </div>
 </div>
@@ -2099,6 +2383,23 @@ export default function StyleGuide() {
   </div>
   <p className="text-sm text-gray-500">Default popover variant. Can be adapted for context menus.</p>
 </div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Royalblue</h4>
+  <div className="mb-2 flex items-center justify-center p-8 bg-gray-100 rounded">
+    <PopoverComponent variant="royalblue" title="Dimensions">
+      <PopoverFormFields
+        fields={[
+          { id: 'width', label: 'Width', defaultValue: '100%' },
+          { id: 'maxWidth', label: 'Max. width', defaultValue: '300px' },
+          { id: 'height', label: 'Height', defaultValue: '25px' },
+          { id: 'maxHeight', label: 'Max. height', defaultValue: 'none' },
+        ]}
+      />
+    </PopoverComponent>
+  </div>
+  <p className="text-sm text-gray-500">Elegant popover with rich dark blue background and gold accents.</p>
+</div>
 </div>
   </div>
 </div>
@@ -2123,7 +2424,7 @@ export default function StyleGuide() {
       variant="default"
       name="Alex Johnson"
       title="Product Designer"
-      avatarUrl="/images/avatar-1.jpg"
+      avatarUrl="https://api.dicebear.com/7.x/avataaars/svg?seed=Demo"
       description="Passionate designer with 5+ years of experience creating user-centered digital experiences."
       stats={[
         { value: '52', label: 'Projects' },
@@ -2147,7 +2448,7 @@ export default function StyleGuide() {
       variant="ocean"
       name="Alex Johnson"
       title="Product Designer"
-      avatarUrl="/images/avatar-1.jpg"
+      avatarUrl="https://api.dicebear.com/7.x/avataaars/svg?seed=Demo"
       description="Passionate designer with 5+ years of experience creating user-centered digital experiences."
       stats={[
         { value: '52', label: 'Projects' },
@@ -2199,6 +2500,28 @@ export default function StyleGuide() {
   </div>
   <p className="text-sm text-gray-500">An ocean-themed progress bar with light background and gradient fill</p>
 </div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Modern</h4>
+  <div className="mb-2">
+    <ProgressComponent variant="modern" value={66} />
+  </div>
+  <div className="mt-4 mb-2">
+    <ProgressComponent variant="modern" value={33} />
+  </div>
+  <p className="text-sm text-gray-500">A sleek, modern progress bar with soft glow effect</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Minimal</h4>
+  <div className="mb-2">
+    <ProgressComponent variant="minimal" value={66} />
+  </div>
+  <div className="mt-4 mb-2">
+    <ProgressComponent variant="minimal" value={33} />
+  </div>
+  <p className="text-sm text-gray-500">A minimal, flat progress bar with subtle animation</p>
+</div>
 </div>
   </div>
 </div>
@@ -2230,6 +2553,57 @@ export default function StyleGuide() {
     />
   </div>
   <p className="text-sm text-gray-500">Default radio group variant.</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Cards</h4>
+  <div className="mb-2">
+    <RadiogroupComponent
+      variant="cards"
+      options={[
+        { value: 'option1', label: 'Option 1' },
+        { value: 'option2', label: 'Option 2' },
+        { value: 'option3', label: 'Option 3' },
+      ]}
+      defaultValue="option1"
+      ariaLabel="Example options"
+    />
+  </div>
+  <p className="text-sm text-gray-500">A card-like radio group with options that visually highlight when selected</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Pills</h4>
+  <div className="mb-2">
+    <RadiogroupComponent
+      variant="pills"
+      options={[
+        { value: 'option1', label: 'Option 1' },
+        { value: 'option2', label: 'Option 2' },
+        { value: 'option3', label: 'Option 3' },
+      ]}
+      defaultValue="option1"
+      ariaLabel="Example options"
+    />
+  </div>
+  <p className="text-sm text-gray-500">A pill-style radio group with an interactive toggle feel</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Toggle</h4>
+  <div className="mb-2">
+    <RadiogroupComponent
+      variant="toggle"
+      options={[
+        { value: 'option1', label: 'Option 1' },
+        { value: 'option2', label: 'Option 2' },
+        { value: 'option3', label: 'Option 3' },
+      ]}
+      defaultValue="option1"
+      ariaLabel="Example options"
+    />
+  </div>
+  <p className="text-sm text-gray-500">A toggle-style radio group with button-like presentation</p>
 </div>
 </div>
   </div>
@@ -2276,6 +2650,99 @@ export default function StyleGuide() {
     />
   </div>
   <p className="text-sm text-gray-500">Default scroll area variant.</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Professional</h4>
+  <div className="mb-2">
+    <ScrollareaComponent
+      variant="professional"
+      items={[
+        'v1.2.0-beta.50',
+        'v1.2.0-beta.49',
+        'v1.2.0-beta.48',
+        'v1.2.0-beta.47',
+        'v1.2.0-beta.46',
+        'v1.2.0-beta.45',
+        'v1.2.0-beta.44',
+        'v1.2.0-beta.43',
+        'v1.2.0-beta.42',
+        'v1.2.0-beta.41',
+        'v1.2.0-beta.40',
+        'v1.2.0-beta.39',
+        'v1.2.0-beta.38',
+        'v1.2.0-beta.37',
+        'v1.2.0-beta.36',
+        'v1.2.0-beta.35',
+      ]}
+      title="Tags"
+      height="225px"
+      width="200px"
+    />
+  </div>
+  <p className="text-sm text-gray-500">A sleek, professional scroll area with modern minimal scrollbars</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Elevated</h4>
+  <div className="mb-2">
+    <ScrollareaComponent
+      variant="elevated"
+      items={[
+        'v1.2.0-beta.50',
+        'v1.2.0-beta.49',
+        'v1.2.0-beta.48',
+        'v1.2.0-beta.47',
+        'v1.2.0-beta.46',
+        'v1.2.0-beta.45',
+        'v1.2.0-beta.44',
+        'v1.2.0-beta.43',
+        'v1.2.0-beta.42',
+        'v1.2.0-beta.41',
+        'v1.2.0-beta.40',
+        'v1.2.0-beta.39',
+        'v1.2.0-beta.38',
+        'v1.2.0-beta.37',
+        'v1.2.0-beta.36',
+        'v1.2.0-beta.35',
+      ]}
+      title="Tags"
+      height="225px"
+      width="200px"
+    />
+  </div>
+  <p className="text-sm text-gray-500">A stylish, elevated scroll area with modern aesthetics and subtle interactions</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Glass</h4>
+  <div className="mb-2">
+    <ScrollareaComponent
+      variant="glass"
+      items={[
+        'v1.2.0-beta.50',
+        'v1.2.0-beta.49',
+        'v1.2.0-beta.48',
+        'v1.2.0-beta.47',
+        'v1.2.0-beta.46',
+        'v1.2.0-beta.45',
+        'v1.2.0-beta.44',
+        'v1.2.0-beta.43',
+        'v1.2.0-beta.42',
+        'v1.2.0-beta.41',
+        'v1.2.0-beta.40',
+        'v1.2.0-beta.39',
+        'v1.2.0-beta.38',
+        'v1.2.0-beta.37',
+        'v1.2.0-beta.36',
+        'v1.2.0-beta.35',
+      ]}
+      title="Tags"
+      height="225px"
+      width="200px"
+    />
+  </div>
+  <p className="text-sm text-gray-500">A glass-morphism inspired scroll area with elegant blur effects</p>
 </div>
 </div>
   </div>
@@ -2334,6 +2801,48 @@ export default function StyleGuide() {
   </div>
   <p className="text-sm text-gray-500">Default select variant.</p>
 </div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Chill</h4>
+  <div className="mb-2">
+    <SelectComponent
+      variant="chill"
+      placeholder="Select a food…"
+      groups={[
+        {
+          label: 'Fruits',
+          items: [
+            { value: 'apple', label: 'Apple' },
+            { value: 'banana', label: 'Banana' },
+            { value: 'blueberry', label: 'Blueberry' },
+            { value: 'grapes', label: 'Grapes' },
+            { value: 'pineapple', label: 'Pineapple' },
+          ],
+        },
+        {
+          label: 'Vegetables',
+          items: [
+            { value: 'aubergine', label: 'Aubergine' },
+            { value: 'broccoli', label: 'Broccoli' },
+            { value: 'carrot', label: 'Carrot', disabled: true },
+            { value: 'courgette', label: 'Courgette' },
+            { value: 'leek', label: 'Leek' },
+          ],
+        },
+        {
+          label: 'Meat',
+          items: [
+            { value: 'beef', label: 'Beef' },
+            { value: 'chicken', label: 'Chicken' },
+            { value: 'lamb', label: 'Lamb' },
+            { value: 'pork', label: 'Pork' },
+          ],
+        },
+      ]}
+    />
+  </div>
+  <p className="text-sm text-gray-500">A calm, relaxed select component with cool colors and subtle animations</p>
+</div>
 </div>
   </div>
 </div>
@@ -2356,6 +2865,78 @@ export default function StyleGuide() {
     <SeparatordemoComponent variant="default" />
   </div>
   <p className="text-sm text-gray-500">Default separator variant.</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Gradient</h4>
+  <div className="mb-2">
+    <SeparatordemoComponent variant="gradient" />
+  </div>
+  <p className="text-sm text-gray-500">A gradient separator that transitions smoothly between colors</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Dotted</h4>
+  <div className="mb-2">
+    <SeparatordemoComponent variant="dotted" />
+  </div>
+  <p className="text-sm text-gray-500">A stylish dot pattern separator</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Elevated</h4>
+  <div className="mb-2">
+    <SeparatordemoComponent variant="elevated" />
+  </div>
+  <p className="text-sm text-gray-500">A thick, elevated separator with shadow effect</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Double</h4>
+  <div className="mb-2">
+    <SeparatordemoComponent variant="double" />
+  </div>
+  <p className="text-sm text-gray-500">A double-line separator for a more decorative look</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Rainbow</h4>
+  <div className="mb-2">
+    <SeparatordemoComponent variant="rainbow" />
+  </div>
+  <p className="text-sm text-gray-500">A colorful, rainbow gradient separator</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Ornate</h4>
+  <div className="mb-2">
+    <SeparatordemoComponent variant="ornate" />
+  </div>
+  <p className="text-sm text-gray-500">A decorative ornate separator with a center accent</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Animated</h4>
+  <div className="mb-2">
+    <SeparatordemoComponent variant="animated" />
+  </div>
+  <p className="text-sm text-gray-500">A dashed separator with animated movement</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Crayon</h4>
+  <div className="mb-2">
+    <SeparatordemoComponent variant="crayon" />
+  </div>
+  <p className="text-sm text-gray-500">A playful separator that looks like it was drawn with a crayon</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Crayon-alt</h4>
+  <div className="mb-2">
+    <SeparatordemoComponent variant="crayon-alt" />
+  </div>
+  <p className="text-sm text-gray-500">A wavy, hand-drawn separator that looks like crayon</p>
 </div>
 </div>
   </div>
@@ -2399,6 +2980,34 @@ export default function StyleGuide() {
     />
   </div>
   <p className="text-sm text-gray-500">Ocean-themed slider with gradient track and smooth animations</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Audio</h4>
+  <div className="mb-2 flex items-center justify-center py-4">
+    <SliderComponent
+      variant="audio"
+      defaultValue={[50]}
+      max={100}
+      step={1}
+      ariaLabel="Example slider"
+    />
+  </div>
+  <p className="text-sm text-gray-500">A sleek, dark audio-style volume slider with a modern look</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Squared</h4>
+  <div className="mb-2 flex items-center justify-center py-4">
+    <SliderComponent
+      variant="squared"
+      defaultValue={[50]}
+      max={100}
+      step={1}
+      ariaLabel="Example slider"
+    />
+  </div>
+  <p className="text-sm text-gray-500">A sleek squared audio slider with black glowing thumb</p>
 </div>
 </div>
   </div>
@@ -2450,6 +3059,60 @@ export default function StyleGuide() {
     />
   </div>
   <p className="text-sm text-gray-500">Ocean-themed switch with gradient when active and light background when inactive</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Ios</h4>
+  <div className="mb-2 flex flex-col space-y-4">
+    <SwitchComponent
+      variant="ios"
+      label="Airplane mode"
+      id="ios-airplane"
+    />
+    <SwitchComponent
+      variant="ios"
+      label="Dark mode"
+      id="ios-dark"
+      checked={true}
+    />
+  </div>
+  <p className="text-sm text-gray-500">An iOS-inspired switch with rounded appearance and subtle animations</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Minimal</h4>
+  <div className="mb-2 flex flex-col space-y-4">
+    <SwitchComponent
+      variant="minimal"
+      label="Airplane mode"
+      id="minimal-airplane"
+    />
+    <SwitchComponent
+      variant="minimal"
+      label="Dark mode"
+      id="minimal-dark"
+      checked={true}
+    />
+  </div>
+  <p className="text-sm text-gray-500">A sleek, minimal switch with a dark theme and purple accent</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Flat</h4>
+  <div className="mb-2 flex flex-col space-y-4">
+    <SwitchComponent
+      variant="flat"
+      label="Airplane mode"
+      id="flat-airplane"
+    />
+    <SwitchComponent
+      variant="flat"
+      label="Dark mode"
+      id="flat-dark"
+      checked={true}
+    />
+  </div>
+  <p className="text-sm text-gray-500">A flat, modern toggle with a colorful gradient when active</p>
 </div>
 </div>
   </div>
@@ -2703,6 +3366,21 @@ export default function StyleGuide() {
     />
   </div>
   <p className="text-sm text-gray-500">Ocean-themed toast notification with subtle border and animations</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Champagne</h4>
+  <div className="mb-2">
+    <ToastComponent
+      variant="champagne"
+      title="Notification: Champagne"
+      description="This is a champagne toast notification example"
+      triggerText="Show Champagne Toast"
+      actionText="Dismiss"
+      duration={5000}
+    />
+  </div>
+  <p className="text-sm text-gray-500">Elegant celebratory toast with golden champagne theme</p>
 </div>
 </div>
   </div>

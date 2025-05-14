@@ -6,7 +6,7 @@
       variant="{{VARIANT_NAME}}"
       name="Alex Johnson"
       title="Product Designer"
-      avatarUrl="/images/avatar-1.jpg"
+      avatarUrl="https://api.dicebear.com/7.x/avataaars/svg?seed=Demo"
       description="Passionate designer with 5+ years of experience creating user-centered digital experiences."
       stats={[
         { value: '52', label: 'Projects' },

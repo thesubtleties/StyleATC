@@ -10,16 +10,16 @@
       }
       title="Modal Title"
       description="This is a description of the modal's purpose."
-      footer={
-        <>
-          <button className="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">
-            Cancel
-          </button>
-          <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-            Confirm
-          </button>
-        </>
-      }
+      // footer={
+      //   <>
+      //     <button className="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">
+      //       Cancel
+      //     </button>
+      //     <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+      //       Confirm
+      //     </button>
+      //   </>
+      // }
     >
       <div className="p-4 border border-gray-200 rounded">
         <p>This is the main content of the modal.</p>

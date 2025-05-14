@@ -5,7 +5,7 @@ import { Cross2Icon } from '@radix-ui/react-icons';
 
 
 /* --- Injected Variant Styling Logic --- */
-const allVariantStyles = JSON.parse('{"default":{"root":"","elements":{"trigger":"bg-primary text-primary-foreground hover:bg-primary/90 focus:ring-2 focus:ring-primary","overlay":"bg-black/50 backdrop-blur-sm","content":"bg-background border border-border","title":"text-foreground","description":"text-muted-foreground","label":"text-foreground","input":"border border-input bg-background focus:border-primary focus:ring-1 focus:ring-primary","saveButton":"bg-primary text-primary-foreground hover:bg-primary/90 focus:ring-2 focus:ring-primary","closeButton":"hover:bg-muted focus:ring-2 focus:ring-primary","closeIcon":"h-4 w-4 text-foreground"},"description":"Default dialog variant."}}');
+const allVariantStyles = JSON.parse('{"default":{"root":"w-full max-w-md","elements":{"trigger":"bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-md px-4 py-2 font-medium","overlay":"bg-black/50 backdrop-blur-sm","content":"bg-white border border-gray-200 rounded-lg shadow-lg p-6","title":"text-gray-900 text-lg font-semibold mb-2","description":"text-gray-500 text-sm mb-4","label":"text-gray-700 text-sm font-medium mb-1","input":"border border-gray-300 rounded-md px-3 py-2 w-full focus:border-blue-500 focus:ring-1 focus:ring-blue-500 bg-white","saveButton":"bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-md px-4 py-2 font-medium","closeButton":"hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 rounded-full p-1","closeIcon":"h-4 w-4 text-gray-500"},"description":"Default dialog variant with solid background and normalized styling."},"midnight":{"root":"w-full max-w-md","elements":{"trigger":"bg-indigo-600 text-white hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md px-4 py-2 font-medium transition-colors duration-200","overlay":"bg-black/70 backdrop-blur-sm","content":"bg-opacity-100 bg-gray-900 border border-indigo-800 rounded-lg shadow-lg p-6 text-gray-100","title":"text-indigo-300 text-lg font-semibold mb-2","description":"text-gray-400 text-sm mb-4","label":"text-gray-300 text-sm font-medium mb-1","input":"border border-gray-700 rounded-md px-3 py-2 w-full focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 bg-gray-800 text-gray-200","saveButton":"bg-indigo-600 text-white hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 focus:ring-offset-gray-900 rounded-md px-4 py-2 font-medium transition-colors duration-200","closeButton":"hover:bg-gray-800 focus:ring-2 focus:ring-indigo-500 rounded-full p-1 transition-colors duration-200","closeIcon":"h-4 w-4 text-gray-400 hover:text-gray-200"},"description":"An elegant midnight-themed dialog with deep blues and subtle purple accents."}}');
 const getStyle = (variant, elementName) => {
   const variantStyles = allVariantStyles[variant] || allVariantStyles['default'] || { root: '', elements: {} };
   if (elementName === 'root') {
@@ -53,7 +53,7 @@ const DialogComponent = ({
         <Dialog.Content
           className={classNames(
             'fixed left-1/2 top-1/2 max-h-[85vh] w-[90vw] max-w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-md p-[25px] shadow-sm focus:outline-none data-[state=open]:animate-contentShow',
-            getStyle(variant, 'root'),
+            getStyle(variant, 'content'),
             className
           )}
         >
