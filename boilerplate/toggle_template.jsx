@@ -11,6 +11,7 @@ const ToggleComponent = ({
   label = 'Toggle',
   defaultPressed = false,
   onPressedChange,
+  colors = {},
   ...props
 }) => {
   return (

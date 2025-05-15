@@ -761,7 +761,7 @@ export default function StyleGuide() {
       Disabled
     </ButtonComponent>
   </div>
-  <p className="text-sm text-gray-500">A button styled with our primary teal color with a clean, modern appearance</p>
+  <p className="text-sm text-gray-500">An ocean-themed button with a gradient of blue shades reminiscent of ocean waves</p>
 </div>
 
 
@@ -1625,6 +1625,7 @@ export default function StyleGuide() {
     <FormfieldComponent
       label="Your Name"
       id="example-name-default"
+      variant="default"
       placeholder="e.g., Jane Doe"
     />
 
@@ -1632,6 +1633,7 @@ export default function StyleGuide() {
     <FormfieldComponent
       label="Password"
       id="example-password-default"
+      variant="default"
       type="password"
       placeholder="Enter your password"
     />
@@ -1640,6 +1642,7 @@ export default function StyleGuide() {
     <FormfieldComponent
       label="Email Address"
       id="example-email-default"
+      variant="default"
       type="email"
       defaultValue="test@example.com"
     />
@@ -1666,6 +1669,7 @@ export default function StyleGuide() {
     <FormfieldComponent
       label="Your Name"
       id="example-name-cosmic"
+      variant="cosmic"
       placeholder="e.g., Jane Doe"
     />
 
@@ -1673,6 +1677,7 @@ export default function StyleGuide() {
     <FormfieldComponent
       label="Password"
       id="example-password-cosmic"
+      variant="cosmic"
       type="password"
       placeholder="Enter your password"
     />
@@ -1681,12 +1686,57 @@ export default function StyleGuide() {
     <FormfieldComponent
       label="Email Address"
       id="example-email-cosmic"
+      variant="cosmic"
       type="email"
       defaultValue="test@example.com"
     />
 
   </div>
   <p className="text-sm text-gray-500 italic mt-4">A cosmic, space-themed form field with starry accents and futuristic styling.</p>
+</div>
+
+{/*
+  Style Guide Variant for FormField Component
+
+  Placeholders:
+  - Ocean: e.g., "Default"
+  - ocean: e.g., "default" (May not be used if FormField has no variants itself)
+  - An ocean-inspired form field with cool blue colors and a subtle wave-like appearance: Description of the variant/example.
+
+  Assumes `FormField` is available in the rendering scope.
+*/}
+<div className="mb-6 p-4 border rounded-lg bg-white shadow-sm"> {/* Added container */}
+  <h4 className="text-md font-semibold mb-3 text-gray-800">Ocean Example</h4>
+  <div className="space-y-4"> {/* Add spacing between examples */}
+
+    {/* Example 1: Basic Text Input */}
+    <FormfieldComponent
+      label="Your Name"
+      id="example-name-ocean"
+      variant="ocean"
+      placeholder="e.g., Jane Doe"
+    />
+
+    {/* Example 2: Password Input */}
+    <FormfieldComponent
+      label="Password"
+      id="example-password-ocean"
+      variant="ocean"
+      type="password"
+      placeholder="Enter your password"
+    />
+
+     {/* Example 3: Input with Default Value */}
+    <FormfieldComponent
+      label="Email Address"
+      id="example-email-ocean"
+      variant="ocean"
+      type="email"
+      defaultValue="test@example.com"
+    />
+
+  </div>
+  <p className="text-sm text-gray-500 italic mt-4">An ocean-inspired form field with cool blue colors and a subtle wave-like appearance</p>
 </div>
     </div>
   </div>
@@ -3136,7 +3186,7 @@ export default function StyleGuide() {
   Placeholders:
   - Default: e.g., "Default"
   - default: e.g., "default"
-  - Default tabs variant.: Description of the variant from theme config.
+  - A polished tabs variant with subtle shadows and transitions for a modern UI experience.: Description of the variant from theme config.
 
   Assumes `TabsComponent`, `FormField`, and `Button` are available in the
   rendering scope (imported into the main StyleGuide.jsx).
@@ -3155,7 +3205,7 @@ export default function StyleGuide() {
           content: (
             // Use React Fragments or a div if needed
             <>
-              <p className="mb-5 text-[15px] leading-normal text-gray-700">
+              <p className="mb-5 text-[15px] leading-normal">
                 Make changes to your account here. Click save when you're done.
               </p>
               {/* --- Use the actual FormField component --- */}
@@ -3164,16 +3214,18 @@ export default function StyleGuide() {
                 id="name-default" // Unique ID
                 defaultValue="Ada Lovelace"
                 className="mb-4" // Add spacing if needed
+                variant="default"
               />
               {/* --- Use the actual FormField component --- */}
               <FormfieldComponent
                 label="Username"
                 id="username-default" // Unique ID
                 defaultValue="@ada"
+                variant="default"
               />
               <div className="mt-6 flex justify-end border-t pt-4">
                 {/* --- Use the actual Button component --- */}
-                <ButtonComponent variant="primary">Save changes</ButtonComponent> {/* Example: Use button variant */}
+                <ButtonComponent variant="default">Save changes</ButtonComponent> {/* Example: Use button variant */}
               </div>
             </>
           ),
@@ -3183,7 +3235,7 @@ export default function StyleGuide() {
           label: 'Password',
           content: (
             <>
-              <p className="mb-5 text-[15px] leading-normal text-gray-700">
+              <p className="mb-5 text-[15px] leading-normal">
                 Change your password here. After saving, you'll be logged out.
               </p>
               {/* --- Use the actual FormField component --- */}
@@ -3192,6 +3244,7 @@ export default function StyleGuide() {
                 id="current-password-default" // Unique ID
                 type="password"
                 className="mb-4"
+                variant="default"
               />
               {/* --- Use the actual FormField component --- */}
               <FormfieldComponent
@@ -3199,16 +3252,18 @@ export default function StyleGuide() {
                 id="new-password-default" // Unique ID
                 type="password"
                 className="mb-4"
+                variant="default"
               />
               {/* --- Use the actual FormField component --- */}
               <FormfieldComponent
                 label="Confirm password"
                 id="confirm-password-default" // Unique ID
                 type="password"
+                variant="default"
               />
               <div className="mt-6 flex justify-end border-t pt-4">
                  {/* --- Use the actual Button component --- */}
-                <ButtonComponent variant="primary">Change password</ButtonComponent>
+                <ButtonComponent variant="default">Change password</ButtonComponent>
               </div>
             </>
           ),
@@ -3217,7 +3272,7 @@ export default function StyleGuide() {
     />
     {/* --- End TabsComponent rendering --- */}
   </div>
-  <p className="text-sm text-gray-500 italic">Default tabs variant.</p>
+  <p className="text-sm text-gray-500 italic">A polished tabs variant with subtle shadows and transitions for a modern UI experience.</p>
 </div>
 {/*
   Style Guide Variant for Tabs Component
@@ -3225,7 +3280,7 @@ export default function StyleGuide() {
   Placeholders:
   - Ocean: e.g., "Default"
   - ocean: e.g., "default"
-  - Ocean-themed tabs with subtle gradients and animations: Description of the variant from theme config.
+  - Ocean-themed tabs with smooth gradients, subtle animations, and a calming color palette inspired by the deep sea.: Description of the variant from theme config.
 
   Assumes `TabsComponent`, `FormField`, and `Button` are available in the
   rendering scope (imported into the main StyleGuide.jsx).
@@ -3244,7 +3299,7 @@ export default function StyleGuide() {
           content: (
             // Use React Fragments or a div if needed
             <>
-              <p className="mb-5 text-[15px] leading-normal text-gray-700">
+              <p className="mb-5 text-[15px] leading-normal">
                 Make changes to your account here. Click save when you're done.
               </p>
               {/* --- Use the actual FormField component --- */}
@@ -3253,16 +3308,18 @@ export default function StyleGuide() {
                 id="name-ocean" // Unique ID
                 defaultValue="Ada Lovelace"
                 className="mb-4" // Add spacing if needed
+                variant="ocean"
               />
               {/* --- Use the actual FormField component --- */}
               <FormfieldComponent
                 label="Username"
                 id="username-ocean" // Unique ID
                 defaultValue="@ada"
+                variant="ocean"
               />
               <div className="mt-6 flex justify-end border-t pt-4">
                 {/* --- Use the actual Button component --- */}
-                <ButtonComponent variant="primary">Save changes</ButtonComponent> {/* Example: Use button variant */}
+                <ButtonComponent variant="ocean">Save changes</ButtonComponent> {/* Example: Use button variant */}
               </div>
             </>
           ),
@@ -3272,7 +3329,7 @@ export default function StyleGuide() {
           label: 'Password',
           content: (
             <>
-              <p className="mb-5 text-[15px] leading-normal text-gray-700">
+              <p className="mb-5 text-[15px] leading-normal">
                 Change your password here. After saving, you'll be logged out.
               </p>
               {/* --- Use the actual FormField component --- */}
@@ -3281,6 +3338,7 @@ export default function StyleGuide() {
                 id="current-password-ocean" // Unique ID
                 type="password"
                 className="mb-4"
+                variant="ocean"
               />
               {/* --- Use the actual FormField component --- */}
               <FormfieldComponent
@@ -3288,16 +3346,18 @@ export default function StyleGuide() {
                 id="new-password-ocean" // Unique ID
                 type="password"
                 className="mb-4"
+                variant="ocean"
               />
               {/* --- Use the actual FormField component --- */}
               <FormfieldComponent
                 label="Confirm password"
                 id="confirm-password-ocean" // Unique ID
                 type="password"
+                variant="ocean"
               />
               <div className="mt-6 flex justify-end border-t pt-4">
                  {/* --- Use the actual Button component --- */}
-                <ButtonComponent variant="primary">Change password</ButtonComponent>
+                <ButtonComponent variant="ocean">Change password</ButtonComponent>
               </div>
             </>
           ),
@@ -3306,7 +3366,7 @@ export default function StyleGuide() {
     />
     {/* --- End TabsComponent rendering --- */}
   </div>
-  <p className="text-sm text-gray-500 italic">Ocean-themed tabs with subtle gradients and animations</p>
+  <p className="text-sm text-gray-500 italic">Ocean-themed tabs with smooth gradients, subtle animations, and a calming color palette inspired by the deep sea.</p>
 </div></div>
   </div>
 </div>
@@ -3432,6 +3492,24 @@ export default function StyleGuide() {
     />
   </div>
   <p className="text-sm text-gray-500">Outline toggle variant.</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Ocean</h4>
+  <div className="mb-2 flex items-center gap-4">
+    <ToggleComponent
+      variant="ocean"
+      icon={<FontItalicIcon />}
+      label="Toggle italic"
+    />
+    <ToggleComponent
+      variant="ocean"
+      icon={<FontItalicIcon />}
+      label="Toggle italic (pressed)"
+      defaultPressed={true}
+    />
+  </div>
+  <p className="text-sm text-gray-500">Ocean-themed toggle with cyan accents and smooth transitions.</p>
 </div>
 </div>
   </div>

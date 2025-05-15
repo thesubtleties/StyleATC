@@ -17,6 +17,7 @@
     <FormfieldComponent
       label="Your Name"
       id="example-name-{{VARIANT_NAME}}"
+      variant="{{VARIANT_NAME}}"
       placeholder="e.g., Jane Doe"
     />
 
@@ -24,6 +25,7 @@
     <FormfieldComponent
       label="Password"
       id="example-password-{{VARIANT_NAME}}"
+      variant="{{VARIANT_NAME}}"
       type="password"
       placeholder="Enter your password"
     />
@@ -32,6 +34,7 @@
     <FormfieldComponent
       label="Email Address"
       id="example-email-{{VARIANT_NAME}}"
+      variant="{{VARIANT_NAME}}"
       type="email"
       defaultValue="test@example.com"
     />

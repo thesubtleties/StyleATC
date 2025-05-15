@@ -23,6 +23,7 @@
           icon: <TextAlignRightIcon />,
         },
       ]}
+      colors = {colors}
     />
   </div>
   <p className="text-sm text-gray-500">{{ DESCRIPTION }}</p>

@@ -23,7 +23,7 @@
           content: (
             // Use React Fragments or a div if needed
             <>
-              <p className="mb-5 text-[15px] leading-normal text-gray-700">
+              <p className="mb-5 text-[15px] leading-normal">
                 Make changes to your account here. Click save when you're done.
               </p>
               {/* --- Use the actual FormField component --- */}
@@ -32,16 +32,18 @@
                 id="name-{{VARIANT_NAME}}" // Unique ID
                 defaultValue="Ada Lovelace"
                 className="mb-4" // Add spacing if needed
+                variant="{{VARIANT_NAME}}"
               />
               {/* --- Use the actual FormField component --- */}
               <FormfieldComponent
                 label="Username"
                 id="username-{{VARIANT_NAME}}" // Unique ID
                 defaultValue="@ada"
+                variant="{{VARIANT_NAME}}"
               />
               <div className="mt-6 flex justify-end border-t pt-4">
                 {/* --- Use the actual Button component --- */}
-                <ButtonComponent variant="primary">Save changes</ButtonComponent> {/* Example: Use button variant */}
+                <ButtonComponent variant="{{VARIANT_NAME}}">Save changes</ButtonComponent> {/* Example: Use button variant */}
               </div>
             </>
           ),
@@ -51,7 +53,7 @@
           label: 'Password',
           content: (
             <>
-              <p className="mb-5 text-[15px] leading-normal text-gray-700">
+              <p className="mb-5 text-[15px] leading-normal">
                 Change your password here. After saving, you'll be logged out.
               </p>
               {/* --- Use the actual FormField component --- */}
@@ -60,6 +62,7 @@
                 id="current-password-{{VARIANT_NAME}}" // Unique ID
                 type="password"
                 className="mb-4"
+                variant="{{VARIANT_NAME}}"
               />
               {/* --- Use the actual FormField component --- */}
               <FormfieldComponent
@@ -67,16 +70,18 @@
                 id="new-password-{{VARIANT_NAME}}" // Unique ID
                 type="password"
                 className="mb-4"
+                variant="{{VARIANT_NAME}}"
               />
               {/* --- Use the actual FormField component --- */}
               <FormfieldComponent
                 label="Confirm password"
                 id="confirm-password-{{VARIANT_NAME}}" // Unique ID
                 type="password"
+                variant="{{VARIANT_NAME}}"
               />
               <div className="mt-6 flex justify-end border-t pt-4">
                  {/* --- Use the actual Button component --- */}
-                <ButtonComponent variant="primary">Change password</ButtonComponent>
+                <ButtonComponent variant="{{VARIANT_NAME}}">Change password</ButtonComponent>
               </div>
             </>
           ),
