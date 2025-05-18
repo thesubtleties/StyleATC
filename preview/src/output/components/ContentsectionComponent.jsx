@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 
 /* --- Injected Variant Styling Logic --- */
-const allVariantStyles = JSON.parse('{"default":{"root":"w-full py-8","elements":{"container":"w-full px-4","title":"text-3xl font-bold tracking-tight","subtitle":"text-xl text-muted-foreground","content":"prose prose-lg max-w-none prose-headings:font-bold prose-p:text-muted-foreground prose-a:text-primary"},"description":"Default ContentSection variant."}}');
+const allVariantStyles = JSON.parse('{"default":{"root":"w-full py-8","elements":{"container":"w-full px-4","title":"text-3xl font-bold tracking-tight","subtitle":"text-xl text-muted-foreground","content":"prose prose-lg max-w-none prose-headings:font-bold prose-p:text-muted-foreground prose-a:text-primary"},"description":"A modern, responsive content section with customizable alignment and spacing options."}}');
 const getStyle = (variant, elementName) => {
   const variantStyles = allVariantStyles[variant] || allVariantStyles['default'] || { root: '', elements: {} };
   if (elementName === 'root') {

@@ -832,7 +832,7 @@
               "computed": null
             },
             "trigger": {
-              "tailwind": "rounded p-1 hover:bg-gray-200/50 dark:hover:bg-gray-700/50 focus:outline-none focus:ring-2 focus:ring-gray-300/50 dark:focus:ring-gray-600/50 transition-colors",
+              "tailwind": "rounded p-1 hover:bg-gray-200/30 dark:hover:bg-gray-700/30 focus:outline-none focus-visible:outline-none focus-visible:ring-0 focus:ring-0 !outline-none !ring-0 transition-colors",
               "color": null,
               "text_color": null,
               "computed": null
@@ -1025,7 +1025,7 @@
           "extends": null,
           "color": null,
           "text_color": null,
-          "description": "Default ContentSection variant.",
+          "description": "A modern, responsive content section with customizable alignment and spacing options.",
           "elements": {
             "container": {
               "tailwind": "w-full px-4",
@@ -1759,50 +1759,50 @@
     "header": {
       "variants": {
         "default": {
-          "tailwind": "bg-white shadow",
+          "tailwind": "bg-white border-b border-gray-100 py-3",
           "extends": null,
           "color": null,
           "text_color": null,
           "description": "Default header variant.",
           "elements": {
             "logoContainer": {
-              "tailwind": "flex-1",
+              "tailwind": "flex-1 flex items-center",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "logo": {
-              "tailwind": "flex items-center",
+              "tailwind": "font-semibold text-xl",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "nav": {
-              "tailwind": "items-center",
+              "tailwind": "flex items-center space-x-6 mx-6",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "navItem": {
-              "tailwind": "text-gray-600 hover:text-gray-900 hover:border-b-2 hover:border-primary transition-colors duration-200",
+              "tailwind": "text-gray-600 font-medium hover:text-gray-900 px-1 py-2 transition-colors duration-200",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "actionsContainer": {
-              "tailwind": "ml-4",
+              "tailwind": "flex items-center space-x-3",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "primaryAction": {
-              "tailwind": "bg-primary text-white hover:bg-primary/90 transition-colors shadow-md rounded-md",
+              "tailwind": "px-4 py-2 bg-blue-500 text-white font-medium rounded-md hover:bg-blue-600 transition-colors",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "secondaryAction": {
-              "tailwind": "bg-transparent text-gray-700 hover:bg-gray-100 border border-gray-300 transition-colors",
+              "tailwind": "px-4 py-2 bg-white text-gray-700 font-medium border border-gray-200 rounded-md hover:bg-gray-50 transition-colors",
               "color": null,
               "text_color": null,
               "computed": null

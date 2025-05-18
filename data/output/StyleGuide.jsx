@@ -1269,7 +1269,7 @@ export default function StyleGuide() {
       </ul>
     </ContentsectionComponent>
   </div>
-  <p className="text-sm text-gray-500">Default ContentSection variant.</p>
+  <p className="text-sm text-gray-500">A modern, responsive content section with customizable alignment and spacing options.</p>
 </div>
 </div>
   </div>

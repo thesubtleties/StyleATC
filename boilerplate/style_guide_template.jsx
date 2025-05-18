@@ -202,7 +202,7 @@ export default function StyleGuide() {
                   </a>
                 </li>
                 <li>
-                  <a href="https://github.com/yourusername/your-repo" className="hover:text-white" style={{ color: `${pageStyles.footerText}99` }}>
+                  <a href="https://github.com/thesubtleties" className="hover:text-white" style={{ color: `${pageStyles.footerText}99` }}>
                     GitHub
                   </a>
                 </li>
