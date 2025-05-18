@@ -813,50 +813,50 @@
     "collapsible": {
       "variants": {
         "default": {
-          "tailwind": "w-full rounded-md border p-4",
+          "tailwind": "w-full rounded-md border border-gray-200 dark:border-gray-700 p-4 bg-gray-50 dark:bg-gray-850 shadow-sm",
           "extends": null,
           "color": null,
           "text_color": null,
-          "description": "Default collapsible variant.",
+          "description": "A clean, modern collapsible component with softer colors and subtle shadows.",
           "elements": {
             "header": {
-              "tailwind": "flex items-center justify-between py-2",
+              "tailwind": "flex items-center justify-between py-2 px-3",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "title": {
-              "tailwind": "font-medium",
+              "tailwind": "font-medium text-gray-900 dark:text-gray-800",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "trigger": {
-              "tailwind": "bg-transparent hover:bg-slate-100 dark:hover:bg-slate-800 focus:shadow-slate-200 dark:focus:shadow-slate-800",
+              "tailwind": "rounded p-1 hover:bg-gray-200/50 dark:hover:bg-gray-700/50 focus:outline-none focus:ring-2 focus:ring-gray-300/50 dark:focus:ring-gray-600/50 transition-colors",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "icon": {
-              "tailwind": "h-4 w-4 text-slate-500",
+              "tailwind": "h-4 w-4 text-gray-500 dark:text-gray-400 transition-transform duration-200",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "item": {
-              "tailwind": "bg-slate-100 dark:bg-slate-800",
+              "tailwind": "bg-white dark:bg-gray-800 rounded-md my-1.5 p-3 shadow-sm border border-gray-100 dark:border-gray-700",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "itemText": {
-              "tailwind": "text-slate-700 dark:text-slate-300",
+              "tailwind": "text-gray-600 dark:text-gray-300",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "content": {
-              "tailwind": "data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up overflow-hidden transition-all",
+              "tailwind": "data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up overflow-hidden transition-all ease-in-out duration-200",
               "color": null,
               "text_color": null,
               "computed": null
@@ -959,6 +959,57 @@
             },
             "content": {
               "tailwind": "data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up overflow-hidden transition-all",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        },
+        "macos": {
+          "tailwind": "w-full rounded-lg bg-gradient-to-b from-gray-50 to-gray-100 dark:from-zinc-800 dark:to-zinc-900 border border-gray-200 dark:border-zinc-700 shadow-sm p-3",
+          "extends": "default",
+          "color": null,
+          "text_color": null,
+          "description": "A collapsible component styled after macOS interface elements, featuring a clean, minimal design with subtle gradients and shadows.",
+          "elements": {
+            "header": {
+              "tailwind": "flex items-center justify-between py-2 px-1",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "title": {
+              "tailwind": "font-medium text-gray-800 dark:text-gray-200",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "trigger": {
+              "tailwind": "rounded-full p-1 bg-white dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 hover:bg-gray-50 dark:hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600 transition-colors",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "icon": {
+              "tailwind": "h-4 w-4 text-gray-300 dark:text-gray-300 transition-transform duration-200",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "item": {
+              "tailwind": "bg-white dark:bg-zinc-800 rounded-md my-1.5 p-3 shadow-sm border border-gray-100 dark:border-zinc-700",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "itemText": {
+              "tailwind": "text-gray-700 dark:text-gray-300 text-sm",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "content": {
+              "tailwind": "data-[state=open]:animate-collapsible-down data-[state=closed]:animate-collapsible-up overflow-hidden transition-all ease-in-out duration-200",
               "color": null,
               "text_color": null,
               "computed": null
@@ -1657,7 +1708,7 @@
           "description": "A cosmic, space-themed form field with starry accents and futuristic styling.",
           "elements": {
             "fieldset": {
-              "tailwind": "space-y-3 p-3 rounded-lg bg-gradient-to-b from-indigo-950 to-purple-950",
+              "tailwind": "space-y-3 p-3 rounded-lg bg-gradient-to-b from-indigo-950 to-purple-950 max-w-md mx-auto",
               "color": null,
               "text_color": null,
               "computed": null
@@ -1669,7 +1720,7 @@
               "computed": null
             },
             "input": {
-              "tailwind": "h-[40px] shrink-0 grow rounded-md px-3 text-[15px] leading-none outline-none shadow-inner border border-indigo-500 bg-indigo-900/60 text-white placeholder:text-indigo-300/60 focus:border-purple-400 focus:ring-2 focus:ring-purple-400/50 focus:bg-indigo-900/80 disabled:cursor-not-allowed disabled:bg-indigo-950 disabled:text-indigo-400/50 backdrop-blur-sm",
+              "tailwind": "h-[40px] w-full rounded-md px-3 text-[15px] leading-none outline-none shadow-inner border border-indigo-500 bg-indigo-900/60 text-white placeholder:text-indigo-300/60 focus:border-purple-400 focus:ring-2 focus:ring-purple-400/50 focus:bg-indigo-900/80 disabled:cursor-not-allowed disabled:bg-indigo-950 disabled:text-indigo-400/50 backdrop-blur-sm",
               "color": null,
               "text_color": null,
               "computed": null
@@ -1677,11 +1728,31 @@
           }
         },
         "ocean": {
-          "tailwind": "bg-blue-50 border-2 border-blue-300 focus:border-blue-500 rounded-md p-3 shadow-sm placeholder:text-blue-400",
-          "extends": "formfield.base",
+          "tailwind": "w-full flex-col justify-start space-y-2",
+          "extends": "formfield.default",
           "color": "#0ea5e9",
           "text_color": "#0c4a6e",
-          "description": "An ocean-inspired form field with cool blue colors and a subtle wave-like appearance"
+          "description": "An ocean-inspired form field with cool blue colors and a subtle wave-like appearance",
+          "elements": {
+            "input": {
+              "tailwind": "h-[35px] shrink-0 grow rounded-md bg-blue-50 px-2.5 text-[15px] leading-none outline-none shadow-sm border-2 border-blue-300 placeholder:text-blue-400 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 disabled:cursor-not-allowed disabled:bg-gray-100 disabled:text-gray-500",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "label": {
+              "tailwind": "block text-[13px] leading-none mb-2.5 text-blue-700 font-medium",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "fieldset": {
+              "tailwind": "mb-4 flex flex-col gap-1.5 text-blue-800",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
         }
       }
     },
@@ -3354,6 +3425,144 @@
               "computed": null
             }
           }
+        },
+        "macos": {
+          "tailwind": "",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "A sleek, modern macOS-inspired select component with frosted glass effect and subtle animations.",
+          "elements": {
+            "trigger": {
+              "tailwind": "inline-flex items-center justify-center rounded-md px-[15px] text-[13px] leading-none h-[35px] gap-[5px] bg-white/90 backdrop-blur-sm text-slate-800 border border-slate-200/60 shadow-sm hover:bg-white/95 transition-all duration-200 ease-out data-[placeholder]:text-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500/30 group",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "icon": {
+              "tailwind": "text-slate-500 dark:text-slate-400 ml-2 transition-transform duration-300 ease-out group-data-[state=open]:rotate-180",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "content": {
+              "tailwind": "overflow-hidden backdrop-blur-sm bg-white/60 rounded-md shadow-[0_10px_25px_-5px_rgba(0,0,0,0.1),0_8px_10px_-6px_rgba(0,0,0,0.05)] border border-white/40 will-change-[transform,opacity] z-[100]",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "viewport": {
+              "tailwind": "p-[5px]",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "item": {
+              "tailwind": "text-[13px] leading-none text-slate-800 rounded-[3px] flex items-center h-[25px] pr-[35px] pl-[25px] relative select-none data-[disabled]:text-slate-400 data-[disabled]:pointer-events-none data-[highlighted]:bg-blue-500/20 data-[highlighted]:text-slate-900 data-[highlighted]:backdrop-blur-sm data-[highlighted]:outline-none transition-colors duration-150 ease-out",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "itemIndicator": {
+              "tailwind": "absolute left-0 w-8 inline-flex items-center justify-center text-blue-500 dark:text-blue-400 animate-scaleIn",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "separator": {
+              "tailwind": "h-[1px] bg-slate-300/30 m-[5px]",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "label": {
+              "tailwind": "px-3 text-[11px] font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400 py-1.5",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "scrollButton": {
+              "tailwind": "flex items-center justify-center h-6 bg-gradient-to-b from-white/90 to-transparent dark:from-slate-800/90 dark:to-transparent text-slate-500 dark:text-slate-400 cursor-default",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "arrow": {
+              "tailwind": "fill-white/80 dark:fill-slate-800/80",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        },
+        "osx-aqua": {
+          "tailwind": "",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "A nostalgic early 2000s iMac/Mac OS X inspired select component with the iconic smoke gray translucent plastic look.",
+          "elements": {
+            "trigger": {
+              "tailwind": "inline-flex items-center justify-center rounded-md px-[15px] text-[13px] leading-none h-[35px] gap-[5px] bg-slate-500/80 backdrop-blur-sm text-white border border-slate-600/80 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.2)] hover:bg-slate-400/80 transition-all duration-150 ease-out data-[placeholder]:text-slate-200 focus:outline-none group",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "icon": {
+              "tailwind": "text-slate-200 ml-1 transition-transform duration-150 ease-out group-data-[state=open]:rotate-180",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "content": {
+              "tailwind": "overflow-hidden bg-slate-500/80 backdrop-blur-sm rounded-md border border-slate-600/80 shadow-[0_4px_8px_rgba(0,0,0,0.3),inset_0_1px_0_0_rgba(255,255,255,0.15)] will-change-[transform,opacity] z-[100]",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "viewport": {
+              "tailwind": "p-[5px]",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "item": {
+              "tailwind": "text-[13px] leading-none text-white rounded-[3px] flex items-center h-[25px] pr-[35px] pl-[25px] relative select-none data-[disabled]:text-slate-400 data-[disabled]:pointer-events-none data-[highlighted]:bg-blue-500 data-[highlighted]:text-white data-[highlighted]:outline-none transition-colors duration-150 ease-out",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "itemIndicator": {
+              "tailwind": "absolute left-0 w-[25px] inline-flex items-center justify-center text-blue-300",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "separator": {
+              "tailwind": "h-[1px] bg-slate-400/30 m-[5px]",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "label": {
+              "tailwind": "px-[25px] text-xs font-medium leading-[25px] text-slate-300",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "scrollButton": {
+              "tailwind": "flex items-center justify-center h-[25px] cursor-default bg-gradient-to-b from-slate-400/30 to-transparent text-slate-300",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "arrow": {
+              "tailwind": "fill-slate-600",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
         }
       }
     },
@@ -3944,14 +4153,14 @@
     "toggle": {
       "variants": {
         "default": {
-          "tailwind": "inline-flex items-center justify-center rounded-md p-2 text-sm font-medium ring-offset-background transition-colors hover:bg-muted hover:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-primary data-[state=on]:text-primary-foreground",
+          "tailwind": "inline-flex items-center justify-center rounded-md p-2 text-sm font-medium transition-colors hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/30 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-indigo-600 data-[state=on]:text-white",
           "extends": null,
           "color": null,
           "text_color": null,
-          "description": "Default toggle variant.",
+          "description": "Default toggle variant with indigo accent color.",
           "elements": {
             "icon": {
-              "tailwind": "flex items-center justify-center h-full w-full transition-colors data-[state=on]:text-primary-foreground",
+              "tailwind": "flex items-center justify-center h-full w-full transition-colors data-[state=on]:text-white",
               "color": null,
               "text_color": null,
               "computed": null
@@ -3959,14 +4168,14 @@
           }
         },
         "outline": {
-          "tailwind": "border border-input bg-transparent p-2 hover:bg-accent/10 hover:text-accent-foreground data-[state=on]:bg-primary/20 data-[state=on]:border-primary data-[state=on]:text-primary",
-          "extends": "toggle.default",
+          "tailwind": "inline-flex items-center justify-center rounded-md border border-slate-200 bg-transparent p-2 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500/30 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-indigo-50 data-[state=on]:border-indigo-300 data-[state=on]:text-indigo-700",
+          "extends": "",
           "color": null,
           "text_color": null,
-          "description": "Outline toggle variant.",
+          "description": "Outline toggle variant with subtle indigo accents.",
           "elements": {
             "icon": {
-              "tailwind": "flex items-center justify-center h-full w-full transition-colors data-[state=on]:text-primary",
+              "tailwind": "flex items-center justify-center h-full w-full transition-colors text-slate-600 data-[state=on]:text-indigo-700",
               "color": null,
               "text_color": null,
               "computed": null
@@ -3974,14 +4183,14 @@
           }
         },
         "ocean": {
-          "tailwind": "border border-cyan-400 bg-transparent text-cyan-600 hover:bg-cyan-50 data-[state=on]:bg-cyan-500 data-[state=on]:text-white shadow-sm transition-all duration-200",
-          "extends": "toggle.default",
+          "tailwind": "inline-flex items-center justify-center rounded-md p-2 text-sm font-medium border border-cyan-400 bg-transparent text-cyan-600 hover:bg-cyan-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500/30 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-cyan-500 data-[state=on]:text-white shadow-sm transition-all duration-200",
+          "extends": "",
           "color": null,
           "text_color": null,
           "description": "Ocean-themed toggle with cyan accents and smooth transitions.",
           "elements": {
             "icon": {
-              "tailwind": "text-cyan-600 data-[state=on]:text-white flex items-center justify-center h-full w-full",
+              "tailwind": "flex items-center justify-center h-full w-full transition-colors text-cyan-600 data-[state=on]:text-white",
               "color": null,
               "text_color": null,
               "computed": null
@@ -3993,14 +4202,14 @@
     "togglegroup": {
       "variants": {
         "default": {
-          "tailwind": "flex items-center justify-center",
+          "tailwind": "flex items-center justify-center rounded-lg overflow-hidden shadow-md",
           "extends": null,
           "color": null,
           "text_color": null,
-          "description": "Default toggle group variant.",
+          "description": "An improved toggle group with clean borders, subtle hover effects, and clear active states.",
           "elements": {
             "item": {
-              "tailwind": "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors hover:bg-muted hover:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground",
+              "tailwind": "inline-flex items-center justify-center px-4 py-2 text-sm font-medium transition-all duration-200 border-r last:border-r-0 border-gray-200 bg-white text-gray-700 hover:bg-gray-50 hover:text-gray-900 focus-visible:outline-none focus-visible:z-10 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-blue-50 data-[state=on]:text-blue-700 data-[state=on]:font-semibold",
               "color": null,
               "text_color": null,
               "computed": null
@@ -4008,14 +4217,29 @@
           }
         },
         "outline": {
-          "tailwind": "border border-input bg-transparent hover:bg-accent hover:text-accent-foreground",
+          "tailwind": "flex items-center justify-center border-2 border-gray-400 bg-gray-200 rounded-none p-[2px]",
+          "extends": "",
+          "color": null,
+          "text_color": null,
+          "description": "A nostalgic toggle group styled after classic Mac OS/Windows interfaces with beveled edges and tactile pressed states.",
+          "elements": {
+            "item": {
+              "tailwind": "inline-flex items-center justify-center px-3 py-1 text-sm font-normal text-black bg-gray-200 border-r border-gray-400 last:border-r-0 shadow-[1px_1px_0_0_rgba(0,0,0,0.2)] data-[state=on]:bg-gray-300 data-[state=on]:shadow-[inset_1px_1px_2px_0_rgba(0,0,0,0.3)] data-[state=on]:translate-y-[1px] data-[state=on]:translate-x-[1px] data-[state=on]:font-semibold hover:bg-gray-100 focus:outline-1 focus:outline-black",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        },
+        "modern-dark": {
+          "tailwind": "flex items-center justify-center rounded-lg overflow-hidden shadow-lg bg-gray-900 p-1",
           "extends": "togglegroup.default",
           "color": null,
           "text_color": null,
-          "description": "Outline toggle group variant.",
+          "description": "A sleek, modern dark toggle group with glowing accents and smooth transitions.",
           "elements": {
             "item": {
-              "tailwind": "border border-input bg-transparent hover:bg-accent hover:text-accent-foreground",
+              "tailwind": "inline-flex items-center justify-center px-4 py-2 text-sm font-medium transition-all duration-300 border-0 rounded-md bg-transparent text-gray-400 hover:text-gray-200 focus-visible:outline-none focus-visible:z-10 focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-0 disabled:pointer-events-none disabled:opacity-30 data-[state=on]:bg-gray-800 data-[state=on]:text-indigo-400 data-[state=on]:shadow-inner data-[state=on]:shadow-indigo-900/20",
               "color": null,
               "text_color": null,
               "computed": null
@@ -4027,32 +4251,32 @@
     "toolbar": {
       "variants": {
         "default": {
-          "tailwind": "flex items-center justify-between rounded-md bg-white p-2 shadow-sm",
+          "tailwind": "flex items-center justify-between rounded-md bg-gray-800 p-2 shadow-md",
           "extends": null,
           "color": null,
           "text_color": null,
-          "description": "Default toolbar variant.",
+          "description": "Modern dark gray toolbar with light gray accents and clean, minimal styling.",
           "elements": {
             "button": {
-              "tailwind": "flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500",
+              "tailwind": "flex items-center justify-center rounded-md p-2 text-gray-300 hover:bg-gray-700 hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-600 transition-colors",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "separator": {
-              "tailwind": "mx-2 h-6 w-px bg-gray-300",
+              "tailwind": "mx-2 h-6 w-px bg-gray-600",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "toggleGroup": {
-              "tailwind": "flex",
+              "tailwind": "flex bg-gray-700 rounded-md p-1",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "toggleItem": {
-              "tailwind": "flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 data-[state=on]:bg-blue-100 data-[state=on]:text-blue-700",
+              "tailwind": "flex items-center justify-center rounded-md p-2 text-gray-300 hover:bg-gray-600 hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-600 data-[state=on]:bg-gray-600 data-[state=on]:text-gray-100 transition-colors",
               "color": null,
               "text_color": null,
               "computed": null
@@ -4061,7 +4285,7 @@
         },
         "ocean": {
           "tailwind": "flex items-center justify-between rounded-lg bg-gradient-to-r from-blue-50 to-teal-50 p-2.5 shadow-md border border-blue-100",
-          "extends": "toolbar.default",
+          "extends": "",
           "color": null,
           "text_color": null,
           "description": "Ocean-themed toolbar with gradient background and fluid interactions.",
@@ -4091,6 +4315,72 @@
               "computed": null
             }
           }
+        },
+        "mac-modern": {
+          "tailwind": "flex items-center justify-between rounded-xl bg-white/80 backdrop-blur-md p-1.5 shadow-sm border border-slate-200/60",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "A modern macOS-inspired toolbar with frosted glass effect, subtle animations, and elegant interactions.",
+          "elements": {
+            "button": {
+              "tailwind": "flex items-center justify-center rounded-lg p-2 text-slate-600 hover:bg-slate-100/80 hover:text-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-300/70 active:bg-slate-200/90 transition-all duration-200",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "separator": {
+              "tailwind": "mx-1.5 h-6 w-px bg-slate-200",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "toggleGroup": {
+              "tailwind": "flex gap-0.5 p-1 bg-slate-100/70 rounded-lg",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "toggleItem": {
+              "tailwind": "flex items-center justify-center rounded-md p-1.5 text-slate-600 hover:bg-white hover:text-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-300/70 data-[state=on]:bg-white data-[state=on]:shadow-sm data-[state=on]:text-slate-800 transition-all duration-200",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        },
+        "july-fourth": {
+          "tailwind": "flex items-center justify-between rounded-md bg-gradient-to-r from-blue-700 via-white to-red-700 p-2 shadow-md border border-blue-800",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Patriotic Fourth of July inspired toolbar with red, white, and blue color scheme.",
+          "elements": {
+            "button": {
+              "tailwind": "flex items-center justify-center rounded-md p-2 bg-white text-blue-800 hover:bg-blue-50 hover:text-red-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors shadow-sm",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "separator": {
+              "tailwind": "mx-2 h-6 w-1 bg-white rounded-full shadow-sm",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "toggleGroup": {
+              "tailwind": "flex p-1 bg-blue-800 rounded-md",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "toggleItem": {
+              "tailwind": "flex items-center justify-center rounded-md p-2 text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-white data-[state=on]:bg-red-700 data-[state=on]:text-white data-[state=on]:shadow-sm transition-colors",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
         }
       }
     },
@@ -4101,22 +4391,22 @@
           "extends": null,
           "color": null,
           "text_color": null,
-          "description": "Default tooltip variant.",
+          "description": "A modern, sleek tooltip with a dark backdrop, subtle animations, and clean typography.",
           "elements": {
             "trigger": {
-              "tailwind": "inline-flex items-center justify-center rounded-full bg-gray-200 size-[35px] text-gray-800 shadow-[0_2px_10px] shadow-black/10 hover:bg-gray-300 focus:shadow-[0_0_0_2px] focus:shadow-black outline-none cursor-default",
+              "tailwind": "inline-flex items-center justify-center rounded-full bg-gray-100 size-[35px] text-gray-700 shadow-md hover:bg-gray-200 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 cursor-default transition-all duration-200",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "content": {
-              "tailwind": "data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade text-gray-800 select-none rounded-[4px] bg-white px-[15px] py-[10px] text-[15px] leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity]",
+              "tailwind": "data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade text-gray-50 select-none rounded-lg bg-gray-800 px-3.5 py-2 text-sm font-medium leading-tight shadow-lg will-change-[transform,opacity] border border-gray-700 backdrop-blur-sm bg-opacity-90",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "arrow": {
-              "tailwind": "fill-white",
+              "tailwind": "fill-gray-800",
               "color": null,
               "text_color": null,
               "computed": null

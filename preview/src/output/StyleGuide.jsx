@@ -1174,7 +1174,7 @@ export default function StyleGuide() {
       ]}
     />
   </div>
-  <p className="text-sm text-gray-500">Default collapsible variant.</p>
+  <p className="text-sm text-gray-500">A clean, modern collapsible component with softer colors and subtle shadows.</p>
 </div>
 
 <div className="mb-6">
@@ -1207,6 +1207,22 @@ export default function StyleGuide() {
     />
   </div>
   <p className="text-sm text-gray-500">A fresh, organic-inspired collapsible that feels welcoming and natural.</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Macos</h4>
+  <div className="mb-2">
+    <CollapsibleComponent
+      variant="macos"
+      title="@peduarte starred 3 repositories"
+      items={[
+        { content: '@radix-ui/primitives' },
+        { content: '@radix-ui/colors' },
+        { content: '@radix-ui/themes' },
+      ]}
+    />
+  </div>
+  <p className="text-sm text-gray-500">A collapsible component styled after macOS interface elements, featuring a clean, minimal design with subtle gradients and shadows.</p>
 </div>
 </div>
   </div>
@@ -2893,6 +2909,90 @@ export default function StyleGuide() {
   </div>
   <p className="text-sm text-gray-500">A calm, relaxed select component with cool colors and subtle animations</p>
 </div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Macos</h4>
+  <div className="mb-2">
+    <SelectComponent
+      variant="macos"
+      placeholder="Select a food…"
+      groups={[
+        {
+          label: 'Fruits',
+          items: [
+            { value: 'apple', label: 'Apple' },
+            { value: 'banana', label: 'Banana' },
+            { value: 'blueberry', label: 'Blueberry' },
+            { value: 'grapes', label: 'Grapes' },
+            { value: 'pineapple', label: 'Pineapple' },
+          ],
+        },
+        {
+          label: 'Vegetables',
+          items: [
+            { value: 'aubergine', label: 'Aubergine' },
+            { value: 'broccoli', label: 'Broccoli' },
+            { value: 'carrot', label: 'Carrot', disabled: true },
+            { value: 'courgette', label: 'Courgette' },
+            { value: 'leek', label: 'Leek' },
+          ],
+        },
+        {
+          label: 'Meat',
+          items: [
+            { value: 'beef', label: 'Beef' },
+            { value: 'chicken', label: 'Chicken' },
+            { value: 'lamb', label: 'Lamb' },
+            { value: 'pork', label: 'Pork' },
+          ],
+        },
+      ]}
+    />
+  </div>
+  <p className="text-sm text-gray-500">A sleek, modern macOS-inspired select component with frosted glass effect and subtle animations.</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Osx-aqua</h4>
+  <div className="mb-2">
+    <SelectComponent
+      variant="osx-aqua"
+      placeholder="Select a food…"
+      groups={[
+        {
+          label: 'Fruits',
+          items: [
+            { value: 'apple', label: 'Apple' },
+            { value: 'banana', label: 'Banana' },
+            { value: 'blueberry', label: 'Blueberry' },
+            { value: 'grapes', label: 'Grapes' },
+            { value: 'pineapple', label: 'Pineapple' },
+          ],
+        },
+        {
+          label: 'Vegetables',
+          items: [
+            { value: 'aubergine', label: 'Aubergine' },
+            { value: 'broccoli', label: 'Broccoli' },
+            { value: 'carrot', label: 'Carrot', disabled: true },
+            { value: 'courgette', label: 'Courgette' },
+            { value: 'leek', label: 'Leek' },
+          ],
+        },
+        {
+          label: 'Meat',
+          items: [
+            { value: 'beef', label: 'Beef' },
+            { value: 'chicken', label: 'Chicken' },
+            { value: 'lamb', label: 'Lamb' },
+            { value: 'pork', label: 'Pork' },
+          ],
+        },
+      ]}
+    />
+  </div>
+  <p className="text-sm text-gray-500">A nostalgic early 2000s iMac/Mac OS X inspired select component with the iconic smoke gray translucent plastic look.</p>
+</div>
 </div>
   </div>
 </div>
@@ -3473,7 +3573,7 @@ export default function StyleGuide() {
       defaultPressed={true}
     />
   </div>
-  <p className="text-sm text-gray-500">Default toggle variant.</p>
+  <p className="text-sm text-gray-500">Default toggle variant with indigo accent color.</p>
 </div>
 
 <div className="mb-6">
@@ -3491,7 +3591,7 @@ export default function StyleGuide() {
       defaultPressed={true}
     />
   </div>
-  <p className="text-sm text-gray-500">Outline toggle variant.</p>
+  <p className="text-sm text-gray-500">Outline toggle variant with subtle indigo accents.</p>
 </div>
 
 <div className="mb-6">
@@ -3552,9 +3652,10 @@ export default function StyleGuide() {
           icon: <TextAlignRightIcon />,
         },
       ]}
+      colors = {colors}
     />
   </div>
-  <p className="text-sm text-gray-500">Default toggle group variant.</p>
+  <p className="text-sm text-gray-500">An improved toggle group with clean borders, subtle hover effects, and clear active states.</p>
 </div>
 
 <div className="mb-6">
@@ -3582,9 +3683,41 @@ export default function StyleGuide() {
           icon: <TextAlignRightIcon />,
         },
       ]}
+      colors = {colors}
     />
   </div>
-  <p className="text-sm text-gray-500">Outline toggle group variant.</p>
+  <p className="text-sm text-gray-500">A nostalgic toggle group styled after classic Mac OS/Windows interfaces with beveled edges and tactile pressed states.</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Modern-dark</h4>
+  <div className="mb-2">
+    <TogglegroupComponent
+      variant="modern-dark"
+      type="single"
+      defaultValue="center"
+      ariaLabel="Text alignment"
+      items={[
+        {
+          value: 'left',
+          ariaLabel: 'Left aligned',
+          icon: <TextAlignLeftIcon />,
+        },
+        {
+          value: 'center',
+          ariaLabel: 'Center aligned',
+          icon: <TextAlignCenterIcon />,
+        },
+        {
+          value: 'right',
+          ariaLabel: 'Right aligned',
+          icon: <TextAlignRightIcon />,
+        },
+      ]}
+      colors = {colors}
+    />
+  </div>
+  <p className="text-sm text-gray-500">A sleek, modern dark toggle group with glowing accents and smooth transitions.</p>
 </div>
 </div>
   </div>
@@ -3616,7 +3749,7 @@ export default function StyleGuide() {
       defaultAlignment="center"
     />
   </div>
-  <p className="text-sm text-gray-500">Default toolbar variant.</p>
+  <p className="text-sm text-gray-500">Modern dark gray toolbar with light gray accents and clean, minimal styling.</p>
 </div>
 
 <div className="mb-6">
@@ -3634,6 +3767,40 @@ export default function StyleGuide() {
     />
   </div>
   <p className="text-sm text-gray-500">Ocean-themed toolbar with gradient background and fluid interactions.</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Mac-modern</h4>
+  <div className="mb-2">
+    <ToolbarComponent
+      variant="mac-modern"
+      textFormatting={true}
+      textAlignment={true}
+      showEditInfo={true}
+      showShareButton={true}
+      editInfoText="Edited 2 hours ago"
+      shareButtonText="Share"
+      defaultAlignment="center"
+    />
+  </div>
+  <p className="text-sm text-gray-500">A modern macOS-inspired toolbar with frosted glass effect, subtle animations, and elegant interactions.</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">July-fourth</h4>
+  <div className="mb-2">
+    <ToolbarComponent
+      variant="july-fourth"
+      textFormatting={true}
+      textAlignment={true}
+      showEditInfo={true}
+      showShareButton={true}
+      editInfoText="Edited 2 hours ago"
+      shareButtonText="Share"
+      defaultAlignment="center"
+    />
+  </div>
+  <p className="text-sm text-gray-500">Patriotic Fourth of July inspired toolbar with red, white, and blue color scheme.</p>
 </div>
 </div>
   </div>
@@ -3653,7 +3820,7 @@ export default function StyleGuide() {
       tooltipContent="This is a default tooltip"
     />
   </div>
-  <p className="text-sm text-gray-500">Default tooltip variant.</p>
+  <p className="text-sm text-gray-500">A modern, sleek tooltip with a dark backdrop, subtle animations, and clean typography.</p>
 </div>
 
 <div className="mb-6">

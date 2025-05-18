@@ -44,9 +44,9 @@ const CollapsibleComponent = ({
             )}
           >
             {open ? (
-              <Cross2Icon className={getStyle('icon')} />
+              <Cross2Icon className={getStyle(variant, 'icon')} />
             ) : (
-              <RowSpacingIcon className={getStyle('icon')} />
+              <RowSpacingIcon className={getStyle(variant, 'icon')} />
             )}
           </button>
         </Collapsible.Trigger>
