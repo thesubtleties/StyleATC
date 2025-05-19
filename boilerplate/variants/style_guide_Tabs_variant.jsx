@@ -24,7 +24,7 @@
             // Use React Fragments or a div if needed
             <>
               <p className="mb-5 text-[15px] leading-normal">
-                Make changes to your account here. Click save when you're done.
+                Make FormField variant with same name to style FormFields. Button variant with same name to style Button.
               </p>
               {/* --- Use the actual FormField component --- */}
               <FormfieldComponent

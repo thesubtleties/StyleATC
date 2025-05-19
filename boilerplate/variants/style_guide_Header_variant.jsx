@@ -3,8 +3,7 @@
   <div className="mb-4 border rounded-md overflow-hidden">
     <HeaderComponent
       variant="{{VARIANT_NAME}}"
-      logo="/logo.svg"
-      title="Company"
+      title="{{VARIANT_NAME}} Header"
       navItems={[
         { label: 'Dashboard', href: '#' },
         { label: 'Team', href: '#' },

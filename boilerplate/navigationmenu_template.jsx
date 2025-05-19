@@ -14,7 +14,7 @@ const NavigationmenuComponent = ({
   return (
     <NavigationMenu.Root
       className={classNames(
-        'relative z-10 flex justify-center',
+        'relative w-full flex justify-center z-10',
         getStyle(variant, 'root'),
         className
       )}
@@ -22,7 +22,7 @@ const NavigationmenuComponent = ({
     >
       <NavigationMenu.List
         className={classNames(
-          'center m-0 flex list-none rounded-md p-1 shadow-sm',
+          'center m-0 flex list-none rounded-md p-1 shadow-sm relative',
           getStyle(variant, 'list')
         )}
       >
@@ -58,7 +58,6 @@ const NavigationmenuComponent = ({
 };
 
 const NavigationMenuItem = ({ item, variant }) => {
-  // Simple link item
   if (item.type === 'link') {
     return (
       <NavigationMenu.Item>
@@ -75,7 +74,6 @@ const NavigationMenuItem = ({ item, variant }) => {
     );
   }
 
-  // Dropdown menu item
   return (
     <NavigationMenu.Item>
       <NavigationMenu.Trigger
@@ -141,7 +139,6 @@ const ListItem = React.forwardRef(
   )
 );
 
-// Export both the main component and the ListItem for use in examples
 NavigationmenuComponent.ListItem = ListItem;
 
 export default NavigationmenuComponent;

@@ -16,7 +16,7 @@ const ProfilecardComponent = ({
 }) => {
   return (
     <Card
-      variant="elevated"
+      variant={variant}
       className={classNames('max-w-sm', getStyle(variant, 'root'), className)}
       {...props}
     >

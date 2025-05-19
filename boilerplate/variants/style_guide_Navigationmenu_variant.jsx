@@ -1,4 +1,4 @@
-<div className="mb-6">
+<div className="mb-80">
   <h4 className="text-sm font-medium mb-2">{{ VARIANT_NAME_CAPITALIZED }}</h4>
   <div className="mb-4 py-6 bg-gray-50 rounded-md flex justify-center">
     <NavigationmenuComponent

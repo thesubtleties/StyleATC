@@ -7,7 +7,7 @@
       name="Alex Johnson"
       title="Product Designer"
       avatarUrl="https://api.dicebear.com/7.x/avataaars/svg?seed=Demo"
-      description="Passionate designer with 5+ years of experience creating user-centered digital experiences."
+      description="Make a card with the same variant name to apply non default card styles."
       stats={[
         { value: '52', label: 'Projects' },
         { value: '89', label: 'Reviews' },

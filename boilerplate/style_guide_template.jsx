@@ -78,7 +78,7 @@ export default function StyleGuide() {
           { label: 'Components', href: '#components' },
         ]}
         actions={[
-          { label: 'Get Started', onClick: () => {} },
+          { label: 'Portfolio', onClick: () => openLink('https://sbtl.dev') },
           { label: 'GitHub', onClick: () => openLink('https://github.com/thesubtleties/') },
         ]}
         color={colors}

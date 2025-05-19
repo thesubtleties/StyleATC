@@ -50,7 +50,8 @@ const HeaderComponent = ({
           {title && (
             <div
               className={classNames(
-                `ml-${logo ? '4' : '0'} text-xl font-bold text-[var(--primary)]`
+                `ml-${logo ? '4' : '0'}`,
+                getStyle(variant, 'companyName')
               )}
             >
               {title}

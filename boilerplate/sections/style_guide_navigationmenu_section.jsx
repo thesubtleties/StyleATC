@@ -9,6 +9,6 @@
     className="p-6 rounded-md shadow-sm"
     style={{ backgroundColor: pageStyles.cardBg }}
   >
-    <div className="space-y-12">{{ NAVIGATIONMENU_VARIANTS }}</div>
+    <div>{{ NAVIGATIONMENU_VARIANTS }}</div>
   </div>
 </div>

@@ -137,7 +137,7 @@ export default function StyleGuide() {
           { label: 'Components', href: '#components' },
         ]}
         actions={[
-          { label: 'Get Started', onClick: () => {} },
+          { label: 'Portfolio', onClick: () => openLink('https://sbtl.dev') },
           { label: 'GitHub', onClick: () => openLink('https://github.com/thesubtleties/') },
         ]}
         color={colors}
@@ -1034,6 +1034,14 @@ export default function StyleGuide() {
     <CardComponent variant="danger" className="max-w-sm" />
   </div>
   <p className="text-sm text-gray-500">Card for error messages or critical alerts.</p>
+</div>
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Ocean</h4>
+  <div className="mb-2">
+
+    <CardComponent variant="ocean" className="max-w-sm" />
+  </div>
+  <p className="text-sm text-gray-500">An ocean-themed card with a gentle blue-teal gradient and subtle wave-like shadows.</p>
 </div></div>
   </div>
 </div>
@@ -1774,8 +1782,7 @@ export default function StyleGuide() {
   <div className="mb-4 border rounded-md overflow-hidden">
     <HeaderComponent
       variant="default"
-      logo="/logo.svg"
-      title="Company"
+      title="default Header"
       navItems={[
         { label: 'Dashboard', href: '#' },
         { label: 'Team', href: '#' },
@@ -1796,8 +1803,7 @@ export default function StyleGuide() {
   <div className="mb-4 border rounded-md overflow-hidden">
     <HeaderComponent
       variant="ocean-header"
-      logo="/logo.svg"
-      title="Company"
+      title="ocean-header Header"
       navItems={[
         { label: 'Dashboard', href: '#' },
         { label: 'Team', href: '#' },
@@ -1811,6 +1817,27 @@ export default function StyleGuide() {
     />
   </div>
   <p className="text-sm text-gray-500">A header with a subtle gradient from our primary color to white</p>
+</div>
+
+<div className="mb-10">
+  <h4 className="text-sm font-medium mb-2">Ocean</h4>
+  <div className="mb-4 border rounded-md overflow-hidden">
+    <HeaderComponent
+      variant="ocean"
+      title="ocean Header"
+      navItems={[
+        { label: 'Dashboard', href: '#' },
+        { label: 'Team', href: '#' },
+        { label: 'Projects', href: '#' },
+        { label: 'Calendar', href: '#' },
+      ]}
+      actions={[
+        { label: 'Sign up', onClick: () => {} },
+        { label: 'Log in', onClick: () => {} },
+      ]}
+    />
+  </div>
+  <p className="text-sm text-gray-500">A vibrant ocean-themed header with a blue-to-teal gradient.</p>
 </div>
 </div>
   </div>
@@ -2212,7 +2239,7 @@ export default function StyleGuide() {
     className="p-6 rounded-md shadow-sm"
     style={{ backgroundColor: pageStyles.cardBg }}
   >
-    <div className="space-y-12"><div className="mb-6">
+    <div><div className="mb-80">
   <h4 className="text-sm font-medium mb-2">Default</h4>
   <div className="mb-4 py-6 bg-gray-50 rounded-md flex justify-center">
     <NavigationmenuComponent
@@ -2294,7 +2321,7 @@ export default function StyleGuide() {
   </div>
   <p className="text-sm text-gray-500">Default navigation menu with configurable menu items.</p>
 </div>
-<div className="mb-6">
+<div className="mb-80">
   <h4 className="text-sm font-medium mb-2">Ocean</h4>
   <div className="mb-4 py-6 bg-gray-50 rounded-md flex justify-center">
     <NavigationmenuComponent
@@ -2375,10 +2402,91 @@ export default function StyleGuide() {
     />
   </div>
   <p className="text-sm text-gray-500">Ocean-themed navigation menu with gradient accents and smooth animations</p>
+</div>
+<div className="mb-80">
+  <h4 className="text-sm font-medium mb-2">Macos-modern</h4>
+  <div className="mb-4 py-6 bg-gray-50 rounded-md flex justify-center">
+    <NavigationmenuComponent
+      variant="macos-modern" 
+      items={[
+        {
+          type: 'dropdown',
+          label: 'Features',
+          content: (
+            <ul className="m-0 grid list-none gap-x-2.5 p-[22px] sm:w-[500px] sm:grid-cols-[0.75fr_1fr]">
+              <li className="row-span-3 grid">
+                <NavigationMenu.Link asChild>
+                  <a
+                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-purple9 to-indigo9 p-[25px] no-underline outline-none focus:shadow-[0_0_0_2px]"
+                    href="/"
+                  >
+                    <div className="mb-[7px] mt-4 text-[18px] font-medium leading-[1.2] text-white">
+                      Product Name
+                    </div>
+                    <p className="text-[14px] leading-[1.3] text-white/80">
+                      Brief product description goes here.
+                    </p>
+                  </a>
+                </NavigationMenu.Link>
+              </li>
+
+              <NavigationmenuComponent.ListItem variant="macos-modern" href="/" title="Documentation">
+                Comprehensive guides and API references.
+              </NavigationmenuComponent.ListItem>
+              <NavigationmenuComponent.ListItem variant="macos-modern" href="/" title="Components">
+                UI building blocks for your application.
+              </NavigationmenuComponent.ListItem>
+              <NavigationmenuComponent.ListItem variant="macos-modern" href="/" title="Templates">
+                Pre-built layouts for common use cases.
+              </NavigationmenuComponent.ListItem>
+            </ul>
+          ),
+        },
+        {
+          type: 'dropdown',
+          label: 'Resources',
+          content: (
+            <ul className="m-0 grid list-none gap-x-2.5 p-[22px] sm:w-[600px] sm:grid-flow-col sm:grid-rows-2">
+
+              <NavigationmenuComponent.ListItem
+                variant="macos-modern"
+                title="Getting Started"
+                href="/"
+              >
+                Quick start guide for new users.
+              </NavigationmenuComponent.ListItem>
+
+              <NavigationmenuComponent.ListItem variant="macos-modern" title="Tutorials" href="/">
+                Step-by-step guides for common tasks.
+              </NavigationmenuComponent.ListItem>
+
+              <NavigationmenuComponent.ListItem variant="macos-modern" title="Blog" href="/">
+                Latest news and updates from our team.
+              </NavigationmenuComponent.ListItem>
+
+              <NavigationmenuComponent.ListItem variant="macos-modern" title="Community" href="/">
+                Join our community of developers.
+              </NavigationmenuComponent.ListItem>
+            </ul>
+          ),
+        },
+        {
+          type: 'link',
+          label: 'Pricing',
+          href: '/',
+        },
+        {
+          type: 'link',
+          label: 'Contact',
+          href: '/',
+        },
+      ]}
+    />
+  </div>
+  <p className="text-sm text-gray-500">A macOS-inspired modern navigation menu with subtle transparency effects and rounded corners.</p>
 </div></div>
   </div>
 </div>
-
 
 {
   /* One-Time Password Field */
@@ -2491,7 +2599,7 @@ export default function StyleGuide() {
       name="Alex Johnson"
       title="Product Designer"
       avatarUrl="https://api.dicebear.com/7.x/avataaars/svg?seed=Demo"
-      description="Passionate designer with 5+ years of experience creating user-centered digital experiences."
+      description="Make a card with the same variant name to apply non default card styles."
       stats={[
         { value: '52', label: 'Projects' },
         { value: '89', label: 'Reviews' },
@@ -2503,7 +2611,7 @@ export default function StyleGuide() {
       ]}
     />
   </div>
-  <p className="text-sm text-gray-500">Default profile card style.</p>
+  <p className="text-sm text-gray-500">Clean, modern profile card with subtle shadows and minimal design.</p>
 </div>
 
 
@@ -2515,7 +2623,7 @@ export default function StyleGuide() {
       name="Alex Johnson"
       title="Product Designer"
       avatarUrl="https://api.dicebear.com/7.x/avataaars/svg?seed=Demo"
-      description="Passionate designer with 5+ years of experience creating user-centered digital experiences."
+      description="Make a card with the same variant name to apply non default card styles."
       stats={[
         { value: '52', label: 'Projects' },
         { value: '89', label: 'Reviews' },
@@ -2618,7 +2726,7 @@ export default function StyleGuide() {
       ariaLabel="Example options"
     />
   </div>
-  <p className="text-sm text-gray-500">Default radio group variant.</p>
+  <p className="text-sm text-gray-500">Clean, simple radio group with a smooth transition effect</p>
 </div>
 
 <div className="mb-6">
@@ -2635,7 +2743,7 @@ export default function StyleGuide() {
       ariaLabel="Example options"
     />
   </div>
-  <p className="text-sm text-gray-500">A card-like radio group with options that visually highlight when selected</p>
+  <p className="text-sm text-gray-500">A card-style radio group that highlights entire options when selected</p>
 </div>
 
 <div className="mb-6">
@@ -2652,7 +2760,7 @@ export default function StyleGuide() {
       ariaLabel="Example options"
     />
   </div>
-  <p className="text-sm text-gray-500">A pill-style radio group with an interactive toggle feel</p>
+  <p className="text-sm text-gray-500">A pill-style radio group with a smooth segmented control appearance</p>
 </div>
 
 <div className="mb-6">
@@ -2669,7 +2777,7 @@ export default function StyleGuide() {
       ariaLabel="Example options"
     />
   </div>
-  <p className="text-sm text-gray-500">A toggle-style radio group with button-like presentation</p>
+  <p className="text-sm text-gray-500">A toggle-style radio group that functions like segmented buttons</p>
 </div>
 </div>
   </div>
@@ -3306,7 +3414,7 @@ export default function StyleGuide() {
             // Use React Fragments or a div if needed
             <>
               <p className="mb-5 text-[15px] leading-normal">
-                Make changes to your account here. Click save when you're done.
+                Make FormField variant with same name to style FormFields. Button variant with same name to style Button.
               </p>
               {/* --- Use the actual FormField component --- */}
               <FormfieldComponent
@@ -3400,7 +3508,7 @@ export default function StyleGuide() {
             // Use React Fragments or a div if needed
             <>
               <p className="mb-5 text-[15px] leading-normal">
-                Make changes to your account here. Click save when you're done.
+                Make FormField variant with same name to style FormFields. Button variant with same name to style Button.
               </p>
               {/* --- Use the actual FormField component --- */}
               <FormfieldComponent
@@ -3860,7 +3968,7 @@ export default function StyleGuide() {
                   </a>
                 </li>
                 <li>
-                  <a href="https://github.com/yourusername/your-repo" className="hover:text-white" style={{ color: `${pageStyles.footerText}99` }}>
+                  <a href="https://github.com/thesubtleties" className="hover:text-white" style={{ color: `${pageStyles.footerText}99` }}>
                     GitHub
                   </a>
                 </li>
