@@ -3334,7 +3334,7 @@ export default function StyleGuide() {
       checked={true}
     />
   </div>
-  <p className="text-sm text-gray-500">An iOS-inspired switch with rounded appearance and subtle animations</p>
+  <p className="text-sm text-gray-500">A macOS-inspired switch with Apple's classic blue accent color</p>
 </div>
 
 <div className="mb-6">
@@ -3371,6 +3371,60 @@ export default function StyleGuide() {
     />
   </div>
   <p className="text-sm text-gray-500">A flat, modern toggle with a colorful gradient when active</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Sunset</h4>
+  <div className="mb-2 flex flex-col space-y-4">
+    <SwitchComponent
+      variant="sunset"
+      label="Airplane mode"
+      id="sunset-airplane"
+    />
+    <SwitchComponent
+      variant="sunset"
+      label="Dark mode"
+      id="sunset-dark"
+      checked={true}
+    />
+  </div>
+  <p className="text-sm text-gray-500">A vibrant sunset-themed switch with orange to red gradient</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Dark</h4>
+  <div className="mb-2 flex flex-col space-y-4">
+    <SwitchComponent
+      variant="dark"
+      label="Airplane mode"
+      id="dark-airplane"
+    />
+    <SwitchComponent
+      variant="dark"
+      label="Dark mode"
+      id="dark-dark"
+      checked={true}
+    />
+  </div>
+  <p className="text-sm text-gray-500">A sleek dark-themed switch with black background and teal accent</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Apple</h4>
+  <div className="mb-2 flex flex-col space-y-4">
+    <SwitchComponent
+      variant="apple"
+      label="Airplane mode"
+      id="apple-airplane"
+    />
+    <SwitchComponent
+      variant="apple"
+      label="Dark mode"
+      id="apple-dark"
+      checked={true}
+    />
+  </div>
+  <p className="text-sm text-gray-500">A macOS-inspired switch with Apple's classic blue accent color</p>
 </div>
 </div>
   </div>
@@ -3909,6 +3963,23 @@ export default function StyleGuide() {
     />
   </div>
   <p className="text-sm text-gray-500">Patriotic Fourth of July inspired toolbar with red, white, and blue color scheme.</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Patriotic</h4>
+  <div className="mb-2">
+    <ToolbarComponent
+      variant="patriotic"
+      textFormatting={true}
+      textAlignment={true}
+      showEditInfo={true}
+      showShareButton={true}
+      editInfoText="Edited 2 hours ago"
+      shareButtonText="Share"
+      defaultAlignment="center"
+    />
+  </div>
+  <p className="text-sm text-gray-500">A red, white, and blue themed toolbar for patriotic applications with bold selection states.</p>
 </div>
 </div>
   </div>

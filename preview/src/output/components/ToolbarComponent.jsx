@@ -1,5 +1,5 @@
 import * as React from 'react';
-import classNames from 'classnames';
+import classNames from 'classnames'; // Keep classNames if getStyle uses it
 import { Toolbar } from 'radix-ui';
 import {
   StrikethroughIcon,
@@ -12,7 +12,7 @@ import {
 
 
 /* --- Injected Variant Styling Logic --- */
-const allVariantStyles = JSON.parse('{"default":{"root":"flex items-center justify-between rounded-md bg-gray-800 p-2 shadow-md","elements":{"button":"flex items-center justify-center rounded-md p-2 text-gray-300 hover:bg-gray-700 hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-600 transition-colors","separator":"mx-2 h-6 w-px bg-gray-600","toggleGroup":"flex bg-gray-700 rounded-md p-1","toggleItem":"flex items-center justify-center rounded-md p-2 text-gray-300 hover:bg-gray-600 hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-600 data-[state=on]:bg-gray-600 data-[state=on]:text-gray-100 transition-colors"},"description":"Modern dark gray toolbar with light gray accents and clean, minimal styling."},"ocean":{"root":"flex items-center justify-between rounded-lg bg-gradient-to-r from-blue-50 to-teal-50 p-2.5 shadow-md border border-blue-100","elements":{"button":"flex items-center justify-center rounded-md p-2 text-blue-600 hover:bg-gradient-to-r hover:from-blue-400/10 hover:to-teal-400/10 focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all duration-200","separator":"mx-2 h-6 w-px bg-gradient-to-b from-blue-200 to-teal-200","toggleGroup":"flex gap-0.5 p-0.5 bg-blue-100/40 rounded-md","toggleItem":"flex items-center justify-center rounded-md p-2 text-blue-600 hover:bg-gradient-to-r hover:from-blue-400/10 hover:to-teal-400/10 focus:outline-none focus:ring-2 focus:ring-blue-400 data-[state=on]:bg-gradient-to-r data-[state=on]:from-blue-500 data-[state=on]:to-teal-400 data-[state=on]:text-white transition-all duration-200"},"description":"Ocean-themed toolbar with gradient background and fluid interactions."},"mac-modern":{"root":"flex items-center justify-between rounded-xl bg-white/80 backdrop-blur-md p-1.5 shadow-sm border border-slate-200/60","elements":{"button":"flex items-center justify-center rounded-lg p-2 text-slate-600 hover:bg-slate-100/80 hover:text-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-300/70 active:bg-slate-200/90 transition-all duration-200","separator":"mx-1.5 h-6 w-px bg-slate-200","toggleGroup":"flex gap-0.5 p-1 bg-slate-100/70 rounded-lg","toggleItem":"flex items-center justify-center rounded-md p-1.5 text-slate-600 hover:bg-white hover:text-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-300/70 data-[state=on]:bg-white data-[state=on]:shadow-sm data-[state=on]:text-slate-800 transition-all duration-200"},"description":"A modern macOS-inspired toolbar with frosted glass effect, subtle animations, and elegant interactions."},"july-fourth":{"root":"flex items-center justify-between rounded-md bg-gradient-to-r from-blue-700 via-white to-red-700 p-2 shadow-md border border-blue-800","elements":{"button":"flex items-center justify-center rounded-md p-2 bg-white text-blue-800 hover:bg-blue-50 hover:text-red-700 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors shadow-sm","separator":"mx-2 h-6 w-1 bg-white rounded-full shadow-sm","toggleGroup":"flex p-1 bg-blue-800 rounded-md","toggleItem":"flex items-center justify-center rounded-md p-2 text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-white data-[state=on]:bg-red-700 data-[state=on]:text-white data-[state=on]:shadow-sm transition-colors"},"description":"Patriotic Fourth of July inspired toolbar with red, white, and blue color scheme."}}');
+const allVariantStyles = JSON.parse('{"default":{"root":"flex flex-row items-center justify-start rounded-md bg-gray-800 p-2 shadow-lg border border-gray-700","elements":{"button":"ml-auto inline-flex h-9 items-center justify-center rounded-md px-3 py-1.5 text-gray-200 bg-gray-700 hover:bg-gray-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-500 active:bg-gray-600 transition-all duration-200","separator":"inline-block mx-2 h-6 w-px bg-gray-600/70","toggleGroup":"inline-flex h-9 flex-row items-center justify-start bg-gray-700 rounded-md","toggleItem":"inline-flex h-9 items-center justify-center rounded-md px-3 text-gray-300 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-500 data-[state=on]:bg-gray-600 data-[state=on]:text-white transition-all duration-200","link":"inline-flex h-9 items-center px-3 text-gray-300 hover:text-gray-100 transition-colors"},"description":"Modern dark gray toolbar with light gray accents and clean, minimal styling."},"ocean":{"root":"flex flex-row items-center justify-start rounded-lg bg-gradient-to-r from-blue-50 via-cyan-50 to-teal-50 p-2 shadow-md border border-blue-100/70","elements":{"button":"ml-auto inline-flex h-9 items-center justify-center rounded-md px-3 py-1.5 text-white bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 focus:outline-none focus:ring-2 focus:ring-blue-400/60 shadow-sm transition-all duration-300","separator":"mx-3 h-6 w-px bg-gradient-to-b from-blue-200/70 to-cyan-200/70","toggleGroup":"inline-flex h-9 flex-row items-center justify-start bg-blue-100/40 rounded-md","toggleItem":"inline-flex h-9 items-center justify-center rounded-md px-3 text-blue-600 hover:bg-blue-100/50 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400/50 data-[state=on]:bg-gradient-to-r data-[state=on]:from-blue-500 data-[state=on]:to-cyan-500 data-[state=on]:text-white data-[state=on]:shadow-sm transition-all duration-300","link":"inline-flex h-9 items-center px-3 text-blue-600 hover:text-cyan-600 transition-colors"},"description":"Ocean-themed toolbar with gradient background and fluid interactions."},"mac-modern":{"root":"flex flex-row items-center justify-start rounded-xl bg-white/90 backdrop-blur-xl p-2 shadow-sm border border-slate-200/70","elements":{"button":"ml-auto inline-flex h-9 items-center justify-center rounded-lg px-3 py-1.5 text-slate-800 bg-slate-100/80 hover:bg-slate-200/80 focus:outline-none focus:ring-2 focus:ring-slate-300/70 active:bg-slate-300/80 shadow-sm transition-all duration-200","separator":"mx-1.5 h-6 w-px bg-slate-200","toggleGroup":"inline-flex h-9 flex-row items-center justify-start gap-0.5 bg-slate-100/70 rounded-lg","toggleItem":"inline-flex h-8 items-center justify-center rounded-md px-3 text-slate-600 hover:bg-slate-100/80 hover:text-slate-800 focus:outline-none focus:ring-2 focus:ring-slate-300/70 data-[state=on]:bg-white data-[state=on]:shadow-sm data-[state=on]:text-slate-800 transition-all duration-200","link":"inline-flex h-9 items-center px-3 text-slate-500 hover:text-slate-800 transition-colors"},"description":"A modern macOS-inspired toolbar with frosted glass effect, subtle animations, and elegant interactions."},"july-fourth":{"root":"flex flex-row items-center justify-start rounded-md bg-gradient-to-r from-blue-600 via-white to-red-600 p-2 shadow-md border border-blue-700","elements":{"button":"ml-auto inline-flex h-9 items-center justify-center rounded-md px-3 py-1.5 text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-blue-500 active:bg-blue-600 shadow-sm transition-all duration-200","separator":"mx-3 h-6 w-px bg-white/80 shadow-sm","toggleGroup":"inline-flex h-9 flex-row items-center justify-start bg-blue-800 rounded-md border border-white/30 shadow-md","toggleItem":"inline-flex h-7 items-center justify-center rounded-md px-3 text-blue-800 bg-white/90 hover:bg-red-100 hover:text-red-800 focus:outline-none focus:ring-2 focus:ring-blue-500 data-[state=on]:bg-red-600 data-[state=on]:text-white data-[state=on]:shadow-sm transition-all duration-200","link":"inline-flex h-9 items-center px-3 text-blue-800 hover:text-red-600 transition-colors"},"description":"Patriotic Fourth of July inspired toolbar with red, white, and blue color scheme."},"patriotic":{"root":"flex flex-row items-center justify-start rounded-md bg-white p-2 shadow-md border-2 border-blue-600","elements":{"toggleItem":"inline-flex h-9 items-center justify-center rounded-md px-3 text-blue-700 hover:bg-blue-50 hover:text-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-500/50 data-[state=on]:bg-red-600 data-[state=on]:text-white transition-all duration-200","button":"ml-auto inline-flex h-9 items-center justify-center rounded-md px-3 py-1.5 text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-blue-500/50 active:bg-blue-600 shadow-sm transition-all duration-200","separator":"mx-3 h-6 w-px bg-blue-200","link":"inline-flex h-9 items-center px-3 text-blue-800 hover:text-red-600 transition-colors","toggleGroup":"inline-flex h-9 flex-row items-center justify-start gap-1"},"description":"A red, white, and blue themed toolbar for patriotic applications with bold selection states."}}');
 const getStyle = (variant, elementName) => {
   const variantStyles = allVariantStyles[variant] || allVariantStyles['default'] || { root: '', elements: {} };
   if (elementName === 'root') {
@@ -23,10 +23,10 @@ const getStyle = (variant, elementName) => {
 };
 /* --- End Injected Logic --- */
 
+// Assume getStyle(variant, part) is defined here based on INJECT_VARIANT_STYLING_LOGIC
 
 const ToolbarComponent = ({
   variant = 'default',
-  className = '',
   textFormatting = true,
   textAlignment = true,
   showEditInfo = true,
@@ -38,29 +38,40 @@ const ToolbarComponent = ({
 }) => {
   return (
     <Toolbar.Root
-      className={classNames(
-        'flex w-full min-w-max rounded-md p-2.5 shadow-sm',
-        getStyle(variant, 'root'),
-        className
-      )}
+      className={getStyle(variant, 'root')}
       aria-label="Formatting options"
       {...props}
     >
       {textFormatting && (
         <Toolbar.ToggleGroup type="multiple" aria-label="Text formatting">
-          <ToolbarToggleItem value="bold" aria-label="Bold">
+          <Toolbar.ToggleItem
+            className={getStyle(variant, 'toggleItem')}
+            value="bold"
+            aria-label="Bold"
+          >
             <FontBoldIcon />
-          </ToolbarToggleItem>
-          <ToolbarToggleItem value="italic" aria-label="Italic">
+          </Toolbar.ToggleItem>
+          <Toolbar.ToggleItem
+            className={getStyle(variant, 'toggleItem')}
+            value="italic"
+            aria-label="Italic"
+          >
             <FontItalicIcon />
-          </ToolbarToggleItem>
-          <ToolbarToggleItem value="strikethrough" aria-label="Strike through">
+          </Toolbar.ToggleItem>
+          <Toolbar.ToggleItem
+            className={getStyle(variant, 'toggleItem')}
+            value="strikethrough"
+            aria-label="Strike through"
+          >
             <StrikethroughIcon />
-          </ToolbarToggleItem>
+          </Toolbar.ToggleItem>
         </Toolbar.ToggleGroup>
       )}
 
-      {textFormatting && textAlignment && <ToolbarSeparator />}
+      {/* Render separator only if needed */}
+      {textFormatting && textAlignment && (
+        <Toolbar.Separator className={getStyle(variant, 'separator')} />
+      )}
 
       {textAlignment && (
         <Toolbar.ToggleGroup
@@ -68,96 +79,61 @@ const ToolbarComponent = ({
           defaultValue={defaultAlignment}
           aria-label="Text alignment"
         >
-          <ToolbarToggleItem value="left" aria-label="Left aligned">
+          <Toolbar.ToggleItem
+            className={getStyle(variant, 'toggleItem')}
+            value="left"
+            aria-label="Left aligned"
+          >
             <TextAlignLeftIcon />
-          </ToolbarToggleItem>
-          <ToolbarToggleItem value="center" aria-label="Center aligned">
+          </Toolbar.ToggleItem>
+          <Toolbar.ToggleItem
+            className={getStyle(variant, 'toggleItem')}
+            value="center"
+            aria-label="Center aligned"
+          >
             <TextAlignCenterIcon />
-          </ToolbarToggleItem>
-          <ToolbarToggleItem value="right" aria-label="Right aligned">
+          </Toolbar.ToggleItem>
+          <Toolbar.ToggleItem
+            className={getStyle(variant, 'toggleItem')}
+            value="right"
+            aria-label="Right aligned"
+          >
             <TextAlignRightIcon />
-          </ToolbarToggleItem>
+          </Toolbar.ToggleItem>
         </Toolbar.ToggleGroup>
       )}
 
+      {/* Render separator only if needed */}
       {(showEditInfo || showShareButton) &&
-        (textFormatting || textAlignment) && <ToolbarSeparator />}
+        (textFormatting || textAlignment) && (
+          <Toolbar.Separator className={getStyle(variant, 'separator')} />
+        )}
 
       {showEditInfo && (
-        <ToolbarLink href="#" target="_blank" style={{ marginRight: 10 }}>
+        <Toolbar.Link
+          className={classNames(
+            getStyle(variant, 'link'),
+            getStyle(variant, 'editInfoLink')
+          )}
+          href="#"
+          target="_blank"
+        >
           {editInfoText}
-        </ToolbarLink>
+        </Toolbar.Link>
       )}
 
       {showShareButton && (
-        <ToolbarButton style={{ marginLeft: 'auto' }}>
+        <Toolbar.Button
+          className={classNames(
+            getStyle(variant, 'button'),
+            getStyle(variant, 'shareButton')
+          )}
+        >
           {shareButtonText}
-        </ToolbarButton>
+        </Toolbar.Button>
       )}
     </Toolbar.Root>
   );
 };
-
-const ToolbarToggleItem = React.forwardRef(
-  ({ children, className, variant, ...props }, forwardedRef) => (
-    <Toolbar.ToggleItem
-      className={classNames(
-        'ml-0.5 inline-flex h-[25px] flex-shrink-0 flex-grow-0 basis-auto items-center justify-center rounded px-[5px] text-[13px] leading-none outline-none first:ml-0 focus:relative',
-        getStyle(variant, 'toggleItem'),
-        className
-      )}
-      {...props}
-      ref={forwardedRef}
-    >
-      {children}
-    </Toolbar.ToggleItem>
-  )
-);
-
-const ToolbarSeparator = React.forwardRef(
-  ({ className, variant, ...props }, forwardedRef) => (
-    <Toolbar.Separator
-      className={classNames(
-        'mx-2.5 w-px',
-        getStyle(variant, 'separator'),
-        className
-      )}
-      {...props}
-      ref={forwardedRef}
-    />
-  )
-);
-
-const ToolbarLink = React.forwardRef(
-  ({ children, className, variant, ...props }, forwardedRef) => (
-    <Toolbar.Link
-      className={classNames(
-        'ml-0.5 hidden h-[25px] flex-shrink-0 flex-grow-0 basis-auto items-center justify-center rounded px-[5px] text-[13px] leading-none outline-none first:ml-0 hover:cursor-pointer focus:relative sm:inline-flex',
-        getStyle(variant, 'link'),
-        className
-      )}
-      {...props}
-      ref={forwardedRef}
-    >
-      {children}
-    </Toolbar.Link>
-  )
-);
-
-const ToolbarButton = React.forwardRef(
-  ({ children, className, variant, ...props }, forwardedRef) => (
-    <Toolbar.Button
-      className={classNames(
-        'inline-flex h-[25px] flex-shrink-0 flex-grow-0 basis-auto items-center justify-center rounded px-2.5 text-[13px] leading-none outline-none focus:relative',
-        getStyle(variant, 'button'),
-        className
-      )}
-      {...props}
-      ref={forwardedRef}
-    >
-      {children}
-    </Toolbar.Button>
-  )
-);
 
 export default ToolbarComponent;

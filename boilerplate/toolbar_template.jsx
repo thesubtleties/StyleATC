@@ -1,5 +1,5 @@
 import * as React from 'react';
-import classNames from 'classnames';
+import classNames from 'classnames'; // Keep classNames if getStyle uses it
 import { Toolbar } from 'radix-ui';
 import {
   StrikethroughIcon,
@@ -11,10 +11,10 @@ import {
 } from '@radix-ui/react-icons';
 
 /* INJECT_VARIANT_STYLING_LOGIC */
+// Assume getStyle(variant, part) is defined here based on INJECT_VARIANT_STYLING_LOGIC
 
 const ToolbarComponent = ({
   variant = 'default',
-  className = '',
   textFormatting = true,
   textAlignment = true,
   showEditInfo = true,
@@ -26,29 +26,40 @@ const ToolbarComponent = ({
 }) => {
   return (
     <Toolbar.Root
-      className={classNames(
-        'flex w-full min-w-max rounded-md p-2.5 shadow-sm',
-        getStyle(variant, 'root'),
-        className
-      )}
+      className={getStyle(variant, 'root')}
       aria-label="Formatting options"
       {...props}
     >
       {textFormatting && (
         <Toolbar.ToggleGroup type="multiple" aria-label="Text formatting">
-          <ToolbarToggleItem value="bold" aria-label="Bold">
+          <Toolbar.ToggleItem
+            className={getStyle(variant, 'toggleItem')}
+            value="bold"
+            aria-label="Bold"
+          >
             <FontBoldIcon />
-          </ToolbarToggleItem>
-          <ToolbarToggleItem value="italic" aria-label="Italic">
+          </Toolbar.ToggleItem>
+          <Toolbar.ToggleItem
+            className={getStyle(variant, 'toggleItem')}
+            value="italic"
+            aria-label="Italic"
+          >
             <FontItalicIcon />
-          </ToolbarToggleItem>
-          <ToolbarToggleItem value="strikethrough" aria-label="Strike through">
+          </Toolbar.ToggleItem>
+          <Toolbar.ToggleItem
+            className={getStyle(variant, 'toggleItem')}
+            value="strikethrough"
+            aria-label="Strike through"
+          >
             <StrikethroughIcon />
-          </ToolbarToggleItem>
+          </Toolbar.ToggleItem>
         </Toolbar.ToggleGroup>
       )}
 
-      {textFormatting && textAlignment && <ToolbarSeparator />}
+      {/* Render separator only if needed */}
+      {textFormatting && textAlignment && (
+        <Toolbar.Separator className={getStyle(variant, 'separator')} />
+      )}
 
       {textAlignment && (
         <Toolbar.ToggleGroup
@@ -56,96 +67,61 @@ const ToolbarComponent = ({
           defaultValue={defaultAlignment}
           aria-label="Text alignment"
         >
-          <ToolbarToggleItem value="left" aria-label="Left aligned">
+          <Toolbar.ToggleItem
+            className={getStyle(variant, 'toggleItem')}
+            value="left"
+            aria-label="Left aligned"
+          >
             <TextAlignLeftIcon />
-          </ToolbarToggleItem>
-          <ToolbarToggleItem value="center" aria-label="Center aligned">
+          </Toolbar.ToggleItem>
+          <Toolbar.ToggleItem
+            className={getStyle(variant, 'toggleItem')}
+            value="center"
+            aria-label="Center aligned"
+          >
             <TextAlignCenterIcon />
-          </ToolbarToggleItem>
-          <ToolbarToggleItem value="right" aria-label="Right aligned">
+          </Toolbar.ToggleItem>
+          <Toolbar.ToggleItem
+            className={getStyle(variant, 'toggleItem')}
+            value="right"
+            aria-label="Right aligned"
+          >
             <TextAlignRightIcon />
-          </ToolbarToggleItem>
+          </Toolbar.ToggleItem>
         </Toolbar.ToggleGroup>
       )}
 
+      {/* Render separator only if needed */}
       {(showEditInfo || showShareButton) &&
-        (textFormatting || textAlignment) && <ToolbarSeparator />}
+        (textFormatting || textAlignment) && (
+          <Toolbar.Separator className={getStyle(variant, 'separator')} />
+        )}
 
       {showEditInfo && (
-        <ToolbarLink href="#" target="_blank" style={{ marginRight: 10 }}>
+        <Toolbar.Link
+          className={classNames(
+            getStyle(variant, 'link'),
+            getStyle(variant, 'editInfoLink')
+          )}
+          href="#"
+          target="_blank"
+        >
           {editInfoText}
-        </ToolbarLink>
+        </Toolbar.Link>
       )}
 
       {showShareButton && (
-        <ToolbarButton style={{ marginLeft: 'auto' }}>
+        <Toolbar.Button
+          className={classNames(
+            getStyle(variant, 'button'),
+            getStyle(variant, 'shareButton')
+          )}
+        >
           {shareButtonText}
-        </ToolbarButton>
+        </Toolbar.Button>
       )}
     </Toolbar.Root>
   );
 };
-
-const ToolbarToggleItem = React.forwardRef(
-  ({ children, className, variant, ...props }, forwardedRef) => (
-    <Toolbar.ToggleItem
-      className={classNames(
-        'ml-0.5 inline-flex h-[25px] flex-shrink-0 flex-grow-0 basis-auto items-center justify-center rounded px-[5px] text-[13px] leading-none outline-none first:ml-0 focus:relative',
-        getStyle(variant, 'toggleItem'),
-        className
-      )}
-      {...props}
-      ref={forwardedRef}
-    >
-      {children}
-    </Toolbar.ToggleItem>
-  )
-);
-
-const ToolbarSeparator = React.forwardRef(
-  ({ className, variant, ...props }, forwardedRef) => (
-    <Toolbar.Separator
-      className={classNames(
-        'mx-2.5 w-px',
-        getStyle(variant, 'separator'),
-        className
-      )}
-      {...props}
-      ref={forwardedRef}
-    />
-  )
-);
-
-const ToolbarLink = React.forwardRef(
-  ({ children, className, variant, ...props }, forwardedRef) => (
-    <Toolbar.Link
-      className={classNames(
-        'ml-0.5 hidden h-[25px] flex-shrink-0 flex-grow-0 basis-auto items-center justify-center rounded px-[5px] text-[13px] leading-none outline-none first:ml-0 hover:cursor-pointer focus:relative sm:inline-flex',
-        getStyle(variant, 'link'),
-        className
-      )}
-      {...props}
-      ref={forwardedRef}
-    >
-      {children}
-    </Toolbar.Link>
-  )
-);
-
-const ToolbarButton = React.forwardRef(
-  ({ children, className, variant, ...props }, forwardedRef) => (
-    <Toolbar.Button
-      className={classNames(
-        'inline-flex h-[25px] flex-shrink-0 flex-grow-0 basis-auto items-center justify-center rounded px-2.5 text-[13px] leading-none outline-none focus:relative',
-        getStyle(variant, 'button'),
-        className
-      )}
-      {...props}
-      ref={forwardedRef}
-    >
-      {children}
-    </Toolbar.Button>
-  )
-);
 
 export default ToolbarComponent;
