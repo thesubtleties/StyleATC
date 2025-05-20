@@ -8,15 +8,17 @@ style_theme = FastMCP(
     "StyleATC Tailwind Styling System",
     instructions="""# Welcome to the StyleATC Component Styling System
 
+    Probably call the welcome tool first to get an overview of the system and then give the user a quick summary of how to use it.
+
 This tool helps you create and manage a centralized theme for dynamically styled React components using Tailwind CSS.
 
 ## Core Concepts
 
-1.  **Global Styles**: Centralized colors, spacing, and typography values (`view_theme`).
-2.  **Components**: Base UI element types (e.g., button, card) defined in `theme.json`. Each component generates a *single* React file (e.g., `Button.jsx`).
-3.  **Variants**: Different stylistic versions of the same component type (e.g., default, primary, secondary), defined under the component in `theme.json`. The single React file handles rendering all its variants via a `variant` prop.
-4.  **Elements**: Specific sub-parts *within a component variant* that can have their own styles (e.g., the 'item' or 'trigger' within an 'accordion' variant). Defined in the `elements` dictionary *inside* a variant.
-5.  **Extends**: A variant can use the `extends` property (e.g., `"extends": "button.default"`) to inherit the base `tailwind` string from another variant. **Note:** Currently, nested `elements` are **not** automatically inherited via `extends`; they are copied only during *creation* if not explicitly provided (see `create_component_variant`).
+1.  **Global Styles**: Centralized colors, spacing, typography, and **configured Tailwind animation utility names** are managed (`view_theme`, `list_animations`, `get_animation_details`). The actual `@keyframes` definitions should be provided in your project's main CSS files and configured in `tailwind.config.js` to work with the `animate-*` classes.
+2.  **Components**: Base UI element types (e.g., button, card) defined in `theme.json`. Each component generates a *single* React file (e.g., `Button.jsx`) that uses theme data to apply styles.
+3.  **Variants**: Different stylistic versions of the same component type (e.g., default, primary, secondary). Styles, including animations, are defined under the component in `theme.json`. The generated React file handles rendering all its variants via a `variant` prop.
+4.  **Elements**: Specific sub-parts *within a component variant* that can have their own styles. Defined in the `elements` dictionary *inside* a variant.
+5.  **Extends**: A variant can use the `extends` property (e.g., `"extends": "button.default"`) to inherit the base `tailwind` string from another variant. Note: nested `elements` are copied only during *creation* if not explicitly provided.
 
 ## Getting Started
 
@@ -28,78 +30,84 @@ This tool helps you create and manage a centralized theme for dynamically styled
     ```
     list_components()
     ```
-3.  Get detailed computed styles for a specific component variant:
+3.  List available global animation names:
+    ```
+    list_animations()
+    ```
+4.  Get detailed style properties and computed Tailwind classes for a specific component variant:
     ```
     get_component_details(component_type="button", variant="primary")
+    ```
+5.  Get the CSS value definition for a specific animation name (for reference):
+    ```
+    get_animation_details(animation_name="fadeIn")
     ```
 
 ## Common Tasks
 
-### Updating Styles
+### Managing Styles
 
-1.  **Update a Variant's Property** (e.g., its main `tailwind`, `description`, `extends`):
+1.  **Update a Variant's or Element's Tailwind Classes**: Modify the `tailwind` property of a component variant or a specific element within a variant. Include standard Tailwind classes and **animation classes like `animate-[animationName]`** (e.g., `animate-fadeIn`) referencing names from `list_animations()`.
     ```
     update_variant_property(
         component_type="button",
         variant="primary",
         property_name="tailwind",
-        value="new-tailwind-classes..."
+        value="bg-blue-500 text-white rounded animate-pulse" # Example including animation class
     )
     ```
-2.  **Update an Element's Property** (within a specific variant):
     ```
     update_variant_element(
         component_type="accordion",
         variant="default",
         element_name="trigger",
         property_name="tailwind",
-        value="new-tailwind-for-trigger..."
+        value="px-2 py-1 font-semibold animate-bounce" # Example including animation class
     )
     ```
-3.  **Update a Global Color**:
+2.  **Update a Global Color**:
     ```
     update_global_color(color_name="primary", color_value="#8b5cf6")
     ```
-
-### Creating New Styles
-
-1.  **Create a New Component Variant**:
+3.  **Create a New Component Variant**:
     ```
     create_component_variant(
         component_type="button",
         variant="warning",
         extends="button.default",
-        tailwind="bg-yellow-500 hover:bg-yellow-600",
+        tailwind="bg-yellow-500 hover:bg-yellow-600 animate-shakeX", # Example with animation class
         text_color="white",
-        description="A warning button"
+        description="A warning button with a shake animation on interaction."
     )
     ```
-    *   **Note on Elements:** If `extends` is used (e.g., `extends="button.default"`) and you **do not** provide an `elements` dictionary in the `create_component_variant` call, the system will attempt to **copy** the `elements` structure from the base variant (`button.default` in this case) into the new variant (`warning`). If you provide an `elements` dictionary, your provided one will be used.
+    *   Note on Elements: If `extends` is used and you do not provide an `elements` dictionary, the system will attempt to copy the `elements` structure from the base variant.
+4.  **Delete a Component Variant**:
+    ```
+    delete_component_variant(component_type="button", variant="secondary")
+    ```
 
 ### Generating Components & Style Guide
 
-1.  **Generate/Update All Component Files**: (Use this after theme changes)
+1.  **Generate/Update All Component Files**: (Use this after theme changes) This processes each component type defined in the theme and generates/overwrites its corresponding dynamic React component file based on the latest theme data. Each file includes logic for all its variants.
     ```
     generate_all_components()
     ```
-    *   This processes each component type defined in the theme and generates/overwrites its corresponding dynamic React component file (e.g., `output/components/Button.jsx`, `output/components/Card.jsx`) based on the latest theme data and boilerplate templates. Each file includes logic for all its variants.
-2.  **Generate/Update Style Guide Page**:
+2.  **Generate/Update Style Guide Page**: This generates/overwrites the `output/StyleGuide.jsx` file, which imports the generated components and displays examples of each variant.
      ```
      generate_style_guide()
      ```
-     * This generates/overwrites the `output/StyleGuide.jsx` file, which imports the generated components and displays examples of each variant.
-3.  **Update Preview App**: (Copies generated files to the preview app source)
+3.  **Update Preview App**: Copies generated files to the preview app source directory (`preview/src/output/`).
     ```
     update_preview()
     ```
 
 ### Preview and Testing
 
-1.  **Start Preview Server**: (Runs Astro dev server)
+1.  **Start Preview Server**: Starts the Astro development server for viewing components.
     ```
     start_preview_server()
     ```
-2.  **Stop Preview Server**:
+2.  **Stop Preview Server**: Stops the Astro development server.
     ```
     stop_preview_server()
     ```
@@ -107,7 +115,7 @@ This tool helps you create and manage a centralized theme for dynamically styled
 
 ### Managing Changes
 
-1.  **Save Theme Changes**: (Persists theme modifications to `theme_config.json`)
+1.  **Save Theme Changes**: Persists theme modifications to `data/theme_config.json`.
     ```
     save_theme()
     ```
@@ -115,31 +123,32 @@ This tool helps you create and manage a centralized theme for dynamically styled
     ```
     has_unsaved_changes()
     ```
-3.  **Revert Theme Changes**: (Reloads from the last saved `theme_config.json`)
+3.  **Revert Theme Changes**: Reloads the theme from the last saved `theme_config.json`.
     ```
     revert_theme()
     ```
 
 ## File Locations
 
--   **Boilerplate Templates**: `boilerplate/*.jsx` (These NEED to be updated manually for the `getStyle()` system).
+-   **Boilerplate Templates**: `boilerplate/*.jsx` (Need manual updates for the `getStyle()` system).
 -   **Theme Configuration**: `data/theme_config.json`.
 -   **Generated Components**: `data/output/components/*.jsx`.
 -   **Generated Style Guide**: `data/output/StyleGuide.jsx`.
 -   **Preview App Source**: `preview/src/`. Generated files are copied into `preview/src/output/`.
+-   **Global CSS (@keyframes)**: The actual `@keyframes` animation definitions should be in your project's main CSS files (e.g., `src/index.css`), configured in `tailwind.config.js`.
 
 ## Best Practices
 
-1.  **Use Global Colors**: Reference `global.colors.*` in variant/element properties where possible.
+1.  **Use Global Values**: Reference colors, spacing, font sizes, and animation names (via `animate-*` classes in `tailwind`) defined in the global theme.
 2.  **Use `default` as Base**: Define common structure/layout in the `default` variant.
-3.  **Use `extends`**: Use `extends: "component.default"` in other variants to inherit base `tailwind` (remember elements are copied on creation, not dynamically inherited).
-4.  **Generate After Changes**: Run `generate_all_components()` and `generate_style_guide()` after modifying the theme.
+3.  **Use `extends`**: Use `extends: "component.default"` to inherit base `tailwind` classes.
+4.  **Generate After Changes**: Run generation tools after modifying the theme.
 5.  **Update Preview**: Run `update_preview()` before checking the preview server.
 6.  **Save Your Changes**: Use `save_theme()` regularly.
 
 ## Typical Workflow
 
-1.  Modify theme (`update_variant_*`, `update_global_color`, `create_component_variant`).
+1.  Modify theme (using update, create, or delete tools). Include animation classes like `animate-[animationName]` in `tailwind` properties as needed.
 2.  Generate component files: `generate_all_components()`.
 3.  Generate style guide page: `generate_style_guide()`.
 4.  Update preview app files: `update_preview()`.
@@ -165,55 +174,55 @@ os.makedirs(COMPONENTS_DIR, exist_ok=True)
 
 
 # RESOURCES: Allow reading files from the data directory
-@style_theme.resource("file://{path}")
-def read_file(path: str) -> str:
-    """Read a file from the data directory."""
-    # Ensure the path doesn't try to escape the data directory
-    safe_path = os.path.normpath(os.path.join(DATA_DIR, path))
-    if not safe_path.startswith(DATA_DIR):
-        raise ValueError(
-            f"Access denied: Cannot access paths outside {DATA_DIR}"
-        )
+# @style_theme.resource("file://{path}")
+# def read_file(path: str) -> str:
+#     """Read a file from the data directory."""
+#     # Ensure the path doesn't try to escape the data directory
+#     safe_path = os.path.normpath(os.path.join(DATA_DIR, path))
+#     if not safe_path.startswith(DATA_DIR):
+#         raise ValueError(
+#             f"Access denied: Cannot access paths outside {DATA_DIR}"
+#         )
 
-    try:
-        with open(safe_path, "r") as f:
-            return f.read()
-    except FileNotFoundError:
-        return f"Error: File {path} not found"
-    except Exception as e:
-        return f"Error reading file: {str(e)}"
+#     try:
+#         with open(safe_path, "r") as f:
+#             return f.read()
+#     except FileNotFoundError:
+#         return f"Error: File {path} not found"
+#     except Exception as e:
+#         return f"Error reading file: {str(e)}"
 
 
-@style_theme.resource("directory://{path}")
-def list_directory(path: str = "") -> str:
-    """List files in the data directory."""
-    # Ensure the path doesn't try to escape the data directory
-    safe_path = os.path.normpath(os.path.join(DATA_DIR, path))
-    if not safe_path.startswith(DATA_DIR):
-        raise ValueError(
-            f"Access denied: Cannot access paths outside {DATA_DIR}"
-        )
+# @style_theme.resource("directory://{path}")
+# def list_directory(path: str = "") -> str:
+#     """List files in the data directory."""
+#     # Ensure the path doesn't try to escape the data directory
+#     safe_path = os.path.normpath(os.path.join(DATA_DIR, path))
+#     if not safe_path.startswith(DATA_DIR):
+#         raise ValueError(
+#             f"Access denied: Cannot access paths outside {DATA_DIR}"
+#         )
 
-    try:
-        if not os.path.isdir(safe_path):
-            return f"Error: {path} is not a directory"
+#     try:
+#         if not os.path.isdir(safe_path):
+#             return f"Error: {path} is not a directory"
 
-        files = os.listdir(safe_path)
-        result = []
+#         files = os.listdir(safe_path)
+#         result = []
 
-        for file in files:
-            full_path = os.path.join(safe_path, file)
-            file_type = "Directory" if os.path.isdir(full_path) else "File"
-            size = (
-                os.path.getsize(full_path)
-                if os.path.isfile(full_path)
-                else "-"
-            )
-            result.append(f"{file} ({file_type}, {size} bytes)")
+#         for file in files:
+#             full_path = os.path.join(safe_path, file)
+#             file_type = "Directory" if os.path.isdir(full_path) else "File"
+#             size = (
+#                 os.path.getsize(full_path)
+#                 if os.path.isfile(full_path)
+#                 else "-"
+#             )
+#             result.append(f"{file} ({file_type}, {size} bytes)")
 
-        return f"Contents of {path or 'root directory'}:\n" + "\n".join(result)
-    except Exception as e:
-        return f"Error listing directory: {str(e)}"
+#         return f"Contents of {path or 'root directory'}:\n" + "\n".join(result)
+#     except Exception as e:
+#         return f"Error listing directory: {str(e)}"
 
 
 # TOOLS: Manage components and theme
@@ -221,37 +230,45 @@ def list_directory(path: str = "") -> str:
 def welcome() -> str:
     """Get a user-friendly welcome message explaining how to interact with the styling system."""
     return """
-Hello! Welcome to the StyleATC Component Styling System. I'm here to help you manage the look and feel of your React components.
 
-**What can we do?**
+This is the documentation for the StyleATC Component Styling System. This system provides tools for managing a centralized theme for dynamically styled React components using Tailwind CSS.
 
-Think of me as your assistant for styling tasks. You can ask me to:
+The core concepts and capabilities available within this system are as follows:
 
-*   **Show Current Styles:** See the overall theme configuration or details about specific components and their variants (like "show me the theme" or "what does the primary button look like?").
-*   **Modify Styles:** Change global colors, update the appearance of component variants (like "make the default button background gray"), or tweak specific parts (elements) of a component (like "change the accordion trigger's text color").
-*   **Create New Styles:** Define new variants for existing components (like "create a 'danger' button variant based on the default").
-*   **Generate Code & Previews:** After making changes, ask me to generate the updated React component files, create the visual style guide page, and update the preview application so you can see the results.
-*   **Manage Changes:** Save your work to the theme configuration file or revert to the last saved version.
+**Core Concepts:**
 
-**How to Interact:**
+*   **Global Styles**: Centralized colors, spacing, typography, and **configured Tailwind animation utility names** are managed. The actual `@keyframes` definitions should be provided in your project's main CSS files and configured in `tailwind.config.js` to work with the `animate-*` classes.
+*   **Components**: Base UI element types (e.g., button, card) are defined. Each component corresponds to a single generated React file.
+*   **Variants**: Different stylistic versions of the same component type (e.g., default, primary, secondary), defined under the component. Styles, including animations, are applied via Tailwind classes within the `tailwind` property. The generated React file handles rendering these variants based on a 'variant' prop.
+*   **Elements**: Specific sub-parts *within a component variant* that can have their own styles, defined in the 'elements' dictionary within a variant.
+*   **Extends**: Variants can inherit the base 'tailwind' string from other variants using the 'extends' property (e.g., `"extends": "button.default"`). Note that nested 'elements' are copied on creation, not dynamically inherited via 'extends'.
 
-Just tell me what you want to accomplish in plain language! I understand requests like:
+**Available Tools and Functionality:**
 
-*   _"Update the global primary color to #FF6347"_
-*   _"Show me the details for the 'card' component's 'default' variant"_
-*   _"Create a 'ghost' variant for the button that extends 'button.default' and has a transparent background"_
-*   _"Generate all components and update the preview"_
-*   _"Save the theme changes"_
+The system provides the following functions/tools that can be executed:
 
-I will figure out which internal tools need to be called based on your request.
+*   **Show Styles (`list_components`, `get_component_details`, `get_variant_details`, `list_animations`, `get_animation_details`)**: The system can list available component types and their variants, retrieve detailed computed styles for specific component variants, **list available global animation names, and get the CSS value for a specific animation (for reference).**
+*   **Modify Styles (`update_variant_property`, `update_variant_element`, `update_global_color`)**: The system can update properties of component variants and their nested elements, as well as update global color values. **When applying animations, add the corresponding `animate-*` Tailwind utility class (e.g., `animate-fadeIn`, `animate-bounce`) to the `tailwind` property.**
+*   **Create Styles (`create_component_variant`)**: New variants can be defined for existing components.
+*   **Delete Styles (`delete_component_variant`)**: Specific variants can be removed from a component's configuration.
+*   **Generate Code & Previews (`generate_all_components`, `generate_style_guide`, `update_preview`)**: The system can generate updated React component files based on the current theme, create the visual style guide page, and copy generated files to the preview application source directory (`preview/src/output/`).
+*   **Manage Changes (`save_theme`, `has_unsaved_changes`, `revert_theme`)**: The current theme state can be saved to `data/theme_config.json`, checked for unsaved changes, or reverted to the last saved state.
+*   **Preview Server Management (`start_preview_server`, `stop_preview_server`)**: The Astro preview development server can be started and stopped to view changes.
 
-**Getting Started:**
+**Interaction:**
 
-A good way to begin is to see the current setup. Try asking me:
+Users will provide requests in natural language. The system should interpret these requests and map them to the appropriate tool function to execute the requested action. Examples of user requests include:
 
-"**Show me the theme configuration**"
+*   "Update the global primary color to #FF6347"
+*   "Show me the details for the 'card' component's 'default' variant"
+*   **"List all available animations"**
+*   **"Get details for the 'bounceIn' animation"**
+*   "Create a 'ghost' variant for the button that extends 'button.default' and has a transparent background"
+*   "Delete the 'outline' variant from the button"
+*   "Generate all components and update the preview"
+*   "Save the theme changes"
 
-Let me know what you'd like to do!
+When a user first interacts with the system, providing an overview of its capabilities (like this document) is helpful. A suggested initial user interaction is to ask to see the theme configuration, **list available components, or list available animations.**
 """
 
 
@@ -336,17 +353,27 @@ def get_component_details(component_type: str, variant: str) -> str:
     return tool_get_component_details(component_type, variant)
 
 
-# elements are stored in the variant
-# @style_theme.tool()
-# def get_component_elements(component_type: str) -> str:
-#     """Get all elements of a component
+@style_theme.tool()
+def list_animations() -> str:
+    """
+    List all available global animations configured in the theme.
+    """
+    from theme_tools import tool_list_animations
 
-#     Args:
-#         component_type: The type of component (e.g., 'dropdown', 'tabs')
-#     """
-#     from theme_tools import tool_get_component_elements
+    return tool_list_animations()
 
-#     return tool_get_component_elements(component_type)
+
+@style_theme.tool()
+def get_animation_details(animation_name: str) -> str:
+    """
+    Get the CSS value for a specific global animation.
+
+    Args:
+        animation_name: The name of the animation.
+    """
+    from theme_tools import tool_get_animation_details
+
+    return tool_get_animation_details(animation_name)
 
 
 @style_theme.tool()

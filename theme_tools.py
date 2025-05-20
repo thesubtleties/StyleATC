@@ -173,6 +173,52 @@ def tool_get_component_elements(component_type: str) -> str:
         return f"Error getting component elements: {str(e)}"
 
 
+def tool_list_animations() -> str:
+    """
+    List the names of all available global animations configured in the theme.
+    """
+    try:
+        result = engine.list_animations()
+
+        if "error" in result:
+            return result["error"]
+
+        if not result:
+            return "No global animations defined in the theme."
+
+        # Extract only the keys (animation names)
+        animation_names = list(result.keys())
+        animation_names.sort()  # Optional: Sort alphabetically
+
+        output = "Available Animation Names:\n\n"
+        output += "\n".join([f"- {name}" for name in animation_names])
+
+        return output.strip()
+    except Exception as e:
+        return f"Error listing animation names: {str(e)}".strip()
+
+
+def tool_get_animation_details(animation_name: str) -> str:
+    """
+    Get details for a specific global animation.
+
+    Args:
+        animation_name: The name of the animation.
+    """
+    try:
+        result = engine.get_animation_details(animation_name)
+
+        if "error" in result:
+            return result["error"]
+
+        output = f"Animation: {result['name']}\n"
+        output += f"CSS Value: {result['value']}"
+
+        return output.strip()
+    except Exception as e:
+        return f"Error getting animation details: {str(e)}".strip()
+
+
 def tool_update_variant_property(  # <<< Renamed
     component_type: str,
     variant: str,

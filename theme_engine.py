@@ -839,6 +839,48 @@ class ThemeEngine:
                 "error": f"An unexpected error occurred while deleting variant '{variant}': {e}"
             }
 
+    def list_animations(self) -> Dict[str, str]:
+        """
+        List all available global animations and their CSS values.
+        """
+        if (
+            not self._theme
+            or not self._theme.global_values
+            or not self._theme.global_values.animations
+        ):
+            return {
+                "error": "Theme not loaded or animations not defined in global values."
+            }
+
+        # Return a copy of the animations dictionary to prevent external modification
+        return dict(self._theme.global_values.animations)
+
+    def get_animation_details(self, animation_name: str) -> Dict[str, str]:
+        """
+        Get the CSS value for a specific global animation.
+
+        Args:
+            animation_name: The name of the animation.
+
+        Returns:
+            A dictionary containing the animation name and its value, or an error.
+        """
+        if (
+            not self._theme
+            or not self._theme.global_values
+            or not self._theme.global_values.animations
+        ):
+            return {
+                "error": "Theme not loaded or animations not defined in global values."
+            }
+
+        animations = self._theme.global_values.animations
+
+        if animation_name not in animations:
+            return {"error": f"Animation '{animation_name}' not found."}
+
+        return {"name": animation_name, "value": animations[animation_name]}
+
     def save_theme(self) -> Dict[str, Any]:
         """Explicitly save the current theme state to disk"""
         if not self._has_unsaved_changes:
@@ -988,14 +1030,10 @@ const getStyle = (variant, elementName) => {{
         component_ids = list(
             self._theme.components.keys()
         )  # Get the IDs (e.g., 'button', 'accordion')
-        print(
-            f"Attempting to generate components for types: {component_ids}"
-        )  # Temporary print for debugging
+        # print(f"Attempting to generate components for types: {component_ids}") # Removed debug print
 
         for component_type_id in component_ids:
-            print(
-                f"Generating component for: {component_type_id}"
-            )  # Temporary print
+            # print(f"Generating component for: {component_type_id}") # Removed debug print
             # Call the *new* render_component, which handles all variants internally
             # It only needs the component type ID now.
             result = self.render_component(
@@ -1006,9 +1044,7 @@ const getStyle = (variant, elementName) => {{
                 errors.append(
                     {"component": component_type_id, "error": result["error"]}
                 )
-                print(
-                    f"Error generating component for '{component_type_id}': {result['error']}"
-                )  # Temp print
+                # print(f"Error generating component for '{component_type_id}': {result['error']}") # Removed debug print
                 # Removed logging
             elif result.get("success"):
                 # Check if a path was actually generated (it might be None if no variants)
@@ -1019,24 +1055,18 @@ const getStyle = (variant, elementName) => {{
                             "path": result["path"],
                         }
                     )
-                    print(
-                        f"Success generating component file for '{component_type_id}' at {result['path']}"
-                    )  # Temp print
+                    # print(f"Success generating component file for '{component_type_id}' at {result['path']}") # Removed debug print
                     # Removed logging
-                else:
-                    print(
-                        f"Skipped generating file for '{component_type_id}' (Reason: {result.get('message', 'No variants/styles')})"
-                    )  # Temp print
-                    # Removed logging for skipped generation
+                # else:
+                # print(f"Skipped generating file for '{component_type_id}' (Reason: {result.get('message', 'No variants/styles')})") # Removed debug print
+                # Removed logging for skipped generation
 
         success = len(errors) == 0
         message = f"Generated {len(results)} dynamic component files."
         if errors:
             message += f" Encountered {len(errors)} errors."
         # Removed logging
-        print(
-            f"Component generation finished. Success: {success}. Message: {message}"
-        )  # Temp print
+        # print(f"Component generation finished. Success: {success}. Message: {message}") # Removed debug print
 
         return {
             "success": success,

@@ -47,15 +47,15 @@ export default function StyleGuide() {
   
   // Style tokens from the theme system
   const colors = {
-    primary: '#1e3a8a',
-    secondary: '#475569',
+    primary: '#7c3aed',
+    secondary: '#00f9ff',
     success: '#16a34a',
     warning: '#f59e0b',
     error: '#ef4444',
     neutral: '#f3f4f6',
     text: {
-      primary: '#1e293b',
-      secondary: '#64748b',
+      primary: '#111827',
+      secondary: '#4b5563',
       muted: '#9ca3af',
     },
     accent: '#0d9488',
@@ -65,13 +65,13 @@ export default function StyleGuide() {
       dark: '#0f172a',
     },
     background: '#f9fafb',
-    headerBg: '#1e3a8a',
+    headerBg: '#7c3aed',
     headerText: '#ffffff',
-    footerBg: '#1e3a8a',
+    footerBg: '#7c3aed',
     footerText: '#ffffff',
     cardBg: '#ffffff',
     muted: '#9ca3af',
-    sectionHeadingColor: '#1e3a8a',
+    sectionHeadingColor: '#7c3aed',
   };
   
   const spacing = {
@@ -1199,7 +1199,7 @@ export default function StyleGuide() {
       onSubmit={(e) => e.preventDefault()}
     />
   </div>
-  <p className="text-sm text-gray-500">Elegant form styled for luxury jewelry websites with gold accents and refined typography.</p>
+  <p className="text-sm text-gray-500">Elegant form styled with refined dark blue accents and sophisticated typography.</p>
 </div>
 </div>
   </div>
@@ -3415,7 +3415,7 @@ export default function StyleGuide() {
             </div>
           </div>
           <div className="border-t mt-8 pt-8 text-center" style={{ borderColor: `${pageStyles.footerText}33` }}>
-            <p style={{ color: `${pageStyles.footerText}99` }}>© {new Date().getFullYear()} sbtl | 2025</p>
+            <p style={{ color: `${pageStyles.footerText}99` }}>© {new Date().getFullYear()} | sbtl</p>
           </div>
         </div>
       </footer>

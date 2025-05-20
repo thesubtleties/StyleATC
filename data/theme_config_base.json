@@ -1,16 +1,22 @@
 {
   "global_values": {
     "colors": {
-      "primary": "#7c3aed",
-      "secondary": "#00f9ff",
+      "primary": "#1e3a8a",
+      "secondary": "#475569",
       "success": "#16a34a",
       "warning": "#f59e0b",
       "error": "#ef4444",
       "neutral": "#f3f4f6",
       "text": {
-        "primary": "#111827",
-        "secondary": "#4b5563",
+        "primary": "#1e293b",
+        "secondary": "#64748b",
         "muted": "#9ca3af"
+      },
+      "accent": "#0d9488",
+      "gold": "#ca8a04",
+      "background": {
+        "light": "#f8fafc",
+        "dark": "#0f172a"
       }
     },
     "spacing": {
@@ -235,26 +241,19 @@
     "button": {
       "variants": {
         "default": {
-          "tailwind": "bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500",
+          "tailwind": "bg-blue-800 text-white hover:bg-blue-900 px-5 py-2.5 rounded-md font-medium shadow-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-opacity-50 active:translate-y-0.5",
           "extends": null,
           "color": null,
           "text_color": null,
-          "description": "Default button variant.",
+          "description": "Elegant, classy button with dark blue styling and subtle interactions",
           "elements": {
             "text": {
-              "tailwind": "flex items-center",
+              "tailwind": "flex items-center justify-center gap-2 tracking-wide",
               "color": null,
               "text_color": null,
               "computed": null
             }
           }
-        },
-        "primary": {
-          "tailwind": "bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400",
-          "extends": "button.default",
-          "color": null,
-          "text_color": null,
-          "description": "Primary button with blue styling and white text"
         },
         "secondary": {
           "tailwind": "bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500",
@@ -278,13 +277,6 @@
             }
           }
         },
-        "danger": {
-          "tailwind": "bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500",
-          "extends": "button.default",
-          "color": null,
-          "text_color": null,
-          "description": "Danger button with red styling"
-        },
         "ghost": {
           "tailwind": "bg-transparent hover:bg-blue-50 px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-200 border border-transparent hover:border-blue-100",
           "extends": "",
@@ -299,13 +291,6 @@
               "computed": null
             }
           }
-        },
-        "success": {
-          "tailwind": "bg-secondary hover:bg-secondary/90 text-white px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary/50",
-          "extends": "button.default",
-          "color": null,
-          "text_color": null,
-          "description": "Success button with secondary color styling"
         },
         "bright": {
           "tailwind": "bg-gradient-to-br from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2",
@@ -337,27 +322,6 @@
             }
           }
         },
-        "sunset": {
-          "tailwind": "bg-orange-500 hover:bg-orange-600 text-white px-5 py-2.5 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-orange-300",
-          "extends": "button.default",
-          "color": null,
-          "text_color": null,
-          "description": "A warm, sunset-colored button with orange tones and soft shadows"
-        },
-        "sunset-gradient": {
-          "tailwind": "bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-5 py-2.5 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-orange-300",
-          "extends": "button.default",
-          "color": null,
-          "text_color": null,
-          "description": "A vibrant gradient button transitioning from orange to pink, like a beautiful sunset"
-        },
-        "ocean-sunset-blend": {
-          "tailwind": "bg-gradient-to-r from-cyan-500 to-orange-500 hover:from-cyan-600 hover:to-orange-600 text-white px-5 py-2.5 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-300",
-          "extends": "button.default",
-          "color": null,
-          "text_color": null,
-          "description": "A harmonious blend of ocean blues and sunset oranges in a gradient button"
-        },
         "modal-default": {
           "tailwind": "bg-slate-700 hover:bg-slate-800 text-white px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-slate-400 transition-colors",
           "extends": null,
@@ -370,7 +334,15 @@
           "extends": null,
           "color": null,
           "text_color": null,
-          "description": "A sun-faded orange button to match the fancy modal"
+          "description": "A sun-faded orange button to match the fancy modal",
+          "elements": {
+            "text": {
+              "tailwind": "flex items-center justify-center gap-1.5 text-white font-medium tracking-wide",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
         }
       }
     },
@@ -560,20 +532,20 @@
     "checkbox": {
       "variants": {
         "default": {
-          "tailwind": "border border-gray-300 bg-white hover:bg-gray-100 focus:ring-2 focus:ring-offset-2 focus:ring-primary-500",
+          "tailwind": "border border-gray-300 bg-white hover:bg-gray-50 focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded transition-all duration-200",
           "extends": null,
           "color": null,
           "text_color": null,
           "description": "Default checkbox variant.",
           "elements": {
             "indicator": {
-              "tailwind": "flex items-center justify-center text-white",
+              "tailwind": "flex items-center justify-center bg-blue-700 w-full h-full",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "icon": {
-              "tailwind": "size-4 text-primary-600",
+              "tailwind": "size-4 text-white",
               "color": null,
               "text_color": null,
               "computed": null
@@ -1511,11 +1483,11 @@
           }
         },
         "luxury": {
-          "tailwind": "w-full max-w-lg space-y-6 p-8 rounded-lg bg-white shadow-lg border border-amber-100",
+          "tailwind": "w-full max-w-lg space-y-6 p-8 rounded-lg bg-white shadow-lg border border-[#e2e8f0]",
           "extends": null,
           "color": null,
           "text_color": null,
-          "description": "Elegant form styled for luxury jewelry websites with gold accents and refined typography.",
+          "description": "Elegant form styled with refined dark blue accents and sophisticated typography.",
           "elements": {
             "field": {
               "tailwind": "grid gap-2.5 mb-5",
@@ -1524,31 +1496,31 @@
               "computed": null
             },
             "label": {
-              "tailwind": "text-[15px] font-semibold leading-[35px] tracking-wide uppercase text-xs text-amber-500 drop-shadow",
+              "tailwind": "text-[15px] font-semibold leading-[35px] tracking-wide uppercase text-xs text-[#1e3a8a]",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "message": {
-              "tailwind": "text-[13px] text-amber-700 italic",
+              "tailwind": "text-[13px] text-[#475569] italic",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "input": {
-              "tailwind": "h-[40px] w-full rounded-sm border border-amber-200 bg-amber-50/30 px-3 text-[15px] leading-none placeholder:text-amber-300 focus:outline-none focus:ring-1 focus:ring-amber-400/50 focus:border-amber-400",
+              "tailwind": "h-[40px] w-full rounded-sm border border-[#cbd5e1] bg-[#f8fafc] px-3 text-[15px] leading-none placeholder:text-[#94a3b8] focus:outline-none focus:ring-1 focus:ring-[#1e3a8a]/50 focus:border-[#1e3a8a]",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "textarea": {
-              "tailwind": "w-full resize-none rounded-sm border border-amber-200 bg-amber-50/30 p-3 text-[15px] leading-relaxed placeholder:text-amber-300 focus:outline-none focus:ring-1 focus:ring-amber-400/50 focus:border-amber-400 min-h-[100px]",
+              "tailwind": "w-full resize-none rounded-sm border border-[#cbd5e1] bg-[#f8fafc] p-3 text-[15px] leading-relaxed placeholder:text-[#94a3b8] focus:outline-none focus:ring-1 focus:ring-[#1e3a8a]/50 focus:border-[#1e3a8a] min-h-[100px]",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "submit": {
-              "tailwind": "h-[45px] w-full mt-6 bg-white text-amber-500 font-bold tracking-wide uppercase text-sm rounded-sm border border-amber-300 hover:border-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 transition-all duration-300",
+              "tailwind": "h-[45px] w-full mt-6 bg-[#1e3a8a] text-white font-bold tracking-wide uppercase text-sm rounded-sm border border-[#1e3a8a] hover:bg-[#1e40af] hover:border-[#1e40af] focus:outline-none focus:ring-2 focus:ring-[#1e3a8a] focus:ring-offset-2 transition-all duration-300",
               "color": null,
               "text_color": null,
               "computed": null
