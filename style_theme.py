@@ -115,7 +115,7 @@ This tool helps you create and manage a centralized theme for dynamically styled
 
 ### Managing Changes
 
-1.  **Save Theme Changes**: Persists theme modifications to `data/theme_config.json`.
+1.  **Save Theme Changes**: Persists theme modifications to `data/theme_config.json`. If you make changes to the theme, you should usually save them unless they seem like they might be breaking.
     ```
     save_theme()
     ```
