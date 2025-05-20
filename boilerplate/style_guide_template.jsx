@@ -235,7 +235,7 @@ export default function StyleGuide() {
             </div>
           </div>
           <div className="border-t mt-8 pt-8 text-center" style={{ borderColor: `${pageStyles.footerText}33` }}>
-            <p style={{ color: `${pageStyles.footerText}99` }}>© {new Date().getFullYear()} sbtl | 2025</p>
+            <p style={{ color: `${pageStyles.footerText}99` }}>© {new Date().getFullYear()} | sbtl</p>
           </div>
         </div>
       </footer>
