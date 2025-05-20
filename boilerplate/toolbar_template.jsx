@@ -100,8 +100,8 @@ const ToolbarComponent = ({
       {showEditInfo && (
         <Toolbar.Link
           className={classNames(
-            getStyle(variant, 'link'),
-            getStyle(variant, 'editInfoLink')
+            getStyle(variant, 'link')
+            // getStyle(variant, 'editInfoLink')
           )}
           href="#"
           target="_blank"
@@ -113,8 +113,8 @@ const ToolbarComponent = ({
       {showShareButton && (
         <Toolbar.Button
           className={classNames(
-            getStyle(variant, 'button'),
-            getStyle(variant, 'shareButton')
+            getStyle(variant, 'button')
+            // getStyle(variant, 'shareButton')
           )}
         >
           {shareButtonText}

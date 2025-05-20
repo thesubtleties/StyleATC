@@ -197,7 +197,7 @@ export default function StyleGuide() {
               <h4 className="text-md font-bold mb-4">Resources</h4>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="hover:text-white" style={{ color: `${pageStyles.footerText}99` }}>
+                  <a href="https://github.com/thesubtleties/StyleATC" className="hover:text-white" style={{ color: `${pageStyles.footerText}99` }}>
                     Documentation
                   </a>
                 </li>

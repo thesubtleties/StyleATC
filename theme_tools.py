@@ -308,6 +308,29 @@ def tool_create_component_element(
         return f"Error creating component element: {str(e)}"
 
 
+def tool_delete_component_variant(
+    component_type: str, variant: str, auto_save: bool = False
+) -> str:
+    """Delete a specific variant from a component.
+
+    Args:
+        component_type: The type of component (e.g., 'button', 'dropdown')
+        variant: The name of the variant to delete (e.g., 'secondary', 'outline')
+        auto_save: Whether to automatically save changes to disk (default: False)
+    """
+    try:
+        result = engine.delete_component_variant(
+            component_type, variant, auto_save
+        )
+
+        if "error" in result:
+            return result["error"]
+
+        return result["message"]
+    except Exception as e:
+        return f"Error deleting component variant: {str(e)}".strip()
+
+
 def tool_save_theme() -> str:
     """Save the current theme state to disk"""
     try:

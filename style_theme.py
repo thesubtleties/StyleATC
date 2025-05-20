@@ -454,6 +454,22 @@ def create_component_variant(
     )
 
 
+@style_theme.tool()
+def delete_component_variant(
+    component_type: str, variant: str, auto_save: bool = False
+) -> str:
+    """Delete a specific variant from a component.
+
+    Args:
+        component_type: The type of component (e.g., 'button', 'dropdown')
+        variant: The name of the variant to delete (e.g., 'secondary', 'outline')
+        auto_save: Whether to automatically save changes to disk (default: False)
+    """
+    from theme_tools import tool_delete_component_variant
+
+    return tool_delete_component_variant(component_type, variant, auto_save)
+
+
 # @style_theme.tool()
 # def create_component_element(
 #     component_type: str,

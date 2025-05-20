@@ -8,6 +8,8 @@ const SwitchComponent = ({
   label = 'Toggle',
   id = 'switch',
   variant = 'default',
+  checked,
+  onCheckedChange,
   ...props
 }) => {
   return (
@@ -33,6 +35,9 @@ const SwitchComponent = ({
           )}
           id={id}
           style={{ '-webkit-tap-highlight-color': 'rgba(0, 0, 0, 0)' }}
+          checked={checked}
+          onCheckedChange={onCheckedChange}
+          {...props}
         >
           <Switch.Thumb
             className={classNames(

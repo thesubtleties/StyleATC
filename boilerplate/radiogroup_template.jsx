@@ -24,40 +24,43 @@ const RadiogroupComponent = ({
         aria-label={ariaLabel}
         {...props}
       >
-        {options.map((option, index) => (
-          <div
-            key={option.value}
-            className={classNames(
-              'flex items-center',
-              getStyle(variant, 'itemContainer')
-            )}
-          >
-            <RadioGroup.Item
+        {options.map((option, index) => {
+          const uniqueId = `radio-${variant}-${option.value}`;
+          return (
+            <div
+              key={option.value}
               className={classNames(
-                'size-[25px] cursor-default rounded-full outline-none',
-                getStyle(variant, 'radioItem')
+                'flex items-center',
+                getStyle(variant, 'itemContainer')
               )}
-              value={option.value}
-              id={`radio-${option.value}`}
             >
-              <RadioGroup.Indicator
+              <RadioGroup.Item
                 className={classNames(
-                  'relative flex size-full items-center justify-center after:block after:rounded-full',
-                  getStyle(variant, 'indicator')
+                  'size-[25px] cursor-default rounded-full outline-none',
+                  getStyle(variant, 'radioItem')
                 )}
-              />
-            </RadioGroup.Item>
-            <label
-              className={classNames(
-                'pl-[15px] text-[15px] leading-none',
-                getStyle(variant, 'label')
-              )}
-              htmlFor={`radio-${option.value}`}
-            >
-              {option.label}
-            </label>
-          </div>
-        ))}
+                value={option.value}
+                id={uniqueId}
+              >
+                <RadioGroup.Indicator
+                  className={classNames(
+                    'relative flex size-full items-center justify-center after:block after:rounded-full',
+                    getStyle(variant, 'indicator')
+                  )}
+                />
+              </RadioGroup.Item>
+              <label
+                className={classNames(
+                  'pl-[15px] text-[15px] leading-none',
+                  getStyle(variant, 'label')
+                )}
+                htmlFor={uniqueId}
+              >
+                {option.label}
+              </label>
+            </div>
+          );
+        })}
       </RadioGroup.Root>
     </form>
   );

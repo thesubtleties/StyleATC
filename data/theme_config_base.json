@@ -1,22 +1,16 @@
 {
   "global_values": {
     "colors": {
-      "primary": "#1e3a8a",
-      "secondary": "#475569",
+      "primary": "#7c3aed",
+      "secondary": "#00f9ff",
       "success": "#16a34a",
       "warning": "#f59e0b",
       "error": "#ef4444",
       "neutral": "#f3f4f6",
       "text": {
-        "primary": "#1e293b",
-        "secondary": "#64748b",
+        "primary": "#111827",
+        "secondary": "#4b5563",
         "muted": "#9ca3af"
-      },
-      "accent": "#0d9488",
-      "gold": "#ca8a04",
-      "background": {
-        "light": "#f8fafc",
-        "dark": "#0f172a"
       }
     },
     "spacing": {
@@ -241,19 +235,26 @@
     "button": {
       "variants": {
         "default": {
-          "tailwind": "bg-blue-800 text-white hover:bg-blue-900 px-5 py-2.5 rounded-md font-medium shadow-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-opacity-50 active:translate-y-0.5",
+          "tailwind": "bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500",
           "extends": null,
           "color": null,
           "text_color": null,
-          "description": "Elegant, classy button with dark blue styling and subtle interactions",
+          "description": "Default button variant.",
           "elements": {
             "text": {
-              "tailwind": "flex items-center justify-center gap-2 tracking-wide",
+              "tailwind": "flex items-center",
               "color": null,
               "text_color": null,
               "computed": null
             }
           }
+        },
+        "primary": {
+          "tailwind": "bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400",
+          "extends": "button.default",
+          "color": null,
+          "text_color": null,
+          "description": "Primary button with blue styling and white text"
         },
         "secondary": {
           "tailwind": "bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500",
@@ -277,6 +278,13 @@
             }
           }
         },
+        "danger": {
+          "tailwind": "bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500",
+          "extends": "button.default",
+          "color": null,
+          "text_color": null,
+          "description": "Danger button with red styling"
+        },
         "ghost": {
           "tailwind": "bg-transparent hover:bg-blue-50 px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-200 border border-transparent hover:border-blue-100",
           "extends": "",
@@ -291,6 +299,13 @@
               "computed": null
             }
           }
+        },
+        "success": {
+          "tailwind": "bg-secondary hover:bg-secondary/90 text-white px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary/50",
+          "extends": "button.default",
+          "color": null,
+          "text_color": null,
+          "description": "Success button with secondary color styling"
         },
         "bright": {
           "tailwind": "bg-gradient-to-br from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2",
@@ -322,6 +337,27 @@
             }
           }
         },
+        "sunset": {
+          "tailwind": "bg-orange-500 hover:bg-orange-600 text-white px-5 py-2.5 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-orange-300",
+          "extends": "button.default",
+          "color": null,
+          "text_color": null,
+          "description": "A warm, sunset-colored button with orange tones and soft shadows"
+        },
+        "sunset-gradient": {
+          "tailwind": "bg-gradient-to-r from-orange-500 to-pink-500 hover:from-orange-600 hover:to-pink-600 text-white px-5 py-2.5 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-orange-300",
+          "extends": "button.default",
+          "color": null,
+          "text_color": null,
+          "description": "A vibrant gradient button transitioning from orange to pink, like a beautiful sunset"
+        },
+        "ocean-sunset-blend": {
+          "tailwind": "bg-gradient-to-r from-cyan-500 to-orange-500 hover:from-cyan-600 hover:to-orange-600 text-white px-5 py-2.5 rounded-lg font-medium shadow-md hover:shadow-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-300",
+          "extends": "button.default",
+          "color": null,
+          "text_color": null,
+          "description": "A harmonious blend of ocean blues and sunset oranges in a gradient button"
+        },
         "modal-default": {
           "tailwind": "bg-slate-700 hover:bg-slate-800 text-white px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-slate-400 transition-colors",
           "extends": null,
@@ -334,15 +370,7 @@
           "extends": null,
           "color": null,
           "text_color": null,
-          "description": "A sun-faded orange button to match the fancy modal",
-          "elements": {
-            "text": {
-              "tailwind": "flex items-center justify-center gap-1.5 text-white font-medium tracking-wide",
-              "color": null,
-              "text_color": null,
-              "computed": null
-            }
-          }
+          "description": "A sun-faded orange button to match the fancy modal"
         }
       }
     },

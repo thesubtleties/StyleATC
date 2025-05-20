@@ -3,7 +3,7 @@
   <div className="mb-4 border rounded-md overflow-hidden">
     <HeaderComponent
       variant="{{VARIANT_NAME}}"
-      title="{{VARIANT_NAME}} Header"
+      title="{{ VARIANT_NAME_CAPITALIZED }} Header"
       navItems={[
         { label: 'Dashboard', href: '#' },
         { label: 'Team', href: '#' },

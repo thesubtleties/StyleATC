@@ -47,25 +47,31 @@ export default function StyleGuide() {
   
   // Style tokens from the theme system
   const colors = {
-    primary: '#7c3aed',
-    secondary: '#00f9ff',
+    primary: '#1e3a8a',
+    secondary: '#475569',
     success: '#16a34a',
     warning: '#f59e0b',
     error: '#ef4444',
     neutral: '#f3f4f6',
     text: {
-      primary: '#111827',
-      secondary: '#4b5563',
+      primary: '#1e293b',
+      secondary: '#64748b',
       muted: '#9ca3af',
     },
+    accent: '#0d9488',
+    gold: '#ca8a04',
+    background: {
+      light: '#f8fafc',
+      dark: '#0f172a',
+    },
     background: '#f9fafb',
-    headerBg: '#7c3aed',
+    headerBg: '#1e3a8a',
     headerText: '#ffffff',
-    footerBg: '#7c3aed',
+    footerBg: '#1e3a8a',
     footerText: '#ffffff',
     cardBg: '#ffffff',
     muted: '#9ca3af',
-    sectionHeadingColor: '#7c3aed',
+    sectionHeadingColor: '#1e3a8a',
   };
   
   const spacing = {
@@ -401,27 +407,7 @@ export default function StyleGuide() {
       Disabled
     </ButtonComponent>
   </div>
-  <p className="text-sm text-gray-500">Default button variant.</p>
-</div>
-
-
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Primary</h4>
-  <div className="flex flex-wrap gap-4 mb-2">
-    <ButtonComponent variant="primary" size="sm">
-      Small
-    </ButtonComponent>
-    <ButtonComponent variant="primary" size="md">
-      Medium
-    </ButtonComponent>
-    <ButtonComponent variant="primary" size="lg">
-      Large
-    </ButtonComponent>
-    <ButtonComponent variant="primary" disabled>
-      Disabled
-    </ButtonComponent>
-  </div>
-  <p className="text-sm text-gray-500">Primary button with blue styling and white text</p>
+  <p className="text-sm text-gray-500">Elegant, classy button with dark blue styling and subtle interactions</p>
 </div>
 
 
@@ -466,26 +452,6 @@ export default function StyleGuide() {
 
 
 <div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Danger</h4>
-  <div className="flex flex-wrap gap-4 mb-2">
-    <ButtonComponent variant="danger" size="sm">
-      Small
-    </ButtonComponent>
-    <ButtonComponent variant="danger" size="md">
-      Medium
-    </ButtonComponent>
-    <ButtonComponent variant="danger" size="lg">
-      Large
-    </ButtonComponent>
-    <ButtonComponent variant="danger" disabled>
-      Disabled
-    </ButtonComponent>
-  </div>
-  <p className="text-sm text-gray-500">Danger button with red styling</p>
-</div>
-
-
-<div className="mb-6">
   <h4 className="text-sm font-medium mb-2">Ghost</h4>
   <div className="flex flex-wrap gap-4 mb-2">
     <ButtonComponent variant="ghost" size="sm">
@@ -502,26 +468,6 @@ export default function StyleGuide() {
     </ButtonComponent>
   </div>
   <p className="text-sm text-gray-500">Ghost button with transparent background and primary text color</p>
-</div>
-
-
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Success</h4>
-  <div className="flex flex-wrap gap-4 mb-2">
-    <ButtonComponent variant="success" size="sm">
-      Small
-    </ButtonComponent>
-    <ButtonComponent variant="success" size="md">
-      Medium
-    </ButtonComponent>
-    <ButtonComponent variant="success" size="lg">
-      Large
-    </ButtonComponent>
-    <ButtonComponent variant="success" disabled>
-      Disabled
-    </ButtonComponent>
-  </div>
-  <p className="text-sm text-gray-500">Success button with secondary color styling</p>
 </div>
 
 
@@ -562,326 +508,6 @@ export default function StyleGuide() {
     </ButtonComponent>
   </div>
   <p className="text-sm text-gray-500">A refined subtle button with slate colors and active state for secondary actions</p>
-</div>
-
-
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Neon</h4>
-  <div className="flex flex-wrap gap-4 mb-2">
-    <ButtonComponent variant="neon" size="sm">
-      Small
-    </ButtonComponent>
-    <ButtonComponent variant="neon" size="md">
-      Medium
-    </ButtonComponent>
-    <ButtonComponent variant="neon" size="lg">
-      Large
-    </ButtonComponent>
-    <ButtonComponent variant="neon" disabled>
-      Disabled
-    </ButtonComponent>
-  </div>
-  <p className="text-sm text-gray-500">Neon pink button with subtle shadow and hover effects</p>
-</div>
-
-
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Gradient</h4>
-  <div className="flex flex-wrap gap-4 mb-2">
-    <ButtonComponent variant="gradient" size="sm">
-      Small
-    </ButtonComponent>
-    <ButtonComponent variant="gradient" size="md">
-      Medium
-    </ButtonComponent>
-    <ButtonComponent variant="gradient" size="lg">
-      Large
-    </ButtonComponent>
-    <ButtonComponent variant="gradient" disabled>
-      Disabled
-    </ButtonComponent>
-  </div>
-  <p className="text-sm text-gray-500">Gradient button with primary to secondary color transition</p>
-</div>
-
-
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Custom</h4>
-  <div className="flex flex-wrap gap-4 mb-2">
-    <ButtonComponent variant="custom" size="sm">
-      Small
-    </ButtonComponent>
-    <ButtonComponent variant="custom" size="md">
-      Medium
-    </ButtonComponent>
-    <ButtonComponent variant="custom" size="lg">
-      Large
-    </ButtonComponent>
-    <ButtonComponent variant="custom" disabled>
-      Disabled
-    </ButtonComponent>
-  </div>
-  <p className="text-sm text-gray-500">Custom button with gradient and rounded corners</p>
-</div>
-
-
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Test</h4>
-  <div className="flex flex-wrap gap-4 mb-2">
-    <ButtonComponent variant="test" size="sm">
-      Small
-    </ButtonComponent>
-    <ButtonComponent variant="test" size="md">
-      Medium
-    </ButtonComponent>
-    <ButtonComponent variant="test" size="lg">
-      Large
-    </ButtonComponent>
-    <ButtonComponent variant="test" disabled>
-      Disabled
-    </ButtonComponent>
-  </div>
-  <p className="text-sm text-gray-500">A test button to verify if we can create components</p>
-</div>
-
-
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Vibrant</h4>
-  <div className="flex flex-wrap gap-4 mb-2">
-    <ButtonComponent variant="vibrant" size="sm">
-      Small
-    </ButtonComponent>
-    <ButtonComponent variant="vibrant" size="md">
-      Medium
-    </ButtonComponent>
-    <ButtonComponent variant="vibrant" size="lg">
-      Large
-    </ButtonComponent>
-    <ButtonComponent variant="vibrant" disabled>
-      Disabled
-    </ButtonComponent>
-  </div>
-  <p className="text-sm text-gray-500">A vibrant button with cyan-to-blue gradient and enhanced hover effects</p>
-</div>
-
-
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">3d</h4>
-  <div className="flex flex-wrap gap-4 mb-2">
-    <ButtonComponent variant="3d" size="sm">
-      Small
-    </ButtonComponent>
-    <ButtonComponent variant="3d" size="md">
-      Medium
-    </ButtonComponent>
-    <ButtonComponent variant="3d" size="lg">
-      Large
-    </ButtonComponent>
-    <ButtonComponent variant="3d" disabled>
-      Disabled
-    </ButtonComponent>
-  </div>
-  <p className="text-sm text-gray-500">A 3D button with depth effect that appears to press down when clicked</p>
-</div>
-
-
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Cool-blue</h4>
-  <div className="flex flex-wrap gap-4 mb-2">
-    <ButtonComponent variant="cool-blue" size="sm">
-      Small
-    </ButtonComponent>
-    <ButtonComponent variant="cool-blue" size="md">
-      Medium
-    </ButtonComponent>
-    <ButtonComponent variant="cool-blue" size="lg">
-      Large
-    </ButtonComponent>
-    <ButtonComponent variant="cool-blue" disabled>
-      Disabled
-    </ButtonComponent>
-  </div>
-  <p className="text-sm text-gray-500">A cool blue gradient button with cyan accents and enhanced hover effects</p>
-</div>
-
-
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Modern</h4>
-  <div className="flex flex-wrap gap-4 mb-2">
-    <ButtonComponent variant="modern" size="sm">
-      Small
-    </ButtonComponent>
-    <ButtonComponent variant="modern" size="md">
-      Medium
-    </ButtonComponent>
-    <ButtonComponent variant="modern" size="lg">
-      Large
-    </ButtonComponent>
-    <ButtonComponent variant="modern" disabled>
-      Disabled
-    </ButtonComponent>
-  </div>
-  <p className="text-sm text-gray-500">A modern button with gradient background, rounded corners, and subtle shadow effects</p>
-</div>
-
-
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Indigo-gradient</h4>
-  <div className="flex flex-wrap gap-4 mb-2">
-    <ButtonComponent variant="indigo-gradient" size="sm">
-      Small
-    </ButtonComponent>
-    <ButtonComponent variant="indigo-gradient" size="md">
-      Medium
-    </ButtonComponent>
-    <ButtonComponent variant="indigo-gradient" size="lg">
-      Large
-    </ButtonComponent>
-    <ButtonComponent variant="indigo-gradient" disabled>
-      Disabled
-    </ButtonComponent>
-  </div>
-  <p className="text-sm text-gray-500">An indigo gradient button that uses our primary color with enhanced hover effects</p>
-</div>
-
-
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Ocean</h4>
-  <div className="flex flex-wrap gap-4 mb-2">
-    <ButtonComponent variant="ocean" size="sm">
-      Small
-    </ButtonComponent>
-    <ButtonComponent variant="ocean" size="md">
-      Medium
-    </ButtonComponent>
-    <ButtonComponent variant="ocean" size="lg">
-      Large
-    </ButtonComponent>
-    <ButtonComponent variant="ocean" disabled>
-      Disabled
-    </ButtonComponent>
-  </div>
-  <p className="text-sm text-gray-500">An ocean-themed button with a gradient of blue shades reminiscent of ocean waves</p>
-</div>
-
-
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Sunrise</h4>
-  <div className="flex flex-wrap gap-4 mb-2">
-    <ButtonComponent variant="sunrise" size="sm">
-      Small
-    </ButtonComponent>
-    <ButtonComponent variant="sunrise" size="md">
-      Medium
-    </ButtonComponent>
-    <ButtonComponent variant="sunrise" size="lg">
-      Large
-    </ButtonComponent>
-    <ButtonComponent variant="sunrise" disabled>
-      Disabled
-    </ButtonComponent>
-  </div>
-  <p className="text-sm text-gray-500">A warm, energetic button styled with our coral secondary color</p>
-</div>
-
-
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Ocean-sunrise-gradient</h4>
-  <div className="flex flex-wrap gap-4 mb-2">
-    <ButtonComponent variant="ocean-sunrise-gradient" size="sm">
-      Small
-    </ButtonComponent>
-    <ButtonComponent variant="ocean-sunrise-gradient" size="md">
-      Medium
-    </ButtonComponent>
-    <ButtonComponent variant="ocean-sunrise-gradient" size="lg">
-      Large
-    </ButtonComponent>
-    <ButtonComponent variant="ocean-sunrise-gradient" disabled>
-      Disabled
-    </ButtonComponent>
-  </div>
-  <p className="text-sm text-gray-500">A vibrant gradient button that transitions from our teal primary to our coral secondary</p>
-</div>
-
-
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Ocean-wave</h4>
-  <div className="flex flex-wrap gap-4 mb-2">
-    <ButtonComponent variant="ocean-wave" size="sm">
-      Small
-    </ButtonComponent>
-    <ButtonComponent variant="ocean-wave" size="md">
-      Medium
-    </ButtonComponent>
-    <ButtonComponent variant="ocean-wave" size="lg">
-      Large
-    </ButtonComponent>
-    <ButtonComponent variant="ocean-wave" disabled>
-      Disabled
-    </ButtonComponent>
-  </div>
-  <p className="text-sm text-gray-500">A beautiful ocean-themed gradient button with a wave-like appearance</p>
-</div>
-
-
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Sunset</h4>
-  <div className="flex flex-wrap gap-4 mb-2">
-    <ButtonComponent variant="sunset" size="sm">
-      Small
-    </ButtonComponent>
-    <ButtonComponent variant="sunset" size="md">
-      Medium
-    </ButtonComponent>
-    <ButtonComponent variant="sunset" size="lg">
-      Large
-    </ButtonComponent>
-    <ButtonComponent variant="sunset" disabled>
-      Disabled
-    </ButtonComponent>
-  </div>
-  <p className="text-sm text-gray-500">A warm, sunset-colored button with orange tones and soft shadows</p>
-</div>
-
-
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Sunset-gradient</h4>
-  <div className="flex flex-wrap gap-4 mb-2">
-    <ButtonComponent variant="sunset-gradient" size="sm">
-      Small
-    </ButtonComponent>
-    <ButtonComponent variant="sunset-gradient" size="md">
-      Medium
-    </ButtonComponent>
-    <ButtonComponent variant="sunset-gradient" size="lg">
-      Large
-    </ButtonComponent>
-    <ButtonComponent variant="sunset-gradient" disabled>
-      Disabled
-    </ButtonComponent>
-  </div>
-  <p className="text-sm text-gray-500">A vibrant gradient button transitioning from orange to pink, like a beautiful sunset</p>
-</div>
-
-
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Ocean-sunset-blend</h4>
-  <div className="flex flex-wrap gap-4 mb-2">
-    <ButtonComponent variant="ocean-sunset-blend" size="sm">
-      Small
-    </ButtonComponent>
-    <ButtonComponent variant="ocean-sunset-blend" size="md">
-      Medium
-    </ButtonComponent>
-    <ButtonComponent variant="ocean-sunset-blend" size="lg">
-      Large
-    </ButtonComponent>
-    <ButtonComponent variant="ocean-sunset-blend" disabled>
-      Disabled
-    </ButtonComponent>
-  </div>
-  <p className="text-sm text-gray-500">A harmonious blend of ocean blues and sunset oranges in a gradient button</p>
 </div>
 
 
@@ -972,14 +598,6 @@ export default function StyleGuide() {
   <p className="text-sm text-gray-500">Minimal card with a truly flat appearance and subtle gray background.</p>
 </div>
 <div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Ghost</h4>
-  <div className="mb-2">
-
-    <CardComponent variant="ghost" className="max-w-sm" />
-  </div>
-  <p className="text-sm text-gray-500">Transparent card that blends with the background, subtle hover.</p>
-</div>
-<div className="mb-6">
   <h4 className="text-sm font-medium mb-2">Dark</h4>
   <div className="mb-2">
 
@@ -1004,36 +622,12 @@ export default function StyleGuide() {
   <p className="text-sm text-gray-500">Card designed for interaction, with hover transform and focus states.</p>
 </div>
 <div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Info</h4>
-  <div className="mb-2">
-
-    <CardComponent variant="info" className="max-w-sm" />
-  </div>
-  <p className="text-sm text-gray-500">Card for displaying informational messages.</p>
-</div>
-<div className="mb-6">
   <h4 className="text-sm font-medium mb-2">Success</h4>
   <div className="mb-2">
 
     <CardComponent variant="success" className="max-w-sm" />
   </div>
   <p className="text-sm text-gray-500">Card for success messages or positive affirmations.</p>
-</div>
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Warning</h4>
-  <div className="mb-2">
-
-    <CardComponent variant="warning" className="max-w-sm" />
-  </div>
-  <p className="text-sm text-gray-500">Card for warnings or important notices.</p>
-</div>
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Danger</h4>
-  <div className="mb-2">
-
-    <CardComponent variant="danger" className="max-w-sm" />
-  </div>
-  <p className="text-sm text-gray-500">Card for error messages or critical alerts.</p>
 </div>
 <div className="mb-6">
   <h4 className="text-sm font-medium mb-2">Ocean</h4>
@@ -1782,7 +1376,7 @@ export default function StyleGuide() {
   <div className="mb-4 border rounded-md overflow-hidden">
     <HeaderComponent
       variant="default"
-      title="default Header"
+      title="Default Header"
       navItems={[
         { label: 'Dashboard', href: '#' },
         { label: 'Team', href: '#' },
@@ -1799,32 +1393,11 @@ export default function StyleGuide() {
 </div>
 
 <div className="mb-10">
-  <h4 className="text-sm font-medium mb-2">Ocean-header</h4>
-  <div className="mb-4 border rounded-md overflow-hidden">
-    <HeaderComponent
-      variant="ocean-header"
-      title="ocean-header Header"
-      navItems={[
-        { label: 'Dashboard', href: '#' },
-        { label: 'Team', href: '#' },
-        { label: 'Projects', href: '#' },
-        { label: 'Calendar', href: '#' },
-      ]}
-      actions={[
-        { label: 'Sign up', onClick: () => {} },
-        { label: 'Log in', onClick: () => {} },
-      ]}
-    />
-  </div>
-  <p className="text-sm text-gray-500">A header with a subtle gradient from our primary color to white</p>
-</div>
-
-<div className="mb-10">
   <h4 className="text-sm font-medium mb-2">Ocean</h4>
   <div className="mb-4 border rounded-md overflow-hidden">
     <HeaderComponent
       variant="ocean"
-      title="ocean Header"
+      title="Ocean Header"
       navItems={[
         { label: 'Dashboard', href: '#' },
         { label: 'Team', href: '#' },
@@ -2097,70 +1670,6 @@ export default function StyleGuide() {
 </div>
 
 <div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Rounded</h4>
-  <div className="mb-2">
-    <ModalComponent
-      variant="rounded"
-      trigger={
-        <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-          Open Rounded Modal
-        </button>
-      }
-      title="Modal Title"
-      description="This is a description of the modal's purpose."
-      // footer={
-      //   <>
-      //     <button className="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">
-      //       Cancel
-      //     </button>
-      //     <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-      //       Confirm
-      //     </button>
-      //   </>
-      // }
-    >
-      <div className="p-4 border border-gray-200 rounded">
-        <p>This is the main content of the modal.</p>
-        <p className="mt-2">You can put any components or content here.</p>
-      </div>
-    </ModalComponent>
-  </div>
-  <p className="text-sm text-gray-500">Modal with rounded corners</p>
-</div>
-
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Colorful</h4>
-  <div className="mb-2">
-    <ModalComponent
-      variant="colorful"
-      trigger={
-        <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-          Open Colorful Modal
-        </button>
-      }
-      title="Modal Title"
-      description="This is a description of the modal's purpose."
-      // footer={
-      //   <>
-      //     <button className="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">
-      //       Cancel
-      //     </button>
-      //     <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-      //       Confirm
-      //     </button>
-      //   </>
-      // }
-    >
-      <div className="p-4 border border-gray-200 rounded">
-        <p>This is the main content of the modal.</p>
-        <p className="mt-2">You can put any components or content here.</p>
-      </div>
-    </ModalComponent>
-  </div>
-  <p className="text-sm text-gray-500">Modal with a colorful header section</p>
-</div>
-
-<div className="mb-6">
   <h4 className="text-sm font-medium mb-2">Fancy</h4>
   <div className="mb-2">
     <ModalComponent
@@ -2190,38 +1699,6 @@ export default function StyleGuide() {
     </ModalComponent>
   </div>
   <p className="text-sm text-gray-500">Modal with a primary color accent at the top</p>
-</div>
-
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Ocean-modal</h4>
-  <div className="mb-2">
-    <ModalComponent
-      variant="ocean-modal"
-      trigger={
-        <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-          Open Ocean-modal Modal
-        </button>
-      }
-      title="Modal Title"
-      description="This is a description of the modal's purpose."
-      // footer={
-      //   <>
-      //     <button className="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">
-      //       Cancel
-      //     </button>
-      //     <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-      //       Confirm
-      //     </button>
-      //   </>
-      // }
-    >
-      <div className="p-4 border border-gray-200 rounded">
-        <p>This is the main content of the modal.</p>
-        <p className="mt-2">You can put any components or content here.</p>
-      </div>
-    </ModalComponent>
-  </div>
-  <p className="text-sm text-gray-500">A clean modal with subtle primary color accents and rounded corners</p>
 </div>
 </div>
   </div>
@@ -2854,7 +2331,7 @@ export default function StyleGuide() {
       width="200px"
     />
   </div>
-  <p className="text-sm text-gray-500">A sleek, professional scroll area with modern minimal scrollbars</p>
+  <p className="text-sm text-gray-500">A sleek, professional scroll area with a dark theme and minimal scrollbars</p>
 </div>
 
 <div className="mb-6">
@@ -2889,10 +2366,10 @@ export default function StyleGuide() {
 </div>
 
 <div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Glass</h4>
+  <h4 className="text-sm font-medium mb-2">Glassmorphic</h4>
   <div className="mb-2">
     <ScrollareaComponent
-      variant="glass"
+      variant="glassmorphic"
       items={[
         'v1.2.0-beta.50',
         'v1.2.0-beta.49',
@@ -2916,7 +2393,7 @@ export default function StyleGuide() {
       width="200px"
     />
   </div>
-  <p className="text-sm text-gray-500">A glass-morphism inspired scroll area with elegant blur effects</p>
+  <p className="text-sm text-gray-500">A delicate glass-morphism scroll area with subtle gray dividers and elegant blue text on a transparent backdrop</p>
 </div>
 </div>
   </div>
@@ -3142,59 +2619,11 @@ export default function StyleGuide() {
 </div>
 
 <div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Elevated</h4>
-  <div className="mb-2">
-    <SeparatordemoComponent variant="elevated" />
-  </div>
-  <p className="text-sm text-gray-500">A thick, elevated separator with shadow effect</p>
-</div>
-
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Double</h4>
-  <div className="mb-2">
-    <SeparatordemoComponent variant="double" />
-  </div>
-  <p className="text-sm text-gray-500">A double-line separator for a more decorative look</p>
-</div>
-
-<div className="mb-6">
   <h4 className="text-sm font-medium mb-2">Rainbow</h4>
   <div className="mb-2">
     <SeparatordemoComponent variant="rainbow" />
   </div>
   <p className="text-sm text-gray-500">A colorful, rainbow gradient separator</p>
-</div>
-
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Ornate</h4>
-  <div className="mb-2">
-    <SeparatordemoComponent variant="ornate" />
-  </div>
-  <p className="text-sm text-gray-500">A decorative ornate separator with a center accent</p>
-</div>
-
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Animated</h4>
-  <div className="mb-2">
-    <SeparatordemoComponent variant="animated" />
-  </div>
-  <p className="text-sm text-gray-500">A dashed separator with animated movement</p>
-</div>
-
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Crayon</h4>
-  <div className="mb-2">
-    <SeparatordemoComponent variant="crayon" />
-  </div>
-  <p className="text-sm text-gray-500">A playful separator that looks like it was drawn with a crayon</p>
-</div>
-
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Crayon-alt</h4>
-  <div className="mb-2">
-    <SeparatordemoComponent variant="crayon-alt" />
-  </div>
-  <p className="text-sm text-gray-500">A wavy, hand-drawn separator that looks like crayon</p>
 </div>
 </div>
   </div>
@@ -3320,42 +2749,6 @@ export default function StyleGuide() {
 </div>
 
 <div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Ios</h4>
-  <div className="mb-2 flex flex-col space-y-4">
-    <SwitchComponent
-      variant="ios"
-      label="Airplane mode"
-      id="ios-airplane"
-    />
-    <SwitchComponent
-      variant="ios"
-      label="Dark mode"
-      id="ios-dark"
-      checked={true}
-    />
-  </div>
-  <p className="text-sm text-gray-500">A macOS-inspired switch with Apple's classic blue accent color</p>
-</div>
-
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Minimal</h4>
-  <div className="mb-2 flex flex-col space-y-4">
-    <SwitchComponent
-      variant="minimal"
-      label="Airplane mode"
-      id="minimal-airplane"
-    />
-    <SwitchComponent
-      variant="minimal"
-      label="Dark mode"
-      id="minimal-dark"
-      checked={true}
-    />
-  </div>
-  <p className="text-sm text-gray-500">A sleek, minimal switch with a dark theme and purple accent</p>
-</div>
-
-<div className="mb-6">
   <h4 className="text-sm font-medium mb-2">Flat</h4>
   <div className="mb-2 flex flex-col space-y-4">
     <SwitchComponent
@@ -3370,7 +2763,7 @@ export default function StyleGuide() {
       checked={true}
     />
   </div>
-  <p className="text-sm text-gray-500">A flat, modern toggle with a colorful gradient when active</p>
+  <p className="text-sm text-gray-500">A minimalist toggle with square corners and an inverted color scheme when active, creating a sleek, modern appearance.</p>
 </div>
 
 <div className="mb-6">
@@ -3407,24 +2800,6 @@ export default function StyleGuide() {
     />
   </div>
   <p className="text-sm text-gray-500">A sleek dark-themed switch with black background and teal accent</p>
-</div>
-
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Apple</h4>
-  <div className="mb-2 flex flex-col space-y-4">
-    <SwitchComponent
-      variant="apple"
-      label="Airplane mode"
-      id="apple-airplane"
-    />
-    <SwitchComponent
-      variant="apple"
-      label="Dark mode"
-      id="apple-dark"
-      checked={true}
-    />
-  </div>
-  <p className="text-sm text-gray-500">A macOS-inspired switch with Apple's classic blue accent color</p>
 </div>
 </div>
   </div>
@@ -3658,21 +3033,6 @@ export default function StyleGuide() {
     />
   </div>
   <p className="text-sm text-gray-500">Default toast variant.</p>
-</div>
-
-<div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">Destructive</h4>
-  <div className="mb-2">
-    <ToastComponent
-      variant="destructive"
-      title="Notification: Destructive"
-      description="This is a destructive toast notification example"
-      triggerText="Show Destructive Toast"
-      actionText="Dismiss"
-      duration={5000}
-    />
-  </div>
-  <p className="text-sm text-gray-500">Destructive toast variant.</p>
 </div>
 
 <div className="mb-6">
@@ -3949,23 +3309,6 @@ export default function StyleGuide() {
 </div>
 
 <div className="mb-6">
-  <h4 className="text-sm font-medium mb-2">July-fourth</h4>
-  <div className="mb-2">
-    <ToolbarComponent
-      variant="july-fourth"
-      textFormatting={true}
-      textAlignment={true}
-      showEditInfo={true}
-      showShareButton={true}
-      editInfoText="Edited 2 hours ago"
-      shareButtonText="Share"
-      defaultAlignment="center"
-    />
-  </div>
-  <p className="text-sm text-gray-500">Patriotic Fourth of July inspired toolbar with red, white, and blue color scheme.</p>
-</div>
-
-<div className="mb-6">
   <h4 className="text-sm font-medium mb-2">Patriotic</h4>
   <div className="mb-2">
     <ToolbarComponent
@@ -4010,7 +3353,7 @@ export default function StyleGuide() {
       tooltipContent="This is a ocean tooltip"
     />
   </div>
-  <p className="text-sm text-gray-500">Ocean-themed tooltip with gradient background and smooth animations.</p>
+  <p className="text-sm text-gray-500">A modern, elegant tooltip with a clean teal/aqua color scheme, subtle transparency and border for a refined ocean-inspired look.</p>
 </div>
 
     </div>
@@ -4034,7 +3377,7 @@ export default function StyleGuide() {
               <h4 className="text-md font-bold mb-4">Resources</h4>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="hover:text-white" style={{ color: `${pageStyles.footerText}99` }}>
+                  <a href="https://github.com/thesubtleties/StyleATC" className="hover:text-white" style={{ color: `${pageStyles.footerText}99` }}>
                     Documentation
                   </a>
                 </li>

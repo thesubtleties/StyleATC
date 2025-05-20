@@ -795,6 +795,50 @@ class ThemeEngine:
             "computed_tailwind": computed_tailwind,  # Return computed styles for feedback
         }
 
+    def delete_component_variant(
+        self, component_type: str, variant: str, auto_save: bool = False
+    ) -> Dict[str, Any]:
+        """
+        Delete a specific variant from a component's configuration.
+
+        Args:
+            component_type: The type of component (e.g., 'button', 'dropdown')
+            variant: The name of the variant to delete (e.g., 'secondary', 'outline')
+            auto_save: Whether to automatically save changes to disk (default: False)
+
+        Returns:
+            A dictionary indicating success or failure.
+        """
+        if not self._theme or component_type not in self._theme.components:
+            return {"error": f"Component type '{component_type}' not found"}
+
+        component = self._theme.components[component_type]
+
+        if variant not in component.variants:
+            return {
+                "error": f"Variant '{variant}' not found for component '{component_type}'"
+            }
+
+        try:
+            # Delete the variant from the variants dictionary
+            del component.variants[variant]
+
+            self._has_unsaved_changes = True
+            if auto_save:
+                self._save_theme()
+                save_message = " and saved to disk"
+            else:
+                save_message = " (not yet saved to disk)"
+
+            return {
+                "success": True,
+                "message": f"Deleted variant '{variant}' from component '{component_type}'{save_message}",
+            }
+        except Exception as e:
+            return {
+                "error": f"An unexpected error occurred while deleting variant '{variant}': {e}"
+            }
+
     def save_theme(self) -> Dict[str, Any]:
         """Explicitly save the current theme state to disk"""
         if not self._has_unsaved_changes:
