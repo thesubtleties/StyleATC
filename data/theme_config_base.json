@@ -1,15 +1,15 @@
 {
   "global_values": {
     "colors": {
-      "primary": "#1e3a8a",
-      "secondary": "#475569",
+      "primary": "#7c3aed",
+      "secondary": "#00f9ff",
       "success": "#16a34a",
       "warning": "#f59e0b",
       "error": "#ef4444",
       "neutral": "#f3f4f6",
       "text": {
-        "primary": "#1e293b",
-        "secondary": "#64748b",
+        "primary": "#111827",
+        "secondary": "#4b5563",
         "muted": "#9ca3af"
       },
       "accent": "#0d9488",
@@ -32,6 +32,82 @@
       "md": "1rem",
       "lg": "1.125rem",
       "xl": "1.25rem"
+    },
+    "animations": {
+      "enterFromRight": "enterFromRight 250ms ease",
+      "enterFromLeft": "enterFromLeft 250ms ease",
+      "exitToRight": "exitToRight 250ms ease",
+      "exitToLeft": "exitToLeft 250ms ease",
+      "scaleIn": "scaleIn 200ms ease",
+      "scaleOut": "scaleOut 200ms ease",
+      "fadeIn": "fadeIn 200ms ease",
+      "fadeOut": "fadeOut 200ms ease",
+      "wiggle": "wiggle 1s ease-in-out infinite",
+      "slideUpAndFade": "slideUpAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)",
+      "slideRightAndFade": "slideRightAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)",
+      "slideDownAndFade": "slideDownAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)",
+      "slideLeftAndFade": "slideLeftAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)",
+      "overlayShow": "overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1)",
+      "contentShow": "contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1)",
+      "contentHide": "contentHide 100ms ease-in",
+      "bounce": "bounce 1s infinite",
+      "pulse": "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+      "shakeX": "shakeX 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite",
+      "shakeY": "shakeY 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite",
+      "flipX": "flipX 1s cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+      "flipY": "flipY 1s cubic-bezier(0.455, 0.03, 0.515, 0.955)",
+      "spin": "spin 1s linear infinite",
+      "swing": "swing 2s ease-in-out infinite",
+      "slideInTop": "slideInTop 0.5s ease-out",
+      "slideInRight": "slideInRight 0.5s ease-out",
+      "slideInBottom": "slideInBottom 0.5s ease-out",
+      "slideInLeft": "slideInLeft 0.5s ease-out",
+      "scaleUp": "scaleUp 0.5s ease-out",
+      "focusPulse": "focusPulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+      "bounceIn": "bounceIn 0.75s",
+      "bounceInDown": "bounceInDown 1s",
+      "bounceInLeft": "bounceInLeft 1s",
+      "bounceInRight": "bounceInRight 1s",
+      "bounceInUp": "bounceInUp 1s",
+      "bounceOut": "bounceOut 0.75s",
+      "bounceOutDown": "bounceOutDown 1s",
+      "bounceOutLeft": "bounceOutLeft 1s",
+      "bounceOutRight": "bounceOutRight 1s",
+      "bounceOutUp": "bounceOutUp 1s",
+      "fadeInDown": "fadeInDown 1s",
+      "fadeInLeft": "fadeInLeft 1s",
+      "fadeInRight": "fadeInRight 1s",
+      "fadeInUp": "fadeInUp 1s",
+      "fadeOutDown": "fadeOutDown 1s",
+      "fadeOutLeft": "fadeOutLeft 1s",
+      "fadeOutRight": "fadeOutRight 1s",
+      "fadeOutUp": "fadeOutUp 1s",
+      "lightSpeedInRight": "lightSpeedInRight 1s cubic-bezier(0.36, 0, 0.66, -0.56)",
+      "lightSpeedInLeft": "lightSpeedInLeft 1s cubic-bezier(0.36, 0, 0.66, -0.56)",
+      "lightSpeedOutRight": "lightSpeedOutRight 0.75s cubic-bezier(0.36, 0, 0.66, -0.56)",
+      "lightSpeedOutLeft": "lightSpeedOutLeft 0.75s cubic-bezier(0.36, 0, 0.66, -0.56)",
+      "rotateIn": "rotateIn 1s ease-in-out",
+      "rotateInDownLeft": "rotateInDownLeft 1s ease-in-out",
+      "rotateInDownRight": "rotateInDownRight 1s ease-in-out",
+      "rotateInUpLeft": "rotateInUpLeft 1s ease-in-out",
+      "rotateInUpRight": "rotateInUpRight 1s ease-in-out",
+      "rotateOut": "rotateOut 1s ease-in-out",
+      "rotateOutDownLeft": "rotateOutDownLeft 1s ease-in-out",
+      "rotateOutDownRight": "rotateOutDownRight 1s ease-in-out",
+      "rotateOutUpLeft": "rotateOutUpLeft 1s ease-in-out",
+      "rotateOutUpRight": "rotateOutUpRight 1s ease-in-out",
+      "zoomIn": "zoomIn 0.5s ease-in-out",
+      "zoomInDown": "zoomInDown 1s ease-in-out",
+      "zoomInLeft": "zoomInLeft 1s ease-in-out",
+      "zoomInRight": "zoomInRight 1s ease-in-out",
+      "zoomInUp": "zoomInUp 1s ease-in-out",
+      "zoomOut": "zoomOut 0.5s ease-in-out",
+      "zoomOutDown": "zoomOutDown 1s ease-in-out",
+      "zoomOutLeft": "zoomOutLeft 1s ease-in-out",
+      "zoomOutRight": "zoomOutRight 1s ease-in-out",
+      "zoomOutUp": "zoomOutUp 1s ease-in-out",
+      "rollIn": "rollIn 1s cubic-bezier(0.55, -0.05, 0.67, 1.55)",
+      "rollOut": "rollOut 1s cubic-bezier(0.55, -0.05, 0.67, 1.55)"
     }
   },
   "components": {
@@ -105,7 +181,7 @@
           "description": "A sleek, modern accordion with smooth transitions and contemporary styling",
           "elements": {
             "item": {
-              "tailwind": "mb-2 overflow-hidden rounded-md border border-slate-200 dark:border-slate-700 last:mb-0 transition-all duration-200",
+              "tailwind": "mb-2 overflow-hidden rounded-md border border-slate-200 dark:border-slate-700 last:mb-0 transition-all duration-300 data-[state=open]:shadow-md data-[state=open]:scale-[1.01]",
               "color": null,
               "text_color": null,
               "computed": null
@@ -117,13 +193,13 @@
               "computed": null
             },
             "icon": {
-              "tailwind": "h-5 w-5 text-blue-500 transition-transform duration-300 ease-in-out group-data-[state=open]:rotate-180",
+              "tailwind": "h-5 w-5 text-blue-500 transition-all duration-300 ease-in-out group-data-[state=open]:rotate-180 group-data-[state=open]:scale-110",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "content": {
-              "tailwind": "overflow-hidden px-4 pb-4 pt-0 text-sm text-slate-700 dark:text-slate-300 data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down",
+              "tailwind": "overflow-hidden px-4 pb-4 pt-0 text-sm text-slate-700 dark:text-slate-300 data-[state=open]:animate-[zoomInDown_300ms_ease-out] data-[state=closed]:animate-[zoomOutUp_200ms_ease-in]",
               "color": null,
               "text_color": null,
               "computed": null
@@ -241,7 +317,7 @@
     "button": {
       "variants": {
         "default": {
-          "tailwind": "bg-blue-800 text-white hover:bg-blue-900 px-5 py-2.5 rounded-md font-medium shadow-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-opacity-50 active:translate-y-0.5",
+          "tailwind": "bg-blue-800 text-white hover:bg-blue-900 px-5 py-2.5 rounded-md font-medium shadow-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-opacity-50 active:translate-y-0.5 animate-fadeIn",
           "extends": null,
           "color": null,
           "text_color": null,
@@ -256,14 +332,14 @@
           }
         },
         "secondary": {
-          "tailwind": "bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500",
+          "tailwind": "bg-gray-200 hover:bg-gray-300 text-gray-800 px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 hover:animate-pulse",
           "extends": "button.default",
           "color": null,
           "text_color": null,
           "description": "Secondary button with gray styling"
         },
         "outline": {
-          "tailwind": "bg-transparent border border-slate-300 hover:border-slate-400 font-medium px-5 py-2 rounded-md transition-all duration-200 ease-in-out hover:shadow-sm focus:outline-none focus:ring-1 focus:ring-slate-300 focus:border-slate-400",
+          "tailwind": "bg-transparent border border-slate-300 hover:border-slate-400 font-medium px-5 py-2 rounded-md transition-all duration-200 ease-in-out hover:shadow-sm focus:outline-none focus:ring-1 focus:ring-slate-300 focus:border-slate-400 focus:animate-focusPulse",
           "extends": "",
           "color": null,
           "text_color": null,
@@ -278,14 +354,14 @@
           }
         },
         "ghost": {
-          "tailwind": "bg-transparent hover:bg-blue-50 px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-200 border border-transparent hover:border-blue-100",
+          "tailwind": "bg-transparent relative overflow-hidden transition-all duration-300 ease-in-out hover:bg-blue-50 px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-200 border border-transparent hover:border-blue-100 before:absolute before:inset-0 before:bg-blue-100/0 hover:before:bg-blue-100/30 before:transition-all before:duration-300 before:ease-in-out before:scale-x-0 hover:before:scale-x-100 before:origin-left",
           "extends": "",
           "color": null,
           "text_color": null,
           "description": "Ghost button with transparent background and primary text color",
           "elements": {
             "text": {
-              "tailwind": "flex items-center justify-center gap-1 text-blue-600",
+              "tailwind": "flex items-center justify-center gap-1 text-blue-600 relative z-10 transition-transform duration-300 ease-in-out group-hover:scale-105",
               "color": null,
               "text_color": null,
               "computed": null
@@ -2256,7 +2332,7 @@
               "computed": null
             },
             "viewport": {
-              "tailwind": "mt-3 h-[var(--radix-navigation-menu-viewport-height)] w-full origin-[top_center] overflow-hidden rounded-md bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg transition-[width,_height] duration-300 data-[state=closed]:animate-scaleOut data-[state=open]:animate-scaleIn sm:w-[var(--radix-navigation-menu-viewport-width)]",
+              "tailwind": "mt-3 h-[var(--radix-navigation-menu-viewport-height)] w-full origin-[top_center] overflow-hidden rounded-md bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-lg transition-[width,_height] duration-300 data-[state=closed]:animate-scaleOut data-[state=open]:animate-lightSpeedInRight sm:w-[var(--radix-navigation-menu-viewport-width)]",
               "color": null,
               "text_color": null,
               "computed": null
@@ -2757,7 +2833,7 @@
               "computed": null
             },
             "avatar": {
-              "tailwind": "rounded-full w-16 h-16 border-4 border-white shadow-lg",
+              "tailwind": "rounded-full w-16 h-16 border-4 border-white shadow-lg hover:animate-rotateIn",
               "color": null,
               "text_color": null,
               "computed": null
@@ -2832,14 +2908,14 @@
           }
         },
         "ocean": {
-          "tailwind": "relative h-4 w-full overflow-hidden rounded-full bg-blue-100/50",
+          "tailwind": "relative h-4 w-full overflow-hidden rounded-full bg-blue-100/50 hover:animate-focusPulse group",
           "extends": "",
           "color": null,
           "text_color": null,
           "description": "An ocean-themed progress bar with light background and gradient fill",
           "elements": {
             "indicator": {
-              "tailwind": "h-full w-full bg-gradient-to-r from-blue-400 via-blue-600 to-indigo-500 shadow-md",
+              "tailwind": "h-full w-full bg-gradient-to-r from-blue-400 via-blue-600 to-indigo-500 shadow-md group-hover:animate-zoomInLeft",
               "color": null,
               "text_color": null,
               "computed": null
