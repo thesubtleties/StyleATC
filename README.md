@@ -189,5 +189,5 @@ Again, **you typically do not need to use these exact function calls**. Simply t
     *   Check the MCP server logs (if visible in your client) or Docker container logs to ensure the Astro server inside the container started successfully and is listening on `0.0.0.0:3000`.
 *   **Changes Not Persisting (e.g., `theme_config.json` resets)**:
     *   The most common cause is an incorrect `src` path for the `/data` volume mount. The application inside Docker is writing to `/data`, but if it's not correctly mapped to your *host's* `style_guide/data` directory, changes will be lost when the container stops.
-*   **Tailwind/Animation Issues in Preview**: This usually relates to the Tailwind CSS configuration (`tailwind.config.js`) within your *frontend project* (wherever you plan to use the generated components) or the inclusion of your CSS file with `@keyframes`. This setup is external to the StyleATC MCP server itself but impacts how styles are rendered.
+*   **Tailwind/Animation Issues in Preview**: This usually relates to the Tailwind CSS configuration within your *frontend project* (global.css by default) or the inclusion of your CSS file with `@keyframes`. This setup is external to the StyleATC MCP server itself but impacts how styles are rendered.
 
