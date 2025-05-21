@@ -1,6 +1,6 @@
 # StyleATC Tailwind Styling System (Dockerized)
 
-This repository contains the StyleATC Tailwind Styling System, a MCP (Model Context Protocol) Server designed to manage a centralized design theme for React components using Tailwind CSS. This system is intended to be run as a Docker container.
+This repository contains the StyleATC Tailwind Styling System, a MCP (Model Context Protocol) Server designed to manage a centralized design theme for React components using Tailwind CSS and Radix UI Primitives. This system is intended to be run as a Docker container.
 
 The system allows you to define core design values (colors, spacing, typography, animations) and component variants through a structured configuration file (`theme_config.json`). It then generates dynamic React component files and a Style Guide page based on this configuration and provided boilerplate templates.
 
