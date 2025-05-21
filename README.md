@@ -32,7 +32,7 @@ Before you begin, ensure you have the following installed and configured:
     Open your terminal (e.g., WSL, PowerShell, macOS/Linux terminal) and navigate to an appropriate directory.
     ```bash
     git clone https://github.com/thesubtleties/StyleATC.git
-    cd StyleATC/projects/brainstorm/style_guide
+    cd your/diretory/here/style_guide
     ```
     *(You will now be in the `style_guide` directory, which we'll treat as the project root for Docker operations).*
 
@@ -73,15 +73,15 @@ Before you begin, ensure you have the following installed and configured:
     {
       "mcpServers": {
         "styleGuide": {
-          "command": "docker", // Or 'wsl' then 'docker' for specific client setups needing WSL prefix
+          "command": "docker", 
           "args": [
             "run",
             "-i", // Interactive, keep STDIN open
             "--rm", // Automatically remove the container when it exits
             "--mount",
-            "type=bind,src=/your/host/path/to/StyleATC/projects/brainstorm/style_guide/data,dst=/data,readonly=false",
+            "type=bind,src=/your/host/path/to/StyleATC/projects/style_guide/data,dst=/data,readonly=false",
             "--mount",
-            "type=bind,src=/your/host/path/to/StyleATC/projects/brainstorm/style_guide/preview,dst=/app/preview,readonly=false",
+            "type=bind,src=/your/host/path/to/StyleATC/projects/style_guide/preview,dst=/app/preview,readonly=false",
             "-p",
             "3000:3000", // Map port 3000 on host to 3000 in container for preview server
             "mcp/style-guide" // The Docker image tag used during `docker build`
@@ -89,6 +89,30 @@ Before you begin, ensure you have the following installed and configured:
         }
       }
     }
+
+    // WSL
+
+       {
+     "mcpServers": {
+       "styleGuide": {
+         "command": "wsl",
+         "args": [
+           "docker",
+           "run",
+           "-i",
+           "--rm",
+           "--mount",
+           "type=bind,src=/home/user/your/directory/style_guide/data,dst=/data,readonly=false",
+           "--mount",
+           "type=bind,src=/home/user/your/directory/style_guide/preview,dst=/app/preview,readonly=false",
+           "-p",
+           "3000:3000",
+           "mcp/style-guide"
+         ]
+       }
+     }
+   }
+
     ```
     *   **Explanation of `args`:**
         *   `run -i --rm`: Runs a new container interactively and removes it on exit.
