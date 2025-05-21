@@ -47,7 +47,7 @@ export default function StyleGuide() {
   
   // Style tokens from the theme system
   const colors = {
-    primary: '#7c3aed',
+    primary: '#1E3A8A',
     secondary: '#00f9ff',
     success: '#16a34a',
     warning: '#f59e0b',
@@ -65,13 +65,13 @@ export default function StyleGuide() {
       dark: '#0f172a',
     },
     background: '#f9fafb',
-    headerBg: '#7c3aed',
+    headerBg: '#1E3A8A',
     headerText: '#ffffff',
-    footerBg: '#7c3aed',
+    footerBg: '#1E3A8A',
     footerText: '#ffffff',
     cardBg: '#ffffff',
     muted: '#9ca3af',
-    sectionHeadingColor: '#7c3aed',
+    sectionHeadingColor: '#1E3A8A',
   };
   
   const spacing = {
