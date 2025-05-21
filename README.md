@@ -16,6 +16,19 @@ This README provides instructions for setting up and running the system using **
 *   **Manage Theme Changes**: Tools to update, create, and delete component variants and global values.
 *   **Save and Revert Changes**: Persist theme modifications or revert to the last saved state.
 
+## StyleATC in Action
+
+<video width="640" controls>
+  <source src="https://storage.sbtl.dev/spookyspot/Styleatc2.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
+
+![StyleATC1](https://storage.sbtl.dev/spookyspot/StyleATC-2.png)
+
+![StyleATC2](https://storage.sbtl.dev/spookyspot/StyleATC-3.png)
+
+![StyleATC3](https://storage.sbtl.dev/spookyspot/StyleATC-4.png)
+
 ## Prerequisites
 
 Before you begin, ensure you have the following installed and configured:
@@ -111,7 +124,7 @@ Before you begin, ensure you have the following installed and configured:
          ]
        }
      }
-   }
+
 
     ```
     *   **Explanation of `args`:**
