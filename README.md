@@ -18,10 +18,7 @@ This README provides instructions for setting up and running the system using **
 
 ## StyleATC in Action
 
-<video width="640" controls>
-  <source src="https://storage.sbtl.dev/spookyspot/Styleatc2.webm" type="video/webm">
-  Your browser does not support the video tag.
-</video>
+![StyleATC1](https://storage.sbtl.dev/spookyspot/styleatcvid.webp)
 
 ![StyleATC1](https://storage.sbtl.dev/spookyspot/StyleATC-2.png)
 
