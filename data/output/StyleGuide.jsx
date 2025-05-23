@@ -3236,7 +3236,7 @@ export default function StyleGuide() {
       duration={5000}
     />
   </div>
-  <p className="text-sm text-gray-500">Elegant celebratory toast with golden champagne theme</p>
+  <p className="text-sm text-gray-500">Luxurious champagne celebration toast with sparkling animations, golden gradients, premium shadows, and elegant champagne bubble effects</p>
 </div>
 </div>
   </div>
