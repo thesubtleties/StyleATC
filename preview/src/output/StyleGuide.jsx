@@ -47,7 +47,7 @@ export default function StyleGuide() {
   
   // Style tokens from the theme system
   const colors = {
-    primary: '#1E3A8A',
+    primary: '#7c3aed',
     secondary: '#00f9ff',
     success: '#16a34a',
     warning: '#f59e0b',
@@ -65,13 +65,13 @@ export default function StyleGuide() {
       dark: '#0f172a',
     },
     background: '#f9fafb',
-    headerBg: '#1E3A8A',
+    headerBg: '#7c3aed',
     headerText: '#ffffff',
-    footerBg: '#1E3A8A',
+    footerBg: '#7c3aed',
     footerText: '#ffffff',
     cardBg: '#ffffff',
     muted: '#9ca3af',
-    sectionHeadingColor: '#1E3A8A',
+    sectionHeadingColor: '#7c3aed',
   };
   
   const spacing = {
@@ -327,7 +327,7 @@ export default function StyleGuide() {
       ]}
     />
   </div>
-  <p className="text-sm text-gray-500">A sleek, modern accordion with smooth transitions and contemporary styling</p>
+  <p className="text-sm text-gray-500">Enhanced modern accordion with premium spacing, smooth animations, subtle gradients, and refined interactions</p>
 </div>
 </div>
   </div>
@@ -371,7 +371,7 @@ export default function StyleGuide() {
       onAction={() => console.log('Action confirmed')}
     />
   </div>
-  <p className="text-sm text-gray-500">A whimsical Wizard of Oz themed alert dialog with emerald city colors and yellow brick road accents</p>
+  <p className="text-sm text-gray-500">A magical Wizard of Oz themed alert dialog with emerald city glamour, yellow brick road sparkle, animated elements, and theatrical flair</p>
 </div>
 
 </div>
@@ -636,6 +636,14 @@ export default function StyleGuide() {
     <CardComponent variant="ocean" className="max-w-sm" />
   </div>
   <p className="text-sm text-gray-500">An ocean-themed card with a gentle blue-teal gradient and subtle wave-like shadows.</p>
+</div>
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Fire</h4>
+  <div className="mb-2">
+
+    <CardComponent variant="fire" className="max-w-sm" />
+  </div>
+  <p className="text-sm text-gray-500">A fiery card with red-orange-yellow gradient background and warm glow effect.</p>
 </div></div>
   </div>
 </div>
@@ -669,7 +677,7 @@ export default function StyleGuide() {
       defaultChecked={true}
     />
   </div>
-  <p className="text-sm text-gray-500">Default checkbox variant.</p>
+  <p className="text-sm text-gray-500">Clean, refined checkbox with subtle slate tones and smooth transitions</p>
 </div>
 
 <div className="mb-6">
@@ -707,7 +715,7 @@ export default function StyleGuide() {
       defaultChecked={true}
     />
   </div>
-  <p className="text-sm text-gray-500">Subtle, minimal checkbox with light styling.</p>
+  <p className="text-sm text-gray-500">Modern minimal checkbox with sharp edges, gradient overlay, and sophisticated hover states</p>
 </div>
 
 <div className="mb-6">
@@ -969,7 +977,50 @@ export default function StyleGuide() {
       ]}
     />
   </div>
-  <p className="text-sm text-gray-500">A whimsical 50's ice cream parlor-themed context menu with pastel colors and retro styling.</p>
+  <p className="text-sm text-gray-500">Enhanced retro soda fountain context menu with vibrant pastels, smooth gradients, and playful micro-interactions</p>
+  <div className="mt-2 text-xs text-gray-400">
+    <em>Note: Right-click on the trigger area to see the context menu</em>
+  </div>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Neon</h4>
+  <div className="mb-2">
+    <ContextmenuComponent
+      variant="neon"
+      triggerText="Right-click here to open menu"
+      items={[
+        { label: 'Back', shortcut: '⌘+[' },
+        { label: 'Forward', shortcut: '⌘+]', disabled: true },
+        { label: 'Reload', shortcut: '⌘+R' },
+      ]}
+      subMenuItems={[
+        { label: 'Save Page As…', shortcut: '⌘+S' },
+        { label: 'Create Shortcut…' },
+        { label: 'Name Window…' },
+        { label: 'Developer Tools' },
+      ]}
+      checkboxItems={[
+        {
+          id: 'bookmarks',
+          label: 'Show Bookmarks',
+          shortcut: '⌘+B',
+          defaultChecked: true,
+        },
+        { id: 'urls', label: 'Show Full URLs' },
+      ]}
+      radioItems={[
+        {
+          group: 'People',
+          value: 'pedro',
+          label: 'Pedro Duarte',
+          defaultChecked: true,
+        },
+        { group: 'People', value: 'colm', label: 'Colm Tuite' },
+      ]}
+    />
+  </div>
+  <p className="text-sm text-gray-500">Fun modern context menu with vibrant colors, glass morphism, and smooth animations</p>
   <div className="mt-2 text-xs text-gray-400">
     <em>Note: Right-click on the trigger area to see the context menu</em>
   </div>
@@ -1275,7 +1326,7 @@ export default function StyleGuide() {
   Placeholders:
   - Cosmic: e.g., "Default"
   - cosmic: e.g., "default" (May not be used if FormField has no variants itself)
-  - A cosmic, space-themed form field with starry accents and futuristic styling.: Description of the variant/example.
+  - Enhanced cosmic form field with deep space gradients, animated elements, glowing effects, and futuristic sci-fi styling: Description of the variant/example.
 
   Assumes `FormField` is available in the rendering scope.
 */}
@@ -1310,7 +1361,7 @@ export default function StyleGuide() {
     />
 
   </div>
-  <p className="text-sm text-gray-500 italic mt-4">A cosmic, space-themed form field with starry accents and futuristic styling.</p>
+  <p className="text-sm text-gray-500 italic mt-4">Enhanced cosmic form field with deep space gradients, animated elements, glowing effects, and futuristic sci-fi styling</p>
 </div>
 
 {/*
@@ -1410,7 +1461,7 @@ export default function StyleGuide() {
       ]}
     />
   </div>
-  <p className="text-sm text-gray-500">A vibrant ocean-themed header with a blue-to-teal gradient.</p>
+  <p className="text-sm text-gray-500">Immersive ocean header with flowing gradients, animated waves, glowing effects, and depth layering that captures the beauty of tropical waters</p>
 </div>
 </div>
   </div>
@@ -1480,6 +1531,33 @@ export default function StyleGuide() {
     />
   </div>
   <p className="text-sm text-gray-500">Sophisticated graystone hovercard with slate tones and subtle depth effects.</p>
+</div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Clean</h4>
+  <div className="mb-2 flex justify-center py-12">
+    <HovercardComponent
+      variant="clean"
+      triggerContent={
+        <DefaultTrigger
+          imageUrl="https://pbs.twimg.com/profile_images/1337055608613253126/r_eiMp2H_400x400.png"
+          alt="Radix UI"
+          href="https://twitter.com/radix_ui"
+        />
+      }
+      cardContent={
+        <DefaultCardContent
+          imageUrl="https://pbs.twimg.com/profile_images/1337055608613253126/r_eiMp2H_400x400.png"
+          title="Radix"
+          handle="@radix_ui"
+          description="Components, icons, colors, and templates for building high-quality, accessible UI. Free and open-source."
+          followingCount="0"
+          followersCount="2,900"
+        />
+      }
+    />
+  </div>
+  <p className="text-sm text-gray-500">Ultra-clean minimal hovercard with crisp white background, subtle shadows, and refined typography</p>
 </div>
 </div>
   </div>
@@ -1961,6 +2039,88 @@ export default function StyleGuide() {
     />
   </div>
   <p className="text-sm text-gray-500">A macOS-inspired modern navigation menu with subtle transparency effects and rounded corners.</p>
+</div>
+<div className="mb-80">
+  <h4 className="text-sm font-medium mb-2">Studio</h4>
+  <div className="mb-4 py-6 bg-gray-50 rounded-md flex justify-center">
+    <NavigationmenuComponent
+      variant="studio" 
+      items={[
+        {
+          type: 'dropdown',
+          label: 'Features',
+          content: (
+            <ul className="m-0 grid list-none gap-x-2.5 p-[22px] sm:w-[500px] sm:grid-cols-[0.75fr_1fr]">
+              <li className="row-span-3 grid">
+                <NavigationMenu.Link asChild>
+                  <a
+                    className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-purple9 to-indigo9 p-[25px] no-underline outline-none focus:shadow-[0_0_0_2px]"
+                    href="/"
+                  >
+                    <div className="mb-[7px] mt-4 text-[18px] font-medium leading-[1.2] text-white">
+                      Product Name
+                    </div>
+                    <p className="text-[14px] leading-[1.3] text-white/80">
+                      Brief product description goes here.
+                    </p>
+                  </a>
+                </NavigationMenu.Link>
+              </li>
+
+              <NavigationmenuComponent.ListItem variant="studio" href="/" title="Documentation">
+                Comprehensive guides and API references.
+              </NavigationmenuComponent.ListItem>
+              <NavigationmenuComponent.ListItem variant="studio" href="/" title="Components">
+                UI building blocks for your application.
+              </NavigationmenuComponent.ListItem>
+              <NavigationmenuComponent.ListItem variant="studio" href="/" title="Templates">
+                Pre-built layouts for common use cases.
+              </NavigationmenuComponent.ListItem>
+            </ul>
+          ),
+        },
+        {
+          type: 'dropdown',
+          label: 'Resources',
+          content: (
+            <ul className="m-0 grid list-none gap-x-2.5 p-[22px] sm:w-[600px] sm:grid-flow-col sm:grid-rows-2">
+
+              <NavigationmenuComponent.ListItem
+                variant="studio"
+                title="Getting Started"
+                href="/"
+              >
+                Quick start guide for new users.
+              </NavigationmenuComponent.ListItem>
+
+              <NavigationmenuComponent.ListItem variant="studio" title="Tutorials" href="/">
+                Step-by-step guides for common tasks.
+              </NavigationmenuComponent.ListItem>
+
+              <NavigationmenuComponent.ListItem variant="studio" title="Blog" href="/">
+                Latest news and updates from our team.
+              </NavigationmenuComponent.ListItem>
+
+              <NavigationmenuComponent.ListItem variant="studio" title="Community" href="/">
+                Join our community of developers.
+              </NavigationmenuComponent.ListItem>
+            </ul>
+          ),
+        },
+        {
+          type: 'link',
+          label: 'Pricing',
+          href: '/',
+        },
+        {
+          type: 'link',
+          label: 'Contact',
+          href: '/',
+        },
+      ]}
+    />
+  </div>
+  <p className="text-sm text-gray-500">Premium studio-grade navigation with dark theme, subtle gradients, and sophisticated micro-interactions</p>
 </div></div>
   </div>
 </div>
@@ -2696,6 +2856,20 @@ export default function StyleGuide() {
   </div>
   <p className="text-sm text-gray-500">A sleek squared audio slider with black glowing thumb</p>
 </div>
+
+<div className="mb-6">
+  <h4 className="text-sm font-medium mb-2">Neon</h4>
+  <div className="mb-2 flex items-center justify-center py-4">
+    <SliderComponent
+      variant="neon"
+      defaultValue={[50]}
+      max={100}
+      step={1}
+      ariaLabel="Example slider"
+    />
+  </div>
+  <p className="text-sm text-gray-500">Cyberpunk neon slider with RGB lighting effects, electric glow, and gaming-inspired aesthetics</p>
+</div>
 </div>
   </div>
 </div>
@@ -3322,7 +3496,7 @@ export default function StyleGuide() {
       defaultAlignment="center"
     />
   </div>
-  <p className="text-sm text-gray-500">A red, white, and blue themed toolbar for patriotic applications with bold selection states.</p>
+  <p className="text-sm text-gray-500">Enhanced patriotic toolbar with stars-and-stripes gradients, dynamic shadows, smooth animations, and premium American flair</p>
 </div>
 </div>
   </div>

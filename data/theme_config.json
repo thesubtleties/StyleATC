@@ -1,7 +1,7 @@
 {
   "global_values": {
     "colors": {
-      "primary": "#1E3A8A",
+      "primary": "#7c3aed",
       "secondary": "#00f9ff",
       "success": "#16a34a",
       "warning": "#f59e0b",
@@ -174,32 +174,32 @@
           }
         },
         "modern": {
-          "tailwind": "w-full max-w-md rounded-lg bg-white dark:bg-slate-900 shadow-lg",
+          "tailwind": "w-full max-w-lg rounded-2xl bg-white shadow-xl shadow-black/5 border border-gray-100 backdrop-blur-sm overflow-hidden",
           "extends": "accordion.default",
           "color": null,
           "text_color": null,
-          "description": "A sleek, modern accordion with smooth transitions and contemporary styling",
+          "description": "Enhanced modern accordion with premium spacing, smooth animations, subtle gradients, and refined interactions",
           "elements": {
             "item": {
-              "tailwind": "mb-2 overflow-hidden rounded-md border border-slate-200 dark:border-slate-700 last:mb-0 transition-all duration-300 data-[state=open]:shadow-md data-[state=open]:scale-[1.01]",
+              "tailwind": "overflow-hidden border-b border-gray-100 last:border-b-0 transition-all duration-500 ease-out data-[state=open]:bg-gradient-to-r data-[state=open]:from-blue-50/50 data-[state=open]:to-indigo-50/50",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "trigger": {
-              "tailwind": "flex w-full items-center justify-between px-4 py-3 text-base font-medium text-slate-900 dark:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-1",
+              "tailwind": "flex w-full items-center justify-between px-6 py-5 text-base font-semibold text-gray-900 hover:bg-gray-50/80 transition-all duration-300 ease-out focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:ring-offset-0 group cursor-pointer select-none",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "icon": {
-              "tailwind": "h-5 w-5 text-blue-500 transition-all duration-300 ease-in-out group-data-[state=open]:rotate-180 group-data-[state=open]:scale-110",
+              "tailwind": "h-5 w-5 text-gray-500 transition-all duration-400 ease-out group-data-[state=open]:rotate-180 group-data-[state=open]:text-blue-600 group-hover:text-gray-700 transform group-data-[state=open]:scale-110",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "content": {
-              "tailwind": "overflow-hidden px-4 pb-4 pt-0 text-sm text-slate-700 dark:text-slate-300 data-[state=open]:animate-[zoomInDown_300ms_ease-out] data-[state=closed]:animate-[zoomOutUp_200ms_ease-in]",
+              "tailwind": "overflow-hidden px-6 pb-6 pt-2 text-gray-600 leading-relaxed data-[state=open]:animate-fadeInUp data-[state=closed]:animate-fadeOutUp data-[state=closed]:max-h-0 data-[state=closed]:pb-0 data-[state=closed]:pt-0",
               "color": null,
               "text_color": null,
               "computed": null
@@ -266,46 +266,52 @@
           "extends": "alertdialog.default",
           "color": null,
           "text_color": null,
-          "description": "A whimsical Wizard of Oz themed alert dialog with emerald city colors and yellow brick road accents",
+          "description": "A magical Wizard of Oz themed alert dialog with emerald city glamour, yellow brick road sparkle, animated elements, and theatrical flair",
           "elements": {
             "trigger": {
-              "tailwind": "bg-yellow-400 text-emerald-800 hover:bg-yellow-500 focus:ring-2 focus:ring-yellow-600 rounded-full px-6 py-2 font-semibold shadow-md",
+              "tailwind": "bg-gradient-to-r from-yellow-400 to-amber-500 text-emerald-900 hover:from-yellow-500 hover:to-amber-600 focus:ring-2 focus:ring-yellow-600 rounded-full px-8 py-3 font-bold shadow-lg hover:shadow-xl transition-all duration-200 border-2 border-yellow-600",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "overlay": {
-              "tailwind": "bg-emerald-900/60 backdrop-blur-sm animate-in fade-in",
+              "tailwind": "bg-emerald-900/70 backdrop-blur-sm animate-in fade-in duration-300",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "content": {
-              "tailwind": "bg-gradient-to-br from-emerald-100 to-emerald-200 border-4 border-emerald-600 rounded-xl shadow-xl p-6 max-w-md w-full mx-auto animate-in zoom-in-95 slide-in-from-bottom-10",
+              "tailwind": "flex flex-col bg-gradient-to-br from-emerald-50 to-emerald-100 border-4 border-emerald-600 rounded-2xl shadow-2xl p-8 max-w-lg w-full mx-auto animate-in zoom-in-95 slide-in-from-bottom-5 duration-400 space-y-4",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "title": {
-              "tailwind": "text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-emerald-800 text-2xl font-bold mb-2 text-center",
+              "tailwind": "text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-emerald-800 text-3xl font-black mb-4 text-center tracking-wide",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "description": {
-              "tailwind": "bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 bg-clip-text text-transparent text-center mb-6 font-medium",
+              "tailwind": "bg-gradient-to-r from-purple-600 to-red-600 bg-clip-text text-transparent text-center mb-6 font-semibold text-lg",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "cancel": {
-              "tailwind": "bg-gradient-to-r from-red-500 to-pink-600 text-white hover:from-red-600 hover:to-pink-700 focus:ring-2 focus:ring-red-400 rounded-full px-5 py-2 font-medium shadow-md transition-all duration-300 border-2 border-white",
+              "tailwind": "w-full bg-gradient-to-r from-red-500 to-pink-600 text-white hover:from-red-600 hover:to-pink-700 focus:ring-2 focus:ring-red-400 rounded-full px-6 py-3 font-bold shadow-lg hover:shadow-xl transition-all duration-200 border-2 border-red-700 text-center order-2",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "action": {
-              "tailwind": "bg-yellow-400 text-emerald-800 hover:bg-yellow-500 focus:ring-2 focus:ring-yellow-600 rounded-full px-5 py-2 font-semibold shadow-md transition-colors",
+              "tailwind": "w-full bg-gradient-to-r from-yellow-400 to-amber-500 text-emerald-900 hover:from-yellow-500 hover:to-amber-600 focus:ring-2 focus:ring-yellow-600 rounded-full px-6 py-3 font-black shadow-lg hover:shadow-xl transition-all duration-200 border-2 border-yellow-600 text-center order-1",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "buttonContainer": {
+              "tailwind": "flex flex-col gap-3 mt-6",
               "color": null,
               "text_color": null,
               "computed": null
@@ -602,20 +608,41 @@
               "computed": null
             }
           }
+        },
+        "fire": {
+          "tailwind": "rounded-xl border border-amber-500 bg-gradient-to-br from-yellow-400 via-orange-500 to-red-600 p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] animate-pulse",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "A fiery card with red-orange-yellow gradient background and warm glow effect.",
+          "elements": {
+            "title": {
+              "tailwind": "text-xl font-black mb-2 text-white drop-shadow-md font-serif tracking-wide",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "content": {
+              "tailwind": "text-sm text-amber-100 font-medium font-sans leading-relaxed",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
         }
       }
     },
     "checkbox": {
       "variants": {
         "default": {
-          "tailwind": "border border-gray-300 bg-white hover:bg-gray-50 focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded transition-all duration-200",
+          "tailwind": "border border-slate-300 bg-white hover:bg-slate-50 hover:border-slate-400 focus:ring-2 focus:ring-offset-2 focus:ring-slate-500/30 rounded-md transition-all duration-300 ease-out shadow-sm",
           "extends": null,
           "color": null,
           "text_color": null,
-          "description": "Default checkbox variant.",
+          "description": "Clean, refined checkbox with subtle slate tones and smooth transitions",
           "elements": {
             "indicator": {
-              "tailwind": "flex items-center justify-center bg-blue-700 w-full h-full",
+              "tailwind": "flex items-center justify-center bg-slate-700 w-full h-full transition-all duration-300 ease-out",
               "color": null,
               "text_color": null,
               "computed": null
@@ -627,7 +654,7 @@
               "computed": null
             },
             "label": {
-              "tailwind": "text-gray-700 font-medium cursor-pointer",
+              "tailwind": "text-slate-700 font-medium cursor-pointer select-none",
               "color": null,
               "text_color": null,
               "computed": null
@@ -662,26 +689,26 @@
           }
         },
         "minimal": {
-          "tailwind": "border border-gray-200 bg-gray-50 rounded hover:bg-gray-100 focus:ring-1 focus:ring-offset-1 focus:ring-gray-300",
+          "tailwind": "border-2 border-neutral-200 bg-transparent hover:border-neutral-900 focus:ring-2 focus:ring-offset-2 focus:ring-neutral-900/20 rounded-none transition-all duration-500 ease-out relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-neutral-50 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300",
           "extends": null,
           "color": null,
           "text_color": null,
-          "description": "Subtle, minimal checkbox with light styling.",
+          "description": "Modern minimal checkbox with sharp edges, gradient overlay, and sophisticated hover states",
           "elements": {
             "indicator": {
-              "tailwind": "flex items-center justify-center bg-gray-500",
+              "tailwind": "flex items-center justify-center bg-neutral-900 w-full h-full transition-all duration-500 ease-out transform",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "icon": {
-              "tailwind": "size-4 text-white",
+              "tailwind": "size-3 text-white font-bold transform transition-transform duration-300 ease-out",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "label": {
-              "tailwind": "text-gray-600 font-normal cursor-pointer",
+              "tailwind": "text-neutral-800 font-normal cursor-pointer select-none tracking-wide uppercase text-sm",
               "color": null,
               "text_color": null,
               "computed": null
@@ -999,7 +1026,7 @@
           "description": "Default context menu variant.",
           "elements": {
             "trigger": {
-              "tailwind": "bg-white text-gray-900 hover:bg-gray-100 focus:ring-2 focus:ring-gray-400 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-700",
+              "tailwind": "bg-slate-100 text-slate-700 hover:bg-slate-200 focus:ring-2 focus:ring-slate-400 border border-slate-300 rounded-lg px-4 py-3 font-medium cursor-pointer transition-all duration-200 select-none",
               "color": null,
               "text_color": null,
               "computed": null
@@ -1041,13 +1068,13 @@
               "computed": null
             },
             "subContent": {
-              "tailwind": "bg-white border border-gray-200 dark:bg-gray-800 dark:border-gray-700",
+              "tailwind": "bg-white border border-slate-300 rounded-md shadow-lg p-1 min-w-[12rem] z-50 animate-in slide-in-from-left-2 duration-200",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "subItem": {
-              "tailwind": "text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 data-[disabled]:text-gray-400 data-[disabled]:dark:text-gray-500",
+              "tailwind": "px-2 py-1.5 text-sm rounded-sm text-slate-700 hover:bg-slate-100 cursor-pointer transition-colors duration-200",
               "color": null,
               "text_color": null,
               "computed": null
@@ -1089,34 +1116,34 @@
           "extends": null,
           "color": null,
           "text_color": null,
-          "description": "A whimsical 50's ice cream parlor-themed context menu with pastel colors and retro styling.",
+          "description": "Enhanced retro soda fountain context menu with vibrant pastels, smooth gradients, and playful micro-interactions",
           "elements": {
             "trigger": {
-              "tailwind": "bg-pink-50 text-pink-700 hover:bg-pink-100 focus:ring-2 focus:ring-pink-300",
+              "tailwind": "bg-gradient-to-br from-pink-100 to-rose-200 text-pink-800 hover:from-pink-200 hover:to-rose-300 focus:ring-2 focus:ring-pink-400 focus:ring-offset-2 border-2 border-pink-300 rounded-2xl px-5 py-3 font-bold text-center cursor-pointer transition-all duration-300 ease-out select-none shadow-lg hover:shadow-xl hover:shadow-pink-300/50 transform hover:scale-105 active:scale-95",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "content": {
-              "tailwind": "bg-white border-2 border-pink-200 rounded-xl shadow-lg p-2 min-w-[12rem] z-50 font-medium bg-[radial-gradient(#ffffff,#fef2f6)] [background-size:25px_25px]",
+              "tailwind": "bg-gradient-to-br from-pink-50 via-white to-rose-50 border-2 border-pink-300 rounded-2xl shadow-2xl p-3 min-w-[14rem] z-50 font-medium backdrop-blur-sm animate-in slide-in-from-top-2 duration-300 ease-out before:absolute before:inset-0 before:rounded-2xl before:bg-gradient-to-br before:from-pink-100/20 before:to-transparent before:pointer-events-none",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "item": {
-              "tailwind": "px-3 py-1.5 text-sm rounded-lg text-pink-700 hover:bg-pink-100 data-[disabled]:text-pink-300 cursor-pointer font-medium tracking-wide",
+              "tailwind": "px-4 py-2.5 text-sm rounded-xl text-pink-800 hover:bg-gradient-to-r hover:from-pink-200 hover:to-rose-300 hover:text-pink-900 hover:shadow-md hover:shadow-pink-200/50 cursor-pointer font-semibold tracking-wide transition-all duration-300 ease-out transform hover:scale-[1.02] active:scale-[0.98] border border-transparent hover:border-pink-300/50",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "shortcut": {
-              "tailwind": "text-blue-400 font-mono",
+              "tailwind": "text-blue-600 font-mono text-xs bg-blue-100/80 px-2 py-1 rounded-lg border border-blue-200 group-hover:bg-blue-200 group-hover:text-blue-800 transition-all duration-300",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "separator": {
-              "tailwind": "bg-pink-200 h-[2px] my-1 [background-image:repeating-linear-gradient(to_right,#f9a8d4_0,#f9a8d4_5px,transparent_5px,transparent_7px)]",
+              "tailwind": "h-[2px] my-3 mx-2 bg-gradient-to-r from-pink-300 via-rose-400 to-pink-300 rounded-full opacity-60",
               "color": null,
               "text_color": null,
               "computed": null
@@ -1134,19 +1161,19 @@
               "computed": null
             },
             "subContent": {
-              "tailwind": "bg-white border-2 border-blue-200 rounded-xl shadow-lg p-2 bg-[radial-gradient(#ffffff,#ebf3ff)] [background-size:25px_25px]",
+              "tailwind": "bg-gradient-to-br from-blue-50 via-white to-cyan-50 border-2 border-blue-300 rounded-2xl shadow-2xl p-3 min-w-[14rem] z-50 font-medium backdrop-blur-sm animate-in slide-in-from-left-2 duration-300 ease-out",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "subItem": {
-              "tailwind": "text-blue-600 hover:bg-blue-100 data-[disabled]:text-blue-300 font-medium tracking-wide",
+              "tailwind": "px-4 py-2.5 text-sm rounded-xl text-blue-800 hover:bg-gradient-to-r hover:from-blue-200 hover:to-cyan-300 hover:text-blue-900 hover:shadow-md hover:shadow-blue-200/50 cursor-pointer font-semibold tracking-wide transition-all duration-300 ease-out transform hover:scale-[1.02] active:scale-[0.98] border border-transparent hover:border-blue-300/50",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "checkboxItem": {
-              "tailwind": "text-pink-700 hover:bg-pink-100 data-[disabled]:text-pink-300 font-medium",
+              "tailwind": "px-4 py-2.5 text-sm rounded-xl text-pink-800 hover:bg-gradient-to-r hover:from-emerald-200 hover:to-green-300 hover:text-emerald-900 hover:shadow-md hover:shadow-emerald-200/50 cursor-pointer font-semibold tracking-wide transition-all duration-300 ease-out transform hover:scale-[1.02] active:scale-[0.98] border border-transparent hover:border-emerald-300/50",
               "color": null,
               "text_color": null,
               "computed": null
@@ -1158,19 +1185,106 @@
               "computed": null
             },
             "label": {
-              "tailwind": "text-blue-400 font-medium italic",
+              "tailwind": "text-blue-600 font-bold text-xs uppercase tracking-widest px-4 py-2 opacity-80",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "radioItem": {
-              "tailwind": "text-pink-700 hover:bg-pink-100 data-[disabled]:text-pink-300 font-medium",
+              "tailwind": "px-4 py-2.5 text-sm rounded-xl text-pink-800 hover:bg-gradient-to-r hover:from-orange-200 hover:to-amber-300 hover:text-orange-900 hover:shadow-md hover:shadow-orange-200/50 cursor-pointer font-semibold tracking-wide transition-all duration-300 ease-out transform hover:scale-[1.02] active:scale-[0.98] border border-transparent hover:border-orange-300/50",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "arrow": {
               "tailwind": "fill-white drop-shadow-md",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        },
+        "neon": {
+          "tailwind": "backdrop-blur-xl bg-gradient-to-br from-indigo-50/90 to-purple-50/90 border border-white/20 rounded-xl shadow-2xl p-2 min-w-[14rem] z-50 animate-in slide-in-from-top-2 duration-200",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Fun modern context menu with vibrant colors, glass morphism, and smooth animations",
+          "elements": {
+            "content": {
+              "tailwind": "backdrop-blur-xl bg-gradient-to-br from-indigo-50/90 to-purple-50/90 border border-white/20 rounded-xl shadow-2xl p-2 min-w-[14rem] z-50 animate-in slide-in-from-top-2 duration-200",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "item": {
+              "tailwind": "px-3 py-2.5 text-sm rounded-lg text-slate-700 font-medium hover:bg-gradient-to-r hover:from-indigo-500 hover:to-purple-600 hover:text-white hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 ease-out cursor-pointer transform hover:scale-[1.02] active:scale-[0.98]",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "shortcut": {
+              "tailwind": "text-slate-500 text-xs font-mono bg-slate-100/80 px-1.5 py-0.5 rounded border border-slate-200/50 group-hover:bg-white/20 group-hover:text-white/90 group-hover:border-white/30 transition-all duration-300",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "separator": {
+              "tailwind": "bg-gradient-to-r from-transparent via-indigo-300/50 to-transparent h-px my-2 mx-2",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "subTrigger": {
+              "tailwind": "px-3 py-2.5 text-sm rounded-lg text-slate-700 font-medium hover:bg-gradient-to-r hover:from-indigo-500 hover:to-purple-600 hover:text-white hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 ease-out cursor-pointer transform hover:scale-[1.02] data-[state=open]:bg-gradient-to-r data-[state=open]:from-indigo-500 data-[state=open]:to-purple-600 data-[state=open]:text-white",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "chevron": {
+              "tailwind": "text-slate-400 group-hover:text-white/90 transition-colors duration-300",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "label": {
+              "tailwind": "text-indigo-600 font-semibold text-xs uppercase tracking-wider px-3 py-2 opacity-80",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "checkboxItem": {
+              "tailwind": "px-3 py-2.5 text-sm rounded-lg text-slate-700 font-medium hover:bg-gradient-to-r hover:from-emerald-500 hover:to-teal-600 hover:text-white hover:shadow-lg hover:shadow-emerald-500/25 transition-all duration-300 ease-out cursor-pointer transform hover:scale-[1.02]",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "radioItem": {
+              "tailwind": "px-3 py-2.5 text-sm rounded-lg text-slate-700 font-medium hover:bg-gradient-to-r hover:from-rose-500 hover:to-pink-600 hover:text-white hover:shadow-lg hover:shadow-rose-500/25 transition-all duration-300 ease-out cursor-pointer transform hover:scale-[1.02]",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "indicator": {
+              "tailwind": "text-white group-hover:drop-shadow-sm transition-all duration-300",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "trigger": {
+              "tailwind": "bg-gradient-to-br from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700 focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 rounded-xl px-6 py-4 font-semibold cursor-pointer transition-all duration-300 ease-out select-none shadow-lg hover:shadow-xl hover:shadow-indigo-500/25 transform hover:scale-105 active:scale-95",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "subContent": {
+              "tailwind": "backdrop-blur-xl bg-gradient-to-br from-indigo-50/90 to-purple-50/90 border border-white/20 rounded-xl shadow-2xl p-2 min-w-[14rem] z-50 animate-in slide-in-from-left-2 duration-200",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "subItem": {
+              "tailwind": "px-3 py-2.5 text-sm rounded-lg text-slate-700 font-medium hover:bg-gradient-to-r hover:from-indigo-500 hover:to-purple-600 hover:text-white hover:shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 ease-out cursor-pointer transform hover:scale-[1.02] active:scale-[0.98]",
               "color": null,
               "text_color": null,
               "computed": null
@@ -1639,22 +1753,22 @@
           "extends": null,
           "color": null,
           "text_color": null,
-          "description": "A cosmic, space-themed form field with starry accents and futuristic styling.",
+          "description": "Enhanced cosmic form field with deep space gradients, animated elements, glowing effects, and futuristic sci-fi styling",
           "elements": {
             "fieldset": {
-              "tailwind": "space-y-3 p-3 rounded-lg bg-gradient-to-b from-indigo-950 to-purple-950 max-w-md mx-auto",
+              "tailwind": "space-y-4 p-6 rounded-2xl bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 max-w-md mx-auto border border-purple-500/30 shadow-2xl shadow-purple-500/20 backdrop-blur-xl relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-cyan-500/5 before:via-transparent before:to-purple-500/5 before:pointer-events-none after:absolute after:inset-0 after:bg-[radial-gradient(circle_at_50%_50%,rgba(168,85,247,0.1),transparent_70%)] after:pointer-events-none",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "label": {
-              "tailwind": "text-blue-200 font-medium uppercase tracking-wider",
+              "tailwind": "text-cyan-300 font-bold text-sm uppercase tracking-widest relative z-10 drop-shadow-sm before:content-['\u25b8'] before:text-purple-400 before:mr-2 before:font-mono before:animate-pulse",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "input": {
-              "tailwind": "h-[40px] w-full rounded-md px-3 text-[15px] leading-none outline-none shadow-inner border border-indigo-500 bg-indigo-900/60 text-white placeholder:text-indigo-300/60 focus:border-purple-400 focus:ring-2 focus:ring-purple-400/50 focus:bg-indigo-900/80 disabled:cursor-not-allowed disabled:bg-indigo-950 disabled:text-indigo-400/50 backdrop-blur-sm",
+              "tailwind": "h-12 w-full rounded-lg px-4 text-base leading-none outline-none border border-purple-400/50 bg-gradient-to-r from-slate-800/80 to-slate-900/80 text-cyan-100 placeholder:text-purple-300/70 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/30 focus:shadow-lg focus:shadow-cyan-500/20 focus:bg-gradient-to-r focus:from-slate-800/90 focus:to-slate-900/90 disabled:cursor-not-allowed disabled:bg-slate-950/50 disabled:text-slate-500 disabled:border-slate-700 backdrop-blur-sm transition-all duration-300 ease-out relative z-10 hover:border-purple-300/70 hover:shadow-md hover:shadow-purple-500/10",
               "color": null,
               "text_color": null,
               "computed": null
@@ -1750,38 +1864,38 @@
           }
         },
         "ocean": {
-          "tailwind": "bg-gradient-to-r from-blue-500 to-teal-400 py-4",
+          "tailwind": "bg-gradient-to-r from-cyan-500 via-blue-500 to-teal-500 py-6 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-blue-400/20 before:via-transparent before:to-cyan-400/20 before:animate-pulse before:duration-[3000ms] after:absolute after:inset-0 after:bg-[radial-gradient(ellipse_at_top,rgba(14,165,233,0.3),transparent_50%)] shadow-lg shadow-blue-500/20",
           "extends": "header.default",
           "color": null,
           "text_color": null,
-          "description": "A vibrant ocean-themed header with a blue-to-teal gradient.",
+          "description": "Immersive ocean header with flowing gradients, animated waves, glowing effects, and depth layering that captures the beauty of tropical waters",
           "elements": {
             "logo": {
-              "tailwind": "font-bold text-xl text-white",
+              "tailwind": "font-black text-2xl text-white drop-shadow-lg relative z-10 bg-gradient-to-br from-white to-cyan-100 bg-clip-text text-transparent animate-swing hover:animate-wiggle cursor-pointer",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "navItem": {
-              "tailwind": "text-white/80 font-medium hover:text-white px-2 py-1 transition-colors duration-200",
+              "tailwind": "text-white/90 font-semibold hover:text-white px-4 py-2 transition-all duration-300 ease-out relative z-10 hover:bg-white/10 rounded-lg backdrop-blur-sm border border-transparent hover:border-white/20 hover:shadow-lg hover:shadow-white/10 transform hover:scale-105 animate-fadeInUp hover:animate-wiggle",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "primaryAction": {
-              "tailwind": "px-4 py-2 bg-white text-blue-600 font-medium rounded-md hover:bg-blue-50 shadow-sm transition-colors",
+              "tailwind": "px-6 py-3 bg-white text-blue-600 font-bold rounded-xl hover:bg-blue-50 hover:text-blue-700 shadow-lg hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-300 ease-out relative z-10 transform hover:scale-105 active:scale-95 border border-blue-100 animate-bounceIn hover:animate-pulse",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "secondaryAction": {
-              "tailwind": "px-4 py-2 bg-transparent text-white font-medium border border-white/30 rounded-md hover:bg-white/10 transition-colors",
+              "tailwind": "px-6 py-3 bg-transparent text-white font-semibold border-2 border-white/40 rounded-xl hover:bg-white/15 hover:border-white/60 hover:shadow-lg hover:shadow-white/20 transition-all duration-300 ease-out relative z-10 backdrop-blur-sm transform hover:scale-105 active:scale-95 animate-fadeInUp hover:animate-wiggle",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "companyName": {
-              "tailwind": "font-extrabold text-2xl text-white drop-shadow-md tracking-wide",
+              "tailwind": "font-black text-3xl text-white drop-shadow-xl tracking-wide relative z-10 bg-gradient-to-br from-white via-cyan-100 to-blue-100 bg-clip-text text-transparent hover:animate-swing transition-transform duration-300 cursor-pointer animate-fadeInUp",
               "color": null,
               "text_color": null,
               "computed": null
@@ -1948,6 +2062,81 @@
             },
             "statLabel": {
               "tailwind": "m-0 text-[14px] text-slate-500",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        },
+        "clean": {
+          "tailwind": "",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Ultra-clean minimal hovercard with crisp white background, subtle shadows, and refined typography",
+          "elements": {
+            "trigger": {
+              "tailwind": "inline-block cursor-pointer rounded-full outline-none focus:ring-2 focus:ring-blue-500/30 focus:ring-offset-2 transition-all duration-300 ease-out hover:scale-105",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "triggerImage": {
+              "tailwind": "block size-[48px] rounded-full object-cover border-2 border-white shadow-lg shadow-black/10 hover:shadow-xl hover:shadow-black/15 transition-all duration-300 ease-out",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "content": {
+              "tailwind": "w-96 bg-white border border-gray-100 rounded-2xl shadow-2xl shadow-black/5 p-6 will-change-[transform,opacity] backdrop-blur-xl animate-fadeIn",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "arrow": {
+              "tailwind": "fill-white stroke-gray-100",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "cardContentWrapper": {
+              "tailwind": "flex flex-col gap-4",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "cardImage": {
+              "tailwind": "block size-[72px] rounded-full object-cover border-4 border-white shadow-xl shadow-black/10",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "title": {
+              "tailwind": "m-0 text-lg font-bold text-gray-900 tracking-tight",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "handle": {
+              "tailwind": "m-0 text-sm text-gray-500 font-medium",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "description": {
+              "tailwind": "m-0 text-base text-gray-600 leading-relaxed",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "statNumber": {
+              "tailwind": "m-0 text-lg font-bold text-gray-900",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "statLabel": {
+              "tailwind": "m-0 text-sm text-gray-500 font-medium",
               "color": null,
               "text_color": null,
               "computed": null
@@ -2525,6 +2714,81 @@
             },
             "listItemText": {
               "tailwind": "leading-[1.4] text-gray-600/85 text-sm",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
+        },
+        "studio": {
+          "tailwind": "relative w-full flex justify-center",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Premium studio-grade navigation with dark theme, subtle gradients, and sophisticated micro-interactions",
+          "elements": {
+            "list": {
+              "tailwind": "m-0 flex list-none rounded-2xl bg-gradient-to-r from-slate-800 to-slate-900 p-2 shadow-2xl shadow-black/20 border border-slate-700/50 backdrop-blur-xl relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/5 before:to-transparent before:pointer-events-none",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "trigger": {
+              "tailwind": "group flex select-none items-center justify-between gap-2 rounded-xl px-4 py-3 text-sm font-semibold leading-none text-slate-200 outline-none hover:bg-gradient-to-r hover:from-slate-700 hover:to-slate-600 hover:text-white hover:shadow-lg hover:shadow-black/10 focus:shadow-[0_0_0_2px] focus:shadow-blue-400/50 transition-all duration-300 ease-out relative z-10 border border-transparent hover:border-slate-600/50",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "link": {
+              "tailwind": "block select-none rounded-xl px-4 py-3 text-sm font-semibold leading-none text-slate-200 no-underline outline-none hover:bg-gradient-to-r hover:from-slate-700 hover:to-slate-600 hover:text-white hover:shadow-lg hover:shadow-black/10 focus:bg-gradient-to-r focus:from-slate-700 focus:to-slate-600 focus:text-white transition-all duration-300 ease-out relative z-10 border border-transparent hover:border-slate-600/50",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "caret": {
+              "tailwind": "relative top-px text-slate-400 transition-all duration-300 ease-out group-data-[state=open]:-rotate-180 group-data-[state=open]:text-blue-400 group-hover:text-slate-100 transform",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "indicator": {
+              "tailwind": "top-full flex h-3 items-end justify-center overflow-hidden transition-[width,transform_300ms_ease] data-[state=hidden]:animate-fadeOut data-[state=visible]:animate-fadeIn",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "indicatorArrow": {
+              "tailwind": "relative top-[70%] size-3 rotate-45 rounded-tl-sm bg-gradient-to-br from-slate-800 to-slate-900 border-l border-t border-slate-700/50",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "viewport": {
+              "tailwind": "mt-3 h-[var(--radix-navigation-menu-viewport-height)] w-full origin-[top_center] overflow-hidden rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700/50 shadow-2xl shadow-black/25 transition-[width,_height] duration-300 data-[state=closed]:animate-scaleOut data-[state=open]:animate-scaleIn sm:w-[var(--radix-navigation-menu-viewport-width)] backdrop-blur-xl",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "content": {
+              "tailwind": "absolute left-0 top-0 w-full z-50 data-[motion=from-end]:animate-slideInRight data-[motion=from-start]:animate-slideInLeft data-[motion=to-end]:animate-slideOutRight data-[motion=to-start]:animate-slideOutLeft sm:w-auto p-4",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "listItem": {
+              "tailwind": "block select-none rounded-xl p-4 text-sm leading-none no-underline outline-none transition-all duration-300 ease-out hover:bg-gradient-to-r hover:from-slate-700/50 hover:to-slate-600/50 hover:shadow-lg hover:shadow-black/10 border border-transparent hover:border-slate-600/30",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "listItemTitle": {
+              "tailwind": "mb-2 font-bold leading-[1.2] text-slate-100 hover:text-blue-300 transition-colors duration-300 text-base",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "listItemText": {
+              "tailwind": "leading-[1.5] text-slate-400 text-sm group-hover:text-slate-300 transition-colors duration-300",
               "color": null,
               "text_color": null,
               "computed": null
@@ -3762,6 +4026,33 @@
               "computed": null
             }
           }
+        },
+        "neon": {
+          "tailwind": "relative flex h-16 w-full min-w-[320px] max-w-[400px] mx-auto touch-none select-none items-center",
+          "extends": null,
+          "color": null,
+          "text_color": null,
+          "description": "Cyberpunk neon slider with RGB lighting effects, electric glow, and gaming-inspired aesthetics",
+          "elements": {
+            "track": {
+              "tailwind": "relative h-[8px] w-full grow rounded-full bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 shadow-inner shadow-black/50 border border-slate-700/50 backdrop-blur-sm overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-500/10 before:via-cyan-500/20 before:to-purple-500/10 before:animate-pulse before:duration-[2000ms]",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "range": {
+              "tailwind": "absolute h-full rounded-full bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 shadow-lg shadow-cyan-500/50 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent before:animate-shimmer before:bg-[length:200%_100%] animate-pulse duration-[1500ms]",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            },
+            "thumb": {
+              "tailwind": "block size-7 rounded-full bg-gradient-to-br from-white via-cyan-100 to-purple-100 shadow-[0_0_20px] shadow-cyan-400/60 hover:shadow-[0_0_30px] hover:shadow-purple-500/80 focus:outline-none focus:shadow-[0_0_40px] focus:shadow-pink-500/90 transition-all duration-300 ease-out border-2 border-white/50 backdrop-blur-sm relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-br before:from-cyan-300/30 before:to-purple-300/30 before:rounded-full before:animate-spin before:duration-[3000ms] transform hover:scale-110 active:scale-95",
+              "color": null,
+              "text_color": null,
+              "computed": null
+            }
+          }
         }
       }
     },
@@ -4214,7 +4505,7 @@
     "toolbar": {
       "variants": {
         "default": {
-          "tailwind": "flex flex-row items-center justify-start rounded-md bg-gray-800 p-2 shadow-lg border border-gray-700",
+          "tailwind": "flex flex-row items-center justify-start rounded-md bg-gray-800 p-3 shadow-lg border border-gray-700 gap-3",
           "extends": null,
           "color": null,
           "text_color": null,
@@ -4227,19 +4518,19 @@
               "computed": null
             },
             "separator": {
-              "tailwind": "inline-block mx-2 h-6 w-px bg-gray-600/70",
+              "tailwind": "inline-block mx-3 h-6 w-px bg-gray-600/70",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "toggleGroup": {
-              "tailwind": "inline-flex h-9 flex-row items-center justify-start bg-gray-700 rounded-md",
+              "tailwind": "inline-flex h-9 flex-row items-center justify-start gap-1",
               "color": null,
               "text_color": null,
               "computed": null
             },
             "toggleItem": {
-              "tailwind": "inline-flex h-9 items-center justify-center rounded-md px-3 text-gray-300 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-500 data-[state=on]:bg-gray-600 data-[state=on]:text-white transition-all duration-200",
+              "tailwind": "inline-flex h-8 items-center justify-center rounded-md px-2 text-gray-300 bg-gray-700 hover:bg-gray-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-500 data-[state=on]:bg-gray-500 data-[state=on]:text-white transition-all duration-200 mx-0.5",
               "color": null,
               "text_color": null,
               "computed": null
