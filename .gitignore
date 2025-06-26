@@ -5,3 +5,12 @@ __pycache__/
 *.py[cod]
 *$py.class
 /preview/node_modules
+
+# Logs
+/data/astro_stdout.log
+/data/astro_stderr.log
+/data/astro_pid.txt
+
+# Generated output files
+/data/output/
+/preview/src/output/

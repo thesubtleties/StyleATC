@@ -93,9 +93,9 @@ class StyleGuideGenerator:
 
         try:
             if not os.path.exists(self.boilerplate_dir):
-                print(
-                    f"Warning: Boilerplate directory not found: {self.boilerplate_dir}"
-                )
+                # print(
+                #     f"Warning: Boilerplate directory not found: {self.boilerplate_dir}"
+                # )
                 return  # Exit early if boilerplate dir doesn't exist
 
             for filename in os.listdir(self.boilerplate_dir):
@@ -151,30 +151,30 @@ class StyleGuideGenerator:
                             theme_key_name
                         )  #
                     else:
-                        print(
-                            f"Warning: Extracted empty base_name from template file: {filename}"
-                        )
+                        # print(
+                        #     f"Warning: Extracted empty base_name from template file: {filename}"
+                        # )
 
             # Optional: Sort the lists alphabetically for consistent output order
             self.components_to_import.sort()
             self.components_for_theme_lookup.sort()
             self.components_to_include_in_sections.sort()
             if not self.components_to_import:
-                print(
-                    "Warning: No component templates found or processed in boilerplate directory."
-                )
+                # print(
+                #     "Warning: No component templates found or processed in boilerplate directory."
+                # )
 
         except FileNotFoundError:
-            print(
-                f"Error: Boilerplate directory not found at {self.boilerplate_dir} during discovery."
-            )
+            # print(
+            #     f"Error: Boilerplate directory not found at {self.boilerplate_dir} during discovery."
+            # )
             self.components_to_import = []
             self.components_for_theme_lookup = []
             self.components_to_include_in_sections = []
         except Exception as e:
-            print(
-                f"An unexpected error occurred during component discovery: {e}"
-            )
+            # print(
+            #     f"An unexpected error occurred during component discovery: {e}"
+            # )
             self.components_to_import = []
             self.components_for_theme_lookup = []
             self.components_to_include_in_sections = []

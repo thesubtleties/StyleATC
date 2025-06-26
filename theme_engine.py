@@ -597,35 +597,35 @@ class ThemeEngine:
                             new_variant.elements = copy.deepcopy(
                                 base_variant.elements
                             )
-                            print(
-                                f"[INFO] Copied elements from '{extends_path}' to new variant '{component_type}.{variant}'."
-                            )  # Temp feedback
+                            # print(
+                            #     f"[INFO] Copied elements from '{extends_path}' to new variant '{component_type}.{variant}'."
+                            # )  # Temp feedback
                         else:
-                            print(
-                                f"[INFO] Base variant '{extends_path}' has no elements to copy."
-                            )  # Temp feedback
+                            # print(
+                            #     f"[INFO] Base variant '{extends_path}' has no elements to copy."
+                            # )  # Temp feedback
                     else:
                         # Extending from different component types not handled here, just warn
-                        print(
-                            f"[WARNING] Cannot find base variant '{extends_path}' within component '{component_type}' to copy elements from."
-                        )  # Temp feedback
+                        # print(
+                        #     f"[WARNING] Cannot find base variant '{extends_path}' within component '{component_type}' to copy elements from."
+                        # )  # Temp feedback
 
                 except ValueError:
-                    print(
-                        f"[WARNING] Invalid 'extends' format: '{extends_path}'. Expected 'component.variant'. Cannot copy elements."
-                    )  # Temp feedback
+                    # print(
+                    #     f"[WARNING] Invalid 'extends' format: '{extends_path}'. Expected 'component.variant'. Cannot copy elements."
+                    # )  # Temp feedback
                 except Exception as e:
-                    print(
-                        f"[WARNING] Error copying elements during variant creation for '{component_type}.{variant}': {e}"
-                    )  # Temp feedback
+                    # print(
+                    #     f"[WARNING] Error copying elements during variant creation for '{component_type}.{variant}': {e}"
+                    # )  # Temp feedback
             elif elements_provided:
-                print(
-                    f"[INFO] Elements explicitly provided for new variant '{component_type}.{variant}', not copying from base."
-                )  # Temp feedback
+                # print(
+                #     f"[INFO] Elements explicitly provided for new variant '{component_type}.{variant}', not copying from base."
+                # )  # Temp feedback
             else:
-                print(
-                    f"[INFO] No 'extends' or no explicit 'elements' provided for new variant '{component_type}.{variant}'. Starting with empty elements."
-                )  # Temp feedback
+                # print(
+                #     f"[INFO] No 'extends' or no explicit 'elements' provided for new variant '{component_type}.{variant}'. Starting with empty elements."
+                # )  # Temp feedback
 
             # Assign the newly prepared variant object
             component.variants[variant] = new_variant
@@ -685,9 +685,9 @@ class ThemeEngine:
                         ComponentElement()
                     )
                     element_created_in_update = True
-                    print(
-                        f"[INFO] Created/Reset element '{element_name}' in '{component_type}.{variant}' during update."
-                    )  # Temp feedback
+                    # print(
+                    #     f"[INFO] Created/Reset element '{element_name}' in '{component_type}.{variant}' during update."
+                    # )  # Temp feedback
 
                 # Initialize tracking for this element if needed
                 if element_name not in updated_elements_summary:
@@ -714,10 +714,10 @@ class ThemeEngine:
 
         # --- Handle Errors ---
         if errors:
-            print(
-                f"[ERROR] Errors occurred during update_variant for {component_type}.{variant}:\n - "
-                + "\n - ".join(errors)
-            )  # Temp feedback
+            # print(
+            #     f"[ERROR] Errors occurred during update_variant for {component_type}.{variant}:\n - "
+            #     + "\n - ".join(errors)
+            # )  # Temp feedback
             # Don't save if errors occurred during the update process itself
             return {
                 "error": "Errors occurred during update, changes not saved.",
@@ -982,9 +982,9 @@ const getStyle = (variant, elementName) => {{
         else:
             # Removed logging
             # Still important to know if the injection point is missing
-            print(
-                f"WARNING: Marker '{logic_marker}' not found in template {template_base_name}. Styling logic not injected."
-            )
+            # print(
+            #     f"WARNING: Marker '{logic_marker}' not found in template {template_base_name}. Styling logic not injected."
+            # )
 
         # 6. Clean up old placeholders (still useful)
         rendered_content = re.sub(
