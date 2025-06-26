@@ -154,6 +154,7 @@ class StyleGuideGenerator:
                         # print(
                         #     f"Warning: Extracted empty base_name from template file: {filename}"
                         # )
+                        pass
 
             # Optional: Sort the lists alphabetically for consistent output order
             self.components_to_import.sort()
@@ -163,6 +164,7 @@ class StyleGuideGenerator:
                 # print(
                 #     "Warning: No component templates found or processed in boilerplate directory."
                 # )
+                pass
 
         except FileNotFoundError:
             # print(
