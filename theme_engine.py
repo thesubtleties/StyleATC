@@ -604,28 +604,34 @@ class ThemeEngine:
                             # print(
                             #     f"[INFO] Base variant '{extends_path}' has no elements to copy."
                             # )  # Temp feedback
+                            pass
                     else:
                         # Extending from different component types not handled here, just warn
                         # print(
                         #     f"[WARNING] Cannot find base variant '{extends_path}' within component '{component_type}' to copy elements from."
                         # )  # Temp feedback
+                        pass
 
                 except ValueError:
                     # print(
                     #     f"[WARNING] Invalid 'extends' format: '{extends_path}'. Expected 'component.variant'. Cannot copy elements."
                     # )  # Temp feedback
+                    pass
                 except Exception as e:
                     # print(
                     #     f"[WARNING] Error copying elements during variant creation for '{component_type}.{variant}': {e}"
                     # )  # Temp feedback
+                    pass
             elif elements_provided:
                 # print(
                 #     f"[INFO] Elements explicitly provided for new variant '{component_type}.{variant}', not copying from base."
                 # )  # Temp feedback
+                pass
             else:
                 # print(
                 #     f"[INFO] No 'extends' or no explicit 'elements' provided for new variant '{component_type}.{variant}'. Starting with empty elements."
                 # )  # Temp feedback
+                pass
 
             # Assign the newly prepared variant object
             component.variants[variant] = new_variant
@@ -985,6 +991,7 @@ const getStyle = (variant, elementName) => {{
             # print(
             #     f"WARNING: Marker '{logic_marker}' not found in template {template_base_name}. Styling logic not injected."
             # )
+            pass
 
         # 6. Clean up old placeholders (still useful)
         rendered_content = re.sub(
